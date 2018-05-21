@@ -52,13 +52,13 @@ const SplashContainer = props => (
 
 const Logo = props => (
   <div className="projectLogo">
-    <img src={props.img_src} />
+    <img src={props.img_src} style={{width: '300px', height: '250px'}}/>
   </div>
 );
 
 const ProjectTitle = props => (
   <h2 className="projectTitle">
-    {siteConfig.title}
+    CannerIO <super style={{verticalAlign: "super", fontSize: '20px', color: "#ce4034"}}> alpha</super>
     <small>{siteConfig.tagline}</small>
   </h2>
 );
@@ -76,7 +76,7 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('banner.gif')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -103,67 +103,47 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
+        content: 'CannerIO support access control lets you assign different privileges to different users for collaberation.',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'Membership',
       },
       {
-        content: 'The content of my second feature',
+        content: 'You can setup a standalone login page for your CMS, without login from canner.io',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Login page',
+      },
+      {
+        content: 'We provide customized domain service for premium members to establish CMS using your own domain.',
+        image: imgUrl('docusaurus.svg'),
+        imageAlign: 'top',
+        title: 'Customized domain',
+      },
+      {
+        content: 'CannerIO use Amazon Cloudfront to deliver your website fast and reliable around the globe.',
+        image: imgUrl('docusaurus.svg'),
+        imageAlign: 'top',
+        title: 'CDN delivery',
       },
     ]}
   </Block>
 );
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
+const OSS = props => (
+  <Container
+    padding={[]}
+    id={'service'}
+    background="highlight">
+    <GridBlock contents={[
       {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
+        content: 'We believe in open community, so we open sourced our CMS framework too. If you want to use our open source edition please visit &#x1F449;&#x1F449;&#x1F449; <a href="https://framework.canner.io">framework.canner.io</a>',
+        image: imgUrl('blocks/demo.png'),
         imageAlign: 'right',
-        title: 'Learn How',
+        title: 'Open source: Host anywhere',
       },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
+    ]} layout={props.layout} />
+  </Container>
 );
 
 const Showcase = props => {
@@ -205,11 +185,7 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase language={language} />
+          <OSS />
         </div>
       </div>
     );
