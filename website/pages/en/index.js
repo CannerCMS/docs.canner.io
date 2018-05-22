@@ -104,25 +104,25 @@ const Features = props => (
     {[
       {
         content: 'CannerIO support access control lets you assign different privileges to different users for collaberation.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('features/membership.png'),
         imageAlign: 'top',
         title: 'Membership',
       },
       {
         content: 'You can setup a standalone login page for your CMS, without login from canner.io',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('features/login.png'),
         imageAlign: 'top',
         title: 'Login page',
       },
       {
         content: 'We provide customized domain service for premium members to establish CMS using your own domain.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('features/domain.png'),
         imageAlign: 'top',
         title: 'Customized domain',
       },
       {
         content: 'CannerIO use Amazon Cloudfront to deliver your website fast and reliable around the globe.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('features/CDN.png'),
         imageAlign: 'top',
         title: 'CDN delivery',
       },
