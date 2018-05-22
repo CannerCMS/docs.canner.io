@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Commands · CannerIO (alpha)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Commands · CannerIO (alpha)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.canner.io/index.html"/><meta property="og:description" content="## Administrative"/><meta property="og:image" content="https://docs.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.canner.io/blog/atom.xml" title="CannerIO (alpha) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.canner.io/blog/feed.xml" title="CannerIO (alpha) Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="CannerIO (alpha)"/><h2 class="headerTitleWithLogo">CannerIO (alpha)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://framework.canner.io/docs/why-canner.html" target="_blank">Why</a></li><li class="siteNavGroupActive"><a href="/docs/start-installation.html" target="_self">Docs</a></li><li class=""><a href="https://framework.canner.io" target="_blank">Open source</a></li><li class=""><a href="/en/help.html" target="_self">Help</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>CLI</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Getting Started</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-installation.html">Installation</a></li></ul></div><div class="navGroup navGroupActive"><h3>CLI</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cli-import-firebase.html">Import data to Firebase</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-upload-image.html">Upload image</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/cli-commands.html">Commands</a></li></ul></div><div class="navGroup navGroupActive"><h3>Files</h3><ul><li class="navListItem"><a class="navItem" href="/docs/file-canner-data-js.html">canner.data.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cert.html">cert folder</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cannerrc.html">.cannerrc</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-image-uploaded.html">.canner-image-uploaded.json</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Commands</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="administrative"></a><a href="#administrative" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Administrative</h2>
+<table>
+  <tr>
+    <td>Command</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>login</td>
+    <td>
+      Log in to canner. <b>Required</b> before using other commands
+    </td>
+  </tr>
+  <tr>
+    <td>logout</td>
+    <td>Log out from canner.</td>
+  </tr>
+  <tr>
+    <td>init [appUrl]</td>
+    <td>Choose an app and it will create <code>.cannerrc</code> configuration file in your current directory, or you can set the app directly with a appUrl. You can use this command to change configurations if you want.</td>
+  </tr>
+  <tr>
+    <td>open</td>
+    <td>Open current application website on your browser.</td>
+  </tr>
+  <tr>
+    <td>open:dashboard</td>
+    <td>Open current application dashboard on your browser.</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="app"></a><a href="#app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>App</h2>
+<table>
+  <tr>
+    <td>Command</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>app:list</td>
+    <td>List all your apps and their information.</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="data"></a><a href="#data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data</h2>
+<table>
+  <tr>
+    <td>Command</td>
+    <td>Description</td>
+    <td>Options</td>
+  </tr>
+  <tr>
+    <td>data:import</td>
+    <td>
+      Import your <code>canner.data.js</code>  to the default app url which is set in <code>.cannerrc</code>.
+    </td>
+    <td>
+      <li><code>-u &lt;url&lt;, --url &lt;url&gt;</code> to import data to the specific app.</li>
+      <li><code>-d, --drop-first</code> to drop the data before import.</li>
+    </td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="script"></a><a href="#script" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Script</h2>
+<table>
+  <tr>
+    <td>Command</td>
+    <td>Description</td>
+    <td>Options</td>
+  </tr>
+  <tr>
+    <td>script:deploy</td>
+    <td>
+      Deploy your <a href="#cannerschemajs"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
+    </td>
+    <td>
+      <ul>
+        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="schema-old-version"></a><a href="#schema-old-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema [Old version]</h2>
+<p>These command is used in older version of Canner</p>
+<table>
+  <tr>
+    <td>Command</td>
+    <td>Description</td>
+    <td>Options</td>
+  </tr>
+  <tr>
+    <td>schema:deploy [filename]</td>
+    <td>
+      Deploy your <a href="#cannerschemajs"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
+    </td>
+    <td>
+      <ul>
+        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
+      </ul>
+    </td>
+  </tr>
+</table></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="cli-upload-image.html">← Upload image via CLI</a><a class="docs-next button" href="file-canner-data-js.html">canner.data.js →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#administrative">Administrative</a></li><li><a href="#app">App</a></li><li><a href="#data">Data</a></li><li><a href="#script">Script</a></li><li><a href="#schema-old-version">Schema [Old version]</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-adaptive-cms.html">Why Canner?</a><a href="/docs/guides-basic-setup.html">Guides</a><a href="/docs/concept-canner-cms.html">Concepts</a></div><div><h5>Community</h5><a href="/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://www.canner.io/">CannerIO</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><div style="text-align:center;"><a href="https://www.canner.io" target="_blank"><img src="/img/logo-word-white.png" alt="CannerIO (alpha)"/></a></div><section class="copyright">Copyright © 2018 CannerIO.  Canner, Inc.</section></footer></div></body></html>

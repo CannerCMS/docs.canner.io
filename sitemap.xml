@@ -8,9 +8,12 @@
 <url> <loc>https://docs.canner.io/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://docs.canner.io/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://docs.canner.io/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://docs.canner.io/docs/doc1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/doc1.html" /> </url>
-<url> <loc>https://docs.canner.io/docs/doc2.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/doc2.html" /> </url>
-<url> <loc>https://docs.canner.io/docs/doc3.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/doc3.html" /> </url>
-<url> <loc>https://docs.canner.io/docs/doc4.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/doc4.html" /> </url>
-<url> <loc>https://docs.canner.io/docs/doc5.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/doc5.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/cli-commands.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/cli-commands.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/cli-import-firebase.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/cli-import-firebase.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/cli-upload-image.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/cli-upload-image.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/file-canner-data-js.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/file-canner-data-js.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/file-cannerrc.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/file-cannerrc.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/file-cert.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/file-cert.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/file-canner-image-uploaded.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/file-canner-image-uploaded.html" /> </url>
+<url> <loc>https://docs.canner.io/docs/start-installation.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.canner.io/docs/start-installation.html" /> </url>
 </urlset>
