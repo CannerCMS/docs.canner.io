@@ -1,19 +1,18 @@
 {
   "docs": {
-    "files": [
+    "Getting Started": [
+      "start-installation"
+    ],
+    "CLI": [
+      "cli-import-firebase",
+      "cli-upload-image",
+      "cli-commands"
+    ],
+    "Files": [
       "file-canner-data-js",
       "file-cert",
       "file-cannerrc",
       "file-canner-image-uploaded"
-    ],
-    "CLI": [
-      "cli",
-      "cli-import-firebase",
-      "cli-upload-image",
-      "cli-commands"
     ]
-  },
-  "docs-other": {
-    "First Category": ["doc2", "doc3"]
   }
 }

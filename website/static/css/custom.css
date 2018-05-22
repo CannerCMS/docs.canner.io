@@ -14,3 +14,15 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.imageAlignTop .blockImage {
+  max-width: 150px;
+}
+
+code {
+  background-color: rgba(242, 177, 115, 0.20) !important;
+}
+
+.hljs {
+  color: #777;
+}

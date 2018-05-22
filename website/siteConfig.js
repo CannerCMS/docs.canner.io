@@ -39,8 +39,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'file-canner-data-js', label: 'Docs'},
-    {doc: 'doc3', label: 'Tutorial'},
+    {doc: 'start-installation', label: 'Docs'},
+    {href: 'https://framework.canner.io', label: "Open source"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],

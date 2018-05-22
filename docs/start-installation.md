@@ -1,17 +1,14 @@
 ---
-id: cli
-title: @canner/cli
-sidebar_label: Command line
+id: start-installation
+title: Installation
+sidebar_label: Installation
 ---
 
-`@canner/cli` is the Canner CLI(command line interface), it can be used to:
-
-- Bundle scripts and deploy to CannerIO
-- Import initial data to backend services.
-
-## Get started
+## Install Canner CLI
 
 Make sure you have already install NodeJS and use the command below to install `@canner/cli` globally.
+
+> While we recommend Node 8.x or greater, your Node version must at least 6.x.
 
 ```
 npm install -g @canner/cli
