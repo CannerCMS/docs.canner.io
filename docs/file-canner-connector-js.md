@@ -4,7 +4,9 @@ title: canner.connector.js
 sidebar_label: canner.connector.js
 ---
 
-There are two keys exported from `canner.connector.js`, `connector` is the default connector in your CMS, and `connectors` is a connector map that you can give the connector for each key.
+Export your [connectors](http://framework.canner.io/docs/guides-connector.html) from `canner.connector.js`, `connector` sets the default connector in your CMS, and `connectors` is a connector map that you can give the connector to corresponding key in data.
+
+> Learn more about [Connectors](http://framework.canner.io/docs/guides-connector.html)
 
 ```js
 {
@@ -13,15 +15,13 @@ There are two keys exported from `canner.connector.js`, `connector` is the defau
 }
 ```
 
-**canner.schema.js**
+**canner.connector.js**
+
 ```js
 ...
 exports.connector = myDefultConnector;
 exports.connectors = {
-  posts: postsConnector // only posts will use posts connector
+  posts: postsConnector // only posts key will use posts connector
 }
 
 ```
-
-
-> Learn more about [Connectors](http://framework.canner.io/docs/guides-connector.html)
