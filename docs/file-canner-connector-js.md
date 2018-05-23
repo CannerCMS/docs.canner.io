@@ -4,11 +4,6 @@ title: canner.connector.js
 sidebar_label: canner.connector.js
 ---
 
-
-[Learn more](http://framework.canner.io/docs/guides-connector.html)
-
-
-
 There are two keys exported from `canner.connector.js`, `connector` is the default connector in your CMS, and `connectors` is a connector map that you can give the connector for each key.
 
 ```js
@@ -27,3 +22,6 @@ exports.connectors = {
 }
 
 ```
+
+
+> Learn more about [Connectors](http://framework.canner.io/docs/guides-connector.html)

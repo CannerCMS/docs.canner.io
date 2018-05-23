@@ -4,7 +4,7 @@ title: canner.resolver.js
 sidebar_label: canner.resolver.js
 ---
 
-[Learn more](http://framework.canner.io/docs/guides-resolver.html)
+
 
 `canner.resolver.js` should export a resolver map.
 
@@ -17,3 +17,5 @@ module.exports = {
   info: infoResolver
 }
 ```
+
+> Learn more about [Resolvers](http://framework.canner.io/docs/guides-resolver.html)
