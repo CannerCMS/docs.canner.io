@@ -4,8 +4,6 @@ title: canner.resolver.js
 sidebar_label: canner.resolver.js
 ---
 
-
-
 `canner.resolver.js` should export a resolver map.
 
 **canner.resolver.js**
