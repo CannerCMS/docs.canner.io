@@ -137,7 +137,7 @@ const OSS = props => (
     background="highlight">
     <GridBlock contents={[
       {
-        content: 'We believe in open community, so we open sourced our CMS framework too. If you want to use our open source edition please visit &#x1F449;&#x1F449;&#x1F449; <a href="https://framework.canner.io">framework.canner.io</a>',
+        content: 'Our team at Canner, Inc. believe in open community, so we open sourced our CMS framework to share our reseach and technology to everyone. If you want to use our open source edition please visit &#x1F449;&#x1F449;&#x1F449; <a href="https://framework.canner.io">framework.canner.io</a>',
         image: imgUrl('blocks/demo.png'),
         imageAlign: 'right',
         title: 'Open source: Host anywhere',
