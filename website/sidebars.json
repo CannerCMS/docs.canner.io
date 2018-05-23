@@ -10,6 +10,8 @@
     ],
     "Files": [
       "file-canner-data-js",
+      "file-canner-connector-js",
+      "file-canner-resolver-js",
       "file-cert",
       "file-cannerrc",
       "file-canner-image-uploaded"
