@@ -25,30 +25,27 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('why-adaptive-cms.html')}>
+            <a href={"https://framework.canner.io/docs/why-canner.html"}>
               Why Canner?
             </a>
-            <a href={this.docUrl('guides-basic-setup.html')}>
-              Guides
+            <a href={this.docUrl('start-installation.html')}>
+              Getting Started
             </a>
-            <a href={this.docUrl('concept-canner-cms.html')}>
-              Concepts
+            <a href={"https://framework.canner.io/docs/guides-basic-setup.html"}>
+              Open Source Documentation
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html')}>
-              User Showcase
-            </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="http://stackoverflow.com/questions/tagged/canner"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
             </a>
             <a href="https://discordapp.com/">Project Chat</a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/CannerIO"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -57,7 +54,7 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href="https://www.canner.io/">CannerIO</a>
-            <a href="https://github.com/">GitHub</a>
+            <a href="https://github.com/canner">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}

@@ -94,11 +94,11 @@ const siteConfig = {
   ogImage: 'img/og-image.jpg',
   twitterImage: 'img/og-image.jpg',
 
-  gaTrackingId: "UA-63519210-12"
+  gaTrackingId: "UA-63519210-12",
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/canner/canner',
 };
 
 module.exports = siteConfig;
