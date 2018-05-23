@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  cname: 'nextdoc.canner.io',
+  cname: 'docs.canner.io',
   title: 'CannerIO (alpha)' /* title for your website */,
   tagline: 'CannerIO official documentation',
   url: 'https://docs.canner.io' /* your website url */,
