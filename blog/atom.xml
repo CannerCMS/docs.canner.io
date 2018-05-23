@@ -10,13 +10,15 @@
     <rights>Copyright © 2018 CannerIO.  Canner, Inc.</rights>
     <entry>
         <title type="html"><![CDATA[CannerIO 2.0 & Open source Canner]]></title>
-        <id>https://docs.canner.io/blog/2018/05/23/blog-post.html</id>
-        <link href="https://docs.canner.io/blog/2018/05/23/blog-post.html">
+        <id>https://docs.canner.io/blog/2018/05/23/cannerio-2.html</id>
+        <link href="https://docs.canner.io/blog/2018/05/23/cannerio-2.html">
         </link>
         <updated>2018-05-23T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Today, our team at Canner, Inc. is thrilled to announce our <strong>CannerIO 2.0 alpha version and Canner CMS alpha is now release</strong>! 🎉🎉 This is our biggest release so far! 🤡</p>
-<p>What's new? <strong><em>Everything in CannerIO 2.0</em></strong> is new! We redesign almost everything! But don't worry we support all previous version!</p>
-<p>Here's an overview of the major changes <strong>pricing</strong>, <strong>UI &amp; UX redesign</strong>, <strong>CMS framework redesign</strong>, <strong>Open source</strong>, <strong>Standalone login page</strong>, <strong>New documentation website</strong>. In this blog, we are going to the details of this release!</p>
+        <summary type="html"><![CDATA[<p>Today, our team at Canner, Inc. is thrilled to announce our <strong><a href="https://www.canner.io">CannerIO 2.0 alpha version</a> and <a href="https://framework.canner.io">Open source Canner alpha</a> is now release</strong>! 🎉🎉 This is our biggest release so far! 🤡</p>
+<p>What's new?</p>
+<p><strong><em>Everything in CannerIO 2.0 is new</em></strong>! We redesign almost everything! But don't worry we support all previous versions!</p>
+<p>Here's an overview of the major changes <strong>pricing</strong>, <strong>UI &amp; UX redesign</strong>, <strong>CMS framework redesign</strong>, <strong>Open source</strong>, <strong>Standalone login page</strong>, <strong>New documentation website</strong>.</p>
+<p>In this post, we are going through the details of this release!</p>
 ]]></summary>
         <author>
             <name>Howard Chi</name>
