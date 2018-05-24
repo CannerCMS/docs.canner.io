@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>CannerIO (alpha) Blog</title>
+        <title>CannerIO v2 (alpha) Blog</title>
         <link>https://docs.canner.io/blog</link>
-        <description>The best place to stay up-to-date with the latest CannerIO (alpha) news and events.</description>
+        <description>The best place to stay up-to-date with the latest CannerIO v2 (alpha) news and events.</description>
         <lastBuildDate>Wed, 23 May 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>CannerIO (alpha) Blog</title>
+            <title>CannerIO v2 (alpha) Blog</title>
             <url>https://docs.canner.io/img/icon.png</url>
             <link>https://docs.canner.io/blog</link>
         </image>
