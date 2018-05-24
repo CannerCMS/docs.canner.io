@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   cname: 'docs.canner.io',
-  title: 'CannerIO (alpha)' /* title for your website */,
+  title: 'CannerIO v2 (alpha)' /* title for your website */,
   tagline: 'CannerIO official documentation',
   url: 'https://docs.canner.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
@@ -43,7 +43,7 @@ const siteConfig = {
     {doc: 'start-installation', label: 'Docs'},
     {href: 'https://framework.canner.io', external: true, label: "Open source"},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    // {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:

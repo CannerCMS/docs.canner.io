@@ -7,6 +7,7 @@
 
 const React = require('react');
 
+const {Alert} = require('antd');
 const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -82,9 +83,16 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href="https://www.canner.io">Back to CannerIO</Button>
             <Button href={docUrl('start-installation.html', language)}>Get started</Button>
-            <Button href={"https://framework.canner.io"} target="_blank">Oen source</Button>
+            <Button href={"https://framework.canner.io"} target="_blank">Open source</Button>
           </PromoSection>
         </div>
+        <Alert
+          style={{maxWidth: '500px', margin: '0 auto', textAlign: 'center'}}
+          message="CannerIO v1 document"
+          description={<p>Since we radically change our internal infrastructure. The CannerIO v2 document is mostly different from the v1, If you are looking for CannerIO v1 document please visit <a href="https://docs.v1.canner.io/zh">docs.v1.canner.io</a></p>}
+          type="info"
+          showIcon
+        />
       </SplashContainer>
     );
   }
