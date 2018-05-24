@@ -23,24 +23,11 @@ Export your [connectors](http://framework.canner.io/docs/guides-connector.html) 
 ```js
 import {FirebaseRtdbAdminConnector} from 'canner-graphql-interface';
 
-// add a condition to check if firebase is initialized
-if (!firebase.apps.length) {
-  firebase.initializeApp({
-    apiKey: 'AIzaSyAwzjZJD7SUCRC42mL7A9sw4VPIvodQH98',
-    authDomain: 'apollo-test-2c6af.firebaseapp.com',
-    databaseURL: 'https://apollo-test-2c6af.firebaseio.com',
-    projectId: 'apollo-test-2c6af',
-    storageBucket: '',
-    messagingSenderId: '84103499922'
-  });
-}
-
-const defaultApp = firebase.app();
 const myDefultConnector = new FirebaseRtdbAdminConnector({
-  database: defaultApp.database()
+  projectId: "test-firebase-778be"
 });
 
-exports.connector = myDefultConnector;
+export default myDefultConnector;
 ```
 
 ## Multiple connectors
@@ -53,3 +40,4 @@ exports.connector = {
   post: postConnector,
   test: testConnector
 }
+```
