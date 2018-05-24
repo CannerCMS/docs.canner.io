@@ -18,10 +18,10 @@ Export your [connectors](http://framework.canner.io/docs/guides-connector.html) 
 
 **canner.connector.js**
 
-> NOTE: you'll need to install `canner-graphql-interface` to require essential connectors
+> NOTE: you'll need to install `canner-graphql-interface` to require essential connectors, and select `FirebaseRtdbAdminConnector` if you using CannerIO platform.
 
 ```js
-import {FirebaseConnector} from 'canner-graphql-interface';
+import {FirebaseRtdbAdminConnector} from 'canner-graphql-interface';
 
 // add a condition to check if firebase is initialized
 if (!firebase.apps.length) {
@@ -36,7 +36,7 @@ if (!firebase.apps.length) {
 }
 
 const defaultApp = firebase.app();
-const myDefultConnector = new FirebaseConnector({
+const myDefultConnector = new FirebaseRtdbAdminConnector({
   database: defaultApp.database()
 });
 
