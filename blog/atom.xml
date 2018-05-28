@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.canner.io/blog</id>
     <title>CannerIO v2 (alpha) Blog</title>
-    <updated>2018-05-23T06:00:00Z</updated>
+    <updated>2018-05-28T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest CannerIO v2 (alpha) news and events.</subtitle>
@@ -10,10 +10,10 @@
     <rights>Copyright © 2018 CannerIO.  Canner, Inc.</rights>
     <entry>
         <title type="html"><![CDATA[CannerIO 2.0 & Open source Canner]]></title>
-        <id>https://docs.canner.io/blog/2018/05/23/cannerio-2.html</id>
-        <link href="https://docs.canner.io/blog/2018/05/23/cannerio-2.html">
+        <id>https://docs.canner.io/blog/2018/05/28/cannerio-2.html</id>
+        <link href="https://docs.canner.io/blog/2018/05/28/cannerio-2.html">
         </link>
-        <updated>2018-05-23T06:00:00Z</updated>
+        <updated>2018-05-28T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Today, our team at Canner, Inc. is thrilled to announce our <strong><a href="https://www.canner.io">CannerIO 2.0 alpha version</a> and <a href="https://framework.canner.io">Open source Canner alpha</a> is now release</strong>! 🎉🎉 This is our biggest release so far! 🤡</p>
 <p>What's new?</p>
 <p><strong><em>Everything in CannerIO 2.0 is new</em></strong>! We redesign almost everything! But don't worry we support all previous versions!</p>
