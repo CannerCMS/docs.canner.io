@@ -43,7 +43,7 @@ const siteConfig = {
     {doc: 'start-installation', label: 'Docs'},
     {href: 'https://framework.canner.io', external: true, label: "Open source"},
     {page: 'help', label: 'Help'},
-    // {blog: true, label: 'Blog'},
+    {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
