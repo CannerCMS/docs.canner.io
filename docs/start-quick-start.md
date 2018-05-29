@@ -1,7 +1,7 @@
 ---
-id: start-quick-start
-title: Quick Start
-sidebar_label: Quick Start
+id: start-quick-firebase
+title: Quick Start Firebase
+sidebar_label: Quick Start Firebase
 ---
 
 ## 1. Install Canner CLI
@@ -44,15 +44,25 @@ npm install canner-script canner-graphql-interface
 
 Download the firebase private key and put in `cert/firebase` folder.
 
+Go to **Project settings** > **Service accounts** > **Generate new private key**
+
 ![firebasesdk](/img/firebasesdk.gif)
+
+> We need your Firebase private key to access more control in your Firebase, such as more complete APIs, and storage APIs.
 
 
 ## 5. Prepare files
 
-There are three required files, follow the file introduction, you will know about them quickly.
+There are three required files `canner.schema.js`, `canner.connector.js` and `canner.resolver.js`.
+
+`canner.schema.js` defines how your CMS and data structure looks like.
 
 > - Learn how to write [`canner.schema.js`](file-canner-schema-js)
+
+`canner.connector.js` defines how to connect to your data sources.
 > - Learn how to write [`canner.connector.js`](file-canner-connector-js)
+
+`canner.resolver.js` defines customize data API in your data flow.
 > - Learn how to write [`canner.resolver.js`](file-canner-resolver-js)
 
 > By default, you have to put `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` in the root of your project.
@@ -66,17 +76,6 @@ After writing your `canner.schema.js`, `canner.resolver.js`, `canner.connector.j
 canner script:deploy
 ```
 
-### customize file paths
+## 7. CMS is live
 
-If you want to use your own file naming, you could modify by adding key `schema`, `resolver`, `connector` in `.cannerrc`
-
-In `.cannerrc`
-
-```js
-{
-  ...
-  schema: '<path to your>/custom.schema.js',
-  resolver: '<path to your>/custom.resolver.js',
-  connector: '<path to your>/custom.connector.js'
-}
-```
+Go to your dashboard in CannerIO and you'll see your CMS live.
