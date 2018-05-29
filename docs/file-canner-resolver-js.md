@@ -12,8 +12,16 @@ sidebar_label: canner.resolver.js
 
 ```js
 // ...
-module.exports = {
+export default {
   posts: postsResolver,
   info: infoResolver
 }
+```
+
+If you don't need any resolvers, you can just exports a empty object.
+
+**canner.resolver.js**
+
+```js
+export default {}
 ```

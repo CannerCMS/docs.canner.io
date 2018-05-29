@@ -1,7 +1,7 @@
 ---
-id: start-installation
-title: Installation
-sidebar_label: Installation
+id: start-quick-start
+title: Quick Start
+sidebar_label: Quick Start
 ---
 
 ## 1. Install Canner CLI
@@ -32,15 +32,35 @@ canner init
 
 Choose the app url you want, after you select your app you can use all Canner services of the app with `@canner/cli`.
 
-## 3. Deploy scripts
+## 3. Install required package
 
-After writing your `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` you could deploy your script to CannerIO through our CLI tool by entering
+In your project folder, you have to install two more packages that will be used later.
 
-> Learn how to write [`canner.schema.js`](file-canner-schema-js)
-> Learn how to write [`canner.connector.js`](file-canner-connector-js)
-> Learn how to write [`canner.resolver.js`](file-canner-resolver-js)
+```
+npm install canner-script canner-graphql-interface
+```
+
+## 4 Download private key
+
+Download the firebase private key and put in `cert/firebase` folder.
+
+![firebasesdk](/img/firebasesdk.gif)
+
+
+## 5. Prepare files
+
+There are three required files, follow the file introduction, you will know about them quickly.
+
+> - Learn how to write [`canner.schema.js`](file-canner-schema-js)
+> - Learn how to write [`canner.connector.js`](file-canner-connector-js)
+> - Learn how to write [`canner.resolver.js`](file-canner-resolver-js)
 
 > By default, you have to put `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` in the root of your project.
+
+
+## 6. Deploy
+
+After writing your `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` you could deploy your script to CannerIO through our CLI tool by entering
 
 ```sh
 canner script:deploy

@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started": [
-      "start-installation"
+      "start-quick-start"
     ],
     "CLI": [
       "cli-import-firebase",
@@ -10,6 +10,7 @@
     ],
     "Files": [
       "file-canner-data-js",
+      "file-canner-schema-js",
       "file-canner-connector-js",
       "file-canner-resolver-js",
       "file-cert",

@@ -40,7 +40,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {href: 'https://framework.canner.io/docs/why-canner.html', external: true, label: "Why"},
-    {doc: 'start-installation', label: 'Docs'},
+    {doc: 'start-quick-start', label: 'Docs'},
     {href: 'https://framework.canner.io', external: true, label: "Open source"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
