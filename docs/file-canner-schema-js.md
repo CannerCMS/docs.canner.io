@@ -8,12 +8,14 @@ sidebar_label: canner.schema.js
 
 > Learn more about [Canner Schema](http://framework.canner.io/docs/guides-writing-schema.html)
 
-**canner.schema.js**
+## Example of canner.schema.js
 
 > NOTE: you'will need to install `cannner-script`, know more about [Canner Script](http://framework.canner.io/docs/advance-canner-script.html)
 
+***Remember to add the first two lines***
+
 ```js
-/** @jsx */
+/** @jsx c */
 import c from 'canner-script';
 
 export default (
