@@ -1,8 +1,10 @@
 ---
 id: start-quick-firebase
-title: Quick Start Firebase
-sidebar_label: Quick Start Firebase
+title: How to Firebase - Realtime database
+sidebar_label: Firebase - Realtime database
 ---
+
+> NOTE: We only support for Firebase realtime database at this moment
 
 ## 1. Install Canner CLI
 
@@ -30,11 +32,24 @@ To use `Canner CLI` in your own project, go in current project folder and run th
 canner init
 ```
 
-Choose the app url you want, after you select your app you can use all Canner services of the app with `@canner/cli`.
+It will ask you whether select existing apps or create new one.
+
+```
+? Create an new app or select from existed apps (Use arrow keys)
+❯ Select from existed apps
+  Create a new app
+```
+
+Choose the app url you want.  And you'll see a new `.cannerrc` in your folder. It'll record the configuration.
+
+> Learn more about [`.cannerrc`](file-cannerrc.md) 
 
 ## 3. Install required package
 
 In your project folder, you have to install two more packages that will be used later.
+
+> `canner-script`: is the core library of how you define your CMS data structure and appearance. [Learn more](https://framework.canner.io/docs/advance-canner-script.html)
+> `canner-graphql-interface`: is the library that tells how to connect to your data sources. [Learn more](https://framework.canner.io/docs/guides-connector.html)
 
 ```
 npm install canner-script canner-graphql-interface
@@ -78,4 +93,4 @@ canner script:deploy
 
 ## 7. CMS is live
 
-Go to your dashboard in CannerIO and you'll see your CMS live.
+Go to your dashboard in CannerIO and select your app, you will see your CMS live.
