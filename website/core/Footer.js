@@ -60,7 +60,11 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a
+              target="_blank"
+              href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+              Project Chat
+            </a>
             <a
               href="https://twitter.com/CannerIO"
               target="_blank"

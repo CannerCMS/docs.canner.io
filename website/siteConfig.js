@@ -42,7 +42,7 @@ const siteConfig = {
     {href: 'https://framework.canner.io/docs/why-canner.html', external: true, label: "Why"},
     {doc: 'start-quick-firebase', label: 'Docs'},
     {href: 'https://framework.canner.io', external: true, label: "Open source"},
-    {page: 'help', label: 'Help'},
+    // {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
 
