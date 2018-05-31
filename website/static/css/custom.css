@@ -26,3 +26,7 @@ code {
 .hljs {
   color: #777;
 }
+
+.gitter-chat-embed {
+  z-index: 100000;
+}

@@ -20,8 +20,25 @@ class Footer extends React.Component {
 
   render() {
     const currentYear = new Date().getFullYear();
+
     return (
       <footer className="nav-footer" id="footer">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            ((window.gitter = {}).chat = {}).options = {
+              room: 'Canner/CannerCMS'
+            };
+
+            const script = document.createElement("script");
+
+            script.src = "https://sidecar.gitter.im/dist/sidecar.v1.js";
+            script.async = true;
+            script.defer = true;
+
+            document.body.appendChild(script);
+            `
+          }}/>
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
