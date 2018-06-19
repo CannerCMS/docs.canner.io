@@ -1,7 +1,19 @@
 {
   "docs": {
-    "How to start": [
+    "Quick start": [
       "start-quick-firebase"
+    ],
+    "Guides": [
+      "guides-writing-schema",
+      "guides-connector",
+      "guides-resolver"
+    ],
+    "Advanced": [
+      "advance-canner-script",
+      "advance-component-types",
+      "advance-layout",
+      "advance-customized-component",
+      "advance-customized-layout"
     ],
     "CLI": [
       "cli-import-firebase",
@@ -16,6 +28,59 @@
       "file-cert",
       "file-cannerrc",
       "file-canner-image-uploaded"
+    ],
+    "Tips": [
+      "tips-schema"
+    ]
+  },
+  "community": {
+    "Guides": [
+      "guides-basic-setup",
+      "guides-canner-schema-loader",
+      "guides-image-upload",
+      "guides-community-connector",
+      "guides-community-resolver"
+    ],
+    "Advanced": [
+      "advance-canner-cms",
+      "advance-cms-helpers",
+      "advance-cms-test"
+    ],
+    "Concept": [
+      "concept-refid",
+      "concept-compile-schema",
+      "concept-component-tree",
+      "concept-hocs" ,
+      "concept-action"
+    ]
+  },
+  "api": {
+    "API": [
+      "api-canner-script",
+      "api-components",
+      "api-layouts",
+      "api-cms-core",
+      "api-cms-helpers",
+      "api-toolbar"
+    ]
+  },
+  "tutorial": {
+    "Get started": [
+      "tutorial-community-firebase"
+    ],
+    "CMS component": [
+      "tutorial-string-component",
+      "tutorial-object-component",
+      "tutorial-array-component"
+    ]
+  },
+  "why": {
+    "Why Canner": [
+      "why-canner",
+      "why-mission",
+      "why-adaptive-cms",
+      "why-traditional-headless-adaptive",
+      "why-graphql"
     ]
   }
 }

@@ -6,11 +6,11 @@ sidebar_label: canner.schema.js
 
 `canner.schema.js` is the file describing the schema of your data, it's writed with `jsx` language which is just like html tag and easy to learn.
 
-> Learn more about [Canner Schema](http://framework.canner.io/docs/guides-writing-schema.html)
+> Learn more about [Canner Schema](guides-writing-schema.html)
 
 ## Example of canner.schema.js
 
-> NOTE: you'will need to install `cannner-script`, know more about [Canner Script](http://framework.canner.io/docs/advance-canner-script.html)
+> NOTE: you'will need to install `cannner-script`, know more about [Canner Script](advance-canner-script.html)
 
 ***Remember to add the first two lines***
 

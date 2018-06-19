@@ -9,7 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.0.15"
+    "docusaurus": "1.2.1"
   },
   "dependencies": {
     "antd": "^3.5.3"

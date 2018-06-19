@@ -24,7 +24,7 @@ const siteConfig = {
   cname: 'docs.canner.io',
   title: 'CannerIO v2 (alpha)' /* title for your website */,
   tagline: 'CannerIO official documentation',
-  url: 'https://docs.canner.io' /* your website url */,
+  url: 'https://www.canner.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -39,9 +39,12 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {href: 'https://framework.canner.io/docs/why-canner.html', external: true, label: "Why"},
+    {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-firebase', label: 'Docs'},
-    {href: 'https://framework.canner.io', external: true, label: "Open source"},
+    {doc: 'guides-basic-setup', label: 'Community'},
+    {doc: 'api-canner-script', label: 'API'},
+    {href: "http://antd-cms-component.canner.io/", external: true, label: "Components"},
+    {href: "https://github.com/Canner/canner", external: true, label: "GitHub"},
     // {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
@@ -83,6 +86,8 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'atom-one-dark',
   },
+
+  usePrism: ['jsx', 'js', 'sh'],
 
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js'],
