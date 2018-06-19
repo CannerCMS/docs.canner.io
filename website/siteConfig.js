@@ -40,7 +40,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'why-canner', label: 'Why?'},
-    {doc: 'start-quick-firebase', label: 'Docs'},
+    {doc: 'start-quick-intro', label: 'Docs'},
     {doc: 'guides-basic-setup', label: 'Community'},
     {doc: 'api-canner-script', label: 'API'},
     {href: "http://antd-cms-component.canner.io/", external: true, label: "Components"},

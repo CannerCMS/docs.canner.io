@@ -1,12 +1,18 @@
 {
   "docs": {
     "Quick start": [
+      "start-quick-intro",
       "start-quick-firebase"
     ],
     "Guides": [
       "guides-writing-schema",
       "guides-connector",
       "guides-resolver"
+    ],
+    "Tutorial": [
+      "tutorial-customize-string-component",
+      "tutorial-customize-array-component",
+      "tutorial-customize-object-component"
     ],
     "Advanced": [
       "advance-canner-script",

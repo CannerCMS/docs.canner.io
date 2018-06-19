@@ -1,5 +1,5 @@
 ---
-id: tutorial-array-component
+id: tutorial-customize-array-component
 title: Customize array component
 sidebar_label: Customize array component
 ---

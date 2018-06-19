@@ -1,5 +1,5 @@
 ---
-id: tutorial-string-component
+id: tutorial-customize-string-component
 title: Customize string component
 sidebar_label: Customize string component
 ---

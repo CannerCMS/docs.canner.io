@@ -1,5 +1,5 @@
 ---
-id: tutorial-object-component
+id: tutorial-customize-object-component
 title: Customize object component
 sidebar_label: Customize object component
 ---
