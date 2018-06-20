@@ -82,7 +82,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href="https://www.canner.io">Back to CannerIO</Button>
-            <Button href={docUrl('start-installation.html', language)}>Get started</Button>
+            <Button href={docUrl('start-quick-firebase.html', language)}>Get started</Button>
             <Button href={"https://framework.canner.io"} target="_blank">Open source</Button>
           </PromoSection>
         </div>
