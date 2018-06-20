@@ -134,20 +134,6 @@ sidebar_label: canner
     </td>
   </tr>
   <tr>
-    <td>imageServiceConfigs</td>
-    <td><code>Object</code></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>layouts</td>
-    <td>
-      <code>
-      {[string]: React.ComponentType<*>}
-      </code>
-    </td>
-    <td></td>
-  </tr>
-   <tr>
     <td>baseUrl</td>
     <td>
       <code>
@@ -156,7 +142,7 @@ sidebar_label: canner
     </td>
     <td></td>
   </tr>
-   <tr>
+  <tr>
     <td>history</td>
     <td>
       <code>
@@ -168,7 +154,7 @@ sidebar_label: canner
     </td>
     <td></td>
   </tr>
-   <tr>
+  <tr>
     <td></td>
     <td></td>
     <td></td>

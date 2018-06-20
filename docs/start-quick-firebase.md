@@ -72,7 +72,7 @@ You only need to create a file called `canner.schema.js` to complete your CMS.
 
 `canner.schema.js` defines how your CMS and data structure looks like, and how your CMS should connect to your sources.
 
-> Learn how to write [`canner.schema.js`](file-canner-schema-js)
+> Learn how to [write schema](guides-writing-schema)
 
 > By default, you have to put `canner.schema.js` in the root of your project.
 
