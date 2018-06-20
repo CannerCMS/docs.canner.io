@@ -90,7 +90,7 @@ class Footer extends React.Component {
         </section>
 
         <div style={{textAlign: 'center'}}>
-          <a href={"https://www.canner.io"} target="_blank">
+          <a href={"/"}>
             {this.props.config.footerIcon && (
               <img
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
