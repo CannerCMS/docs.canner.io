@@ -41,11 +41,15 @@
   },
   "community": {
     "Guides": [
+      "guides-community-intro",
       "guides-basic-setup",
       "guides-canner-schema-loader",
       "guides-image-upload",
       "guides-community-connector",
       "guides-community-resolver"
+    ],
+    "Tutorial": [
+      "tutorial-community-firebase"
     ],
     "Advanced": [
       "advance-canner-cms",
@@ -68,16 +72,6 @@
       "api-cms-core",
       "api-cms-helpers",
       "api-toolbar"
-    ]
-  },
-  "tutorial": {
-    "Get started": [
-      "tutorial-community-firebase"
-    ],
-    "CMS component": [
-      "tutorial-string-component",
-      "tutorial-object-component",
-      "tutorial-array-component"
     ]
   },
   "why": {

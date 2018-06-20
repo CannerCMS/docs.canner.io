@@ -71,6 +71,8 @@
     "Setup canner-schema-loader": "Setup canner-schema-loader",
     "guides-community-connector": "Connector",
     "Connector": "Connector",
+    "guides-community-intro": "Introduction",
+    "Introduction": "Introduction",
     "guides-connector": "Connector",
     "guides-image-upload": "Image upload settings",
     "Image upload settings": "Image upload settings",
@@ -80,7 +82,6 @@
     "start-quick-firebase": "How to Firebase - Realtime database",
     "Firebase - Realtime database": "Firebase - Realtime database",
     "start-quick-intro": "Introduction",
-    "Introduction": "Introduction",
     "tips-schema": "Tips for CMS schema",
     "Schema": "Schema",
     "tutorial-community-firebase": "Firebase CMS (Community edition)",
@@ -116,8 +117,6 @@
     "Files": "Files",
     "Tips": "Tips",
     "Concept": "Concept",
-    "Get started": "Get started",
-    "CMS component": "CMS component",
     "Why Canner": "Why Canner"
   },
   "pages-strings": {

@@ -48,8 +48,8 @@ class Footer extends React.Component {
             <a href={this.docUrl('start-installation.html')}>
               Getting Started
             </a>
-            <a href={"https://framework.canner.io/docs/guides-basic-setup.html"}>
-              Open Source Documentation
+            <a href={this.docUrl('guides-community-intro.html')}>
+              Community Edition
             </a>
           </div>
           <div>

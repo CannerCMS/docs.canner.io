@@ -41,7 +41,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-intro', label: 'Docs'},
-    {doc: 'guides-basic-setup', label: 'Community'},
+    {doc: 'guides-community-intro', label: 'Community'},
     {doc: 'api-canner-script', label: 'API'},
     {href: "http://antd-cms-component.canner.io/", external: true, label: "Components"},
     {href: "https://github.com/Canner/canner", external: true, label: "GitHub"},
