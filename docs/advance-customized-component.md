@@ -8,6 +8,10 @@ sidebar_label: Customized CMS components
 
 Use `packageName` to select your customized component to handle the data.
 
+> packageName **must** be a literal string, cannot be a variable.
+
+> If you want to load your package in your file system, you must use **relative or absolute path** start with `./` or `/`. Otherwise, it will be treated as a package in `node_modules`.
+
 
 ***npm package***
 
