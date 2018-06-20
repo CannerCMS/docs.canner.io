@@ -31,7 +31,7 @@ export default (
 
 CMS UI components are categorized into `Array`, `Boolean`, `Number`, `Object`, `String`. For more specialized uses, there are some speical types such as `Date`, `File`, `GeoPoint`, etc....
 
-> See the whole list here: [Canner CMS component](https://canner.github.io/antd-cms-component-docs/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See the supported list here: [Canner CMS component](https://canner.github.io/antd-cms-component-docs/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 Each type has a default UI, for `string` it's default UI is an `input`. For `array`, is a `tab`.
 

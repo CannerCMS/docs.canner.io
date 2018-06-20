@@ -48,8 +48,8 @@ Choose the app url you want.  And you'll see a new `.cannerrc` in your folder. I
 
 In your project folder, you have to install two more packages that will be used later.
 
-> `canner-script`: is the core library of how you define your CMS data structure and appearance. [Learn more](https://framework.canner.io/docs/advance-canner-script.html)
-> `canner-graphql-interface`: is the library that tells how to connect to your data sources. [Learn more](https://framework.canner.io/docs/guides-connector.html)
+- `canner-script`: is the core library of how you define your CMS data structure and appearance. [Learn more](advance-canner-script.html)
+- `canner-graphql-interface`: is the library that tells how to connect to your data sources. [Learn more](guides-connector.html)
 
 ```
 npm install canner-script canner-graphql-interface
