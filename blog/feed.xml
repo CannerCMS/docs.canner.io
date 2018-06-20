@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>CannerIO v2 (alpha) Blog</title>
+        <link>https://www.canner.io/blog</link>
+        <description>The best place to stay up-to-date with the latest CannerIO v2 (alpha) news and events.</description>
+        <lastBuildDate>Mon, 28 May 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>CannerIO v2 (alpha) Blog</title>
+            <url>https://www.canner.io/img/icon.png</url>
+            <link>https://www.canner.io/blog</link>
+        </image>
+        <copyright>Copyright © 2018 CannerIO.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[CannerIO 2.0 & Open source Canner]]></title>
+            <link>https://www.canner.io/blog/2018/05/28/cannerio-2.html</link>
+            <guid>https://www.canner.io/blog/2018/05/28/cannerio-2.html</guid>
+            <pubDate>Mon, 28 May 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Today, our team at Canner, Inc. is thrilled to announce our <strong><a href="https://www.canner.io">CannerIO 2.0 alpha version</a> and <a href="https://framework.canner.io">Open source Canner alpha</a> is now release</strong>! 🎉🎉 This is our biggest release so far! 🤡</p>
+<p>What's new?</p>
+<p><strong><em>Everything in CannerIO 2.0 is new</em></strong>! We redesign almost everything! But don't worry we support all previous versions!</p>
+<p>Here's an overview of the major changes <strong>pricing</strong>, <strong>UI &amp; UX redesign</strong>, <strong>CMS framework redesign</strong>, <strong>Open source</strong>, <strong>Standalone login page</strong>, <strong>New documentation website</strong>.</p>
+<p>In this post, we are going through the details of this release!</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
