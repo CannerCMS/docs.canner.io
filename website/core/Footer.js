@@ -42,7 +42,7 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
-            <a href={"/docs/why-canner.html"}>
+            <a href={this.docUrl('why-canner.html')}>
               Why Canner?
             </a>
             <a href={this.docUrl('start-quick-intro.html')}>
