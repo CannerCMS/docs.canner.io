@@ -43,7 +43,7 @@ const siteConfig = {
     {doc: 'start-quick-intro', label: 'Docs'},
     {doc: 'guides-community-intro', label: 'Community'},
     {doc: 'api-canner-script', label: 'API'},
-    {href: "http://antd-cms-component.canner.io/", external: true, label: "Components"},
+    {href: "/component", label: "Components"},
     {href: "https://github.com/Canner/canner", external: true, label: "GitHub"},
     // {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
@@ -87,7 +87,7 @@ const siteConfig = {
     theme: 'atom-one-dark',
   },
 
-  usePrism: ['jsx', 'js', 'sh'],
+  usePrism: ['jsx', 'js', 'sh', 'json'],
 
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js'],

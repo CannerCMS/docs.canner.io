@@ -11,7 +11,34 @@ By assigning `connector` to schema, the requests from view layer will be handled
 * `create`: `create` function should return payload that will be passed to connector's create method.
 * `update`: `update` function should return payload that will be passed to connector's update method.
 
-For example:
+## Usage
+
+**Only first level tags in `<root/>`** can have a prop called resolver.
+
+
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
+
+export default (
+  <root>
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      connector={connector}
+      resolver={resolver}> // -----> setup resolver
+      <string title="Your name" keyName="name"/>
+    </object>
+    <array
+      keyName="list"
+      title="Products"
+      connector={connector2}
+      resolver={resolver}> // -----> setup resolver
+      <string title="Product name" keyName="name"/>
+    </array>
+  </root>
+)
+```
 
 ### Virtual Field
 We can create a virtual field that is composed of existing fields that are not saved to a DB.

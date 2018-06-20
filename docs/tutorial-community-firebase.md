@@ -135,11 +135,9 @@ And replace it in `src/app/config/firebase.ts` in your project.
 
 Now, create your own CMS!
 
-You'll find three files called `canner.schema.js`, `canner.resolver.js`, `canner.connector.js`. Rewrite with your own settings.
+You'll find a file called `canner.schema.js`. Rewrite with your own settings.
 
-> Learn to [write schema](advance-canner-script.md)
-> Learn to [write connector](guides-connector.md)
-> Learn to [write resolver](guides-resolver.md)
+> Learn to [write schema](guides-write-schema.md)
 
 If you want to try for now, you could use default scripts.
 

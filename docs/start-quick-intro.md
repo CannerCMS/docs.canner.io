@@ -12,9 +12,7 @@ Canner make **CMS simple and easy**. Here is what we discover.
 
 So we design an CMS framework that you can build CMS with only few lines of code and interact with different data sources.
 
-You only need to upload a XML-like(**JSX**) syntax, to create any kind and form of applications. Our CMS has built CMS for websites, mobile apps, and even chatbot applications.
-
-Amazingly, you can building a **blog CMS within 200 lines of code**, as for **basic E-commerce CMS within 300 lines of code** using Canner.
+You only need to upload a XML-like(**JSX**) syntax, to create any kind and form of applications. Our CMS has built CMS for websites, mobile apps, and even chatbot applications.  Amazingly, you can building a **blog CMS within 200 lines of code**, as for **basic E-commerce CMS within 300 lines of code** using Canner.
 
 > Want to learn more about [why use Canner](why-canner.md) and [mission](why-mission.md)
 

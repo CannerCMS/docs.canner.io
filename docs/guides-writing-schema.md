@@ -1,20 +1,35 @@
 ---
 id: guides-writing-schema
-title: Writing CMS schema
-sidebar_label: Writing CMS schema
+title: CMS Schema
+sidebar_label: CMS Schema
 ---
 
 ## Introduction
 
 Unlike other CMS solutions, Canner CMS provides components for developers to pick and assemble components that fit their needs.
 
-A ***CMS schema*** is constructed with the `jsx` syntax, describing the structure of the source data, and what the CMS UI should expect in certain fields.
+A ***CMS schema*** is constructed with the `jsx` syntax, describing the structure of the source data, how to connect to your service, and what the CMS UI should expect in certain fields.
 
 > Normally, CMS schema is stored in `canner.schema.js` file.
 
 ## The root
 
-All schema's root should wrapped by `<root/>` component
+All schema's root should wrapped by `<root/>` component, you have to also setup [connector](guides-connector.md) to define how CMS connect to your source.
+
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
+
+export default (
+  <root connector={connector}>
+    // {... your schema}
+  </root>
+)
+```
+
+### First level tags
+
+The first level tags of `<root/>` must be eithor `<object/>` or `<array/>`, first level tags will eventually become CMS's tabs.  If you want to setup different connector in different tab you could set connectors individually. Moreover, you could to customize how CMS resolve your data pass [resolver](guides-resolver.md) prop into your tabs.
 
 ```jsx
 /** @jsx builder */
@@ -22,16 +37,31 @@ import builder from 'canner-script';
 
 export default (
   <root>
-    // {... your schema}
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      connector={connector}
+      resolver={resolver}>
+      <string title="Your name" keyName="name"/>
+    </object>
+    <array
+      keyName="list"
+      title="Products"
+      connector={connector2}
+      resolver={resolver}>
+      <string title="Product name" keyName="name"/>
+    </array>
   </root>
 )
 ```
+
+> Learn more about [connector](guides-connector.md) and [resolver](guides-resolver.md)
 
 ## Define CMS UI
 
 CMS UI components are categorized into `Array`, `Boolean`, `Number`, `Object`, `String`. For more specialized uses, there are some speical types such as `Date`, `File`, `GeoPoint`, etc....
 
-> See the supported list here: [Canner CMS component](https://canner.github.io/antd-cms-component-docs/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See the supported list here: [Canner CMS component](/component/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 Each type has a default UI, for `string` it's default UI is an `input`. For `array`, is a `tab`.
 

@@ -58,26 +58,6 @@ schema will be something like this:
 
 > see more guides of compile schema in [Compile schema section](concept-compile-canner-schema.md) 
 
-
-### `endpoints` props
-
-`endpoints` is a object, and the values of each key in the object must be an `Endpoint` instance.
-
-```js
-// types
-{
-  [key: string]: Endpoint
-}
-// e.g.
-{
-  info: new MyEndpoint()
-}
-```
-
-Canner provides different adapters (`Endpoint` classes) for developers to connect CMS to different data sources seamlessly.
-
-Every `Endpoint` will at least have six methods `getArray`, `createArray`, `updateArray`, `deleteArray`, `updateObject`, `getObject`. These methods explicitly define how to fetch and update data from sources. For example, [localStorage endpoint](https://github.com/Canner/react-cms-core/blob/master/src/provider/endpoint/localstorage.js)
-
 ## Generator
 
 `Generator` component uses [`componenetTree`](concept-component-tree.md) to render the CMS user interface. Internally, we split into two stages: `prerender` and `render`.

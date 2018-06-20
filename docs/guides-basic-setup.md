@@ -32,9 +32,13 @@ $ yarn add -D canner-schema-loader
 ```js
 // ...
 rules: [{
-  test: /canner\.schema\.js$/,
+  test: /(\.schema\.js|canner\.def\.js)$/,
   use: [
-    {loader: 'canner-schema-loader'}
+    {
+      loader: 'canner-schema-loader'
+    }, {
+      loader: 'babel-loader',
+    }]
   ],
 }]
 // ...

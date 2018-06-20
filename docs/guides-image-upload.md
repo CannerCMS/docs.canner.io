@@ -4,24 +4,74 @@ title: Image upload settings
 sidebar_label: Image upload settings
 ---
 
-## Imgur
+Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `<root/>`**. `storage` must be a object generated from https://github.com/Canner/image-service-config
 
-### Setup `IMGUR_CLIENT_ID` in webpack
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
 
- Canner CMS uses Imgur as the default image storage, so you have to provide an available `IMGUR_CLIENT_ID` to make it work. Alternatively, you can setup image storage to Firebase storage.
-
-> Furthur Information
-> - [Get Imgur's clinet ID](https://api.imgur.com/#registerapp)
-
-```js
-plugins: [
-  new webpack.DefinePlugin({
-    IMGUR_CLIENT_ID: JSON.stringify(process.env.IMGUR_CLIENT_ID)
-  })
-]
+export default (
+  <root>
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      storage={storage} // -------> your storage settings
+      connector={connector}
+      resolver={resolver}>
+      <string title="Your name" keyName="name"/>
+    </object>
+    <array
+      keyName="list"
+      title="Products"
+      storage={storage} // -------> your storage settings
+      connector={connector2}
+      resolver={resolver}>
+      <string title="Product name" keyName="name"/>
+    </array>
+  </root>
+)
 ```
 
-## Firebase
+## Imgur
+
+Upload image to [Imgur](https://imgur.com/).
+
+> Learn more [ImgurService](https://github.com/Canner/image-service-config#imgurservice-imgur)
+
+```js
+import {ImgurService} from '@canner/image-service-config';
+
+const imageService = new ImgurService({
+  clientId, // https://apidocs.imgur.com/
+  mashapeKey // https://market.mashape.com/imgur/imgur-9#image-upload
+});
+
+const serviceConfig = imageService.getServiceConfig();
+// {
+//   name: "image",
+//   accept: "image/*",
+//   action: "https://api.imgur.com/3/image",
+//   headers: {
+//     Authorization: `Client-ID <YOUR CLIENTID>`,
+//     "X-Requested-With": null 
+//    }
+// }
+
+export default (
+  <root>
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      storage={serviceConfig} // -------> your storage settings
+      connector={connector}
+      resolver={resolver}>
+      <string title="Your name" keyName="name"/>
+    </object>
+  </root>
+)
+```
+
+## Firebase Client
 
 Enable Firebase storage to store your images, you can new a `FirebaseClientService` instance and pass to prop `imageServiceConfigs` into `<CMS>` component.
 
@@ -29,6 +79,8 @@ Enable Firebase storage to store your images, you can new a `FirebaseClientServi
 > Learn more about [FirebaseClientService](https://github.com/Canner/image-service-config#firebaseclientservice-firebase-js-sdk)
 
 ```js
+/** @jsx builder */
+import builder from 'canner-script';
 import {FirebaseClientService} from '@canenr/imager-service-config';
 import firebase from 'firebase';
 
@@ -43,12 +95,17 @@ const imageService = new FirebaseClientService({
 
 const serviceConfig = imageService.getServiceConfig();
 
-
-// ... render
-<CMS
-  imageServiceConfigs={{
-    posts: serviceConfig
-  }}
->
+export default (
+  <root>
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      storage={serviceConfig} // -------> your storage settings
+      connector={connector}
+      resolver={resolver}>
+      <string title="Your name" keyName="name"/>
+    </object>
+  </root>
+)
 
 ```

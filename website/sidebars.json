@@ -7,7 +7,8 @@
     "Guides": [
       "guides-writing-schema",
       "guides-connector",
-      "guides-resolver"
+      "guides-resolver",
+      "guides-image-upload"
     ],
     "Tutorial": [
       "tutorial-customize-string-component",
@@ -29,8 +30,6 @@
     "Files": [
       "file-canner-data-js",
       "file-canner-schema-js",
-      "file-canner-connector-js",
-      "file-canner-resolver-js",
       "file-cert",
       "file-cannerrc",
       "file-canner-image-uploaded"
@@ -43,10 +42,7 @@
     "Guides": [
       "guides-community-intro",
       "guides-basic-setup",
-      "guides-canner-schema-loader",
-      "guides-image-upload",
-      "guides-community-connector",
-      "guides-community-resolver"
+      "guides-canner-schema-loader"
     ],
     "Tutorial": [
       "tutorial-community-firebase"

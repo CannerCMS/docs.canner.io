@@ -4,7 +4,7 @@ title: How to Firebase - Realtime database
 sidebar_label: Firebase - Realtime database
 ---
 
-> NOTE: We only support for Firebase realtime database at this moment
+> NOTE: We are not supporting **Firestore** at this moment
 
 ## 1. Install Canner CLI
 
@@ -12,13 +12,13 @@ Make sure you have already install NodeJS and use the command below to install `
 
 > While we recommend Node 8.x or greater, your Node version must at least 6.x.
 
-```
+```sh
 npm install -g @canner/cli
 ```
 
 You should now have a global canner command available from any terminal window on your machine. Once you've installed Canner CLI, sign in using your Canner account:
 
-```
+```sh
 canner login
 ```
 
@@ -28,13 +28,13 @@ After logging in, it will store a token on your machine to validate login inform
 
 To use `Canner CLI` in your own project, go in current project folder and run the command:
 
-```
+```sh
 canner init
 ```
 
 It will ask you whether select existing apps or create new one.
 
-```
+```sh
 ? Create an new app or select from existed apps (Use arrow keys)
 ❯ Select from existed apps
   Create a new app
@@ -51,7 +51,7 @@ In your project folder, you have to install two more packages that will be used 
 - `canner-script`: is the core library of how you define your CMS data structure and appearance. [Learn more](advance-canner-script.html)
 - `canner-graphql-interface`: is the library that tells how to connect to your data sources. [Learn more](guides-connector.html)
 
-```
+```sh
 npm install canner-script canner-graphql-interface
 ```
 
@@ -68,24 +68,18 @@ Go to **Project settings** > **Service accounts** > **Generate new private key**
 
 ## 5. Prepare files
 
-There are three required files `canner.schema.js`, `canner.connector.js` and `canner.resolver.js`.
+You only need to create a file called `canner.schema.js` to complete your CMS.
 
-`canner.schema.js` defines how your CMS and data structure looks like.
+`canner.schema.js` defines how your CMS and data structure looks like, and how your CMS should connect to your sources.
 
-> - Learn how to write [`canner.schema.js`](file-canner-schema-js)
+> Learn how to write [`canner.schema.js`](file-canner-schema-js)
 
-`canner.connector.js` defines how to connect to your data sources.
-> - Learn how to write [`canner.connector.js`](file-canner-connector-js)
-
-`canner.resolver.js` defines customize data API in your data flow.
-> - Learn how to write [`canner.resolver.js`](file-canner-resolver-js)
-
-> By default, you have to put `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` in the root of your project.
+> By default, you have to put `canner.schema.js` in the root of your project.
 
 
 ## 6. Deploy
 
-After writing your `canner.schema.js`, `canner.resolver.js`, `canner.connector.js` you could deploy your script to CannerIO through our CLI tool by entering
+After writing your `canner.schema.js` you could deploy your script to CannerIO through our CLI tool by entering
 
 ```sh
 canner script:deploy

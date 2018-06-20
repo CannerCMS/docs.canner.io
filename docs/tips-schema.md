@@ -6,9 +6,9 @@ sidebar_label: Schema
 
 ## Schema as modules
 
-In real world use cases, schema can't be simple as the example above, so you could seperate them to several files.
+In real world use cases, schema can be really complex, you could seperate them to several files to help you build maintainable code.
 
-> Note that, files should also end with `*.schema.js`
+> Note that, files must end with `*.schema.js`
 
 ***info.schema.js***
 
@@ -43,7 +43,7 @@ One of common tips for building CMS schema, is to wrap partial reusable componen
 
 > Remember to pass the correct attributes with `attributes` and `children`. 
 
-```javascript
+```jsx
 const Img = ({attributes, children}) => (
   <object keyName={attributes.keyName}>
     <string keyName="imageName" title="imageName" />
@@ -58,7 +58,7 @@ const Img = ({attributes, children}) => (
 
 Data will be like
 
-```js
+```json
 {
   myImage: {
     imageName: string,

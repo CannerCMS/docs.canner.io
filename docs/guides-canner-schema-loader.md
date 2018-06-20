@@ -10,25 +10,32 @@ Canner CMS provides sugar syntax in JSX called `canner-script`, JSX is deconstru
 
 > The reason we want to compile through webpack is to prevent redundant executions in runtime, which can boost speed and more intuitive development flow.
 
-First of all add a new loader in your webpack configuration. Remember to install `canner-schema-loader`
+First of all add a new loader in your webpack configuration. Remember to install `canner-schema-loader` and `babel-loader`
 
 ```js
-// webpack.config.js
+// ...
 rules: [{
-  test: /\.schema\.js$/,
+  test: /(\.schema\.js|canner\.def\.js)$/,
   use: [
-    {loader: 'canner-schema-loader'}
+    {
+      loader: 'canner-schema-loader'
+    }, {
+      loader: 'babel-loader',
+    }]
   ],
 }]
+// ...
 ```
 
 ***canner.schema.js***
 ```js
-module.exports = <root>
-  <object keyName="info">
-    <string keyName="name" title="Name" />
-  </object>
-</root>
+module.exports = (
+  <root>
+    <object keyName="info">
+      <string keyName="name" title="Name" />
+    </object>
+  </root>
+)
 ```
 
 **CMS**

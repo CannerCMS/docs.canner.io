@@ -93,7 +93,7 @@ string
 
 ***Example***
 
-```
+```sh
 2018-05-15T08:28Z
 ```
 
@@ -107,7 +107,7 @@ string
 - lng: longtitude
 - placeId: google map placeId
 
-```js
+```json
 {
   lat: number,
   lng: number,
@@ -117,7 +117,7 @@ string
 
 ***Example***
 
-```js
+```json
 {
   lat: 33.9259554,
   lng:  -118.38406509999999,
@@ -138,7 +138,7 @@ Static files that are not included in image types, such as pdf, csv, etc....
 
 ***Data type:***
 
-```js
+```json
 {
   contentType: string,
   name: string,
@@ -149,7 +149,7 @@ Static files that are not included in image types, such as pdf, csv, etc....
 
 ***Example***
 
-```js
+```json
 {
   contentType: "video/mp4",
   name: "cool.mp4",
