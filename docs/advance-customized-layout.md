@@ -52,7 +52,11 @@ Using your customized layout is as easy as defining it in the `name` prop in `<L
 
 import builder, {Layout} from '@canenr/canner-script';
 
-const Tabs = props => <Layout name="tabs" {...props} />;
+import CustomizeTabsLayout from 'path/to/tabs';
+
+// customize layout 
+const Tabs = props => <Layout component={CustomizeTabsLayout} {...props} />;
+
 
 module.exports = (
   <root>
@@ -74,26 +78,3 @@ module.exports = (
   </root>
 );
 ```
-## layout prop in &lt;CMS/&gt;
-
-Declare customized layout namespace by passing key name in the layout prop.
-
-> Notice that the **key** of the layout object should be the same as the `name` as Layout name property you define in the `schema.js`.
-
-```js
-// cms.js
-import {CMS} from 'canner';
-import MyCardLayout from 'path/to/card';
-
-class Example extends React.Component {
-  render() {
-    return (
-      <CMS
-        {...otherProps}
-        layout={{
-          card: MyCardLayout
-        }}
-      />
-    )
-  }
-}

@@ -57,23 +57,25 @@ import c, {Collapse, Block, Tabs, Left, Right} from 'canner-script';
 
 Canner CMS will add default layouts for your CMS. 
 
-### First level in `<root/>`
+### First level in &lt;root/&gt;
 
 Canner will wrap first level component into `Body` layout. 
 
-### Second level in `<root/>`
+### Second level in &lt;root/&gt;
 
 Components will be categorized by their types, see [detail rules](https://github.com/Canner/canner-script/blob/master/src/visitors/layer1-2Fieldset.js).
 
 
 ## Customized Layout
 
-You can add customized layout components through the `layout` props of the component <code>&lt;CannerCMS /&gt;</code>
+You can add customized layout components through the `component` props in `<Layout/>`
 
 ```jsx
+
+import CustomizeCardLayout from 'path/to/card';
 // canner.schema.js
 // customize layout 
-const Card = props => <Layout name="card" {...props} />;
+const Card = props => <Layout component={CustomizeCardLayout} {...props} />;
 
 module.exports = <root>
   <object>
@@ -86,28 +88,6 @@ module.exports = <root>
     </Card>
   </object>
 </root>
-```
-
-Declare customized layout namespace by passing key name in layout prop.
-
-```js
-// cms.js
-import {CMS} from 'canner';
-import MyCardLayout from 'path/to/card';
-
-class Example extends React.Component {
-  render() {
-    return (
-      <CMS
-        {...otherProps}
-        layout={{
-          Card: MyCardLayout
-        }}
-      />
-    )
-  }
-}
-
 ```
 
 > More customize layout techniques, see [Advance customized layout](advance-customized-layout.md)
