@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Actions in CMS · CannerIO v2 (alpha)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta property="og:title" content="Actions in CMS · CannerIO v2 (alpha)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="CannerIO v2 (alpha) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="CannerIO v2 (alpha) Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-12', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="CannerIO v2 (alpha)"/><h2 class="headerTitleWithLogo">CannerIO v2 (alpha)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/why-canner.html" target="_self">Why?</a></li><li class=""><a href="/docs/start-quick-intro.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/guides-basic-setup.html" target="_self">Community</a></li><li class=""><a href="/docs/api-canner-script.html" target="_self">API</a></li><li class=""><a href="http://antd-cms-component.canner.io/" target="_blank">Components</a></li><li class=""><a href="https://github.com/Canner/canner" target="_blank">GitHub</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Concept</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Guides</h3><ul><li class="navListItem"><a class="navItem" href="/docs/guides-basic-setup.html">Basic setups</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-canner-schema-loader.html">Setup canner-schema-loader</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-image-upload.html">Image upload settings</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-community-connector.html">Connector</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-community-resolver.html">Resolver</a></li></ul></div><div class="navGroup navGroupActive"><h3>Advanced</h3><ul><li class="navListItem"><a class="navItem" href="/docs/advance-canner-cms.html">Canner CMS</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-cms-helpers.html">CMS component helpers</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-cms-test.html">Test CMS components</a></li></ul></div><div class="navGroup navGroupActive"><h3>Concept</h3><ul><li class="navListItem"><a class="navItem" href="/docs/concept-refid.html">What is RefId?</a></li><li class="navListItem"><a class="navItem" href="/docs/concept-compile-schema.html">Compile schema</a></li><li class="navListItem"><a class="navItem" href="/docs/concept-component-tree.html">ComponentTree</a></li><li class="navListItem"><a class="navItem" href="/docs/concept-hocs.html">High order components</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/concept-action.html">Actions in CMS</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Actions in CMS</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Every action users make in the CMS fields will create a new <code>Action</code>, which the Canner CMS uses to mutate internal data storage. It looks like actions in Redux, every action is an object with two fields, <code>type</code> and <code>payload</code>.</p>
+<blockquote>
+<p><a href="https://github.com/Canner/react-cms-core/tree/master/src/app/actions">Source code</a> of actions in CMS.</p>
+</blockquote>
+<p><strong>interface</strong></p>
+<pre><code class="hljs css languages- js"><span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">'CREATE_ARRAY'</span> <span class="token operator">|</span> <span class="token string">'UPDATE_ARRAY'</span> <span class="token operator">|</span> <span class="token string">'DELETE_ARRAY'</span> <span class="token operator">|</span> <span class="token string">'UPDATE_OBJECT'</span> <span class="token operator">|</span> <span class="token string">'CREATE_AND_CONNECT'</span> <span class="token operator">|</span> <span class="token string">'CONNECT'</span> <span class="token operator">|</span> <span class="token string">'DISCONNECT'</span> <span class="token operator">|</span> <span class="token string">'DISCONNECT_AND_DELETE'</span> <span class="token operator">|</span> <span class="token string">'NOOP'</span><span class="token punctuation">;</span>
+  payload<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    id<span class="token operator">?</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+    key<span class="token operator">?</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+    path<span class="token operator">?</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+    value<span class="token operator">?</span><span class="token punctuation">:</span> any
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><code>key</code>: First level object's key of the data.</li>
+<li><code>id</code>: If it's a array type data, it will need to have <code>id</code> key to indicate which item in the array should be updated or deleted</li>
+<li><code>path</code>: After navigating to the data of selected <code>key</code> and <code>id</code>, it'll locate the data using this path.</li>
+<li><code>value</code>: New value</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="mutate"></a><a href="#mutate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mutate</h2>
+<p>The mutate function is just like reducer in Redux. When called with two arguments <code>originValue</code> and <code>action</code>, it will return a new value.</p>
+<h2><a class="anchor" aria-hidden="true" id="actionmanager"></a><a href="#actionmanager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ActionManager</h2>
+<p>To support features in CMS such as <strong>reset changes</strong>, <strong>deploy changes</strong>, we can't directly modify original value that are fetched from server, we have to record the actions internally. We use <code>ActionManager</code> to manage actions. For examples, removing the action queue in ActionManager will reset all changes!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/concept-hocs.html">← High order components</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#mutate">Mutate</a></li><li><a href="#actionmanager">ActionManager</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+            ((window.gitter = {}).chat = {}).options = {
+              room: 'Canner/CannerCMS'
+            };
+
+            const script = document.createElement("script");
+
+            script.src = "https://sidecar.gitter.im/dist/sidecar.v1.js";
+            script.async = true;
+            script.defer = true;
+
+            document.body.appendChild(script);
+            </script><section class="sitemap"><div><h5>Docs</h5><a href="https://framework.canner.io/docs/why-canner.html">Why Canner?</a><a href="/docs/start-installation.html">Getting Started</a><a href="https://framework.canner.io/docs/guides-basic-setup.html">Open Source Documentation</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a target="_blank" href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link">Project Chat</a><a href="https://twitter.com/CannerIO" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://www.canner.io/">CannerIO</a><a href="https://github.com/canner">GitHub</a><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><div style="text-align:center"><a href="https://www.canner.io" target="_blank"><img src="/img/logo-word-white.png" alt="CannerIO v2 (alpha)"/></a></div><section class="copyright">Copyright © 2018 CannerIO.  Canner, Inc.</section></footer></div></body></html>
