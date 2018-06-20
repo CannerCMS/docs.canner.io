@@ -116,7 +116,7 @@ As for editor
 <object keyName="editor" ui="editor"/>
 ```
 
-> See all [UI list here](http://antd-cms-component.canner.io/)
+> See all [UI list here](/component/)
 
 ### CMS structure as code
 
