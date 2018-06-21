@@ -9,6 +9,10 @@ Yesterday, GraphQL Taiwan meetup hosted by [GraphQL Taiwan](https://www.facebook
 
 <!--truncate-->
 
+## Resource
+* [Opensource Canner Document](https://www.canner.io/docs/guides-community-intro.html)
+* [Canner Github](https://github.com/Canner/canner)
+
 ## Slide
 <script async class="speakerdeck-embed" data-id="32ef63f2e3ff417994e6962bf78fd40e" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
