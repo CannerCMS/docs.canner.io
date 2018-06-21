@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
-    <title>CannerIO v2 (alpha) Blog</title>
-    <updated>2018-05-28T06:00:00Z</updated>
+    <title>Canner (alpha) Blog</title>
+    <updated>2018-06-21T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest CannerIO v2 (alpha) news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest Canner (alpha) news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 CannerIO.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Canner.io at Graphql Taiwan Meetup Recap]]></title>
+        <id>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</id>
+        <link href="https://www.canner.io/blog/2018/06/21/graphql-meetup.html">
+        </link>
+        <updated>2018-06-21T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Yesterday, GraphQL Taiwan meetup hosted by <a href="https://www.facebook.com/groups/graphql.tw/">GraphQL Taiwan</a> took place in Taipei, Taiwan, around 50 participants attended. As CTO at <a href="www.canner.io">Canner</a>, I'm glad to share what our team Canner's experienced with GraphQL on this meetup.</p>
+]]></summary>
+        <author>
+            <name>William Chang</name>
+            <uri>http://twitter.com/wwwy3y3</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CannerIO 2.0 & Open source Canner]]></title>
         <id>https://www.canner.io/blog/2018/05/28/cannerio-2.html</id>
