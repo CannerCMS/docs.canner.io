@@ -77,7 +77,7 @@ sidebar_label: Commands
     <td>Options</td>
   </tr>
   <tr>
-    <td>script:deploy</td>
+    <td>script:deploy [filename]</td>
     <td>
       Deploy your <a href="#cannerschemajs"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
     </td>
@@ -89,7 +89,9 @@ sidebar_label: Commands
   </tr>
 </table>
 
-## Schema [Old version]
+## Schema [Canner v1 out-of-date]
+
+> Looking for v1 document? Visit [http://docs.v1.canner.io/](http://docs.v1.canner.io/)
 
 These command is used in older version of Canner
 

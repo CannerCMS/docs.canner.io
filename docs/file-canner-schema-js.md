@@ -43,3 +43,22 @@ export default (
   </root>
 )
 ```
+
+## Customize file naming
+
+You could using CLI tool to indicate the filename.
+
+```sh
+canner script:deploy [filename]
+```
+
+If you want to use your own file naming, you could modify by adding key `schema` in `.cannerrc`
+
+In `.cannerrc`
+
+```js
+{
+  ...
+  schema: '<path to your>/custom.schema.js'
+}
+```
