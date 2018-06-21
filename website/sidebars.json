@@ -2,9 +2,10 @@
   "docs": {
     "Quick start": [
       "start-quick-intro",
-      "start-quick-firebase"
+      "start-quick-html5up"
     ],
     "Guides": [
+      "start-quick-firebase",
       "guides-writing-schema",
       "guides-connector",
       "guides-resolver",
@@ -23,6 +24,7 @@
       "advance-customized-layout"
     ],
     "CLI": [
+      "cli-install",
       "cli-import-firebase",
       "cli-upload-image",
       "cli-commands"

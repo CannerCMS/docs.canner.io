@@ -4,6 +4,20 @@ title: Commands
 sidebar_label: Commands
 ---
 
+## Install
+
+You'll need `npm` and `nodeJS`. And enter
+
+```sh
+npm install -g @canner/cli
+```
+
+to install your CLI tool. After install CLI tool you can use it by enter
+
+```sh
+canner
+```
+
 ## Administrative
 
 <table>
