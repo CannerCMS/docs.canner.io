@@ -5,7 +5,7 @@ authorURL: http://twitter.com/wwwy3y3
 authorFBID: 100001527041881
 ---
 
-Yesterday, GraphQL Taiwan meetup hosted by [GraphQL Taiwan](https://www.facebook.com/groups/graphql.tw/) took place in Taipei, Taiwan, around 50 participants attended. As CTO at [Canner](www.canner.io), I'm glad to share what our team Canner's experienced with GraphQL on this meetup.
+Yesterday, GraphQL Taiwan meetup hosted by [GraphQL Taiwan](https://www.facebook.com/groups/graphql.tw/) took place in Taipei, Taiwan, around 50 participants attended. As CTO of [Canner](www.canner.io), I'm glad to share what our team Canner's experienced with GraphQL on this meetup.
 
 <!--truncate-->
 
