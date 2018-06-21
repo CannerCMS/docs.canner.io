@@ -85,19 +85,6 @@ const connector = new FirebaseRtdbClientConnector({
 });
 ```
 
-### PrismaClient
-
-Connect to [Prisma](https://www.prisma.io/) service
-
-**Usage:**
-
-```js
-import {PrismaClient} from "canner-graphql-interface";
-
-// pass `connector` to props
-const connector = new PrismaClient();
-```
-
 ## Single connector
 
 ```jsx
@@ -140,6 +127,36 @@ export default (
       resolver={resolver}>
       <string title="Product name" keyName="name"/>
     </array>
+  </root>
+)
+```
+
+## Supported GraphQL Services:
+### PrismaClient
+
+Connect to [Prisma](https://www.prisma.io/) service
+
+**Usage:**
+
+```js
+import {PrismaClient} from "canner-graphql-interface";
+
+// contruct graphQL client
+const graphqlClient = new PrismaClient();
+```
+
+## GraphQL Client
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
+import {PrismaClient} from "canner-graphql-interface";
+
+// contruct graphQL client
+const graphqlClient = new PrismaClient();
+
+export default (
+  <root graphqlClient={graphqlClient}>
+    // {... your schema}
   </root>
 )
 ```
