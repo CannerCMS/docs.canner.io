@@ -65,6 +65,8 @@
     "Setup canner-schema-loader": "Setup canner-schema-loader",
     "guides-community-intro": "Introduction",
     "Introduction": "Introduction",
+    "guides-component": "Component",
+    "Component": "Component",
     "guides-connector": "Connector",
     "Connector": "Connector",
     "guides-image-upload": "Image upload settings",

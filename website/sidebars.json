@@ -7,6 +7,7 @@
     "Guides": [
       "start-quick-firebase",
       "guides-writing-schema",
+      "guides-component",
       "guides-connector",
       "guides-resolver",
       "guides-image-upload"
