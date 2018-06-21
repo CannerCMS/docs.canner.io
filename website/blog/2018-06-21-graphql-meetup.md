@@ -1,5 +1,5 @@
 ---
-title: Canner.io at Graphql Taiwan Meetup Recap
+title: Canner at GraphQL Taiwan Meetup Recap
 author: William Chang
 authorURL: http://twitter.com/wwwy3y3
 authorFBID: 100001527041881
