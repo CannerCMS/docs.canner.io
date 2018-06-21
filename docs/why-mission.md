@@ -10,6 +10,8 @@ Thanks to modern technologies, such as `Babel`, `React`, `GraphQL`, `Apollo`, `W
 
 ***[flexibility](#1-flexibility), [adaptivity](#2-adaptivity), [simplicity](#3-simplicity), [scalability](#4-scalability), [modularity](#5-modularity)*** are the 5 major missions we try to solve at Canner. Following sections we'll talk about these 5 aspects.
 
+> Learn more about [Why we build Canner?](why-canner.md)
+
 ## 1. Flexibility
 
 Web applications have been a lot complex and wide range of usages. **Flexibility** is one of the biggest missions when we design Canner.
