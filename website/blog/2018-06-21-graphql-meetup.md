@@ -8,8 +8,9 @@ authorFBID: 100001527041881
 On June 20th, GraphQL Taiwan meetup hosted by [GraphQL Taiwan](https://www.facebook.com/groups/graphql.tw/) took place in Taipei, Taiwan. Around 50 participants attended. As CTO at [Canner.io](www.canner.io), I'm glad to share what our experience with GraphQL on this meetup.
 
 ## Slide
-[![Canner Graphql Slide](https://i.imgur.com/NvTKCOZ.png)](https://speakerdeck.com/wwwy3y3/how-canner-dot-io-build-graphql-for-cms-1)
-[link]((https://speakerdeck.com/wwwy3y3/how-canner-dot-io-build-graphql-for-cms-1))
+<script async class="speakerdeck-embed" data-id="32ef63f2e3ff417994e6962bf78fd40e" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+[Slide Link]((https://speakerdeck.com/wwwy3y3/how-canner-dot-io-build-graphql-for-cms-1))
 
 ## What's in this talk?
 At first, I shared about how we see CMS at Canner.io, and why GraphQL plays a big part in our stack.
@@ -31,6 +32,7 @@ This is why we started a concept - Adative CMS. The concept soon became our prod
 **Because we need to deal with different data sources and data relationship at our framework, we believe GraphQL would be a good solution.**
 
 ### 2. Apollo
+![apollo](https://i.imgur.com/DHpYu74.png)
 After several days of research on GraphQL, we decided to use [Apollo](https://www.apollographql.com/) for several reasons:
 * Great Document
 * Great Development Experience : [apollo-client-devtools](https://github.com/apollographql/apollo-client-devtools)
@@ -53,6 +55,7 @@ Currently, we support features below:
 * **Data Join**: Retrieve your data from different paths using one graphQL.
 
 ### 4. GraphQL at Canner.io
+![canner](https://i.imgur.com/1tOLWSL.jpg)
 While designing graphQL interface for our CMS framework, I saw prisma just released. [Prisma](https://www.prisma.io/) is a performant open-source GraphQL ORM-like* layer doing the heavy lifting in your GraphQL server. They designed a great graphQL interface that I can just use it in our framework.
 
 Hence, I developed almost the same graphQL interface with Prisma in Typescript and written as an apollo-link. Although I haven't officially opensourced this repo, but it's already on github: [canner-graphql-interface](https://github.com/Canner/canner-graphql-interface).
