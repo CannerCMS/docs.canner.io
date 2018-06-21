@@ -9,12 +9,12 @@
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 CannerIO.  Canner, Inc.</rights>
     <entry>
-        <title type="html"><![CDATA[Canner.io at Graphql Taiwan Meetup Recap]]></title>
+        <title type="html"><![CDATA[Canner at GraphQL Taiwan Meetup Recap]]></title>
         <id>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</id>
         <link href="https://www.canner.io/blog/2018/06/21/graphql-meetup.html">
         </link>
         <updated>2018-06-21T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Yesterday, GraphQL Taiwan meetup hosted by <a href="https://www.facebook.com/groups/graphql.tw/">GraphQL Taiwan</a> took place in Taipei, Taiwan, around 50 participants attended. As CTO at <a href="www.canner.io">Canner</a>, I'm glad to share what our team Canner's experienced with GraphQL on this meetup.</p>
+        <summary type="html"><![CDATA[<p>Yesterday, GraphQL Taiwan meetup hosted by <a href="https://www.facebook.com/groups/graphql.tw/">GraphQL Taiwan</a> took place in Taipei, Taiwan, around 50 participants attended. As CTO of <a href="www.canner.io">Canner</a>, I'm glad to share what our team Canner's experienced with GraphQL on this meetup.</p>
 ]]></summary>
         <author>
             <name>William Chang</name>
