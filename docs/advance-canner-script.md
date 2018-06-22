@@ -185,7 +185,7 @@ For example, your data is like below
 So your `keyName` should define as `content`
 
 ```js
-<string ui="textare" keyName="content">
+<string ui="textarea" keyName="content">
 ```
 
 > Further information
@@ -237,7 +237,7 @@ module.exports = <root>
 
 ### Query tags
 
-Query tags create components that user can use them to change the current query. There are three types of query tags in Canner: `filter`, `sort`, and `pagination`, put them under the `<toolbar>` in first-level array.
+Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
 
 **exmples**
 

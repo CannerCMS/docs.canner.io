@@ -55,6 +55,32 @@ import c, {Default, Block, Tabs} from 'canner-script';
 
 All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.
 
+Such as when you are using tab, the example below will become four tabs.
+
+```xml
+  <tabs>
+    <string {...}> // -----> tab 1
+    <string {...}> // -----> tab 2
+    <string {...}> // -----> tab 3
+    <string {...}> // -----> tab 4
+  </tabs>
+```
+
+you can use `<Default/>` to group fields, it will become only two tabs.
+
+```jsx
+<tabs>
+  <default> // -----> tab 1
+    <string {...}>
+    <string {...}>
+  </default>
+  <default> // -----> tab 2
+    <string {...}>
+    <string {...}>
+  </default>
+<tabs>
+```
+
 ### &lt;Block/&gt;
 
 The children in `Block` will be put into a Card component.

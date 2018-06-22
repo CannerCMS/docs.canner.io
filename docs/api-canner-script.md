@@ -10,7 +10,7 @@ sidebar_label: canner-script
 
 ### Common Properties
 
-These are some properties you will use it frequently
+These are some properties you will use frequently.
 
 <table>
   <tr>
@@ -35,7 +35,7 @@ These are some properties you will use it frequently
     <td>packageName</td>
     <td>string</td>
     <td><b>false</b></td>
-    <td>If you are using customized components, enter your package name or the path of your component.</td>
+    <td>If you are using customized components, enter your package name or the path of your component. <b>Must be eithor relative path or absolute path</b></td>
   </tr>
   <tr>
     <td>uiParams</td>
@@ -97,9 +97,9 @@ There must be a relation property in relation tag. It is a object containing two
 ```
 #### toOne type
 
-For now, we only support ui `singleSelect` to deal with the toOne relation, which is also the default ui of relation tag. You must give it uiParams to make the component works. Let's look at the example.
+For now, we only support ui `singleSelect` to deal with the toOne relationships, which is also the default UI of relation tag. You must give indicated uiParams to make the component works. Let's look at the example.
 
-**toOne relation example**
+**toOne relationship example**
 ```
 <array keyName="posts">
   <relation keyName="author"
@@ -121,8 +121,9 @@ For now, we only support ui `singleSelect` to deal with the toOne relation, whic
 </array>
 ```
 
-**the data**
-The data of toOne relation will be a id string, for examples, the data of the schema about will be:
+**Data**
+
+The data of toOne relationship will be a `string`, for examples, the data of the schema about will be:
 
 ```
 {
@@ -143,9 +144,10 @@ The data of toOne relation will be a id string, for examples, the data of the sc
 
 #### toMany type
 
-For now, we only support ui `multipleSelect` to deal with the `toMany` relation. You must give it uiParams to make the component works. Let's look at the example.
+For now, we only support UI `multipleSelect` to deal with the `toMany` relationship. You must give it `uiParams` to make the component works. Let's look at the example.
 
-**toOne relation example**
+**toMany relationship example**
+
 ```
 <array keyName="posts">
   <string keyName="title" >
@@ -167,8 +169,8 @@ For now, we only support ui `multipleSelect` to deal with the `toMany` relation.
 </array>
 ```
 
-**the data**
-The data of toMany relation will be a id map, for examples, the data of the schema about will be:
+**Data**
+The data of toMany relationship will be a object and the selected key's value will be `true`. For examples, the data of the schema will be:
 
 ```
 {
