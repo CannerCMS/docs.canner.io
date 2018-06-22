@@ -6,6 +6,7 @@
 <url> <loc>https://www.canner.io/2018/06/21/graphql-meetup</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://www.canner.io/2018/05/28/cannerio-2</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-cms.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-cms.html" /> </url>
+<url> <loc>https://www.canner.io/docs/advance-canner-prisma-type.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-prisma-type.html" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-script.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-script.html" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-cms-helpers.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-cms-helpers.html" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-cms-test.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-cms-test.html" /> </url>
