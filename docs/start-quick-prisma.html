@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Prisma - Quickstart With Prisma GraphQL · Canner (alpha)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="![cannerxprisma](/docs/assets/orange.png)"/><meta property="og:title" content="Prisma - Quickstart With Prisma GraphQL · Canner (alpha)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="![cannerxprisma](/docs/assets/orange.png)"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (alpha) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (alpha) Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner (alpha)"/><h2 class="headerTitleWithLogo">Canner (alpha)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/why-canner.html" target="_self">Why?</a></li><li class="siteNavGroupActive"><a href="/docs/start-quick-intro.html" target="_self">Docs</a></li><li class=""><a href="/docs/guides-community-intro.html" target="_self">Community</a></li><li class=""><a href="/docs/api-canner-script.html" target="_self">API</a></li><li class=""><a href="/component" target="_self">Components</a></li><li class=""><a href="https://github.com/Canner/canner" target="_blank">GitHub</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Quick start</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-intro.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-html5up.html">First CMS in 3 minutes - HTML5UP</a></li></ul></div><div class="navGroup navGroupActive"><h3>Guides</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-firebase.html">Firebase - Realtime database</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/start-quick-prisma.html">Prisma - Quickstart With Prisma GraphQL</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-writing-schema.html">CMS Schema</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-component.html">Component</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-connector.html">Connector</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-resolver.html">Resolver</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-image-upload.html">Image upload settings</a></li></ul></div><div class="navGroup navGroupActive"><h3>Tutorial</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-string-component.html">Customize string component</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-array-component.html">Customize array component</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-object-component.html">Customize object component</a></li></ul></div><div class="navGroup navGroupActive"><h3>Advanced</h3><ul><li class="navListItem"><a class="navItem" href="/docs/advance-canner-script.html">canner-script</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-component-types.html">Types of CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-component.html">Customized CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-layout.html">Customized CMS layouts</a></li></ul></div><div class="navGroup navGroupActive"><h3>CLI</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cli-install.html">Install Canner CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-import-firebase.html">Import data to Firebase</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-upload-image.html">Upload image</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-commands.html">Commands</a></li></ul></div><div class="navGroup navGroupActive"><h3>Files</h3><ul><li class="navListItem"><a class="navItem" href="/docs/file-canner-data-js.html">canner.data.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-schema-js.html">canner.schema.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cert.html">cert folder</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cannerrc.html">.cannerrc</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-image-uploaded.html">.canner-image-uploaded.json</a></li></ul></div><div class="navGroup navGroupActive"><h3>Tips</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tips-schema.html">Schema</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Prisma - Quickstart With Prisma GraphQL</h1></header><article><div><span><p><img src="/docs/assets/orange.png" alt="cannerxprisma"></p>
+<blockquote>
+<p><a href="https://www.prisma.io/">Prisma</a> is a performant open-source GraphQL ORM-like layer doing the heavy lifting in your GraphQL server.</p>
+</blockquote>
+<p>In this article, I'm going to demonstrate how to use Canner with <a href="https://www.prisma.io/">Prisma</a>.</p>
+<blockquote>
+<p>We assume you already deployed a Prisma server, if not, please refer to <a href="https://www.prisma.io/docs/quickstart/">Prisma document</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="1-start-with-a-new-project-folder"></a><a href="#1-start-with-a-new-project-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Start with a New Project Folder</h2>
+<p>Let's start with a new project folder. We'll put related files under this folder.</p>
+<pre><code class="hljs css languages- sh">mkdir canner-prisma &amp;&amp; <span class="hljs-built_in">cd</span> canner-prisma
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-install-canner-cli"></a><a href="#2-install-canner-cli" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Install Canner CLI</h2>
+<p>Make sure you have already install NodeJS and use the command below to install <code>@canner/cli</code> globally.</p>
+<blockquote>
+<p>While we recommend Node 8.x or greater, your Node version must at least 6.x.</p>
+</blockquote>
+<pre><code class="hljs css languages- sh">npm install -g @canner/cli
+</code></pre>
+<p>You should now have a global canner command available from any terminal window on your machine. Once you've installed Canner CLI, sign in using your Canner account:</p>
+<pre><code class="hljs css languages- sh">canner login
+</code></pre>
+<p>After logging in, it will store a token on your machine to validate login information at every canner comamnd, you can use <code>canner whoami</code> to check whether you are login or not, it will return your <code>username</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="3-select-project"></a><a href="#3-select-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Select project</h2>
+<p>To use <code>Canner CLI</code> in your own project, run the command under current project folder:</p>
+<pre><code class="hljs css languages- sh">canner init
+</code></pre>
+<p>It will ask you whether select existing apps or create new one.</p>
+<pre><code class="hljs css languages- sh">? Create an new app or select from existed apps (Use arrow keys)
+❯ Select from existed apps
+  Create a new app
+</code></pre>
+<p>Choose the app url you want.  And you'll see a new <code>.cannerrc</code> in your folder. It'll record the configuration.</p>
+<blockquote>
+<p>Learn more about <a href="/docs/file-cannerrc.html"><code>.cannerrc</code></a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="4-install-required-packages"></a><a href="#4-install-required-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Install required packages</h2>
+<p>In your project folder, you have to install two more packages that will be used later.</p>
+<ul>
+<li><code>canner-script</code>: is the core library of how you define your CMS data structure and appearance. <a href="advance-canner-script.html">Learn more</a></li>
+<li><code>canner-graphql-interface</code>: is the library that tells how to connect to your data sources. <a href="guides-connector.html">Learn more</a></li>
+</ul>
+<pre><code class="hljs css languages- sh">$ npm init -y
+$ npm install canner-script canner-graphql-interface
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="5-copy-prisma-s-files"></a><a href="#5-copy-prisma-s-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Copy Prisma's Files</h2>
+<p>Canner needs prisma's <code>datamodel.graphql</code> and <code>prisma.yml</code> to create a proxy server that deliver requests to your prisma server.</p>
+<p>Copy these two files from your prisma project folder to <code>cert/prisma</code></p>
+<pre><code class="hljs css languages- sh">$ mkdir -p cert/prisma
+$ cp path/to/prisma-project/prisma.yml ./cert/prisma
+$ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="6-write-cannerschemajs"></a><a href="#6-write-cannerschemajs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Write canner.schema.js</h2>
+<p>You only need to create a file called <code>canner.schema.js</code> to complete your CMS.</p>
+<p><code>canner.schema.js</code> defines how your CMS and data structure looks like, and how your CMS should connect to your sources.</p>
+<blockquote>
+<p>Learn how to <a href="guides-writing-schema">write schema</a></p>
+</blockquote>
+<p>A basic <code>Post</code> schema from a blog application with following graphql model</p>
+<pre><code class="hljs css languages- js">type Post <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token constant">ID</span><span class="token operator">!</span> @unique
+  createdAt<span class="token punctuation">:</span> DateTime<span class="token operator">!</span>
+  content<span class="token punctuation">:</span> String<span class="token operator">!</span>
+  title<span class="token punctuation">:</span> String<span class="token operator">!</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>will look like this:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+    <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+    <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+    <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dateTime</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Created Date<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Content<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>For example, if you wrote your <code>datamodel.graphql</code> as:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Post</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+  <span class="hljs-attribute">createdAt</span>: DateTime!
+  <span class="hljs-attribute">content</span>: String!
+  <span class="hljs-attribute">title</span>: String!
+  <span class="hljs-attribute">owner</span>: User! <span class="hljs-variable">@relation</span>(<span class="hljs-attribute">name</span>: <span class="hljs-string">"UserPosts"</span>)
+  <span class="hljs-attribute">location</span>: Location!
+}
+
+<span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">User</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+  <span class="hljs-attribute">name</span>: String! <span class="hljs-variable">@default</span>(<span class="hljs-attribute">value</span>: <span class="hljs-string">""</span>)
+  <span class="hljs-attribute">posts</span>: [Post!]! <span class="hljs-variable">@relation</span>(<span class="hljs-attribute">name</span>: <span class="hljs-string">"UserPosts"</span>, <span class="hljs-attribute">onDelete</span>: CASCADE)
+}
+
+<span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Location</span> {
+  <span class="hljs-attribute">lat</span>: Float!
+  <span class="hljs-attribute">lng</span>: Float!
+  <span class="hljs-attribute">placeId</span>: String
+  <span class="hljs-attribute">address</span>: String
+}
+</code></pre>
+<p>You'll have to write a <code>canner.schema.js</code> containing the same fields with <code>datamodel.graphql</code>.</p>
+<p>Furthermore, To connect the CMS to Prisma server, simply construct a <code>PrismaClient</code> and pass it to <code>&lt;root&gt;</code>.</p>
+<p>Hence, the <code>canner.schema.js</code> should be:</p>
+<pre><code class="hljs css languages- js"><span class="token comment">/** @jsx builder */</span>
+<span class="token keyword">import</span> builder <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>PrismaClient<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"canner-graphql-interface"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// contruct graphQL client</span>
+<span class="token keyword">const</span> graphqlClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrismaClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span> <span class="token attr-name">graphqlClient</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>graphqlClient<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+      <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+      <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+      <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"title"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"owner"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"owner.name"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"owner.name"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tableRoute<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dateTime</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"owner"</span>
+        relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          to<span class="token punctuation">:</span> <span class="token string">'User'</span><span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> <span class="token string">'toOne'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+          textCol<span class="token punctuation">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+          columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Name'</span><span class="token punctuation">,</span>
+            dataIndex<span class="token punctuation">:</span> <span class="token string">'name'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>geoPoint</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>location<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>location<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+      <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>User<span class="token punctuation">"</span></span>
+      <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>User<span class="token punctuation">"</span></span>
+      <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"name"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tableRoute<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"posts"</span>
+        relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          to<span class="token punctuation">:</span> <span class="token string">'Post'</span><span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> <span class="token string">'toMany'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+          textCol<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+          columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+            dataIndex<span class="token punctuation">:</span> <span class="token string">'title'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>To learn more about how to define Canner Schema's tag correspoding to prisma's datatype, see <a href="#resource-canner-and-prisma-datatype-comparison">Canner and Prisma Datatype Comparison</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="7-deploy"></a><a href="#7-deploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Deploy</h2>
+<p>After writing your <code>canner.schema.js</code> you could deploy your script to CannerIO through our CLI tool by entering</p>
+<pre><code class="hljs css languages- sh">canner script:deploy
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="8-cms-is-live"></a><a href="#8-cms-is-live" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. CMS is live</h2>
+<p>Go to your dashboard in CannerIO and select your app, you will see your CMS live.</p>
+<h2><a class="anchor" aria-hidden="true" id="resource-canner-and-prisma-datatype-comparison"></a><a href="#resource-canner-and-prisma-datatype-comparison" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource - Canner and Prisma Datatype Comparison</h2>
+<p>From Prisma to Canner</p>
+<h3><a class="anchor" aria-hidden="true" id="id-field"></a><a href="#id-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ID Field</h3>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Article</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+}
+</code></pre>
+<p>The <code>id</code> field will be automatically inserted in all query and mutation, so you don't have to define this field in canner schema.</p>
+<h3><a class="anchor" aria-hidden="true" id="string"></a><a href="#string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String</h3>
+<p><a href="https://www.canner.io/component?selectedKind=String&amp;selectedStory=Input&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">See live demo</a></p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg>  Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Article</span> {
+  <span class="hljs-attribute">text</span>: String!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="integer-float"></a><a href="#integer-float" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integer / Float</h3>
+<p><a href="https://www.canner.io/component?selectedKind=Number&amp;selectedStory=Input&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">See live demo</a></p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Article</span> {
+  <span class="hljs-attribute">count</span>: Integer!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="datetime"></a><a href="#datetime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime</h3>
+<p><a href="https://www.canner.io/component?selectedKind=DateTime&amp;selectedStory=DateTime&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">See live demo</a></p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Article</span> {
+  <span class="hljs-attribute">createdAt</span>: DateTime!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dateTime</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span> <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dateTime<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="boolean"></a><a href="#boolean" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean</h3>
+<p><a href="https://www.canner.io/component?selectedKind=Boolean&amp;selectedStory=Card&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">See live demo</a></p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Article</span> {
+  <span class="hljs-attribute">isPublished</span>: Boolean!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>boolean</span>
+  <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isPublished<span class="token punctuation">"</span></span>
+  <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    yesText<span class="token punctuation">:</span> <span class="token string">"YES!!"</span><span class="token punctuation">,</span>
+    noText<span class="token punctuation">:</span> <span class="token string">"NO!!"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="enum"></a><a href="#enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enum</h3>
+<p><a href="https://www.canner.io/component?selectedKind=String&amp;selectedStory=Select&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">See live demo</a></p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Role</span> {</span>
+   ADMIN,
+   EDITOR
+}
+
+<span class="hljs-keyword">type</span> Stuff {
+  role : Role!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<blockquote>
+<p>Please use <code>string</code> type and assign <code>select</code> to <code>ui</code>. We'll transfrom <code>String</code> to <code>Enum</code> on the fly in our graphQL proxy.</p>
+</blockquote>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span>
+  <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>role<span class="token punctuation">"</span></span>
+  <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>select<span class="token punctuation">"</span></span>
+  <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    options<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      text<span class="token punctuation">:</span> <span class="token string">'ADMIN'</span><span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> <span class="token string">"admin (with all power)"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      text<span class="token punctuation">:</span> <span class="token string">'EDITOR'</span><span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> <span class="token string">"editor (can only edit)"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="json"></a><a href="#json" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Json</h3>
+<p>The value of Json type is dynamic, so you should define it correspoding to the schema of json.</p>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql">/*
+  <span class="hljs-keyword">For</span> example:
+  dynamic = {
+    nestedProducts: [{
+      name: <span class="hljs-string">"product name"</span>,
+      label: [<span class="hljs-string">"label"</span>, <span class="hljs-string">"label2"</span>]
+    }]
+  }
+*/
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Stuff </span>{
+  dynamic : <span class="hljs-type">Json</span>
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token comment">/*
+  For example:
+  dynamic = {
+    nestedProducts: [{
+      name: "product name",
+      label: ["label", "label2"]
+    }]
+  }
+*/</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dynamic<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nestedProducts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>label<span class="token punctuation">"</span></span> <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tag<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="resource-relationship"></a><a href="#resource-relationship" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource - Relationship</h2>
+<h3><a class="anchor" aria-hidden="true" id="toone"></a><a href="#toone" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ToOne</h3>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">User</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+  <span class="hljs-attribute">name</span>: String! <span class="hljs-variable">@default</span>(<span class="hljs-attribute">value</span>: <span class="hljs-string">""</span>)
+}
+
+<span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Post</span> {
+  <span class="hljs-attribute">owner</span>: User!
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"owner"</span>
+  relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    to<span class="token punctuation">:</span> <span class="token string">'User'</span><span class="token punctuation">,</span>
+    type<span class="token punctuation">:</span> <span class="token string">'toOne'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+    textCol<span class="token punctuation">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+    columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      title<span class="token punctuation">:</span> <span class="token string">'Name'</span><span class="token punctuation">,</span>
+      dataIndex<span class="token punctuation">:</span> <span class="token string">'name'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tomany"></a><a href="#tomany" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ToMany</h3>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma:</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">Post</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+  <span class="hljs-attribute">content</span>: String!
+  <span class="hljs-attribute">title</span>: String!
+}
+
+<span class="hljs-selector-tag">type</span> <span class="hljs-selector-tag">User</span> {
+  <span class="hljs-attribute">id</span>: ID! <span class="hljs-variable">@unique</span>
+  <span class="hljs-attribute">name</span>: String! <span class="hljs-variable">@default</span>(<span class="hljs-attribute">value</span>: <span class="hljs-string">""</span>)
+  <span class="hljs-attribute">posts</span>: [Post!]! <span class="hljs-variable">@relation</span>(<span class="hljs-attribute">name</span>: <span class="hljs-string">"UserPosts"</span>, <span class="hljs-attribute">onDelete</span>: CASCADE)
+}
+</code></pre>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"posts"</span>
+  relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    to<span class="token punctuation">:</span> <span class="token string">'Post'</span><span class="token punctuation">,</span>
+    type<span class="token punctuation">:</span> <span class="token string">'toMany'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+    textCol<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+    columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      title<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+      dataIndex<span class="token punctuation">:</span> <span class="token string">'title'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="resource-canner-s-customized-scalars"></a><a href="#resource-canner-s-customized-scalars" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource - Canner's Customized Scalars</h2>
+<p>There are some Customized Scalars we define in our own GraphQL interface.</p>
+<h3><a class="anchor" aria-hidden="true" id="image"></a><a href="#image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image</h3>
+<p>For <a href="https://www.canner.io/component?selectedKind=Image&amp;selectedStory=Image&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">Image uploader</a></p>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>photo<span class="token punctuation">"</span></span> <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>image<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma: you can either choose to create another <code>type</code> or just use <code>Json</code>.</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-keyword">type</span> <span class="hljs-type">Image</span> {
+  contentType: <span class="hljs-type">String</span>
+  name: <span class="hljs-type">String</span>
+  size: <span class="hljs-type">Number</span>
+  url: <span class="hljs-type">String</span>
+}
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Stuff</span> {
+  photo : <span class="hljs-type">Image</span>!
+  # or <span class="hljs-type">Json</span>!
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="geopoint"></a><a href="#geopoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GeoPoint</h3>
+<p>For <a href="https://www.canner.io/component?selectedKind=GeoPoint&amp;selectedStory=Map&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">GeoPoint locator</a></p>
+<p><img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:</p>
+<pre><code class="hljs css languages- js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>geoPoint</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>location<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<p><svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M26.327 24.38L15.32 1.01A1.766 1.766 0 0 0 13.816.002a1.747 1.747 0 0 0-1.608.834L.272 20.169a1.808 1.808 0 0 0 .021 1.941l5.835 9.038a1.877 1.877 0 0 0 2.108.775l16.936-5.009c.518-.154.943-.52 1.165-1.007a1.816 1.816 0 0 0-.01-1.527zm-2.465 1.002l-14.37 4.25a.602.602 0 0 1-.767-.692l5.133-24.585c.096-.46.732-.533.932-.107l9.505 20.184c.18.38-.025.83-.433.95z" fill="#0C344B"></path></g></g></svg> Prisma: you can either choose to create another <code>type</code> or just use <code>Json</code>.</p>
+<pre><code class="hljs css languages- graphql"><span class="hljs-keyword">type</span> <span class="hljs-type">GeoPoint</span> {
+  placeId: <span class="hljs-type">String</span>
+  address: <span class="hljs-type">String</span>
+  lat: <span class="hljs-type">Number</span>
+  lng: <span class="hljs-type">Number</span>
+}
+
+<span class="hljs-keyword">type</span> <span class="hljs-type">Stuff</span> {
+  location: <span class="hljs-type">GeoPoint</span>!
+  # or <span class="hljs-type">Json</span>!
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start-quick-firebase.html">← How to Firebase - Realtime database</a><a class="docs-next button" href="/docs/guides-writing-schema.html">CMS Schema →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-start-with-a-new-project-folder">1. Start with a New Project Folder</a></li><li><a href="#2-install-canner-cli">2. Install Canner CLI</a></li><li><a href="#3-select-project">3. Select project</a></li><li><a href="#4-install-required-packages">4. Install required packages</a></li><li><a href="#5-copy-prisma-s-files">5. Copy Prisma's Files</a></li><li><a href="#6-write-cannerschemajs">6. Write canner.schema.js</a></li><li><a href="#7-deploy">7. Deploy</a></li><li><a href="#8-cms-is-live">8. CMS is live</a></li><li><a href="#resource-canner-and-prisma-datatype-comparison">Resource - Canner and Prisma Datatype Comparison</a><ul class="toc-headings"><li><a href="#id-field">ID Field</a></li><li><a href="#string">String</a></li><li><a href="#integer-float">Integer / Float</a></li><li><a href="#datetime">DateTime</a></li><li><a href="#boolean">Boolean</a></li><li><a href="#enum">Enum</a></li><li><a href="#json">Json</a></li></ul></li><li><a href="#resource-relationship">Resource - Relationship</a><ul class="toc-headings"><li><a href="#toone">ToOne</a></li><li><a href="#tomany">ToMany</a></li></ul></li><li><a href="#resource-canner-s-customized-scalars">Resource - Canner's Customized Scalars</a><ul class="toc-headings"><li><a href="#image">Image</a></li><li><a href="#geopoint">GeoPoint</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+            ((window.gitter = {}).chat = {}).options = {
+              room: 'Canner/CannerCMS'
+            };
+
+            const script = document.createElement("script");
+
+            script.src = "https://sidecar.gitter.im/dist/sidecar.v1.js";
+            script.async = true;
+            script.defer = true;
+
+            document.body.appendChild(script);
+            </script><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/guides-community-intro.html">Community Edition</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a target="_blank" href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link">Project Chat</a><a href="https://twitter.com/CannerIO" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://www.canner.io/">CannerIO</a><a href="https://github.com/canner">GitHub</a><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner (alpha)"/></a></div><section class="copyright">Copyright © 2018 CannerIO.  Canner, Inc.</section></footer></div><script src="http://localhost:35729/livereload.js"></script></body></html>
