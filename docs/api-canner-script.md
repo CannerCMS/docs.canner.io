@@ -10,6 +10,8 @@ sidebar_label: canner-script
 
 ### Common Properties
 
+These are some properties you will use it frequently
+
 <table>
   <tr>
     <th>Name</th>
@@ -33,13 +35,13 @@ sidebar_label: canner-script
     <td>packageName</td>
     <td>string</td>
     <td><b>false</b></td>
-    <td>If you are using customized components, enter your package name.</td>
+    <td>If you are using customized components, enter your package name or the path of your component.</td>
   </tr>
   <tr>
     <td>uiParams</td>
     <td>Object</td>
     <td><b>false</b></td>
-    <td>Additional UI parameters for components.</td>
+    <td>Additional UI parameters for components. </td>
   </tr>
   <tr>
     <td>title</td>
@@ -85,7 +87,115 @@ sidebar_label: canner-script
 
 ### &lt;relation/&gt;
 
-[TODO]
+There must be a relation property in relation tag. It is a object containing two key '`type`' and '`to`', which represent the relation type and relation to which key
+
+```
+<relation relation={{
+  type: 'toOne' | 'toMany',
+  to: '<a first level key>'
+}}>
+```
+#### toOne type
+
+For now, we only support ui `singleSelect` to deal with the toOne relation, which is also the default ui of relation tag. You must give it uiParams to make the component works. Let's look at the example.
+
+**toOne relation example**
+```
+<array keyName="posts">
+  <relation keyName="author"
+    relation={{
+      to: 'users',
+      type: 'toOne'
+    }}
+    uiParams: {{
+      textCol: 'name', // decide field to represent the user
+      columns: [{ // the columns config of the table which is used to pick relation data.
+        title: 'Name',
+        dataIndex: 'name'
+      }]
+    }}
+  >
+</array>
+<array keyName="users" >
+  <string keyName="name" >
+</array>
+```
+
+**the data**
+The data of toOne relation will be a id string, for examples, the data of the schema about will be:
+
+```
+{
+  posts: [{
+    id: 'postId1',
+    author: 'userId1' // this is the relation field
+  }],
+  users: [{
+    id: 'userId1',
+    name: 'userName1'
+  }, {
+    id: 'userId2',
+    name: 'userName2'
+  }]
+}
+```
+
+
+#### toMany type
+
+For now, we only support ui `multipleSelect` to deal with the `toMany` relation. You must give it uiParams to make the component works. Let's look at the example.
+
+**toOne relation example**
+```
+<array keyName="posts">
+  <string keyName="title" >
+</array>
+<array keyName="users" >
+  <relation keyName="posts"
+    relation={{
+      to: 'posts',
+      type: 'toMany'
+    }}
+    uiParams: {{
+      textCol: 'title', // decide field to represent the post
+      columns: [{ // the columns config of the table which is used to pick relation data.
+        title: 'Title',
+        dataIndex: 'title'
+      }]
+    }}
+  >
+</array>
+```
+
+**the data**
+The data of toMany relation will be a id map, for examples, the data of the schema about will be:
+
+```
+{
+  posts: [{
+    id: 'postId1',
+    title: 'postTitle1'
+  }, {
+    id: 'postId2',
+    title: 'postTitle2'
+  }, {
+    id: 'postId3',
+    title: 'postTitle3'
+  }],
+  users: [{
+    id: 'userId1',
+    posts: { // the relation field
+      postId1: true,
+      postId2: true
+    }
+  }, {
+    id: 'userId2',
+    posts: {  // the relation field
+      postId3: true
+    }
+  }]
+}
+```
 
 ### &lt;object/&gt;
 
