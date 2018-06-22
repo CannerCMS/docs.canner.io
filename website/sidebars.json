@@ -6,6 +6,7 @@
     ],
     "Guides": [
       "start-quick-firebase",
+      "start-quick-prisma",
       "guides-writing-schema",
       "guides-component",
       "guides-connector",
