@@ -1,7 +1,7 @@
 ---
 id: start-quick-prisma
-title: Prisma - Quickstart With Prisma GraphQL
-sidebar_label: Prisma - Quickstart With Prisma GraphQL
+title: Quickstart With Prisma GraphQL
+sidebar_label: Prisma - GraphQL
 ---
 ![cannerxprisma](/docs/assets/orange.png)
 
