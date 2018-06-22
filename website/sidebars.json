@@ -23,7 +23,8 @@
       "advance-component-types",
       "advance-layout",
       "advance-customized-component",
-      "advance-customized-layout"
+      "advance-customized-layout",
+      "advance-canner-prisma-type"
     ],
     "CLI": [
       "cli-install",
