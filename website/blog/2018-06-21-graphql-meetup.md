@@ -10,7 +10,7 @@ Yesterday, GraphQL Taiwan meetup hosted by [GraphQL Taiwan](https://www.facebook
 <!--truncate-->
 
 ## Resource
-* [Opensource Canner Document](https://www.canner.io/docs/guides-community-intro.html)
+* [Open-source Canner Document](https://www.canner.io/docs/guides-community-intro.html)
 * [Canner Github](https://github.com/Canner/canner)
 
 ## Slide
@@ -50,7 +50,7 @@ After several days of research on GraphQL, we decided to use [Apollo](https://ww
 
 ### 3. Integrate with Firebase: Apollo-link-firebase
 ![apollo-link-firebase](https://user-images.githubusercontent.com/26116324/37811194-a316caac-2e93-11e8-858b-eff589dcfdf3.png)
-Several months ago, we opensourced [apollo-link-firebase](https://github.com/Canner/apollo-link-firebase).  `apollo-link-firebase` provides you a simple way to query Firebase in graphQL with Apollo-client without building a graphQL server.
+Several months ago, we announced [apollo-link-firebase](https://github.com/Canner/apollo-link-firebase).  `apollo-link-firebase` provides you a simple way to query Firebase in graphQL with Apollo-client without building a graphQL server.
 
 Currently, we support features below:
 
@@ -63,7 +63,7 @@ Currently, we support features below:
 ![canner](https://i.imgur.com/1tOLWSL.jpg)
 While designing graphQL interface for our CMS framework, I saw prisma just released. **[Prisma](https://www.prisma.io/)** is a performant open-source GraphQL **ORM-like\* layer** doing the heavy lifting in your GraphQL server. They designed a great graphQL interface that we can just use it in our CMS framework.
 
-Hence, our team Canner developed almost the same graphQL interface with Prisma in Typescript and written as an apollo-link. Although we haven't officially opensourced this repo, but it's already on github: [canner-graphql-interface](https://github.com/Canner/canner-graphql-interface).
+Hence, our team Canner developed almost the same graphQL interface with Prisma in Typescript and written as an apollo-link. Although we haven't officially announced this repo, but it's already on github: [canner-graphql-interface](https://github.com/Canner/canner-graphql-interface).
 
 `canner-graphql-interface` provides a connector interface, so we can simply implement this interface to create connectors to different data sources, which is now support for **Firebase Realtime database, MemoryStore and also Prisma Client**. We'll be sure to support more data sources in the future.
 
