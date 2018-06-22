@@ -164,12 +164,12 @@ module.exports = (
 
 ### Type tags
 
-Type tags are the most basic UI component for CMS.  For example you could create a editor for string.
+Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
 
-Using editor UI:
+Using textarea UI:
 
 ```js
-<string ui="editor">
+<string ui="textarea">
 ```
 
 Every UI component should pass a keyName, which matchs to the key name of your data source.
@@ -185,7 +185,7 @@ For example, your data is like below
 So your `keyName` should define as `content`
 
 ```js
-<string ui="editor" keyName="content">
+<string ui="textarea" keyName="content">
 ```
 
 > Further information
@@ -235,3 +235,49 @@ module.exports = <root>
 > Further information
 > - [Advance layout introduction](advance-layout.md)  
 
+### Query tags
+
+Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
+
+**exmples**
+
+```
+<root>
+  <array keyName="posts">
+    <toolbar>
+      <filter fields={[{
+        type: 'select',
+        label: 'Status',
+        options: [{
+          text: 'All',
+          condition: {}
+        }, {
+          text: 'Published',
+          condition: {
+            draft: {
+              eq: false
+            }
+          }
+        }, {
+          text: 'Draft',
+          condition: {
+            draft: {
+              eq: true
+            }
+          }
+        }]
+      }, {
+        type: 'number',
+        key: 'views',
+        label: 'Views',
+      }]}>
+      <sort defaultOption="views" options={[{
+        key: 'views',
+        title: 'Views'
+      }]}>
+      <pagination>
+    </toolbar>
+  </array>
+</root>
+
+```

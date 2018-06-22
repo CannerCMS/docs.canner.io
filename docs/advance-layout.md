@@ -14,7 +14,7 @@ Canner supports serveral basic layouts. Remember to import them before using the
 
 ```jsx
 /** @jsx c */
-import c, {Collapse, Block, Tabs, Left, Right} from 'canner-script';
+import c, {Default, Block, Tabs} from 'canner-script';
 ```
 
 ***Usage***
@@ -23,16 +23,12 @@ import c, {Collapse, Block, Tabs, Left, Right} from 'canner-script';
   <Body>
     <object name="info">
       <Tabs>
-        <Block>
-          <Left>
-            <string name="name" />
-          </Left>
-          <Right>
-            <string name="nickname" />
-          </Right>
-        </Block>
-        <Block>
-          <Collapse>
+        <Default>
+          <string name="name" />
+          <string name="nickname" />
+        </Default>
+        <Default>
+          <Block>
             <object name="phones">
               <string name="phone1" />
               <string name="phone2" />
@@ -41,17 +37,58 @@ import c, {Collapse, Block, Tabs, Left, Right} from 'canner-script';
               <string name="address1" />
               <string name="address2" />
             </object>
+          </Block>
+          <Block>
             <object name="emails">
               <string name="email1" />
               <string name="email2" />
             </object>
-          </Collapse>
-        </Block>
+          </Block>
+        </Default>
       </Tabs>
     </object>
   </Body>
 </root>
 ```
+
+### &lt;Default/&gt;
+
+All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.
+
+Such as when you are using tab, the example below will become four tabs.
+
+```xml
+  <tabs>
+    <string {...}> // -----> tab 1
+    <string {...}> // -----> tab 2
+    <string {...}> // -----> tab 3
+    <string {...}> // -----> tab 4
+  </tabs>
+```
+
+you can use `<Default/>` to group fields, it will become only two tabs.
+
+```jsx
+<tabs>
+  <default> // -----> tab 1
+    <string {...}>
+    <string {...}>
+  </default>
+  <default> // -----> tab 2
+    <string {...}>
+    <string {...}>
+  </default>
+<tabs>
+```
+
+### &lt;Block/&gt;
+
+The children in `Block` will be put into a Card component.
+
+### &lt;Tabs/&gt;
+
+Each child in `Tabs` will be put into a `TabPane`.
+
 
 ## Default Layout
 
