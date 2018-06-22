@@ -34,6 +34,7 @@
 <p>Learn more basic and concept of <a href="/docs/advance-component-types.html">Types of CMS component</a></p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="common-properties"></a><a href="#common-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Properties</h3>
+<p>These are some properties you will use frequently.</p>
 <table>
   <tr>
     <th>Name</th>
@@ -57,13 +58,13 @@
     <td>packageName</td>
     <td>string</td>
     <td><b>false</b></td>
-    <td>If you are using customized components, enter your package name.</td>
+    <td>If you are using customized components, enter your package name or the path of your component. <b>Must be eithor relative path or absolute path</b></td>
   </tr>
   <tr>
     <td>uiParams</td>
     <td>Object</td>
     <td><b>false</b></td>
-    <td>Additional UI parameters for components.</td>
+    <td>Additional UI parameters for components. </td>
   </tr>
   <tr>
     <td>title</td>
@@ -107,7 +108,99 @@
 <p>See complete <a href="/component/?selectedKind=File&amp;selectedStory=Image&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">File components list</a></p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="lt-relation-gt"></a><a href="#lt-relation-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;relation/&gt;</h3>
-<p>[TODO]</p>
+<p>There must be a relation property in relation tag. It is a object containing two key '<code>type</code>' and '<code>to</code>', which represent the relation type and relation to which key</p>
+<pre><code class="hljs">&lt;relation relation={{
+  <span class="hljs-keyword">type</span>: <span class="hljs-string">'toOne'</span> | <span class="hljs-string">'toMany'</span>,
+  <span class="hljs-keyword">to</span>: <span class="hljs-string">'&lt;a first level key&gt;'</span>
+}}&gt;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="toone-type"></a><a href="#toone-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toOne type</h4>
+<p>For now, we only support ui <code>singleSelect</code> to deal with the toOne relationships, which is also the default UI of relation tag. You must give indicated uiParams to make the component works. Let's look at the example.</p>
+<p><strong>toOne relationship example</strong></p>
+<pre><code class="hljs">&lt;array <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"posts"</span>&gt;
+  &lt;relation <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"author"</span>
+    relation={{
+      <span class="hljs-keyword">to</span>: <span class="hljs-string">'users'</span>,
+      <span class="hljs-built_in">type</span>: <span class="hljs-string">'toOne'</span>
+    }}
+    uiParams: {{
+      textCol: <span class="hljs-string">'name'</span>, <span class="hljs-comment">// decide field to represent the user</span>
+      columns: [{ <span class="hljs-comment">// the columns config of the table which is used to pick relation data.</span>
+        title: <span class="hljs-string">'Name'</span>,
+        dataIndex: <span class="hljs-string">'name'</span>
+      }]
+    }}
+  &gt;
+&lt;/array&gt;
+&lt;array <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"users"</span> &gt;
+  &lt;string <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"name"</span> &gt;
+&lt;/array&gt;
+</code></pre>
+<p><strong>Data</strong></p>
+<p>The data of toOne relationship will be a <code>string</code>, for examples, the data of the schema about will be:</p>
+<pre><code class="hljs">{
+  <span class="hljs-attribute">posts</span>: [{
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId1'</span>,
+    <span class="hljs-attribute">author</span>: <span class="hljs-string">'userId1'</span> <span class="hljs-comment">// this is the relation field</span>
+  }],
+  <span class="hljs-attribute">users</span>: [{
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId1'</span>,
+    <span class="hljs-attribute">name</span>: <span class="hljs-string">'userName1'</span>
+  }, {
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId2'</span>,
+    <span class="hljs-attribute">name</span>: <span class="hljs-string">'userName2'</span>
+  }]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="tomany-type"></a><a href="#tomany-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toMany type</h4>
+<p>For now, we only support UI <code>multipleSelect</code> to deal with the <code>toMany</code> relationship. You must give it <code>uiParams</code> to make the component works. Let's look at the example.</p>
+<p><strong>toMany relationship example</strong></p>
+<pre><code class="hljs">&lt;<span class="hljs-built_in">array</span> keyName=<span class="hljs-string">"posts"</span>&gt;
+  &lt;<span class="hljs-built_in">string</span> keyName=<span class="hljs-string">"title"</span> &gt;
+&lt;/<span class="hljs-built_in">array</span>&gt;
+&lt;<span class="hljs-built_in">array</span> keyName=<span class="hljs-string">"users"</span> &gt;
+  &lt;relation keyName=<span class="hljs-string">"posts"</span>
+    relation={{
+      <span class="hljs-keyword">to</span>: <span class="hljs-string">'posts'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'toMany'</span>
+    }}
+    uiParams: {{
+      textCol: <span class="hljs-string">'title'</span>, <span class="hljs-comment">// decide field to represent the post</span>
+      columns: <span class="hljs-meta">[</span>{ <span class="hljs-comment">// the columns config of the table which is used to pick relation data.</span>
+        title: <span class="hljs-string">'Title'</span>,
+        dataIndex: <span class="hljs-string">'title'</span>
+      }<span class="hljs-meta">]</span>
+    }}
+  &gt;
+&lt;/array&gt;
+</code></pre>
+<p><strong>Data</strong>
+The data of toMany relationship will be a object and the selected key's value will be <code>true</code>. For examples, the data of the schema will be:</p>
+<pre><code class="hljs">{
+  <span class="hljs-attribute">posts</span>: [{
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId1'</span>,
+    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle1'</span>
+  }, {
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId2'</span>,
+    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle2'</span>
+  }, {
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId3'</span>,
+    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle3'</span>
+  }],
+  <span class="hljs-attribute">users</span>: [{
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId1'</span>,
+    <span class="hljs-attribute">posts</span>: { <span class="hljs-comment">// the relation field</span>
+      <span class="hljs-attribute">postId1</span>: true,
+      <span class="hljs-attribute">postId2</span>: true
+    }
+  }, {
+    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId2'</span>,
+    <span class="hljs-attribute">posts</span>: {  <span class="hljs-comment">// the relation field</span>
+      <span class="hljs-attribute">postId3</span>: true
+    }
+  }]
+}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="lt-object-gt"></a><a href="#lt-object-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;object/&gt;</h3>
 <blockquote>
 <p>See complete <a href="/component/?selectedKind=Object&amp;selectedStory=Options&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">Object components list</a></p>

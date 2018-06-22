@@ -36,23 +36,19 @@
 <h2><a class="anchor" aria-hidden="true" id="basic-layout"></a><a href="#basic-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Layout</h2>
 <p>Canner supports serveral basic layouts. Remember to import them before using them.</p>
 <pre><code class="hljs css languages- jsx"><span class="token comment">/** @jsx c */</span>
-<span class="token keyword">import</span> c<span class="token punctuation">,</span> <span class="token punctuation">{</span>Collapse<span class="token punctuation">,</span> Block<span class="token punctuation">,</span> Tabs<span class="token punctuation">,</span> Left<span class="token punctuation">,</span> Right<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> c<span class="token punctuation">,</span> <span class="token punctuation">{</span>Default<span class="token punctuation">,</span> Block<span class="token punctuation">,</span> Tabs<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong><em>Usage</em></strong></p>
 <pre><code class="hljs css languages- xml"><span class="hljs-tag">&lt;<span class="hljs-name">root</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">Body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"info"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">Tabs</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Block</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">Left</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">Left</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">Right</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nickname"</span> /&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">Right</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">Block</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Block</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">Collapse</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Default</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nickname"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Default</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Default</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Block</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"phones"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"phone1"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"phone2"</span> /&gt;</span>
@@ -61,17 +57,45 @@
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"address1"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"address2"</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Block</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Block</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"emails"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email1"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email2"</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">Collapse</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">Block</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Block</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Default</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">Tabs</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">Body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">root</span>&gt;</span>
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="lt-default-gt"></a><a href="#lt-default-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;Default/&gt;</h3>
+<p>All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.</p>
+<p>Such as when you are using tab, the example below will become four tabs.</p>
+<pre><code class="hljs css languages- xml">  <span class="hljs-tag">&lt;<span class="hljs-name">tabs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span> {<span class="hljs-attr">...</span>}&gt;</span> // -----&gt; tab 1
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span> {<span class="hljs-attr">...</span>}&gt;</span> // -----&gt; tab 2
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span> {<span class="hljs-attr">...</span>}&gt;</span> // -----&gt; tab 3
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span> {<span class="hljs-attr">...</span>}&gt;</span> // -----&gt; tab 4
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tabs</span>&gt;</span>
+</code></pre>
+<p>you can use <code>&lt;Default/&gt;</code> to group fields, it will become only two tabs.</p>
+<pre><code class="hljs css languages- jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tabs</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>default</span><span class="token punctuation">></span></span> <span class="token comment">// -----> tab 1</span>
+    <span class="token operator">&lt;</span>string <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token operator">></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>default</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>default</span><span class="token punctuation">></span></span> <span class="token comment">// -----> tab 2</span>
+    <span class="token operator">&lt;</span>string <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>string <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token operator">></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>default</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tabs</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="lt-block-gt"></a><a href="#lt-block-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;Block/&gt;</h3>
+<p>The children in <code>Block</code> will be put into a Card component.</p>
+<h3><a class="anchor" aria-hidden="true" id="lt-tabs-gt"></a><a href="#lt-tabs-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;Tabs/&gt;</h3>
+<p>Each child in <code>Tabs</code> will be put into a <code>TabPane</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="default-layout"></a><a href="#default-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default Layout</h2>
 <p>Canner CMS will add default layouts for your CMS.</p>
 <h3><a class="anchor" aria-hidden="true" id="first-level-in-lt-root-gt"></a><a href="#first-level-in-lt-root-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First level in &lt;root/&gt;</h3>
@@ -103,7 +127,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="visitors"></a><a href="#visitors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visitors</h2>
 <p>Layout tags will create visitors, and exported to <code>canner-schema-loader</code> to transform the component tree.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/advance-component-types.html">← Types of CMS components</a><a class="docs-next button" href="/docs/advance-customized-component.html">Customized CMS components →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#basic-layout">Basic Layout</a></li><li><a href="#default-layout">Default Layout</a><ul class="toc-headings"><li><a href="#first-level-in-lt-root-gt">First level in &lt;root/&gt;</a></li><li><a href="#second-level-in-lt-root-gt">Second level in &lt;root/&gt;</a></li></ul></li><li><a href="#customized-layout">Customized Layout</a></li><li><a href="#visitors">Visitors</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/advance-component-types.html">← Types of CMS components</a><a class="docs-next button" href="/docs/advance-customized-component.html">Customized CMS components →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#basic-layout">Basic Layout</a><ul class="toc-headings"><li><a href="#lt-default-gt">&lt;Default/&gt;</a></li><li><a href="#lt-block-gt">&lt;Block/&gt;</a></li><li><a href="#lt-tabs-gt">&lt;Tabs/&gt;</a></li></ul></li><li><a href="#default-layout">Default Layout</a><ul class="toc-headings"><li><a href="#first-level-in-lt-root-gt">First level in &lt;root/&gt;</a></li><li><a href="#second-level-in-lt-root-gt">Second level in &lt;root/&gt;</a></li></ul></li><li><a href="#customized-layout">Customized Layout</a></li><li><a href="#visitors">Visitors</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
