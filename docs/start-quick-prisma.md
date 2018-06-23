@@ -231,4 +231,4 @@ canner script:deploy
 Go to your dashboard in CannerIO and select your app, you will see your CMS live.
 
 ## Resource
-* [Canner and Prisma Datatype Comparison](/docs/advance-canner-prisma-type)
+* [Canner and Prisma Datatype Comparison](/docs/advance-canner-prisma-type.html)
