@@ -10,6 +10,10 @@ If you’re not familiar with GraphQL, GraphQL is a query language for your API,
 
 In our framework, we use canner schema to create an Apollo Client that serves a powerful GraphQL API to CMS components. GraphQL offers three main benefits:
 
+## Eliminate frontend data boilerplate 
+
+No need to worry about requesting and waiting for data. Just ask for the data you need with a GraphQL query and it’ll show up when you need it.
+
 ## Better data management
 GraphQL gives you exactly what you want in view layer, for example:
 
@@ -28,6 +32,10 @@ Furthermore, Apollo client already comes with great features like caching, netwo
 
 ## Easier to aggregate data from multiple sources
 Dealing with relationship is hard. It’s even harder to join data from multiple sources and serve as a clean response. Using **GraphQL and Apollo** allow us to build better API for view layer and provide data customization API to developers.
+
+## Push frontend complexity into queries
+
+many data transformations can be done at **build-time** within your GraphQL queries
 
 ## Community support
 Canner is an open-sourced framework, since Apollo Framework and GraphQL are also open-sourced and already have large community, it’s reasonable to build on top of them and let developers get familiar to our framework faster and easier.
