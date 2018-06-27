@@ -3,8 +3,8 @@
 <url> <loc>https://www.canner.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/en/help.html" /> </url>
 <url> <loc>https://www.canner.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/en/index.html" /> </url>
 <url> <loc>https://www.canner.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/en/users.html" /> </url>
-<url> <loc>https://www.canner.io/2018/06/21/graphql-meetup</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://www.canner.io/2018/05/28/cannerio-2</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://www.canner.io/blog/2018/05/28/cannerio-2.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-cms.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-cms.html" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-prisma-type.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-prisma-type.html" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-script.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-script.html" /> </url>
@@ -42,6 +42,7 @@
 <url> <loc>https://www.canner.io/docs/guides-image-upload.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-image-upload.html" /> </url>
 <url> <loc>https://www.canner.io/docs/guides-resolver.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-resolver.html" /> </url>
 <url> <loc>https://www.canner.io/docs/guides-writing-schema.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-writing-schema.html" /> </url>
+<url> <loc>https://www.canner.io/docs/start-quick-3commands.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/start-quick-3commands.html" /> </url>
 <url> <loc>https://www.canner.io/docs/start-quick-firebase.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/start-quick-firebase.html" /> </url>
 <url> <loc>https://www.canner.io/docs/start-quick-html5up.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/start-quick-html5up.html" /> </url>
 <url> <loc>https://www.canner.io/docs/start-quick-intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/start-quick-intro.html" /> </url>
