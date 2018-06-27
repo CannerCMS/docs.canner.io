@@ -40,6 +40,10 @@ canner
     <td>Choose an app and it will create <code>.cannerrc</code> configuration file in your current directory, or you can set the app directly with a appUrl. You can use this command to change configurations if you want.</td>
   </tr>
   <tr>
+    <td>init:schema [appUrl]</td>
+    <td>Choose a schema template and a data source, it will create `schema` and `cert` files in your current directory.</td>
+  </tr>
+  <tr>
     <td>open</td>
     <td>Open current application website on your browser.</td>
   </tr>

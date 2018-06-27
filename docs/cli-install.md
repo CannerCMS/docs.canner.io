@@ -20,7 +20,7 @@ $ npm install -g @canner/cli
 or yarn
 
 ```sh
-$ yarn global add @canner/cli
+$ yarn global add @canner/cli --prefix /usr/local
 ```
 
 ### Check if install successfully
@@ -33,15 +33,14 @@ canner --help
 
 You will get all available commands, and help menu.
 
-```
+```shell
   Usage: canner [options] [command] <cmd>
 
 
   Options:
 
-    -V, --version  output the version number
-    -h, --help     output usage information
-
+    -V, --version   output the version number
+    -h, --help      output usage information
 
   Commands:
 
@@ -49,13 +48,15 @@ You will get all available commands, and help menu.
     logout
     whoami
     init [url]
+    init:schema [options]
     open:dashboard
     app:list
     app:create
     script:deploy [options] [filename]
+    script:serve [filename]
     data:import [options] [filename]
 ```
 
-Horay! You are ready to go!
+Hooray! You are ready to go!
 
 > Learn more about [commands](cli-commands.md)

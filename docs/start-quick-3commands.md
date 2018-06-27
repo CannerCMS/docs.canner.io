@@ -32,14 +32,14 @@ Initializing schema...
 ✔ Initialized
 ```
 
-Choose any except `None`, and you'll see the folders `schema`, `cert` and `canner.schema.js` appearing in your project folder. `Canner.schema.js` and the folder `schema` are the schemas that Canner use them to build the CMS. The folder `cert` stores certification files for Canner to connect data source.
+Choose any except `None`, and you'll see the folders `schema`, `cert` and `canner.schema.js` appearing in your project folder. `canner.schema.js` and the folder `schema` are the schemas that Canner use them to build the CMS. The folder `cert` stores certification files for Canner to connect data source.
 
 > - Learn more about [`schema`](file-canner-schema-js.md)
 > - Learn more about [`cert`](file-cert.md) 
 
 ## 3. Local Serve
 
-In your project folder, you can just run `canner script:serve` to build your CMS and host it. Open [http://localhost:9090](http://localhost:9090), you will see the CMS .
+In your project folder, you can just run `canner script:serve` to build your CMS and host it. Open [http://localhost:9090](http://localhost:9090), you will see the result as below.
 
 ![users-cms](/docs/assets/users-cms.png)
 
