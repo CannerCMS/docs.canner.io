@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
     <title>Canner (alpha) Blog</title>
-    <updated>2018-06-21T06:00:00Z</updated>
+    <updated>2018-07-02T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Canner (alpha) news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 CannerIO.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Canner 1st meetup @ Taiwan, Taipei]]></title>
+        <id>https://www.canner.io/blog/2018/07/02/canner-meetup.html</id>
+        <link href="https://www.canner.io/blog/2018/07/02/canner-meetup.html">
+        </link>
+        <updated>2018-07-02T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>On June 30, our team Canner held our first meetup at Taiwan, Taipei. We are amazed by how the community passionate about Canner, our seats are full within 6 days when we release our meetup news. Thanks to all supporters of Canner!</p>
+<p>In this post we are going to share our talks in that day, and hope people that couldn't attend our meetup could also learn from this post! So let's get started! 🌟</p>
+]]></summary>
+        <author>
+            <name>Howard Chi</name>
+            <uri>http://twitter.com/chilijung</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Canner at GraphQL Taiwan Meetup Recap]]></title>
         <id>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</id>

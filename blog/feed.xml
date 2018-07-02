@@ -4,7 +4,7 @@
         <title>Canner (alpha) Blog</title>
         <link>https://www.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner (alpha) news and events.</description>
-        <lastBuildDate>Thu, 21 Jun 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jul 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>https://www.canner.io/blog</link>
         </image>
         <copyright>Copyright © 2018 CannerIO.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[Canner 1st meetup @ Taiwan, Taipei]]></title>
+            <link>https://www.canner.io/blog/2018/07/02/canner-meetup.html</link>
+            <guid>https://www.canner.io/blog/2018/07/02/canner-meetup.html</guid>
+            <pubDate>Mon, 02 Jul 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>On June 30, our team Canner held our first meetup at Taiwan, Taipei. We are amazed by how the community passionate about Canner, our seats are full within 6 days when we release our meetup news. Thanks to all supporters of Canner!</p>
+<p>In this post we are going to share our talks in that day, and hope people that couldn't attend our meetup could also learn from this post! So let's get started! 🌟</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Canner at GraphQL Taiwan Meetup Recap]]></title>
             <link>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</link>
