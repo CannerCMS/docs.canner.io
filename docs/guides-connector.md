@@ -25,7 +25,7 @@ To setup your connector in CMS pass `connector` in eithor your `<root/>` or **fi
 
 ### MemoryConnector
 
-Connect to your browser memory using localstorage
+Connect to your browser memory. The data will be removed after you close the web.
 
 **Usage:**
 

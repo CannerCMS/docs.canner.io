@@ -1,6 +1,6 @@
 ---
 id: start-quick-prisma
-title: Quickstart With Prisma GraphQL
+title: Quickstart with Prisma GraphQL
 sidebar_label: Prisma - GraphQL
 ---
 ![cannerxprisma](/docs/assets/orange.png)
@@ -11,7 +11,7 @@ In this article, I'm going to demonstrate how to use Canner with [Prisma](https:
 
 > We assume you already deployed a Prisma server, if not, please refer to [Prisma document](https://www.prisma.io/docs/quickstart/)
 
-## 1. Start with a New Project Folder
+## 1. Start with a new project folder
 Let's start with a new project folder. We'll put related files under this folder.
 
 ```sh
@@ -68,7 +68,7 @@ $ npm init -y
 $ npm install canner-script canner-graphql-interface
 ```
 
-## 5. Copy Prisma's Files
+## 5. Copy Prisma's files
 Canner needs prisma's `datamodel.graphql` and `prisma.yml` to create a proxy server that deliver requests to your prisma server.
 
 Copy these two files from your prisma project folder to `cert/prisma`
@@ -137,7 +137,7 @@ type Location {
 You'll have to write a `canner.schema.js` containing the same fields with `datamodel.graphql`.
 
 
-Furthermore, To connect the CMS to Prisma server, simply construct a `PrismaClient` and pass it to `<root>`.
+Furthermore, to connect the CMS to Prisma server, simply construct a `PrismaClient` and pass it to `<root>`.
 
 Hence, the `canner.schema.js` should be:
 ``` js
@@ -220,7 +220,7 @@ export default (
 
 ## 7. Deploy
 
-After writing your `canner.schema.js` you could deploy your script to CannerIO through our CLI tool by entering
+After writing your `canner.schema.js` you could deploy your script to Canner through our CLI tool by entering
 
 ```sh
 canner script:deploy
@@ -228,7 +228,7 @@ canner script:deploy
 
 ## 8. CMS is live
 
-Go to your dashboard in CannerIO and select your app, you will see your CMS live.
+Go to your dashboard in Canner and select your app, you will see your CMS live.
 
 ## Resource
-* [Canner and Prisma Datatype Comparison](/docs/advance-canner-prisma-type.html)
+* [Canner and Prisma datatype comparison](/docs/advance-canner-prisma-type.html)

@@ -1,7 +1,7 @@
 ---
 id: advance-canner-prisma-type
-title: Canner and Prisma Datatype Comparison
-sidebar_label: Canner and Prisma Datatype Comparison
+title: Canner and Prisma datatype comparison
+sidebar_label: Canner and Prisma datatype comparison
 ---
 
 ## Prisma Scalars
@@ -214,7 +214,7 @@ type User {
 />
 ```
 
-## Canner Customized Scalars
+## Canner customized scalars
 There are some Customized Scalars we define in our own GraphQL interface.
 
 ### Image
