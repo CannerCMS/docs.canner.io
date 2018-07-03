@@ -42,7 +42,7 @@ Don't want to miss our next meetup?
 - Follow us on Twitter: https://www.twitter.com/cannerio
 - Like our fans page on FB: https://www.facebook.com/cannerIO
 
-> Our next event Canner workshop on 7/28 at Taiwan, Taipei. [Join now!]()
+> Our next event Canner workshop on 7/28 at Taiwan, Taipei. [Join now!](https://cannerio.kktix.cc/events/canner-workshop)
 
 ## Activity photos
 
