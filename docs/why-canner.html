@@ -35,15 +35,53 @@
 </blockquote>
 <p>Before we built Canner CMS framework, we've tried most of CMS framework such as Wordpress, Drupal, etc. What we found was that getting simple functions to work was easy enough, but once you try to build and scale into your product or your service you ran into deeper issues...</p>
 <ol>
-<li><p><strong>Humongous code base:</strong>  Each CMS framework is humongous and complex, if you want to use them you have to install a huge code base into your system, and most of the time it'll affect and mess with all your existing code.</p></li>
-<li><p><strong>Hardcoded and limited APIs:</strong>  APIs should not predefined and even hard coded into codebase, which is critical for building advanced use cases and impossible to build into your system.</p></li>
-<li><p><strong>Re-inventing the view layer seemed inefficient and limiting:</strong>  Most CMS rolled their own views, instead of using existing technologies like <code>React</code>, so you have to learn a whole new system, in order to make some changes.</p></li>
-<li><p><strong>CMS are binded with frontend code:</strong>  Many CMS bind with frontend code, so there are many needless and complex conventional namings and settings in your codebase, you have to learn all the system before design your theme.</p></li>
-<li><p><strong>Vendor lock-in:</strong> Many CMS are lock into a specific database and service, it's impossible to switching existing cloud services or databases later.</p></li>
-<li><p><strong>Building complex, nested CMS was impossible:</strong> Many CMS are design for simple use cases such as blog, ecommerce websites. As your service grow larger and complex, you'll run into several bottlenecks to grow your CMS that fits.</p></li>
-<li><p><strong>Building CMS fit your APIs was impossible:</strong> Most CMS are <strong>not purely</strong> CMS, they are design for building templates in it's own structure and platform.  So it's nearly impossible to build CMS that fit into your existing infrastructure.</p></li>
-<li><p><strong>Design CMS structure is like managing a huge code base:</strong> Maintaining your CMS structure is like mess with huge code base with lots of conventions that you must follows.</p></li>
+<li><strong>Humongous codebase:</strong>  Each CMS framework is humongous and complex, if you want to use them you have to install a huge codebase into your system, and most of the time it'll affect and mess with all your existing code.</li>
 </ol>
+<blockquote>
+<p>Canner's CMS is only a React component.</p>
+</blockquote>
+<ol start="2">
+<li><strong>Hardcoded and limited APIs:</strong>  APIs should not predefined and even hard coded into codebase, which is critical for building advanced use cases and impossible to build into your system.</li>
+</ol>
+<blockquote>
+<p>Canner don't predefine any API and data structure.</p>
+</blockquote>
+<ol start="3">
+<li><strong>Re-inventing the view layer seemed inefficient and limiting:</strong>  Most CMS rolled their own views, instead of using existing technologies like <code>React</code>, so you have to learn a whole new system, in order to make some changes.</li>
+</ol>
+<blockquote>
+<p>Canner natively allows you to use <code>React</code> components.</p>
+</blockquote>
+<ol start="4">
+<li><strong>CMSes are binded with frontend code:</strong>  Many CMSes bind with frontend code, so there are many needless and complex conventional namings and settings in your codebase, you have to learn all the system before start designing your theme.</li>
+</ol>
+<blockquote>
+<p>Canner is an agnostic CMS for any application, includes websites, mobile apps, IoTs, and even chatbots.</p>
+</blockquote>
+<ol start="5">
+<li><strong>Vendor lock-in:</strong> Many CMSes are locked into a specific database and service, it's impossible to switching existing cloud services or databases later.</li>
+</ol>
+<blockquote>
+<p>Canner allows you to connect any database and host anywhere, we even allow you to use Canner in hybrid clouds.</p>
+</blockquote>
+<ol start="6">
+<li><strong>Building complex, nested CMS was impossible:</strong> Many CMS are design for simple use cases such as blog, ecommerce websites. As your service grow larger and complex, you'll run into several bottlenecks to grow your CMS that fits.</li>
+</ol>
+<blockquote>
+<p>Canner use schema to define your CMS, it could scale, and could be built in large applications and usages.</p>
+</blockquote>
+<ol start="7">
+<li><strong>Building CMS fit your APIs was impossible:</strong> Most CMS are <strong>not purely</strong> CMS, they are design for building templates in it's own structure and platform.  So it's nearly impossible to build CMS that fit into your existing infrastructure.</li>
+</ol>
+<blockquote>
+<p>Canner adapts to your APIs.</p>
+</blockquote>
+<ol start="8">
+<li><strong>Design CMS structure is like managing a huge code base:</strong> Maintaining your CMS structure is like mess with huge code base with lots of conventions that you must follows.</li>
+</ol>
+<blockquote>
+<p>Canner is only a <code>React</code> component.</p>
+</blockquote>
 <p>Of course not every CMS exhibits all these issues, but if you tried using another CMS you might have run into similar problems.</p>
 <p>If that sounds familiar, you might like <strong><em>Canner</em></strong>. Which motivates us to solve these problems.</p>
 <blockquote>
