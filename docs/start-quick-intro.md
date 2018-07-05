@@ -19,3 +19,4 @@ You only need to upload a XML-like(**JSX**) syntax, to create any kind and form 
 Quick start for 
 
 - [Firebase - Realtime database](start-quick-firebase.md)
+- [Prisma - GraphQL](start-quick-prisma.md)

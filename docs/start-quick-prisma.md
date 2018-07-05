@@ -36,7 +36,7 @@ canner login
 
 After logging in, it will store a token on your machine to validate login information at every canner comamnd, you can use `canner whoami` to check whether you are login or not, it will return your `username`.
 
-## 3. Select project
+## 3. Initialize project
 
 To use `Canner CLI` in your own project, run the command under current project folder:
 
@@ -44,31 +44,22 @@ To use `Canner CLI` in your own project, run the command under current project f
 canner init
 ```
 
-It will ask you whether select existing apps or create new one.
+It will ask you some questions to initialize your project with template schema.
 
 ```sh
-? Create an new app or select from existed apps (Use arrow keys)
-❯ Select from existed apps
-  Create a new app
+? Create an new app or select from existed apps? Select from existed apps
+? What template do you want to create? None
+? What data source do you want to use? Prisma
 ```
 
-Choose the app url you want.  And you'll see a new `.cannerrc` in your folder. It'll record the configuration.
+Then you'll see `.cannerrc`, `canner.schema.js`, `schema`, `cert` in your folder.
 
-> Learn more about [`.cannerrc`](file-cannerrc.md) 
+> - Learn more about [`.cannerrc`](file-cannerrc.md) 
+> - Learn more about [`canenr-schema-js`](file-canner-schema-js.md) 
+> - Learn more about [`cert`](file-cert.md) 
 
-## 4. Install required packages
 
-In your project folder, you have to install two more packages that will be used later.
-
-- `canner-script`: is the core library of how you define your CMS data structure and appearance. [Learn more](advance-canner-script.html)
-- `canner-graphql-interface`: is the library that tells how to connect to your data sources. [Learn more](guides-connector.html)
-
-```sh
-$ npm init -y
-$ npm install canner-script canner-graphql-interface
-```
-
-## 5. Copy Prisma's files
+## 4. Copy Prisma's files
 Canner needs prisma's `datamodel.graphql` and `prisma.yml` to create a proxy server that deliver requests to your prisma server.
 
 Copy these two files from your prisma project folder to `cert/prisma`
@@ -79,7 +70,7 @@ $ cp path/to/prisma-project/prisma.yml ./cert/prisma
 $ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
 ```
 
-## 6. Write canner.schema.js
+## 5. Write canner.schema.js
 You only need to create a file called `canner.schema.js` to complete your CMS.
 
 `canner.schema.js` defines how your CMS and data structure looks like, and how your CMS should connect to your sources.
@@ -228,7 +219,9 @@ canner script:deploy
 
 ## 8. CMS is live
 
-Go to your dashboard in Canner and select your app, you will see your CMS live.
+Run `canner open:dashboard` and click `Edit Content`, you will seed your CMS live.
+
+![editContent](/img/editContent.png)
 
 ## Resource
 * [Canner and Prisma datatype comparison](/docs/advance-canner-prisma-type.html)
