@@ -45,9 +45,7 @@ Headless CMS structure
 The main reasons for users consider using headless CMS over traditional CMS, is because:
 
 1. Flexible CMS structure:
-Traditional CMS have solid API specifications for each use cases. Headless CMS allows flexible API structure for users to construct their API specifications.
-
-In order to achieve it, Some of the headless CMS platforms are like "Wix version" of CMS that you could drag and drop CMS components to design your CMS designs. Some provide CMS configurations to upload your CMS designs.
+Traditional CMS have solid API specifications for each use cases. Headless CMS allows flexible API structure for users to construct their API specifications. In order to achieve it, Some of the headless CMS platforms are like "Wix version" of CMS that you could drag and drop CMS components to design your CMS designs. Some provide CMS configurations to upload your CMS designs.
 
 2. Cross devices:
 Because headless CMS is API-based, you create different CMS for each platform, whether it is web, mobile, or even IoT.
