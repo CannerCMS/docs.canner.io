@@ -52,36 +52,31 @@
 <pre><code class="hljs css languages- sh">canner login
 </code></pre>
 <p>After logging in, it will store a token on your machine to validate login information at every canner comamnd, you can use <code>canner whoami</code> to check whether you are login or not, it will return your <code>username</code>.</p>
-<h2><a class="anchor" aria-hidden="true" id="3-select-project"></a><a href="#3-select-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Select project</h2>
+<h2><a class="anchor" aria-hidden="true" id="3-initialize-project"></a><a href="#3-initialize-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Initialize project</h2>
 <p>To use <code>Canner CLI</code> in your own project, run the command under current project folder:</p>
 <pre><code class="hljs css languages- sh">canner init
 </code></pre>
-<p>It will ask you whether select existing apps or create new one.</p>
-<pre><code class="hljs css languages- sh">? Create an new app or select from existed apps (Use arrow keys)
-❯ Select from existed apps
-  Create a new app
+<p>It will ask you some questions to initialize your project with template schema.</p>
+<pre><code class="hljs css languages- sh">? Create an new app or select from existed apps? Select from existed apps
+? What template <span class="hljs-keyword">do</span> you want to create? None
+? What data <span class="hljs-built_in">source</span> <span class="hljs-keyword">do</span> you want to use? Prisma
 </code></pre>
-<p>Choose the app url you want.  And you'll see a new <code>.cannerrc</code> in your folder. It'll record the configuration.</p>
+<p>Then you'll see <code>.cannerrc</code>, <code>canner.schema.js</code>, <code>schema</code>, <code>cert</code> in your folder.</p>
 <blockquote>
-<p>Learn more about <a href="/docs/file-cannerrc.html"><code>.cannerrc</code></a></p>
-</blockquote>
-<h2><a class="anchor" aria-hidden="true" id="4-install-required-packages"></a><a href="#4-install-required-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Install required packages</h2>
-<p>In your project folder, you have to install two more packages that will be used later.</p>
 <ul>
-<li><code>canner-script</code>: is the core library of how you define your CMS data structure and appearance. <a href="advance-canner-script.html">Learn more</a></li>
-<li><code>canner-graphql-interface</code>: is the library that tells how to connect to your data sources. <a href="guides-connector.html">Learn more</a></li>
+<li>Learn more about <a href="/docs/file-cannerrc.html"><code>.cannerrc</code></a></li>
+<li>Learn more about <a href="/docs/file-canner-schema-js.html"><code>canenr-schema-js</code></a></li>
+<li>Learn more about <a href="/docs/file-cert.html"><code>cert</code></a></li>
 </ul>
-<pre><code class="hljs css languages- sh">$ npm init -y
-$ npm install canner-script canner-graphql-interface
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="5-copy-prisma-s-files"></a><a href="#5-copy-prisma-s-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Copy Prisma's files</h2>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="4-copy-prisma-s-files"></a><a href="#4-copy-prisma-s-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Copy Prisma's files</h2>
 <p>Canner needs prisma's <code>datamodel.graphql</code> and <code>prisma.yml</code> to create a proxy server that deliver requests to your prisma server.</p>
 <p>Copy these two files from your prisma project folder to <code>cert/prisma</code></p>
 <pre><code class="hljs css languages- sh">$ mkdir -p cert/prisma
 $ cp path/to/prisma-project/prisma.yml ./cert/prisma
 $ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="6-write-cannerschemajs"></a><a href="#6-write-cannerschemajs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Write canner.schema.js</h2>
+<h2><a class="anchor" aria-hidden="true" id="5-write-cannerschemajs"></a><a href="#5-write-cannerschemajs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Write canner.schema.js</h2>
 <p>You only need to create a file called <code>canner.schema.js</code> to complete your CMS.</p>
 <p><code>canner.schema.js</code> defines how your CMS and data structure looks like, and how your CMS should connect to your sources.</p>
 <blockquote>
@@ -215,12 +210,13 @@ $ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
 <pre><code class="hljs css languages- sh">canner script:deploy
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="8-cms-is-live"></a><a href="#8-cms-is-live" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. CMS is live</h2>
-<p>Go to your dashboard in Canner and select your app, you will see your CMS live.</p>
+<p>Run <code>canner open:dashboard</code> and click <code>Edit Content</code>, you will seed your CMS live.</p>
+<p><img src="/img/editContent.png" alt="editContent"></p>
 <h2><a class="anchor" aria-hidden="true" id="resource"></a><a href="#resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource</h2>
 <ul>
 <li><a href="/docs/advance-canner-prisma-type.html">Canner and Prisma datatype comparison</a></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start-quick-firebase.html">← How to Firebase - Realtime database</a><a class="docs-next button" href="/docs/guides-writing-schema.html">CMS Schema →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-start-with-a-new-project-folder">1. Start with a new project folder</a></li><li><a href="#2-install-canner-cli">2. Install Canner CLI</a></li><li><a href="#3-select-project">3. Select project</a></li><li><a href="#4-install-required-packages">4. Install required packages</a></li><li><a href="#5-copy-prisma-s-files">5. Copy Prisma's files</a></li><li><a href="#6-write-cannerschemajs">6. Write canner.schema.js</a></li><li><a href="#7-deploy">7. Deploy</a></li><li><a href="#8-cms-is-live">8. CMS is live</a></li><li><a href="#resource">Resource</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start-quick-firebase.html">← How to Firebase - Realtime database</a><a class="docs-next button" href="/docs/guides-writing-schema.html">CMS Schema →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-start-with-a-new-project-folder">1. Start with a new project folder</a></li><li><a href="#2-install-canner-cli">2. Install Canner CLI</a></li><li><a href="#3-initialize-project">3. Initialize project</a></li><li><a href="#4-copy-prisma-s-files">4. Copy Prisma's files</a></li><li><a href="#5-write-cannerschemajs">5. Write canner.schema.js</a></li><li><a href="#7-deploy">7. Deploy</a></li><li><a href="#8-cms-is-live">8. CMS is live</a></li><li><a href="#resource">Resource</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
