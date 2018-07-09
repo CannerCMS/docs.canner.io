@@ -44,7 +44,6 @@ const siteConfig = {
     {doc: 'guides-community-intro', label: 'Community'},
     {doc: 'api-canner-script', label: 'API'},
     {href: "/component", label: "Components"},
-    {href: "https://github.com/Canner/canner", external: true, label: "GitHub"},
     // {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
@@ -80,7 +79,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' CannerIO.  Canner, Inc.',
+    ' Canner.  Canner, Inc.',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
