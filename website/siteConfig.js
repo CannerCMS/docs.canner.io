@@ -99,6 +99,11 @@ const siteConfig = {
   ogImage: 'img/og-image.jpg',
   twitterImage: 'img/og-image.jpg',
 
+  algolia: {
+    apiKey: "c9ba81d7831a52129d133134abaf5f04",
+    indexName: "canner",
+  },
+
   gaTrackingId: "UA-63519210-1",
 
   // You may provide arbitrary config keys to be used as needed by your
