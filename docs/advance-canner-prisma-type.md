@@ -24,6 +24,7 @@ type Article {
 }
 ```
 <img width="32" height="32" src="/img/icon.png" style="float: left; margin: 0px 10px 15px 0px;" /> Canner:
+
 ``` js
 <string keyName="text" ui="input" />
 ```

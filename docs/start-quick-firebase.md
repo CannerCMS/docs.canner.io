@@ -43,7 +43,7 @@ It will ask you some questions to initialize your project with template schema.
 Then you'll see `.cannerrc`, `canner.schema.js`, `schema`, `cert` in your folder.
 
 > - Learn more about [`.cannerrc`](file-cannerrc.md) 
-> - Learn more about [`canenr-schema-js`](file-canner-schema-js.md) 
+> - Learn more about [`canner.schema.js`](file-canner-schema-js.md) 
 > - Learn more about [`cert`](file-cert.md) 
 
 
