@@ -20,6 +20,7 @@ class Footer extends React.Component {
 
   render() {
     const currentYear = new Date().getFullYear();
+    const props = this.props;
 
     return (
       <footer className="nav-footer" id="footer">
@@ -65,27 +66,31 @@ class Footer extends React.Component {
               href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
               Project Chat
             </a>
-            <a
-              href="https://twitter.com/CannerIO"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
           </div>
           <div>
-            <h5>More</h5>
-            <a href="https://www.canner.io/">CannerIO</a>
-            <a href="https://github.com/canner">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count={true}
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
+            <h5>Social</h5>
+            <a href="https://www.canner.io/">Canner Official site</a>
+            <div className="social">
+              <a
+                className="github-button"
+                href={this.props.config.repoUrl}
+                data-icon="octicon-star"
+                data-count-href="/facebook/docusaurus/stargazers"
+                data-show-count={true}
+                data-count-aria-label="# stargazers on GitHub"
+                aria-label="Star this project on GitHub">
+                Star
+              </a>
+            </div>
+            {props.config.twitterUsername && (
+              <div className="social">
+                <a
+                  href={`https://twitter.com/${props.config.twitterUsername}`}
+                  className="twitter-follow-button">
+                  Follow @{props.config.twitterUsername}
+                </a>
+              </div>
+            )}
           </div>
         </section>
 

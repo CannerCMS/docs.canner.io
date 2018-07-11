@@ -103,6 +103,8 @@ const siteConfig = {
   /* Open Graph and Twitter card images */
   ogImage: 'img/og-image.jpg',
   twitterImage: 'img/og-image.jpg',
+  twitterUsername: 'cannerIO',
+  facebookAppId: '1435592646549630',
 
   algolia: {
     apiKey: "c9ba81d7831a52129d133134abaf5f04",
