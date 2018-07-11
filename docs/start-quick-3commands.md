@@ -51,5 +51,5 @@ In your project folder, you can just run `canner script:serve` to build your CMS
 
 You can follow the document below to build CMS on Canner with connecting your data source.
 
-- [connect to firebase admin](start-quick-firebase.md)
-- [connect to prisma](start-quick-prisma.md)
+- [connect to Firebase admin](start-quick-firebase.md)
+- [connect to Prisma](start-quick-prisma.md)
