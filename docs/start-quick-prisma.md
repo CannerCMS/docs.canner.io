@@ -55,11 +55,17 @@ It will ask you some questions to initialize your project with template schema.
 Then you'll see `.cannerrc`, `canner.schema.js`, `schema`, `cert` in your folder.
 
 > - Learn more about [`.cannerrc`](file-cannerrc.md) 
-> - Learn more about [`canenr-schema-js`](file-canner-schema-js.md) 
-> - Learn more about [`cert`](file-cert.md) 
+> - Learn more about [`canner.schema.js`](file-canner-schema-js.md) 
+> - Learn more about [`cert`](file-cert.md)
+
+## 4. Start a Prisma project
+
+> Follow Prisma quick start to start your first project: https://www.prisma.io/docs/quickstart/
+
+After these steps your get two files (`datamodel.graphql` and `prisma.yml`) that is needed in next step.
 
 
-## 4. Copy Prisma's files
+## 5. Copy Prisma's files
 Canner needs prisma's `datamodel.graphql` and `prisma.yml` to create a proxy server that deliver requests to your prisma server.
 
 Copy these two files from your prisma project folder to `cert/prisma`
@@ -70,7 +76,7 @@ $ cp path/to/prisma-project/prisma.yml ./cert/prisma
 $ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
 ```
 
-## 5. Write canner.schema.js
+## 6. Write canner.schema.js
 You only need to create a file called `canner.schema.js` to complete your CMS.
 
 `canner.schema.js` defines how your CMS and data structure looks like, and how your CMS should connect to your sources.
