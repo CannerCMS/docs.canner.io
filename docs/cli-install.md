@@ -7,7 +7,7 @@ sidebar_label: Install Canner CLI
 
 First of all, you have to install at least [Node](https://nodejs.org/en/download/) and [npm](http://npmjs.com/) (or [Yarn](https://yarnpkg.com/)) on your computer.
 
-> While we recommend Node 8.x or greater, your Node version must at least 6.x.
+> While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
 ### Install `@canner/cli`
 

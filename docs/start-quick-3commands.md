@@ -8,7 +8,7 @@ sidebar_label: Building CMS in 3 commands
 
 Make sure you have already install NodeJS and use the command below to install `@canner/cli` globally.
 
-> While we recommend Node 8.x or greater, your Node version must at least 6.x.
+> While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
 ```sh
 npm install -g @canner/cli

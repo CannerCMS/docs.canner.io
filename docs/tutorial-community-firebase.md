@@ -29,7 +29,7 @@ Please clone the repository [on Github Canner/canner-firebase-cms](https://githu
 > - Windows: NPM - [install in Windows](https://docs.npmjs.com/getting-started/installing-node#microsoft-windows)
 > - Mac OS: NPM - [install in Mac OS X](https://docs.npmjs.com/getting-started/installing-node#apple-macos)
 
-> While we recommend Node 8.x or greater, your Node version must at least 6.x.
+> While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
 First of all, install needed packages navigate to the root of the folder and enter:
 
