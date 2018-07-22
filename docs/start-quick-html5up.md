@@ -128,6 +128,11 @@ Deploy schema
 canner script:deploy
 ```
 
+Install required package in global
+```
+npm i -g install @canner/cli-firebase-tool
+```
+
 Import data
 
 ```sh

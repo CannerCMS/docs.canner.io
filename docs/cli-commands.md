@@ -67,7 +67,8 @@ canner
 </table>
 
 ## Data
-
+> To use `data:import`, please install `@canner/cli-firebase-tool` in global first.
+> 
 <table>
   <tr>
     <td>Command</td>

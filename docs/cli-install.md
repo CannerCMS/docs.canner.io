@@ -34,27 +34,34 @@ canner --help
 You will get all available commands, and help menu.
 
 ```shell
-  Usage: canner [options] [command] <cmd>
-
+Usage:  [options] [command] <cmd>
 
   Options:
 
-    -V, --version   output the version number
-    -h, --help      output usage information
+    -V, --version                       output the version number
+    -h, --help                          output usage information
 
   Commands:
 
-    login
-    logout
-    whoami
-    init [url]
-    init:schema [options]
-    open:dashboard
-    app:list
-    app:create
-    script:deploy [options] [filename]
-    script:serve [filename]
-    data:import [options] [filename]
+    login                               Login to Canner
+    logout                              Logout
+    whoami                              Display account info
+    init [url]                          Initialize project
+    init:schema [options]               Initialize schema
+    open:dashboard                      Open your project dashboard
+    app:list                            List all your projects in Canner
+    app:create                          Create a project in Canner
+    script:deploy [options] [filename]  Bundle your CMS and deploy it to Canner
+    script:serve [options] [filename]   Serve your CMS in local
+    data:import [options] [filename]    Import default data to your data source
+
+  Examples:
+
+    Intitialize schemas with templates:
+    $ canner init:schema
+
+    Serving CMS:
+    $ canner script:serve
 ```
 
 Hooray! You are ready to go!
