@@ -8,7 +8,7 @@ In this tutorial, we are going to build a **string component** that deal with ob
 
 > `React` version must be >= 16.x version
 >
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/string-input)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-string-input-pkg)
 
 ## 1. Create your component
 
@@ -129,4 +129,4 @@ Now you can see your customized component in your CMS.
 
 ![customize string](/docs/assets/tutorial-customize-string/input.png)
 
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/string-input)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-string-input-pkg)

@@ -23,7 +23,7 @@ Let's started!
 
 > `React` version must be >= 16.x version
 >
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/array-tabs)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-array-tabs-pkg)
 
 ## 1. Create your component
 
@@ -318,4 +318,4 @@ Now you can see your customized component in your CMS.
 
 ![array-tab](/docs/assets/tutorial-customize-array/array-tab.png)
 
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/array-tabs)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-array-tabs-pkg)

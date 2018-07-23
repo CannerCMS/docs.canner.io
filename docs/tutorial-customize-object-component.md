@@ -20,7 +20,7 @@ Now let's get started! You'll learn to build customized fields like this:
 
 > `React` version must be >= 16.x version
 >
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/object-fields)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-object-fields-pkg)
 
 ## 1. Create your component
 
@@ -224,4 +224,4 @@ Now you can see your customized component in your CMS.
 
 ![customize fields](/docs/assets/tutorial-customize-object/custom-fields.png)
 
-> This demo is [open source on Github](https://github.com/Canner/customize-demo/tree/master/packages/object-fields)
+> This demo is [open source on Github](https://github.com/Canner/canner/tree/master/examples/custom-object-fields-pkg)
