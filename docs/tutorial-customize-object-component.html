@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customize object component · Canner (alpha)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Customize object component · Canner (alpha)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="In this tutorial, we are going to build a **component that contains multiple fields internally** that deal with object type data."/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (alpha) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (alpha) Blog RSS Feed"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customize object component · Canner (alpha)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial, we are going to build a **component that contains multiple fields internally** that deal with object type data."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customize object component · Canner (alpha)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="In this tutorial, we are going to build a **component that contains multiple fields internally** that deal with object type data."/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (alpha) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (alpha) Blog RSS Feed"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -6,13 +6,30 @@
 
               ga('create', 'UA-63519210-1', 'auto');
               ga('send', 'pageview');
-            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner (alpha)"/><h2 class="headerTitleWithLogo">Canner (alpha)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/why-canner.html" target="_self">Why?</a></li><li class="siteNavGroupActive"><a href="/docs/start-quick-intro.html" target="_self">Docs</a></li><li class=""><a href="/docs/guides-community-intro.html" target="_self">Community</a></li><li class=""><a href="/docs/api-canner-script.html" target="_self">API</a></li><li class=""><a href="/component" target="_self">Components</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Tutorial</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Quick start</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-intro.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-3commands.html">Building CMS in 3 commands</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-html5up.html">First CMS in 3 minutes - HTML5UP</a></li></ul></div><div class="navGroup navGroupActive"><h3>Guides</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-firebase.html">Firebase - Realtime database</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-prisma.html">Prisma - GraphQL</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-writing-schema.html">CMS Schema</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-component.html">Component</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-connector.html">Connector</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-resolver.html">Resolver</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-image-upload.html">Image upload settings</a></li></ul></div><div class="navGroup navGroupActive"><h3>Tutorial</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-string-component.html">Customize string component</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-array-component.html">Customize array component</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/tutorial-customize-object-component.html">Customize object component</a></li></ul></div><div class="navGroup navGroupActive"><h3>Advanced</h3><ul><li class="navListItem"><a class="navItem" href="/docs/advance-canner-script.html">canner-script</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-component-types.html">Types of CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-component.html">Customized CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-layout.html">Customized CMS layouts</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-canner-prisma-type.html">Canner and Prisma datatype comparison</a></li></ul></div><div class="navGroup navGroupActive"><h3>CLI</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cli-install.html">Install Canner CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-import-firebase.html">Import data to Firebase</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-upload-image.html">Upload image</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-commands.html">Commands</a></li></ul></div><div class="navGroup navGroupActive"><h3>Files</h3><ul><li class="navListItem"><a class="navItem" href="/docs/file-canner-data-js.html">canner.data.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-schema-js.html">canner.schema.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cert.html">cert folder</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cannerrc.html">.cannerrc</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-image-uploaded.html">.canner-image-uploaded.json</a></li></ul></div><div class="navGroup navGroupActive"><h3>Tips</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tips-schema.html">Schema</a></li></ul></div></div></section></div><script>
-          var toggler = document.getElementById('navToggler');
-          var nav = document.getElementById('docsNav');
-          toggler.onclick = function() {
-            nav.classList.toggle('docsSliderActive');
-          };
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Customize object component</h1></header><article><div><span><p>In this tutorial, we are going to build a <strong>component that contains multiple fields internally</strong> that deal with object type data.</p>
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner (alpha)"/><h2 class="headerTitleWithLogo">Canner (alpha)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/why-canner.html" target="_self">Why?</a></li><li class="siteNavGroupActive"><a href="/docs/start-quick-intro.html" target="_self">Docs</a></li><li class=""><a href="/docs/guides-community-intro.html" target="_self">Community</a></li><li class=""><a href="/docs/api-canner-script.html" target="_self">API</a></li><li class=""><a href="/component" target="_self">Components</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Tutorial</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Quick start</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-intro.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-3commands.html">Building CMS in 3 commands</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-html5up.html">First CMS in 3 minutes - HTML5UP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul><li class="navListItem"><a class="navItem" href="/docs/start-quick-firebase.html">Firebase - Realtime database</a></li><li class="navListItem"><a class="navItem" href="/docs/start-quick-prisma.html">Prisma - GraphQL</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-writing-schema.html">CMS Schema</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-component.html">Component</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-connector.html">Connector</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-resolver.html">Resolver</a></li><li class="navListItem"><a class="navItem" href="/docs/guides-image-upload.html">Image upload settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorial</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-string-component.html">Customize string component</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-customize-array-component.html">Customize array component</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/tutorial-customize-object-component.html">Customize object component</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul><li class="navListItem"><a class="navItem" href="/docs/advance-canner-script.html">canner-script</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-component-types.html">Types of CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-component.html">Customized CMS components</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-customized-layout.html">Customized CMS layouts</a></li><li class="navListItem"><a class="navItem" href="/docs/advance-canner-prisma-type.html">Canner and Prisma datatype comparison</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">CLI</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cli-install.html">Install Canner CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-import-firebase.html">Import data to Firebase</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-upload-image.html">Upload image</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-commands.html">Commands</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Files</h3><ul><li class="navListItem"><a class="navItem" href="/docs/file-canner-data-js.html">canner.data.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-schema-js.html">canner.schema.js</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cert.html">cert folder</a></li><li class="navListItem"><a class="navItem" href="/docs/file-cannerrc.html">.cannerrc</a></li><li class="navListItem"><a class="navItem" href="/docs/file-canner-image-uploaded.html">.canner-image-uploaded.json</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tips</h3><ul><li class="navListItem"><a class="navItem" href="/docs/tips-schema.html">Schema</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Customize object component</h1></header><article><div><span><p>In this tutorial, we are going to build a <strong>component that contains multiple fields internally</strong> that deal with object type data.</p>
 <p>Sometimes building CMS components are not as simple as building an input or editor. Somethimes you want to create a component that deal with an entire object. And update data back to CMS, when it's modified.</p>
 <p>For example, you are building a variant component for ecommerce website that look like this.</p>
 <p><img src="/docs/assets/tutorial-customize-object/variant.png" alt="variant"></p>
@@ -21,119 +38,119 @@
 <p><img src="/docs/assets/tutorial-customize-object/custom-fields.png" alt="custom fields"></p>
 <blockquote>
 <p><code>React</code> version must be &gt;= 16.x version</p>
-<p>This demo is <a href="https://github.com/Canner/customize-demo/tree/master/packages/object-fields">open source on Github</a></p>
+<p>This demo is <a href="https://github.com/Canner/canner/tree/master/examples/custom-object-fields-pkg">open source on Github</a></p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="1-create-your-component"></a><a href="#1-create-your-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create your component</h2>
 <p>Create a React component as usual. Here's an example of a map.</p>
-<pre><code class="hljs css js">
-<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-built_in">Map</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">'immutable'</span>;
+<pre><code class="hljs css languages- js">
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Map<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'immutable'</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fields</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Fields</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
 
-  onChange = <span class="hljs-function">(<span class="hljs-params">e, type</span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> {value } = <span class="hljs-keyword">this</span>.props;
-    <span class="hljs-keyword">const</span> newValue = e.target.value;
-    <span class="hljs-built_in">console</span>.log(newValue)
-  }
+  <span class="token function-variable function">onChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> newValue <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    <span class="hljs-keyword">const</span> { value } = <span class="hljs-keyword">this</span>.props;
-    <span class="hljs-keyword">return</span> (
-      &lt;div style={{border: "1px solid #CCC", padding: "20px"}}&gt;
-        &lt;h1&gt;Your name&lt;/h1&gt;
-        &lt;input
-          type="text"
-          value={value.name}
-          onChange={(e) =&gt; this.onChange(e, 'name')}
-        /&gt;
-        &lt;h1&gt;Content&lt;/h1&gt;
-        &lt;textarea
-          value={value.content}
-          onChange={(e) =&gt; this.onChange(e, 'content')}
-        /&gt;
-      &lt;/div&gt;
-    );
-  }
-}
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>border<span class="token punctuation">:</span> <span class="token string">"1px solid #CCC"</span><span class="token punctuation">,</span> padding<span class="token punctuation">:</span> <span class="token string">"20px"</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Your name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+          <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+          <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span>
+          <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span>
+          <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">.</span>content<span class="token punctuation">}</span></span>
+          <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'content'</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 </code></pre>
 <p>this component's data is like</p>
-<pre><code class="hljs css js">{
-  <span class="hljs-attr">name</span>: string,
-  <span class="hljs-attr">content</span>: string
-}
+<pre><code class="hljs css languages- js"><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+  content<span class="token punctuation">:</span> string
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Here's how an actual data looks like</p>
-<pre><code class="hljs css js">{
-  <span class="hljs-attr">name</span>: <span class="hljs-string">"Howard"</span>,
-  <span class="hljs-attr">content</span>: <span class="hljs-string">"This is a content area"</span>
-}
+<pre><code class="hljs css languages- js"><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">"Howard"</span><span class="token punctuation">,</span>
+  content<span class="token punctuation">:</span> <span class="token string">"This is a content area"</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="2-transform-data-to-immutablejs"></a><a href="#2-transform-data-to-immutablejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Transform data to Immutable.js</h2>
 <blockquote>
 <p>IMPORTANT: All internal variables in CMS framework must be <a href="http://facebook.github.io/immutable-js/">Immutable.js</a>, in other words, <code>value</code> pass into <code>onChange</code> function must be <code>Immutable.js</code>.</p>
 </blockquote>
 <p>To update values in Canner called <code>onChange</code> function that pass as props, to your CMS component. And you could receive your new value through <code>value</code> prop.</p>
-<pre><code class="hljs css js">
-<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
-<span class="hljs-keyword">import</span> {<span class="hljs-built_in">Map</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">'immutable'</span>;
+<pre><code class="hljs css languages- js">
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Map<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'immutable'</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fields</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  <span class="hljs-keyword">static</span> defaultProps = {
-    <span class="hljs-attr">value</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>() <span class="hljs-comment">// define immutable map</span>
-  };
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Fields</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+    value<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// define immutable map</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  onChange = <span class="hljs-function">(<span class="hljs-params">e, type</span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> { refId, value } = <span class="hljs-keyword">this</span>.props;
-    <span class="hljs-keyword">const</span> newValue = e.target.value;
-  }
+  <span class="token function-variable function">onChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> refId<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> newValue <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    <span class="hljs-keyword">const</span> { value } = <span class="hljs-keyword">this</span>.props;
-    <span class="hljs-keyword">return</span> (
-      &lt;div style={{border: "1px solid #CCC", padding: "20px"}}&gt;
-        &lt;h1&gt;Your name&lt;/h1&gt;
-        &lt;input
-          type="text"
-          value={value.get('name')} // get value from immutable map
-          onChange={(e) =&gt; this.onChange(e, 'name')}
-        /&gt;
-        &lt;h1&gt;Content&lt;/h1&gt;
-        &lt;textarea
-          value={value.get('content')} // get value from immutable map
-          onChange={(e) =&gt; this.onChange(e, 'content')}
-        /&gt;
-      &lt;/div&gt;
-    );
-  }
-}
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>border<span class="token punctuation">:</span> <span class="token string">"1px solid #CCC"</span><span class="token punctuation">,</span> padding<span class="token punctuation">:</span> <span class="token string">"20px"</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Your name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token operator">&lt;</span>input
+          type<span class="token operator">=</span><span class="token string">"text"</span>
+          value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token comment">// get value from immutable map</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token operator">&lt;</span>textarea
+          value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'content'</span><span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token comment">// get value from immutable map</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'content'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="3-update-value-in-cms"></a><a href="#3-update-value-in-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Update <code>value</code> in CMS</h2>
 <p>To update values in Canner called <code>onChange</code> function that pass as props, to your CMS component. And you could receive your new value through <code>value</code> prop.</p>
-<pre><code class="hljs css js">onChange = <span class="hljs-function">(<span class="hljs-params">e, type</span>) =&gt;</span> {
-  <span class="hljs-keyword">const</span> { refId, value } = <span class="hljs-keyword">this</span>.props;
-  <span class="hljs-keyword">const</span> newValue = e.target.value;
+<pre><code class="hljs css languages- js"><span class="token function-variable function">onChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> refId<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> newValue <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
 
-  <span class="hljs-comment">// call onChange function from props</span>
-  <span class="hljs-keyword">this</span>.props.onChange(refId, <span class="hljs-string">"update"</span>, value.setIn([type], newValue));
-}
+  <span class="token comment">// call onChange function from props</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">onChange</span><span class="token punctuation">(</span>refId<span class="token punctuation">,</span> <span class="token string">"update"</span><span class="token punctuation">,</span> value<span class="token punctuation">.</span><span class="token function">setIn</span><span class="token punctuation">(</span><span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">,</span> newValue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="4-define-cannerdefjs"></a><a href="#4-define-cannerdefjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Define <code>canner.def.js</code></h2>
 <p>All <code>object</code> and <code>array</code> type components must define it's <code>canner.def.js</code>. In order to let CMS know what data structure is inside your component.</p>
 <p>In this example, add a <code>canner.def.js</code> in root.</p>
-<pre><code class="hljs css js"><span class="hljs-comment">/** @jsx builder */</span>
-<span class="hljs-keyword">import</span> builder <span class="hljs-keyword">from</span> <span class="hljs-string">'canner-script'</span>;
+<pre><code class="hljs css languages- js"><span class="token comment">/** @jsx builder */</span>
+<span class="token keyword">import</span> builder <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
 
-<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{attributes}</span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    &lt;object {...attributes}&gt;
-      &lt;string keyName="name" /&gt;
-      &lt;string keyName="content" /&gt;
-    &lt;/object&gt;
-  );
-}
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">{</span>attributes<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token spread"><span class="token punctuation">{</span><span class="token punctuation">...</span><span class="token attr-value">attributes</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <blockquote>
 <p>Learn more about <a href="/docs/advance-customized-component.html#canner.def.js"><code>canner.def.js</code></a></p>
@@ -151,48 +168,48 @@
 <p>Learn more at <a href="/docs/advance-customized-component.html#naming">customized component - Naming</a></p>
 </blockquote>
 <p>Here's your <code>package.json</code> might look like.</p>
-<pre><code class="hljs css js">{
-  <span class="hljs-string">"name"</span>: <span class="hljs-string">"@canner/customize-object-field"</span>,
-  <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.1.4"</span>,
-  <span class="hljs-string">"description"</span>: <span class="hljs-string">"object field"</span>,
-  <span class="hljs-string">"main"</span>: <span class="hljs-string">"lib/index.js"</span>,
-  <span class="hljs-string">"keywords"</span>: [
-    <span class="hljs-string">"cms"</span>,
-    <span class="hljs-string">"input"</span>,
-    <span class="hljs-string">"canner"</span>
-  ],
-  <span class="hljs-string">"author"</span>: <span class="hljs-string">"canner"</span>,
-  <span class="hljs-string">"license"</span>: <span class="hljs-string">"ISC"</span>,
-  <span class="hljs-string">"peerDependencies"</span>: {
-    <span class="hljs-string">"react"</span>: <span class="hljs-string">"^0.14.0 || ^15.0.0 || ^16.0.0"</span>
-  },
-  <span class="hljs-string">"canner"</span>: {
-    <span class="hljs-string">"cannerDataType"</span>: <span class="hljs-string">"object"</span>
-  }
-}
+<pre><code class="hljs css languages- js"><span class="token punctuation">{</span>
+  <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"@canner/customize-object-field"</span><span class="token punctuation">,</span>
+  <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"0.1.4"</span><span class="token punctuation">,</span>
+  <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"object field"</span><span class="token punctuation">,</span>
+  <span class="token string">"main"</span><span class="token punctuation">:</span> <span class="token string">"lib/index.js"</span><span class="token punctuation">,</span>
+  <span class="token string">"keywords"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"cms"</span><span class="token punctuation">,</span>
+    <span class="token string">"input"</span><span class="token punctuation">,</span>
+    <span class="token string">"canner"</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"author"</span><span class="token punctuation">:</span> <span class="token string">"canner"</span><span class="token punctuation">,</span>
+  <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"ISC"</span><span class="token punctuation">,</span>
+  <span class="token string">"peerDependencies"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"react"</span><span class="token punctuation">:</span> <span class="token string">"^0.14.0 || ^15.0.0 || ^16.0.0"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">"canner"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"cannerDataType"</span><span class="token punctuation">:</span> <span class="token string">"object"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>And remember to add a new key called <code>canner</code> in <code>package.json</code>, in here add</p>
-<pre><code class="hljs css js">{
-  ...
-  <span class="hljs-string">"canner"</span>: {
-    <span class="hljs-string">"cannerDataType"</span>: <span class="hljs-string">"object"</span>
-  }
-}
+<pre><code class="hljs css languages- js"><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token string">"canner"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"cannerDataType"</span><span class="token punctuation">:</span> <span class="token string">"object"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <blockquote>
 <p>Learn more how to setup <a href="/docs/advance-customized-component.html#canner-configuration">Canner configuration</a></p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="6-install-in-cms"></a><a href="#6-install-in-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Install in CMS</h2>
 <p>Install package in your CMS, and import your package in your <code>canner.schema.js</code> add <code>packageName</code> attribute in your object tag. So here we'll set <code>packageName</code> as <code>@canner/customize-object-fields</code>.</p>
-<pre><code class="hljs css xml"><span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">keyName</span>=<span class="hljs-string">"demoFields"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Demo"</span> <span class="hljs-attr">packageName</span>=<span class="hljs-string">"@canner/customize-object-fields"</span>/&gt;</span>
+<pre><code class="hljs css languages- xml"><span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">keyName</span>=<span class="hljs-string">"demoFields"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Demo"</span> <span class="hljs-attr">packageName</span>=<span class="hljs-string">"@canner/customize-object-fields"</span>/&gt;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="7-you-re-done"></a><a href="#7-you-re-done" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. You're done</h2>
 <p>Now you can see your customized component in your CMS.</p>
 <p><img src="/docs/assets/tutorial-customize-object/custom-fields.png" alt="customize fields"></p>
 <blockquote>
-<p>This demo is <a href="https://github.com/Canner/customize-demo/tree/master/packages/object-fields">open source on Github</a></p>
+<p>This demo is <a href="https://github.com/Canner/canner/tree/master/examples/custom-object-fields-pkg">open source on Github</a></p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="tutorial-customize-array-component.html">← Customize array component</a><a class="docs-next button" href="advance-canner-script.html">About canner-script (JSX for Canner) →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-create-your-component">1. Create your component</a></li><li><a href="#2-transform-data-to-immutablejs">2. Transform data to Immutable.js</a></li><li><a href="#3-update-value-in-cms">3. Update <code>value</code> in CMS</a></li><li><a href="#4-define-cannerdefjs">4. Define <code>canner.def.js</code></a></li><li><a href="#5-publish">5. Publish</a></li><li><a href="#6-install-in-cms">6. Install in CMS</a></li><li><a href="#7-you-re-done">7. You're done</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/tutorial-customize-array-component.html">← Customize array component</a><a class="docs-next button" href="/docs/advance-canner-script.html">About canner-script (JSX for Canner) →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-create-your-component">1. Create your component</a></li><li><a href="#2-transform-data-to-immutablejs">2. Transform data to Immutable.js</a></li><li><a href="#3-update-value-in-cms">3. Update <code>value</code> in CMS</a></li><li><a href="#4-define-cannerdefjs">4. Define <code>canner.def.js</code></a></li><li><a href="#5-publish">5. Publish</a></li><li><a href="#6-install-in-cms">6. Install in CMS</a></li><li><a href="#7-you-re-done">7. You're done</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
