@@ -73,7 +73,7 @@ export default (
 
 ## Firebase Client
 
-Enable Firebase storage to store your images, you can new a `FirebaseClientService` instance and pass to prop `imageServiceConfigs` into `<CMS>` component.
+Enable Firebase storage to store your images, you can new a `FirebaseClientService` instance and pass to prop `imageServiceConfigs` into `<Canner>` component.
 
 > You don't have to install `@canner/image-service-config` maually because it's a dependency of canner
 > Learn more about [FirebaseClientService](https://github.com/Canner/image-service-config#firebaseclientservice-firebase-js-sdk)

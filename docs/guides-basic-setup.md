@@ -72,7 +72,7 @@ module.exports = (
 
 Pass your `canner.schema.js` into `canner`, this will generate all the CMS for you!
 
-> `canner` relies on `react-router` to achieve routing in CMS, so you have to pass `history` prop into `<CMS/>`
+> `canner` relies on `react-router` to achieve routing in CMS, so you have to pass `history` prop into `<Canner/>`
 
 > `React` version must be >= 16.x version
 
@@ -83,7 +83,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import {CMS} from 'canner';
+import Canner from 'canner';
 
 // your schema
 import schema from 'path/to/canner.schema.js';
@@ -92,7 +92,7 @@ import schema from 'path/to/canner.schema.js';
 ReactDOM.render(
   <Router>
     <Route path="/" render={({history}) => (
-      <CMS
+      <Canner
         history={history}
         schema={schema}
       />

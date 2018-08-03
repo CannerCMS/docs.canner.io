@@ -75,7 +75,7 @@ const connector = new FirebaseRtdbClientConnector({
 export default class App extends React.Component (
   render() {
     return (
-      <CMS
+      <Canner
         schema={schema}
         revolver={resolver}
         {/* use firebase connector */}

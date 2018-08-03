@@ -43,12 +43,12 @@ module.exports = (
 `canner`'s CMS component needs a schema that compiles through `canner-schema-loader`
 
 ```js
-import {CMS} from 'canner';
+import Canner from 'canner';
 // we can get a object including the `jsonSchema` and `componentTree`
 import schema from 'canner.schema.js';
 
 //return part
-return <CMS
+return <Canner
   {...OtherProps}
   schema={schema} // pass to schema prop
 />

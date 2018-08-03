@@ -31,7 +31,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import {CMS} from 'canner';
+import Canner from 'canner';
 
 // your schema
 import schema from 'path/to/canner.schema.js';
@@ -40,7 +40,7 @@ import schema from 'path/to/canner.schema.js';
 ReactDOM.render(
   <Router>
     <Route path="/" render={({history}) => (
-      <CMS
+      <Canner
         history={history}
         schema={schema}
       />
