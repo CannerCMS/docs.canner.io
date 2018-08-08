@@ -166,5 +166,75 @@ export default (
 );
 ```
 
+## Validation
+
+Canner relies on [ajv](https://github.com/epoberezkin/ajv#validation-keywords) for the validation.
+
+You can add a `validation` prop to the data type tags such as `<string/>`, `<object />`, etc. Then it will be validated when deployed.
+
+**examples**
+
+```js
+export default (
+  <root>
+    <array keyName="users">
+      <string title="User Name" keyName="name" validation={{pattern: '^[a-zA-Z0-9]{4,10}$'}} />
+    </array>
+  </root>
+)
+```
+
+![validation with pattern](/docs/assets/guides-writing-schema/pattern.png)
+
+### Required Field
+
+In addition to the [required](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#required) keyword in `ajv`, we also provide the individual `required` prop to confirm the value is truthy. Note that it's implementation is same as `Boolean(value)`, so if you want to ensure `object` or `array` is not empty, you should use [required](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#required) or [minItems](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#maxitems--minitems).
+
+**examples**
+```js
+export default (
+  <root>
+    <array keyName="users">
+      <string title="User Name" keyName="name" required />
+    </array>
+  </root>
+)
+```
+
+![validation with pattern](/docs/assets/guides-writing-schema/required.png)
+
+### Customize Validation
+
+You can customize a validation by adding a `validator` in `validation` object, it's a function recieves the **immutable** value of this field and the `reject` function, so you can do any validation as long as you remember to return the result of calling `reject` with error message when invalid.
+
+Here is an example, in our `editor` component, if you want to ensure the field is empty, `required` prop won't work because it's an object which is always truthy. It this case, you should add a `validtor` to validate the value yourself.
+
+**example**
+```js
+export default (
+  <root>
+    <object keyName="about">
+      <object
+        keyName="content"
+        ui="editor"
+        title="Content"
+        validation={
+          {
+            validator: (content, reject) => {
+              content = content.toJS();
+              if (!content || content.html.length === 0) {
+                return reject('should be required'); // the message will show on field
+              }
+            }
+          }
+        }
+      />
+    </object>
+  </root>
+)
+```
+![validation with pattern](/docs/assets/guides-writing-schema/validator.png)
+
 ## Reference
 - [All CMS component tags](api-canner-script.md)
+- [AJV validate keywords](https://github.com/epoberezkin/ajv#validation-keywords)
