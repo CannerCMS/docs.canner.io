@@ -252,6 +252,7 @@ Open `http://localhost:8000/` to see your blog website.
 
 ## #4. Deploy website
 If you want to deploy this website, please go to Gatsby document.
+
 https://www.gatsbyjs.org/docs/deploy-gatsby/
 
 ## More information
