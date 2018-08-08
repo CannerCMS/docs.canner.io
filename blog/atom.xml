@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
     <title>Canner (alpha) Blog</title>
-    <updated>2018-07-02T06:00:00Z</updated>
+    <updated>2018-08-08T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Canner (alpha) news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 Canner.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Gatsby-blog + Prisma + Canner]]></title>
+        <id>https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</id>
+        <link href="https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html">
+        </link>
+        <updated>2018-08-08T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Demo of how to use <a href="https://www.canner.io">Canner</a>(CMS) + <a href="https://www.gatsbyjs.org/">Gatsby</a>(Site generator) + <a href="https://www.prisma.io/">Prisma</a>(Database).</p>
+<p><img src="https://i.imgur.com/zqPONIo.png" alt="cover"></p>
+]]></summary>
+        <author>
+            <name>William Chang</name>
+            <uri>http://twitter.com/wwwy3y3</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Canner 1st meetup @ Taiwan, Taipei]]></title>
         <id>https://www.canner.io/blog/2018/07/02/canner-meetup.html</id>
