@@ -237,4 +237,4 @@ export default (
 
 ## Reference
 - [All CMS component tags](api-canner-script.md)
-- [AJV validate keywords](https://github.com/epoberezkin/ajv#validation-keywords)
+- [ajv validate keywords](https://github.com/epoberezkin/ajv#validation-keywords)
