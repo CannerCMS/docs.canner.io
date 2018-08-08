@@ -5,7 +5,7 @@ authorURL: http://twitter.com/wwwy3y3
 authorFBID: 100001527041881
 ---
 
-Demo of how to use [canner](https://www.canner.io)(CMS) + [gatsby](https://www.gatsbyjs.org/)(Site generator) + [prisma](https://www.prisma.io/)(Database).
+Demo of how to use [Canner](https://www.canner.io)(CMS) + [Gatsby](https://www.gatsbyjs.org/)(Site generator) + [Prisma](https://www.prisma.io/)(Database).
 
 ![cover](https://i.imgur.com/zqPONIo.png)
 
@@ -26,7 +26,7 @@ git clone git@github.com:Canner/canner-demo.git
 cd canner-demo/gatsby-blog-with-prisma
 ```
 
-### Make sure you install the latest canner cli
+### Make sure you install the latest canner CLI
 ```sh
 npm install -g @canner/cli@latest 
 ```
@@ -34,7 +34,7 @@ npm install -g @canner/cli@latest
 ### Signup on canner.io
 If you haven't signup on canner.io. Please visit [canner](www.canner.io) to create a account.
 
-### Make sure you install prisma cli
+### Make sure you install Prisma CLI
 ```sh
 npm install -g prisma
 ```
@@ -42,7 +42,7 @@ npm install -g prisma
 ## #1. Initialize your Prisma project
 Right now, you should be under `canner-demo/gatsby-blog-with-prisma`.
 
-### a. Create prisma files
+### a. Create Prisma files
 ```sh
 cd cert/prisma
 # remove the default prisma files
@@ -81,7 +81,7 @@ type User {
 prisma deploy
 ```
 
-After deploying to prisma, you'll see successful result on terminal like below.
+After deploying to Prisma, you'll see successful result on terminal like below.
 
 ![result-2](https://i.imgur.com/B7dr9N5.png)
 
@@ -251,7 +251,7 @@ npm run dev
 Open `http://localhost:8000/` to see your blog website.
 
 ## #4. Deploy website
-If you want to deploy this website, please go to gatsby document.
+If you want to deploy this website, please go to Gatsby document.
 https://www.gatsbyjs.org/docs/deploy-gatsby/
 
 ## More information
