@@ -250,7 +250,7 @@ npm run dev
 
 Open `http://localhost:8000/` to see your blog website.
 
-## 4. Deploy website
+## #4. Deploy website
 If you want to deploy this website, please go to gatsby document.
 https://www.gatsbyjs.org/docs/deploy-gatsby/
 
