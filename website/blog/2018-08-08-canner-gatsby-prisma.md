@@ -17,7 +17,15 @@ Let's look at the overview with a simple image below.
 ![overview](https://i.imgur.com/fb9YSOY.png)
 
 ## Before you start
-After you clone this repository, there are certain things you need to make sure.
+### Clone the demo
+The demo we're going to use locates at https://github.com/Canner/canner-demo
+```sh
+git clone git@github.com:Canner/canner-demo.git
+
+# move to the gatsby example
+cd canner-demo/gatsby-blog-with-prisma
+```
+
 ### Make sure you install the latest canner cli
 ```sh
 npm install -g @canner/cli@latest 
@@ -32,6 +40,8 @@ npm install -g prisma
 ```
 
 ## #1. Initialize your Prisma project
+Right now, you should be under `canner-demo/gatsby-blog-with-prisma`.
+
 ### a. Create prisma files
 ```sh
 cd cert/prisma
