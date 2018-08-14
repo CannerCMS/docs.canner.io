@@ -81,10 +81,20 @@ Enable Firebase storage to store your images, you can new a `FirebaseClientServi
 ```js
 /** @jsx builder */
 import builder from 'canner-script';
-import {FirebaseClientService} from '@canenr/imager-service-config';
+import {FirebaseClientService} from '@canner/image-service-config';
 import firebase from 'firebase';
 
-// ... 
+firebase.initializeApp({
+  apiKey,
+  storageBucket
+});
+
+// remember to autauthencate firebase first, or uploading will be failed,
+// https://firebase.google.com/docs/auth/web/start
+firebase.auth().signInAnonymously();
+// or login your firebase Auth
+firebase.auth().signInWithEmailAndPassword("xxx", "xxx");
+
 
 const imageService = new FirebaseClientService({
   firebase: firebase,
