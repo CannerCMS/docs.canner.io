@@ -89,7 +89,7 @@ firebase.initializeApp({
   storageBucket
 });
 
-// remember to autauthencate firebase first, or uploading will be failed,
+// remember to authenticate firebase first, or uploading will be failed,
 // https://firebase.google.com/docs/auth/web/start
 firebase.auth().signInAnonymously();
 // or login your firebase Auth
