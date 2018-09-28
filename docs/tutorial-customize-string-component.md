@@ -35,8 +35,6 @@ export default class StringInput extends PureComponent {
 
 ## 2. Received and update `value` in CMS
 
-> IMPORTANT: All internal variables in CMS framework must be [immutableJS](http://facebook.github.io/immutable-js/), in other words, `value` pass into `onChange` function must be `immutableJS`.
-
 To update values in Canner called `onChange` function that pass as props, to your CMS component. And you could receive your new value through `value` prop.
 
 ```js

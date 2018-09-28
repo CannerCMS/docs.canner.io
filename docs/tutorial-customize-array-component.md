@@ -31,7 +31,7 @@ Create a React component as usual. Here's an example of a tab porting [`rc-tabs`
 
 Normally you'll use `rc-tabs` as below:
 
-> This example assume that your `value` prop is a [immutable.js List](http://facebook.github.io/immutable-js/docs/#/List)
+> This example assume that your `value` prop is an array.
 
 ```js
 import React, { Component } from "react";
@@ -53,7 +53,7 @@ export default class TabUi extends Component {
 
   static defaultProps = {
     uiParams: {},
-    value: new List()
+    value: []
   };
 
   handleTabChange = (key) => {
@@ -67,8 +67,7 @@ export default class TabUi extends Component {
     } = this.props;
     // create tab
 
-    const size = value.size;
-    this.setState({ activeKey: `${size}` });
+    this.setState({ activeKey: `${value.length}` });
   };
 
   handleDelete = (index) => {
@@ -79,7 +78,7 @@ export default class TabUi extends Component {
       onOk() {
         // delete tab
         that.setState({
-          activeKey: `${value.size - 2}`
+          activeKey: `${value.length - 2}`
         });
       }
     })
@@ -101,7 +100,7 @@ export default class TabUi extends Component {
       const defaultTitle = `Item ${i + 1}`;
 
       if (uiParams.titleKey) {
-        title = item.get(uiParams.titleKey) || defaultTitle;
+        title = item.uiParams.titleKey || defaultTitle;
       } else if (uiParams.titlePrefix) {
         title = `${uiParams.titlePrefix}${i + 1}` || defaultTitle;
       } else {
@@ -137,7 +136,7 @@ export default class TabUi extends Component {
           renderTabBar={() => (
             <ScrollableInkTabBar
               extraContent={
-                <Button style={{margin: '6px'}}onClick={this.handleCreate}>+ Add</Button>
+                <Button style={{margin: '6px'}} onClick={this.handleCreate}>+ Add</Button>
               }
               />
           )}
@@ -292,7 +291,6 @@ Here's your `package.json` might look like.
   "license": "ISC",
   "dependencies": {
     "antd": "^3.2.0",
-    "immutable": "4.0.0-rc.9",
     "rc-tabs": "^9.2.5"
   }
 }
