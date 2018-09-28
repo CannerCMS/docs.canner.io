@@ -104,7 +104,7 @@ class VairantsObject extends React.Component {
     return (
       <div>
         {/* component deals with the options */}
-        <Options onChange={this.handleOptions} value={value.get('options').toJS()}/>
+        <Options onChange={this.handleOptions} value={value.options}/>
 
         {/* component deals with the variants */}
         <Tabs onChange={this.handleTabs}>
