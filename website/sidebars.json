@@ -70,7 +70,6 @@
     "API": [
       "api-canner-script",
       "api-components",
-      "api-layouts",
       "api-cms-core",
       "api-cms-helpers",
       "api-toolbar"
