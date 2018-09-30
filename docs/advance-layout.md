@@ -58,27 +58,27 @@ All children will be rendered as normal, this layout is useful when you want to 
 Such as when you are using tab, the example below will become four tabs.
 
 ```xml
-  <tabs>
+  <Tabs>
     <string {...}> // -----> tab 1
     <string {...}> // -----> tab 2
     <string {...}> // -----> tab 3
     <string {...}> // -----> tab 4
-  </tabs>
+  </Tabs>
 ```
 
 you can use `<Default/>` to group fields, it will become only two tabs.
 
 ```jsx
-<tabs>
-  <default> // -----> tab 1
+<Tabs>
+  <Default keyName="section1"> // -----> tab 1
     <string {...}>
     <string {...}>
   </default>
-  <default> // -----> tab 2
+  <Default keyName="section2"> // -----> tab 2
     <string {...}>
     <string {...}>
   </default>
-<tabs>
+<Tabs>
 ```
 
 ### &lt;Block/&gt;
@@ -87,20 +87,64 @@ The children in `Block` will be put into a Card component.
 
 ### &lt;Tabs/&gt;
 
-Each child in `Tabs` will be put into a `TabPane`.
+Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default />` because it can group fields without adding other styles. 
 
+> Notice that each child in Tabs should have keyName to let it works because `<Tabs />` will use the keyName to tell canner to render which child.
 
-## Default Layout
+```js
+<Tabs>
+  <Default keyName="section1"> // -----> tab 1
+    <string {...}>
+    <string {...}>
+  </default>
+  <Default keyName="section2"> // -----> tab 2
+    <string {...}>
+    <string {...}>
+  </default>
+<Tabs>
+```
 
-Canner CMS will add default layouts for your CMS. 
+### &lt;Row /&gt; and &lt;Col /&gt;
 
-### First level in &lt;root/&gt;
+The grid system same as [antd grid](https://ant.design/components/grid/).
 
-Canner will wrap first level component into `Body` layout. 
+### &lt;Condition /&gt;
 
-### Second level in &lt;root/&gt;
+Control the children field is hidden or disabled. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
 
-Components will be categorized by their types, see [detail rules](https://github.com/Canner/canner-script/blob/master/src/visitors/layer1-2Fieldset.js).
+For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
+
+```js
+<object keyName="shipment">
+  <string
+    keyName="type"
+    ui="select"
+    uiParams={{
+      options: [{
+
+      }]
+    }}
+  />
+  <Condition match={(value, operator) => {
+    return value.type === 'DELIVERY';
+  }}>
+    <string keyName="address" />
+  <Condition />
+</object>
+```
+
+If you prefer to disable it instead of hiding, add `defaultMode` property in `<Condition />`.
+
+```js
+// ...
+  <Condition
+    match={(value, operator) => {
+      return value.type === 'DELIVERY';
+    }}
+    defaultMode="disabled"
+  >
+// ...
+```
 
 
 ## Customized Layout
