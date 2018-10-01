@@ -5,32 +5,33 @@
       "start-quick-3commands",
       "start-quick-html5up"
     ],
+    "Schema": [
+      "schema-overview",
+      "schema-root",
+      "schema-data",
+      "schema-layout",
+      "schema-toolbar",
+      "schema-page"
+    ],
     "Guides": [
-      "start-quick-firebase",
-      "start-quick-prisma",
-      "guides-writing-schema",
-      "guides-component",
       "guides-connector",
       "guides-resolver",
-      "guides-image-upload"
-    ],
-    "Tutorial": [
-      "tutorial-customize-string-component",
-      "tutorial-customize-array-component",
-      "tutorial-customize-object-component"
-    ],
-    "Advanced": [
-      "advance-canner-script",
-      "advance-component-types",
-      "advance-layout",
-      "advance-customized-component",
+      "guides-storage",
+      "guides-internationalization",
+      "guides-validation",
+      "guides-condition-fields",
+      "guides-customized-components",
+      "guides-customized-layouts",
+      "guides-customized-toolbar",
       "advance-customized-layout",
       "advance-canner-prisma-type"
     ],
     "CLI": [
-      "cli-install",
-      "cli-import-firebase",
-      "cli-upload-image",
+      "cli-installation",
+      "cli-development",
+      "cli-production",
+      "cli-import-data",
+      "cli-config-js",
       "cli-commands"
     ],
     "Files": [
@@ -42,6 +43,15 @@
     ],
     "Tips": [
       "tips-schema"
+    ]
+  },
+  "tutorial": {
+    "Tutorial": [
+      "start-quick-firebase",
+      "start-quick-prisma",
+      "tutorial-customize-string-component",
+      "tutorial-customize-array-component",
+      "tutorial-customize-object-component"
     ]
   },
   "community": {
@@ -68,12 +78,12 @@
   },
   "api": {
     "API": [
-      "api-canner-script",
-      "api-components",
+      "api-schema",
+      "api-ui-components",
       "api-layouts",
-      "api-cms-core",
-      "api-cms-helpers",
-      "api-toolbar"
+      "api-toolbar",
+      "api-canner",
+      "api-helpers"
     ]
   },
   "why": {

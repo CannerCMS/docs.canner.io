@@ -41,6 +41,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-intro', label: 'Docs'},
+    {doc: 'start-quick-firebase', label: 'Tutorials'},
     {doc: 'guides-community-intro', label: 'Community'},
     {doc: 'api-canner-script', label: 'API'},
     {href: "/component", label: "Components"},
