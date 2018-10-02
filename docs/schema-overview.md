@@ -294,7 +294,7 @@ module.exports = <root>
 
 ### Page tags
 
-Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. So we also support serveral common `indicator` and `chart` tags to showing the data.
+Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `indicator` and `chart` to show the data.
 
 **exmples**
 
