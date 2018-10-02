@@ -4,7 +4,25 @@ title: Import Data
 sidebar_label: Import Data
 ---
 
-If you use firebase as your database, `@canner/cli` will upload data to `firebase`, but the behavior is different from Canner. `@canner/cli` will compares the new data with old data in firebase, if same key exist in firebase, the new data will not be uploaded with error:  `firebase database had the same key 'user'`.
+> NOTE: Importing data feature is not ONLY support Firebase realtime database
+
+## Firebase realtime database
+
+If you use **Firebase realtime database** as your database, `@canner/cli` will upload data to `firebase`, but the behavior is different from Canner. `@canner/cli` will compares the new data with old data in firebase, if same key exist in firebase, the new data will not be uploaded with error:  `firebase database had the same key 'user'`.
+
+`@canner/cli-firebase-tool` is a prerequisite for `canner data:import`
+
+Install `@canner/cli-firebase-tool` by running
+
+```
+npm i -g @canner/cli-firebase-tool
+```
+
+Command:
+
+```
+canner data:import [options] [filename]
+```
 
 ### Original data
 ```js

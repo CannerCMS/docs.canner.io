@@ -1,7 +1,7 @@
 ---
 id: guides-internationalization
-title: internationalization (i18n)
-sidebar_label: internationalization (i18n)
+title: Internationalization (i18n)
+sidebar_label: Internationalization (i18n)
 ---
 
 Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `<root/>`**. `storage` must be a object generated from https://github.com/Canner/image-service-config

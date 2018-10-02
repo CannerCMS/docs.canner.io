@@ -27,10 +27,10 @@
     ],
     "CLI": [
       "cli-installation",
+      "cli-canner-config-js",
       "cli-development",
       "cli-production",
       "cli-import-data",
-      "cli-config-js",
       "cli-commands"
     ],
     "Files": [
