@@ -102,7 +102,7 @@ There are serveral available tags, as listed below.
 - \<array />
 - \<object />
 
-***Layouts***: Layout of CMS blocks and appearance
+***Layouts***: The layouts and appearance of the CMS
 
 - \<Collapse />
 - \<Block />
@@ -117,7 +117,14 @@ There are serveral available tags, as listed below.
 - \<toolbar />
   - \<sorter />
   - \<filter />
+    - \<textFilter />
+    - \<numberFilter />
+    - \<selectFilter />
   - \<pagination />
+  - \<actions />
+    - \<filter />
+    - \<export />
+    - \<import />
 
 
 ### Wrapped in &lt;root/&gt;
@@ -205,7 +212,7 @@ So your `keyName` should define as `content`
 
 Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
 
-Every layout tag will generate a new `visitor` that is inserted into the `visitors` array, which will be collected in `root` tag.
+Every layout tag generates a new `visitor` which is used to edit the component tree will be collected in `root` tag.
 
 For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to seperate the three fields into two different blocks.
 
@@ -230,11 +237,11 @@ import c, {Block} from 'canner-script';
 
 module.exports = <root>
   <object keyName="info">
-    <Block>
+    <Block title="Basic Info">
       <string keyName="name" />
       <string keyName="nickname" />
     </Block>
-    <Block>
+    <Block title="Other Info">
       <string keyName="note"  ui="editor"/>
     </Block>
   </object>
@@ -246,9 +253,7 @@ module.exports = <root>
 
 ### Toolbar tags
 
-Toolbar tags provide additional features for user to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`。
-
-Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
+Toolbar tags provide additional features for user to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc. They only can be put into **first level array** and **relation field**.
 
 **exmples**
 
@@ -256,35 +261,26 @@ Query tags create components that user can use them to query requested content. 
 <root>
   <array keyName="posts">
     <toolbar>
-      <filter fields={[{
-        type: 'select',
-        label: 'Status',
-        options: [{
-          text: 'All',
-          condition: {}
-        }, {
-          text: 'Published',
-          condition: {
-            draft: {
-              eq: false
+      <filter>
+        <numberFilter field="views" lable="Views">
+        <selectFilter
+          label="Status"
+          options={[{
+            text: 'All',
+            condition: {}
+          }, {
+            text: 'Published',
+            condition: {
+              draft: {
+                eq: false
+              }
             }
-          }
-        }, {
-          text: 'Draft',
-          condition: {
-            draft: {
-              eq: true
-            }
-          }
-        }]
-      }, {
-        type: 'number',
-        key: 'views',
-        label: 'Views',
-      }]}>
+          }]}
+        />
+      </filter>
       <sort defaultOption="views" options={[{
-        key: 'views',
-        title: 'Views'
+        field: 'views',
+        label: 'Views'
       }]}>
       <pagination>
     </toolbar>
@@ -292,3 +288,38 @@ Query tags create components that user can use them to query requested content. 
 </root>
 
 ```
+> Further information
+> - [All toolbar tags](schema-toolbar-tags.md)  
+
+
+### Page tags
+
+Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. So we also support serveral common `indicator` and `chart` tags to showing the data.
+
+**exmples**
+
+```
+<root>
+  <page keyName="dashboard">
+    <indicator
+      ui="amount"
+      keyName="productsPie"
+      graphql={`
+        query products {
+          products {
+
+          }
+        }
+      `}
+      getValue={v => v.length}
+    >
+  </page>
+  <array keyName="products">
+    <string keyName="name" title="Name" />
+    {...}
+  </array>
+</root>
+
+```
+> Further information
+> - [All page tags](schema-page-tags.md)  
