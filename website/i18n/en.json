@@ -4,154 +4,290 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Canner official documentation",
-    "advance-canner-cms": "Canner CMS",
-    "Canner CMS": "Canner CMS",
-    "advance-canner-script": "About canner-script (JSX for Canner)",
-    "canner-script": "canner-script",
-    "advance-cms-helpers": "canner-helpers",
-    "CMS component helpers": "CMS component helpers",
-    "advance-cms-test": "Test CMS components",
-    "Test CMS components": "Test CMS components",
-    "advance-component-types": "Types of CMS components",
-    "Types of CMS components": "Types of CMS components",
-    "advance-layout": "Layout",
-    "Layout": "Layout",
-    "api-canner": "canner",
-    "canner": "canner",
-    "api-canner-helpers": "Canner Helpers",
-    "Canner Helpers": "Canner Helpers",
-    "api-ui-components": "CMS UI Components",
-    "CMS UI Components": "CMS UI Components",
-    "api-layouts": "Layouts",
-    "Layouts": "Layouts",
-    "api-schema": "Schema",
-    "Schema": "Schema",
-    "api-toolbar": "Toolbar",
-    "Toolbar": "Toolbar",
-    "cli-commands": "Commands",
-    "Commands": "Commands",
-    "cli-config-js": "Canner.config.js",
-    "Canner.config.js": "Canner.config.js",
-    "cli-development": "Development",
-    "Development": "Development",
-    "cli-import-data": "Import Data",
-    "Import Data": "Import Data",
-    "cli-installation": "Installation",
-    "Installation": "Installation",
-    "cli-production": "Production",
-    "Production": "Production",
-    "cli-upload-image": "Upload image via CLI",
-    "Upload image": "Upload image",
-    "concept-action": "Actions in CMS",
-    "Actions in CMS": "Actions in CMS",
-    "concept-compile-schema": "How compiling CMS schema works?",
-    "Compile schema": "Compile schema",
-    "concept-component-tree": "ComponentTree",
-    "ComponentTree": "ComponentTree",
-    "concept-hocs": "High order components",
-    "High order components": "High order components",
-    "concept-refid": "What is RefId?",
-    "What is RefId?": "What is RefId?",
-    "file-canner-data-js": "canner.data.js",
-    "canner.data.js": "canner.data.js",
-    "file-canner-schema-js": "canner.schema.js",
-    "canner.schema.js": "canner.schema.js",
-    "file-cannerrc": ".cannerrc",
-    ".cannerrc": ".cannerrc",
-    "file-cert": "cert folder",
-    "cert folder": "cert folder",
-    "file-canner-image-uploaded": ".canner-image-uploaded.json file",
-    ".canner-image-uploaded.json": ".canner-image-uploaded.json",
-    "guides-basic-setup": "Basic setups",
-    "Basic setups": "Basic setups",
-    "guides-canner-prisma-type": "Canner and Prisma datatype comparison",
-    "Canner and Prisma datatype comparison": "Canner and Prisma datatype comparison",
-    "guides-canner-schema-loader": "Setup canner-schema-loader in webpack",
-    "Setup canner-schema-loader": "Setup canner-schema-loader",
-    "guides-community-intro": "Introduction",
-    "Introduction": "Introduction",
-    "guides-component": "Component",
-    "Component": "Component",
-    "guides-condition-fields": "Condition Fields",
-    "Condition Fields": "Condition Fields",
-    "guides-connector": "Connector",
-    "Connector": "Connector",
-    "guides-customized-component": "Customized CMS Component",
-    "Customized CMS Component": "Customized CMS Component",
-    "guides-customized-layout": "Customized Layout",
-    "Customized Layout": "Customized Layout",
-    "guides-customized-toolbar": "Customized Toolbar",
-    "Customized Toolbar": "Customized Toolbar",
-    "guides-internationalization": "internationalization (i18n)",
-    "internationalization (i18n)": "internationalization (i18n)",
-    "guides-resolver": "Resolver",
-    "Resolver": "Resolver",
-    "guides-storage": "Storage",
-    "Storage": "Storage",
-    "guides-validation": "Validation",
-    "Validation": "Validation",
-    "guides-writing-schema": "CMS Schema",
-    "CMS Schema": "CMS Schema",
-    "schema-data-type-tags": "Data Type Tags",
-    "Data Type Tags": "Data Type Tags",
-    "schema-layout-tags": "Layout Tags",
-    "Layout Tags": "Layout Tags",
-    "schema-overview": "Overview",
-    "Overview": "Overview",
-    "schema-page-tags": "Page Tags",
-    "Page Tags": "Page Tags",
-    "schema-root-tag": "Root Tag",
-    "Root Tag": "Root Tag",
-    "schema-toolbar-tags": "Toolbar Tags",
-    "Toolbar Tags": "Toolbar Tags",
-    "start-quick-3commands": "Building CMS in 3 commands",
-    "Building CMS in 3 commands": "Building CMS in 3 commands",
-    "start-quick-html5up": "First CMS using Canner in 3 minutes",
-    "First CMS in 3 minutes - HTML5UP": "First CMS in 3 minutes - HTML5UP",
-    "start-quick-intro": "Introduction",
-    "tips-schema": "Tips for CMS schema",
-    "tutorial-community-firebase": "Firebase CMS (Community edition)",
-    "Firebase CMS (Community edition)": "Firebase CMS (Community edition)",
-    "tutorial-connect-to-firebase": "Connect to Firebase Realtime Database",
-    "Connect to Firebase Realtime Database": "Connect to Firebase Realtime Database",
-    "tutorial-connect-to-prisma": "Connect to Prisma",
-    "Connect to Prisma": "Connect to Prisma",
-    "tutorial-customize-array-component": "Customize array component",
-    "Customize array component": "Customize array component",
-    "tutorial-customize-object-component": "Customize object component",
-    "Customize object component": "Customize object component",
-    "tutorial-customize-string-component": "Customize string component",
-    "Customize string component": "Customize string component",
-    "why-adaptive-cms": "Why Adaptive CMS?",
-    "Why Adaptive CMS?": "Why Adaptive CMS?",
-    "why-canner": "Why Canner?",
-    "Why Canner?": "Why Canner?",
-    "why-firebase-cms": "Why CMS for Firebase?",
-    "Why CMS for Firebase?": "Why CMS for Firebase?",
-    "why-graphql": "Why build on GraphQL?",
-    "Why build on GraphQL?": "Why build on GraphQL?",
-    "why-jsx": "Why Canner use JSX as schema?",
-    "Why Canner use JSX?": "Why Canner use JSX?",
-    "why-mission": "Our mission",
-    "Our mission": "Our mission",
-    "why-traditional-headless-adaptive": "From traditional, headless to adaptive CMS",
-    "Traditional vs Headless vs Adaptive CMS": "Traditional vs Headless vs Adaptive CMS",
-    "Why?": "Why?",
-    "Docs": "Docs",
-    "Tutorials": "Tutorials",
-    "Community": "Community",
-    "API": "API",
-    "Components": "Components",
-    "Blog": "Blog",
-    "Quick start": "Quick start",
-    "Guides": "Guides",
-    "CLI": "CLI",
-    "Files": "Files",
-    "Tips": "Tips",
-    "Tutorial": "Tutorial",
-    "Advanced": "Advanced",
-    "Concept": "Concept",
-    "Why Canner": "Why Canner"
+    "docs": {
+      "advance-canner-cms": {
+        "title": "Canner CMS",
+        "sidebar_label": "Canner CMS"
+      },
+      "advance-canner-script": {
+        "title": "About canner-script (JSX for Canner)",
+        "sidebar_label": "canner-script"
+      },
+      "advance-cms-helpers": {
+        "title": "canner-helpers",
+        "sidebar_label": "CMS component helpers"
+      },
+      "advance-cms-test": {
+        "title": "Test CMS components",
+        "sidebar_label": "Test CMS components"
+      },
+      "advance-component-types": {
+        "title": "Types of CMS components",
+        "sidebar_label": "Types of CMS components"
+      },
+      "api-canner": {
+        "title": "canner",
+        "sidebar_label": "canner"
+      },
+      "api-canner-helpers": {
+        "title": "Canner Helpers",
+        "sidebar_label": "Canner Helpers"
+      },
+      "api-ui-components": {
+        "title": "CMS UI Components",
+        "sidebar_label": "CMS UI Components"
+      },
+      "api-schema": {
+        "title": "Schema",
+        "sidebar_label": "Schema"
+      },
+      "api-toolbar": {
+        "title": "Toolbar",
+        "sidebar_label": "Toolbar"
+      },
+      "cli-commands": {
+        "title": "Commands",
+        "sidebar_label": "Commands"
+      },
+      "cli-config-js": {
+        "title": "Canner.config.js",
+        "sidebar_label": "Canner.config.js"
+      },
+      "cli-development": {
+        "title": "Development",
+        "sidebar_label": "Development"
+      },
+      "cli-import-data": {
+        "title": "Import Data",
+        "sidebar_label": "Import Data"
+      },
+      "cli-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "cli-production": {
+        "title": "Production",
+        "sidebar_label": "Production"
+      },
+      "cli-upload-image": {
+        "title": "Upload image via CLI",
+        "sidebar_label": "Upload image"
+      },
+      "concept-action": {
+        "title": "Actions in CMS",
+        "sidebar_label": "Actions in CMS"
+      },
+      "concept-compile-schema": {
+        "title": "How compiling CMS schema works?",
+        "sidebar_label": "Compile schema"
+      },
+      "concept-component-tree": {
+        "title": "ComponentTree",
+        "sidebar_label": "ComponentTree"
+      },
+      "concept-hocs": {
+        "title": "High order components",
+        "sidebar_label": "High order components"
+      },
+      "concept-refid": {
+        "title": "What is RefId?",
+        "sidebar_label": "What is RefId?"
+      },
+      "file-canner-data-js": {
+        "title": "canner.data.js",
+        "sidebar_label": "canner.data.js"
+      },
+      "file-canner-schema-js": {
+        "title": "canner.schema.js",
+        "sidebar_label": "canner.schema.js"
+      },
+      "file-cannerrc": {
+        "title": ".cannerrc",
+        "sidebar_label": ".cannerrc"
+      },
+      "file-cert": {
+        "title": "cert folder",
+        "sidebar_label": "cert folder"
+      },
+      "file-canner-image-uploaded": {
+        "title": ".canner-image-uploaded.json file",
+        "sidebar_label": ".canner-image-uploaded.json"
+      },
+      "guides-basic-setup": {
+        "title": "Basic setups",
+        "sidebar_label": "Basic setups"
+      },
+      "guides-canner-prisma-type": {
+        "title": "Canner and Prisma datatype comparison",
+        "sidebar_label": "Canner and Prisma datatype comparison"
+      },
+      "guides-canner-schema-loader": {
+        "title": "Setup canner-schema-loader in webpack",
+        "sidebar_label": "Setup canner-schema-loader"
+      },
+      "guides-community-intro": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
+      "guides-component": {
+        "title": "Component",
+        "sidebar_label": "Component"
+      },
+      "guides-condition-fields": {
+        "title": "Condition Fields",
+        "sidebar_label": "Condition Fields"
+      },
+      "guides-connector": {
+        "title": "Connector",
+        "sidebar_label": "Connector"
+      },
+      "guides-customized-component": {
+        "title": "Customized CMS Component",
+        "sidebar_label": "Customized CMS Component"
+      },
+      "guides-customized-layout": {
+        "title": "Customized Layout",
+        "sidebar_label": "Customized Layout"
+      },
+      "guides-customized-toolbar": {
+        "title": "Customized Toolbar",
+        "sidebar_label": "Customized Toolbar"
+      },
+      "guides-internationalization": {
+        "title": "internationalization (i18n)",
+        "sidebar_label": "internationalization (i18n)"
+      },
+      "guides-resolver": {
+        "title": "Resolver",
+        "sidebar_label": "Resolver"
+      },
+      "guides-storage": {
+        "title": "Storage",
+        "sidebar_label": "Storage"
+      },
+      "guides-validation": {
+        "title": "Validation",
+        "sidebar_label": "Validation"
+      },
+      "guides-writing-schema": {
+        "title": "CMS Schema",
+        "sidebar_label": "CMS Schema"
+      },
+      "schema-data-type-tags": {
+        "title": "Data Type Tags",
+        "sidebar_label": "Data Type Tags"
+      },
+      "schema-layout-tags": {
+        "title": "Layout Tags",
+        "sidebar_label": "Layout Tags"
+      },
+      "schema-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "schema-page-tags": {
+        "title": "Page Tags",
+        "sidebar_label": "Page Tags"
+      },
+      "schema-root-tag": {
+        "title": "Root Tag",
+        "sidebar_label": "Root Tag"
+      },
+      "schema-toolbar-tags": {
+        "title": "Toolbar Tags",
+        "sidebar_label": "Toolbar Tags"
+      },
+      "start-quick-3commands": {
+        "title": "Building CMS in 3 commands",
+        "sidebar_label": "Building CMS in 3 commands"
+      },
+      "start-quick-html5up": {
+        "title": "First CMS using Canner in 3 minutes",
+        "sidebar_label": "First CMS in 3 minutes - HTML5UP"
+      },
+      "start-quick-intro": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
+      "tips-schema": {
+        "title": "Tips for CMS schema",
+        "sidebar_label": "Schema"
+      },
+      "tutorial-community-firebase": {
+        "title": "Firebase CMS (Community edition)",
+        "sidebar_label": "Firebase CMS (Community edition)"
+      },
+      "tutorial-connect-to-firebase": {
+        "title": "Connect to Firebase Realtime Database",
+        "sidebar_label": "Connect to Firebase Realtime Database"
+      },
+      "tutorial-connect-to-prisma": {
+        "title": "Connect to Prisma",
+        "sidebar_label": "Connect to Prisma"
+      },
+      "tutorial-customize-array-component": {
+        "title": "Customize array component",
+        "sidebar_label": "Customize array component"
+      },
+      "tutorial-customize-object-component": {
+        "title": "Customize object component",
+        "sidebar_label": "Customize object component"
+      },
+      "tutorial-customize-string-component": {
+        "title": "Customize string component",
+        "sidebar_label": "Customize string component"
+      },
+      "why-adaptive-cms": {
+        "title": "Why Adaptive CMS?",
+        "sidebar_label": "Why Adaptive CMS?"
+      },
+      "why-canner": {
+        "title": "Why Canner?",
+        "sidebar_label": "Why Canner?"
+      },
+      "why-firebase-cms": {
+        "title": "Why CMS for Firebase?",
+        "sidebar_label": "Why CMS for Firebase?"
+      },
+      "why-graphql": {
+        "title": "Why build on GraphQL?",
+        "sidebar_label": "Why build on GraphQL?"
+      },
+      "why-jsx": {
+        "title": "Why Canner use JSX as schema?",
+        "sidebar_label": "Why Canner use JSX?"
+      },
+      "why-mission": {
+        "title": "Our mission",
+        "sidebar_label": "Our mission"
+      },
+      "why-traditional-headless-adaptive": {
+        "title": "From traditional, headless to adaptive CMS",
+        "sidebar_label": "Traditional vs Headless vs Adaptive CMS"
+      }
+    },
+    "links": {
+      "Why?": "Why?",
+      "Docs": "Docs",
+      "Tutorials": "Tutorials",
+      "Community": "Community",
+      "API": "API",
+      "Components": "Components",
+      "Blog": "Blog"
+    },
+    "categories": {
+      "Quick start": "Quick start",
+      "Schema": "Schema",
+      "Guides": "Guides",
+      "CLI": "CLI",
+      "Files": "Files",
+      "Tips": "Tips",
+      "Tutorial": "Tutorial",
+      "Advanced": "Advanced",
+      "Concept": "Concept",
+      "API": "API",
+      "Why Canner": "Why Canner"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
