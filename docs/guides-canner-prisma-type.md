@@ -1,5 +1,5 @@
 ---
-id: advance-canner-prisma-type
+id: guides-canner-prisma-type
 title: Canner and Prisma datatype comparison
 sidebar_label: Canner and Prisma datatype comparison
 ---

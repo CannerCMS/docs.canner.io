@@ -1,5 +1,5 @@
 ---
-id: api-cms-core
+id: api-canner
 title: canner
 sidebar_label: canner
 ---

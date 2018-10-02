@@ -1,7 +1,7 @@
 ---
-id: advance-customized-component
-title: Customized CMS components
-sidebar_label: Customized CMS components
+id: guides-customized-component
+title: Customized CMS Component
+sidebar_label: Customized CMS Component
 ---
 
 ## Introduction

@@ -1,7 +1,7 @@
 ---
-id: cli-import-firebase
-title: Import data to Firebase
-sidebar_label: Import data to Firebase
+id: cli-import-data
+title: Import Data
+sidebar_label: Import Data
 ---
 
 If you use firebase as your database, `@canner/cli` will upload data to `firebase`, but the behavior is different from Canner. `@canner/cli` will compares the new data with old data in firebase, if same key exist in firebase, the new data will not be uploaded with error:  `firebase database had the same key 'user'`.

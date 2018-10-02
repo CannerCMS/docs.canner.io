@@ -1,7 +1,7 @@
 ---
 id: schema-overview
 title: Overview
-sidebar_label: Overview (JSX)
+sidebar_label: Overview
 ---
 ## Why
 

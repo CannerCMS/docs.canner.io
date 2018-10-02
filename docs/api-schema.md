@@ -1,7 +1,7 @@
 ---
-id: api-canner-script
-title: canner-script
-sidebar_label: canner-script
+id: api-schema
+title: Schema
+sidebar_label: Schema
 ---
 
 ## Type tags

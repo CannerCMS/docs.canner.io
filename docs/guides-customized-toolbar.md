@@ -1,7 +1,7 @@
 ---
-id: guides-image-upload
-title: Image upload settings
-sidebar_label: Image upload settings
+id: guides-customized-toolbar
+title: Customized Toolbar
+sidebar_label: Customized Toolbar
 ---
 
 Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `<root/>`**. `storage` must be a object generated from https://github.com/Canner/image-service-config

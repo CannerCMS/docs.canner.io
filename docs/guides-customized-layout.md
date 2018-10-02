@@ -1,7 +1,7 @@
 ---
-id: advance-customized-layout
-title: Customized CMS layouts
-sidebar_label: Customized CMS layouts
+id: guides-customized-layout
+title: Customized Layout
+sidebar_label: Customized Layout
 ---
 
 > `React` version must be >= 16.x version

@@ -1,7 +1,7 @@
 ---
-id: cli-install
-title: Install Canner CLI
-sidebar_label: Install Canner CLI
+id: cli-installation
+title: Installation
+sidebar_label: Installation
 ---
 
 

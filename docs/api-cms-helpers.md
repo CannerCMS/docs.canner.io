@@ -1,7 +1,7 @@
 ---
-id: api-cms-helpers
-title: canner-helpers
-sidebar_label: canner-helpers
+id: api-canner-helpers
+title: Canner Helpers
+sidebar_label: Canner Helpers
 ---
 
 ## Components

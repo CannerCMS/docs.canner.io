@@ -1,7 +1,7 @@
 ---
-id: advance-canner-script
-title: About canner-script (JSX for Canner)
-sidebar_label: canner-script
+id: schema-toolbar-tags
+title: Toolbar Tags
+sidebar_label: Toolbar Tags
 ---
 ## Why
 

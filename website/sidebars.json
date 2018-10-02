@@ -7,11 +7,11 @@
     ],
     "Schema": [
       "schema-overview",
-      "schema-root",
-      "schema-data",
-      "schema-layout",
-      "schema-toolbar",
-      "schema-page"
+      "schema-root-tag",
+      "schema-data-type-tags",
+      "schema-layout-tags",
+      "schema-toolbar-tags",
+      "schema-page-tags"
     ],
     "Guides": [
       "guides-connector",
@@ -20,11 +20,10 @@
       "guides-internationalization",
       "guides-validation",
       "guides-condition-fields",
-      "guides-customized-components",
-      "guides-customized-layouts",
+      "guides-customized-component",
+      "guides-customized-layout",
       "guides-customized-toolbar",
-      "advance-customized-layout",
-      "advance-canner-prisma-type"
+      "guides-canner-prisma-type"
     ],
     "CLI": [
       "cli-installation",
@@ -47,8 +46,8 @@
   },
   "tutorial": {
     "Tutorial": [
-      "start-quick-firebase",
-      "start-quick-prisma",
+      "tutorial-connect-to-firebase",
+      "tutorial-connect-to-prisma",
       "tutorial-customize-string-component",
       "tutorial-customize-array-component",
       "tutorial-customize-object-component"
@@ -83,7 +82,7 @@
       "api-layouts",
       "api-toolbar",
       "api-canner",
-      "api-helpers"
+      "api-canner-helpers"
     ]
   },
   "why": {

@@ -1,7 +1,7 @@
 ---
-id: advance-canner-script
-title: About canner-script (JSX for Canner)
-sidebar_label: canner-script
+id: schema-layout-tags
+title: Layout Tags
+sidebar_label: Layout Tags
 ---
 ## Why
 

@@ -1,7 +1,7 @@
 ---
-id: start-quick-prisma
-title: Quickstart with Prisma GraphQL
-sidebar_label: Prisma - GraphQL
+id: tutorial-connect-to-prisma
+title: Connect to Prisma
+sidebar_label: Connect to Prisma
 ---
 ![cannerxprisma](/docs/assets/orange.png)
 

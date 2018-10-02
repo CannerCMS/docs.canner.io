@@ -1,7 +1,7 @@
 ---
-id: start-quick-firebase
-title: How to Firebase - Realtime database
-sidebar_label: Firebase - Realtime database
+id: tutorial-connect-to-firebase
+title: Connect to Firebase Realtime Database
+sidebar_label: Connect to Firebase Realtime Database
 ---
 
 > NOTE: We are not supporting **Firestore** at this moment

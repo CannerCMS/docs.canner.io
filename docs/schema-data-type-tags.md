@@ -1,7 +1,7 @@
 ---
-id: advance-canner-script
-title: About canner-script (JSX for Canner)
-sidebar_label: canner-script
+id: schema-data-type-tags
+title: Data Type Tags
+sidebar_label: Data Type Tags
 ---
 ## Why
 
