@@ -104,7 +104,7 @@ class VairantsObject extends React.Component {
     return (
       <div>
         {/* component deals with the options */}
-        <Options onChange={this.handleOptions} value={value.get('options').toJS()}/>
+        <Options onChange={this.handleOptions} value={value.options}/>
 
         {/* component deals with the variants */}
         <Tabs onChange={this.handleTabs}>
@@ -177,10 +177,10 @@ class MyArrayComponent extends React.Component {
 
 ### createEmptyData
 
-Create empty immutable data from canner schema object.
+Create empty data from canner schema object.
 
 ```js
-type createEmptyData = (schemaObject: Object) => ImmutableData
+type createEmptyData = (schemaObject: Object) => *
 ```
 
 ***Example***
@@ -198,28 +198,4 @@ const test1 = {
 
 // {name: ''}
 createEmptyData(test1));
-```
-
-### transformData
-
-Detect whether value is an [immutable data](http://facebook.github.io/immutable-js/) created by ImmutableJS. Transform to Immutable if not.
-
-```js
-type transformData = * => ImmutableData
-```
-
-***Example***
-
-```js
-import {transformData} from 'canner-helpers';
-const test1 = 'test1';
-const test2 = {
-  test2: ['test2']
-}
-
-// 'test1'
-transformData(test1)
-
-// Immutable.Map[1]
-transformData(test2));
 ```

@@ -88,11 +88,6 @@ When rendering, apart from original node's information, generator will pass addi
     <th>Description</th>
   </tr>
   <tr>
-    <td>transformData</td>
-    <td><code>any => Immutable</code></td>
-    <td>turn data to immutable</td>
-  </tr>
-  <tr>
     <td>createEmptyData</td>
     <td><code>(schema: Object) => any</code></td>
     <td>this function will returns schema object of inserted schema object</td>

@@ -49,7 +49,7 @@ sidebar_label: CMS UI Components
   <tr>
     <td>onChange</td>
     <td><code>(refId, changeType, value) => Promise<*></code></td>
-    <td><code>onChange</code> function is how you update data from component to CMS data, the first argument is the field's <code>refId</code>, second argument is change type, third is its value (and <b>must</b> be immutableJS)</td>
+    <td><code>onChange</code> function is how you update data from component to CMS data, the first argument is the field's <code>refId</code>, second argument is change type, third is its value</td>
   </tr>
   <tr>
     <td>onDeploy</td>

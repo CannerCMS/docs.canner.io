@@ -205,7 +205,7 @@ export default (
 
 ### Customize Validation
 
-You can customize a validation by adding a `validator` in `validation` object, it's a function recieves the **immutable** value of this field and the `reject` function. When the field is invalid, call reject function to return error message `reject(<your error message>)`.
+You can customize a validation by adding a `validator` in `validation` object, it's a function recieves the value of this field and the `reject` function. When the field is invalid, call reject function to return error message `reject(<your error message>)`.
 
 Here is an example, in our `editor` component, if you want to ensure the field is empty, `required` prop won't work because it's an object which is always truthy. It this case, you should add a `validator` to validate the value yourself.
 
@@ -222,7 +222,6 @@ export default (
         validation={
           {
             validator: (content, reject) => {
-              content = content.toJS();
               if (!content || content.html.length === 0) {
                 return reject('should be required'); // the message will show on field
               }

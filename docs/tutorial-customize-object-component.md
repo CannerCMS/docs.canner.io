@@ -29,7 +29,6 @@ Create a React component as usual. Here's an example of a map.
 ```js
 
 import React, { Component } from "react";
-import {Map} from 'immutable';
 
 export default class Fields extends Component {
 
@@ -79,50 +78,7 @@ Here's how an actual data looks like
 }
 ```
 
-## 2. Transform data to Immutable.js
-
-> IMPORTANT: All internal variables in CMS framework must be [Immutable.js](http://facebook.github.io/immutable-js/), in other words, `value` pass into `onChange` function must be `Immutable.js`.
-
-To update values in Canner called `onChange` function that pass as props, to your CMS component. And you could receive your new value through `value` prop.
-
-```js
-
-import React, { Component } from "react";
-import {Map} from 'immutable';
-
-export default class Fields extends Component {
-  static defaultProps = {
-    value: new Map() // define immutable map
-  };
-
-  onChange = (e, type) => {
-    const { refId, value } = this.props;
-    const newValue = e.target.value;
-  }
-
-  render() {
-    const { value } = this.props;
-    return (
-      <div style={{border: "1px solid #CCC", padding: "20px"}}>
-        <h1>Your name</h1>
-        <input
-          type="text"
-          value={value.get('name')} // get value from immutable map
-          onChange={(e) => this.onChange(e, 'name')}
-        />
-        <h1>Content</h1>
-        <textarea
-          value={value.get('content')} // get value from immutable map
-          onChange={(e) => this.onChange(e, 'content')}
-        />
-      </div>
-    );
-  }
-}
-
-```
-
-## 3. Update `value` in CMS
+## 2. Update `value` in CMS
 
 To update values in Canner called `onChange` function that pass as props, to your CMS component. And you could receive your new value through `value` prop.
 
@@ -132,11 +88,11 @@ onChange = (e, type) => {
   const newValue = e.target.value;
 
   // call onChange function from props
-  this.props.onChange(refId, "update", value.setIn([type], newValue));
+  this.props.onChange(refId, "update", {...value, type: newValue});
 }
 ```
 
-## 4. Define `canner.def.js`
+## 3. Define `canner.def.js`
 
 All `object` and `array` type components must define it's `canner.def.js`. In order to let CMS know what data structure is inside your component.
 
@@ -158,7 +114,7 @@ module.exports = function({attributes}) {
 
 > Learn more about [`canner.def.js`](advance-customized-component.md#canner.def.js)
 
-## 5. Publish
+## 4. Publish
 
 Now your customized component is done, is time to puslish as a npm package.
 
@@ -210,7 +166,7 @@ And remember to add a new key called `canner` in `package.json`, in here add
 > Learn more how to setup [Canner configuration](advance-customized-component.md#canner-configuration)
 
 
-## 6. Install in CMS
+## 5. Install in CMS
 
 Install package in your CMS, and import your package in your `canner.schema.js` add `packageName` attribute in your object tag. So here we'll set `packageName` as `@canner/customize-object-fields`.
 
@@ -218,7 +174,7 @@ Install package in your CMS, and import your package in your `canner.schema.js` 
 <object keyName="demoFields" title="Demo" packageName="@canner/customize-object-fields"/>
 ```
 
-## 7. You're done
+## 6. You've done
 
 Now you can see your customized component in your CMS.
 
