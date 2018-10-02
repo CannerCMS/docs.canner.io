@@ -41,7 +41,8 @@
       "file-canner-image-uploaded"
     ],
     "Tips": [
-      "tips-schema"
+      "tips-schema-modules",
+      "tips-reusable-schema"
     ]
   },
   "tutorial": {
