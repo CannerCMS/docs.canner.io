@@ -4,8 +4,6 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-> **[CannerIO v1]:** Since we radically change our internal infrastructure. The CannerIO v2 document is mostly different from the v1, If you are looking for CannerIO v1 document please visit [docs.v1.canner.io](https://docs.v1.canner.io)
-
 Canner make **CMS simple and easy**. Here is what we discover.
 
 > Most developers/companies struggle with building maintainable and extendable CMS

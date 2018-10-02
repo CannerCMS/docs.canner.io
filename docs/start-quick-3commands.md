@@ -16,7 +16,7 @@ npm install -g @canner/cli
 
 ## 2. Initialize Schema
 
-To use `Canner CLI` in your own project, go in current project folder and run the command:
+After installing **Canner CLI** in your own project, go in current project folder and run the command:
 
 ```shell
 $ canner init:schema
@@ -37,14 +37,14 @@ Choose any except `None`, and you'll see the folders `schema`, `cert` and `canne
 > - Learn more about [`schema`](file-canner-schema-js.md)
 > - Learn more about [`cert`](file-cert.md) 
 
-## 3. Local Serve
+## 3. Serving in Local Machine
 
 In your project folder, you can just run `canner script:serve` to build your CMS and host it. Open [http://localhost:9090](http://localhost:9090), you will see the result as below.
 
 ![users-cms](/docs/assets/users-cms.png)
 
 
-> Local serving will **NOT** actually fetch the data source you chose, it only use [memory connector](guides-connector.md#memoryconnector) to save data in memory.
+> You can also serve data from different environment settings, learn more [here](cli-development.md).
 
 
 ## 4. Next Step
