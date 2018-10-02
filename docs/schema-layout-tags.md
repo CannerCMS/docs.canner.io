@@ -3,281 +3,176 @@ id: schema-layout-tags
 title: Layout Tags
 sidebar_label: Layout Tags
 ---
-## Why
 
-`canner-script` is a sugar syntax of Canner CMS schema. In order to, make Canner's developers declare schema in a declarative and intuitive way.
+Layout tags are used to create grids, containers, and blocks in CMS. This lets you create customized design layouts and visual design for your CMS.
 
-```js
-// jsx
+> Biggest difference between `Layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
+
+## Basic Layout
+
+Canner supports serveral basic layouts. Remember to import them before using them.
+
+```jsx
+/** @jsx c */
+import c, {Default, Block, Tabs} from 'canner-script';
+```
+
+***Usage***
+```xml
 <root>
-  <object keyName="info">
-    <string keyName="name">
-  </object>
+  <Body>
+    <object name="info">
+      <Tabs>
+        <Default>
+          <string name="name" />
+          <string name="nickname" />
+        </Default>
+        <Default>
+          <Block>
+            <object name="phones">
+              <string name="phone1" />
+              <string name="phone2" />
+            </object>
+            <object name="address">
+              <string name="address1" />
+              <string name="address2" />
+            </object>
+          </Block>
+          <Block>
+            <object name="emails">
+              <string name="email1" />
+              <string name="email2" />
+            </object>
+          </Block>
+        </Default>
+      </Tabs>
+    </object>
+  </Body>
 </root>
 ```
 
-is equivalent to 
+### &lt;Default/&gt;
 
-```js
-// schema in JSON
-{
-  info: {
-    type: 'object',
-    items: {
-      name: {
-        type: 'string',
-      }
-    }
-  }
-}
+All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.
+
+Such as when you are using tab, the example below will become four tabs.
+
+```xml
+  <Tabs>
+    <string {...}> // -----> tab 1
+    <string {...}> // -----> tab 2
+    <string {...}> // -----> tab 3
+    <string {...}> // -----> tab 4
+  </Tabs>
 ```
 
-## How
-
-We use `babel` with the `bable-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
-
-```js
-/** @jsx c */
-import c from 'canner-script';
-```
-
-***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of react, and is **required**.
+you can use `<Default/>` to group fields, it will become only two tabs.
 
 ```jsx
-/** @jsx c */
-import c from 'canner-script';
-
-modules.export = (
-  <root>
-    <object keyName="info">
-      <string keyName="name">
-    </object>
-  </root>
-);
+<Tabs>
+  <Default keyName="section1"> // -----> tab 1
+    <string {...}>
+    <string {...}>
+  </default>
+  <Default keyName="section2"> // -----> tab 2
+    <string {...}>
+    <string {...}>
+  </default>
+<Tabs>
 ```
 
-***Output***
+### &lt;Block/&gt;
 
-```jsx
-c('root', null, 
-  c('object', {name: 'info'}, 
-    c('string', {name: 'name'})
-  )
-)
+The children in `Block` will be put into a Card component.
 
-// canner-script will internally create a schema object with visitors as below:
-{
-  schema: info: {
-    name: 'info',
-    type: 'object',
-    items: {
-      name: {
-        name: 'name',
-        type: 'string'
-      }
-    }
-  },
-  visitors: []
-}
-```
+### &lt;Tabs/&gt;
 
-## Valid schema syntax
+Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default />` because it can group fields without adding other styles. 
 
-### JSX Tags
-There are serveral available tags, as listed below.
-
-***Types***: Represents the data types of the data:
-
-- string
-- boolean
-- number
-- date
-- mapPoint
-- file
-- relation
-- array
-- object
-
-***Layout***: Layout of CMS blocks and appearance
-
-- Collapse
-- Block
-
-***Query and miscellaneous***:
-
-- root (Outermost tag, the root)
-- toolbar
-  - sort
-  - filter
-  - pagination
-
-
-### Wrapped in &lt;root/&gt;
-
-The jsx schema **must** be wrapped in the `root` tag. `root` will return object with two keys, `schema` and `visitors`. `schema` contains the data structure and `visitors` contains the inputs for our `compiler` to build the complete `componentTree`.
-
-
-***Incorrect***
-
-```jsx
-module.exports = (
-  <object keyName="test">
-    {
-      /* other schema */
-    }
-  </object>
-);
-
-// which means
-// {
-//   type: 'object',
-//   name: 'test',
-//   items: ...
-// }
-```
-
-***Correct***
-```jsx
-module.exports = (
-  <root>
-    <object keyName="test">
-      {
-        /* other schema */
-      }
-    </object>
-  </root>
-);
-
-// which means
-// {
-//   schema: {
-//     test: {
-//       type: 'object',
-//       name: 'test',
-//       items: ...
-//     }
-//   },
-//   visitors: []
-// }
-```
-
-### Type tags
-
-Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
-
-Using textarea UI:
+> Notice that each child in Tabs should have keyName to let it works because `<Tabs />` will use the keyName to tell canner to render which child.
 
 ```js
-<string ui="textarea">
+<Tabs>
+  <Default keyName="section1"> // -----> tab 1
+    <string {...}>
+    <string {...}>
+  </default>
+  <Default keyName="section2"> // -----> tab 2
+    <string {...}>
+    <string {...}>
+  </default>
+<Tabs>
 ```
 
-Every UI component should pass a keyName, which matchs to the key name of your data source.
+### &lt;Row /&gt; and &lt;Col /&gt;
 
-For example, your data is like below
+The grid system same as [antd grid](https://ant.design/components/grid/).
+
+### &lt;Condition /&gt;
+
+Control the children field is hidden or disabled. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+
+For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
 
 ```js
-{
-  content: "This is your content"
-}
+<object keyName="shipment">
+  <string
+    keyName="type"
+    ui="select"
+    uiParams={{
+      options: [{
+
+      }]
+    }}
+  />
+  <Condition match={(value, operator) => {
+    return value.type === 'DELIVERY';
+  }}>
+    <string keyName="address" />
+  <Condition />
+</object>
 ```
 
-So your `keyName` should define as `content`
+If you prefer to disable it instead of hiding, add `defaultMode` property in `<Condition />`.
 
 ```js
-<string ui="textarea" keyName="content">
+// ...
+  <Condition
+    match={(value, operator) => {
+      return value.type === 'DELIVERY';
+    }}
+    defaultMode="disabled"
+  >
+// ...
 ```
 
-> Further information
-> - [Antd CMS components docs](https://canner.github.io/antd-cms-component-docs)
-> - [API of CMS components](api-components.md) 
 
-### Layout tags
+## Customized Layout
 
-Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
+You can add customized layout components through the `component` props in `<Layout/>`
 
-Every layout tag will generate a new `visitor` that is inserted into the `visitors` array, which will be collected in `root` tag.
-
-For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to seperate the three fields into two different blocks.
-
-***without block***
 ```jsx
-/** @jsx c */
-import c from 'canner-script';
+
+import CustomizeCardLayout from 'path/to/card';
+// canner.schema.js
+// customize layout 
+const Card = props => <Layout component={CustomizeCardLayout} {...props} />;
 
 module.exports = <root>
-  <object keyName="info">
-    <string keyName="name" />
-    <string keyName="nickname" />
-    <string keyName="note" ui="editor"/>
+  <object>
+    <Card>
+      <string name="name" />
+      <srting name="nickname" />
+    </Card>
+    <Card>
+      <string name="note" />
+    </Card>
   </object>
 </root>
 ```
 
-***with block***
-```jsx
-/** @jsx c */
-import c, {Block} from 'canner-script';
+> More customize layout techniques, see [Advance customized layout](advance-customized-layout.md)
+ 
+## Visitors
 
-module.exports = <root>
-  <object keyName="info">
-    <Block>
-      <string keyName="name" />
-      <string keyName="nickname" />
-    </Block>
-    <Block>
-      <string keyName="note"  ui="editor"/>
-    </Block>
-  </object>
-</root>
-```
-
-> Further information
-> - [Advance layout introduction](advance-layout.md)  
-
-### Query tags
-
-Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
-
-**exmples**
-
-```
-<root>
-  <array keyName="posts">
-    <toolbar>
-      <filter fields={[{
-        type: 'select',
-        label: 'Status',
-        options: [{
-          text: 'All',
-          condition: {}
-        }, {
-          text: 'Published',
-          condition: {
-            draft: {
-              eq: false
-            }
-          }
-        }, {
-          text: 'Draft',
-          condition: {
-            draft: {
-              eq: true
-            }
-          }
-        }]
-      }, {
-        type: 'number',
-        key: 'views',
-        label: 'Views',
-      }]}>
-      <sort defaultOption="views" options={[{
-        key: 'views',
-        title: 'Views'
-      }]}>
-      <pagination>
-    </toolbar>
-  </array>
-</root>
-
-```
+Layout tags will create visitors, and exported to `canner-schema-loader` to transform the component tree.

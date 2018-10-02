@@ -103,6 +103,11 @@ There are serveral available tags, as listed below.
 
 - Collapse
 - Block
+- Default
+- Row
+- Col
+- Tabs
+- Condition
 
 ***Query and miscellaneous***:
 
