@@ -3,9 +3,62 @@ id: schema-overview
 title: Overview
 sidebar_label: Overview
 ---
-## Why
 
-`canner-script` is a sugar syntax of Canner CMS schema. In order to, make Canner's developers declare schema in a declarative and intuitive way.
+## Introduction
+Unlike other CMS solutions, Canner CMS provides components for developers to pick and assemble components that fit their needs.
+
+A CMS schema is constructed with the `jsx` syntax, describing the structure of the source data, how to connect to your service, and what the CMS UI should expect in certain fields.
+
+> Normally, CMS schema is stored in `canner.schema.js` file.
+
+
+
+## JSX Tags
+There are serveral available tags, as listed below.
+
+**Root**
+- \<root />
+
+***Data Types***: Represents the data types of the data:
+
+- \<string />
+- \<boolean />
+- \<number />
+- \<date />
+- \<mapPoint />
+- \<file />
+- \<relation />
+- \<array />
+- \<object />
+
+***Layouts***: The layouts and appearance of the CMS
+
+- \<Collapse />
+- \<Block />
+- \<Row />
+- \<Col />
+- \<Tabs />
+- \<Default />
+- \<Condition />
+
+***Toolbars***:
+
+- \<toolbar />
+  - \<sorter />
+  - \<filter />
+    - \<textFilter />
+    - \<numberFilter />
+    - \<selectFilter />
+  - \<pagination />
+  - \<actions />
+    - \<filter />
+    - \<export />
+    - \<import />
+
+
+### Why
+
+JSX lets developers declare schema in a declarative and intuitive way.
 
 ```js
 // jsx
@@ -32,7 +85,7 @@ is equivalent to
 }
 ```
 
-## How
+### How
 
 We use `babel` with the `bable-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
 
@@ -82,52 +135,8 @@ c('root', null,
 }
 ```
 
-## Valid schema syntax
 
-### JSX Tags
-There are serveral available tags, as listed below.
-
-**Root**
-- \<root />
-
-***Data Types***: Represents the data types of the data:
-
-- \<string />
-- \<boolean />
-- \<number />
-- \<date />
-- \<mapPoint />
-- \<file />
-- \<relation />
-- \<array />
-- \<object />
-
-***Layouts***: The layouts and appearance of the CMS
-
-- \<Collapse />
-- \<Block />
-- \<Row />
-- \<Col />
-- \<Tabs />
-- \<Default />
-- \<Condition />
-
-***Toolbars***:
-
-- \<toolbar />
-  - \<sorter />
-  - \<filter />
-    - \<textFilter />
-    - \<numberFilter />
-    - \<selectFilter />
-  - \<pagination />
-  - \<actions />
-    - \<filter />
-    - \<export />
-    - \<import />
-
-
-### Wrapped in &lt;root/&gt;
+## Wrapped in &lt;root/&gt;
 
 The jsx schema **must** be wrapped in the `root` tag. `root` will return object with serveral keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
 
@@ -177,7 +186,7 @@ module.exports = (
 // }
 ```
 
-### Data Type tags
+## Data Type tags
 
 Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
 
@@ -208,7 +217,7 @@ So your `keyName` should define as `content`
 > - [Antd CMS components docs](https://canner.github.io/antd-cms-component-docs)
 > - [API of CMS components](api-components.md) 
 
-### Layout tags
+## Layout tags
 
 Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
 
@@ -251,7 +260,7 @@ module.exports = <root>
 > Further information
 > - [All layout tags](schema-layout-tags.md)  
 
-### Toolbar tags
+## Toolbar tags
 
 Toolbar tags provide additional features for user to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc. They only can be put into **first level array** and **relation field**.
 
@@ -292,7 +301,7 @@ module.exports = <root>
 > - [All toolbar tags](schema-toolbar-tags.md)  
 
 
-### Page tags
+## Page tags
 
 Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `indicator` and `chart` to show the data.
 
