@@ -8,9 +8,9 @@ Canner provides different storages for you to customize where to store files of 
 
 ## Usage
 
-New the storage instances, and put them into imageStorage or fileStorage properties of any data tags. Storage instance must be an object generated from [@canner/storage]( https://github.com/Canner/canner/blob/canary/packages/canner-storage/src/index.js).
+New the storage instances, and put them into `imageStorage` or `fileStorage` properties of any data tags. Storage instance must be an object generated from [@canner/storage]( https://github.com/Canner/canner/blob/canary/packages/canner-storage/src/index.js).
 
-> You don't have to install `@canner/storage` maually because it's a dependency of canner
+> You don't have to install `@canner/storage` manually because it's a dependency of canner
 
 ```jsx
 /** @jsx builder */
