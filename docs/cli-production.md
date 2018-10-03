@@ -4,66 +4,30 @@ title: Production
 sidebar_label: Production
 ---
 
-
-First of all, you have to install at least [Node](https://nodejs.org/en/download/) and [npm](http://npmjs.com/) (or [Yarn](https://yarnpkg.com/)) on your computer.
-
-> While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
-
-### Install `@canner/cli`
-
-Through npm:
-
-```sh
-$ npm install -g @canner/cli
-```
-
-or yarn
-
-```sh
-$ yarn global add @canner/cli --prefix /usr/local
-```
-
-### Check if install successfully
-
-Enter 
+Deploy your CMS to canner.io by entering 
 
 ```
-canner --help
+canner script:deploy
 ```
 
-You will get all available commands, and help menu.
+## Setting up production environment
 
-```shell
-Usage:  [options] [command] <cmd>
+To setup production environment, in your `canner.config.js` set your key `default` in `env` to your resource.
 
-  Options:
+Example:
 
-    -V, --version                       output the version number
-    -h, --help                          output usage information
-
-  Commands:
-
-    login                               Login to Canner
-    logout                              Logout
-    whoami                              Display account info
-    init [url]                          Initialize project
-    init:schema [options]               Initialize schema
-    open:dashboard                      Open your project dashboard
-    app:list                            List all your projects in Canner
-    app:create                          Create a project in Canner
-    script:deploy [options] [filename]  Bundle your CMS and deploy it to Canner
-    script:serve [options] [filename]   Serve your CMS in local
-    data:import [options] [filename]    Import default data to your data source
-
-  Examples:
-
-    Intitialize schemas with templates:
-    $ canner init:schema
-
-    Serving CMS:
-    $ canner script:serve
+```json
+{
+  env: {
+    default: "firebase/<product-id>"
+  }
+}
 ```
 
-Hooray! You are ready to go!
+## Serving production environment
 
-> Learn more about [commands](cli-commands.md)
+Serving production environment locally by enter
+
+```
+canner script:serve --env prod
+```

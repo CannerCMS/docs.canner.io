@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   // cname: 'docs.canner.io',
-  title: 'Canner (alpha)' /* title for your website */,
+  title: 'Canner (BETA)' /* title for your website */,
   tagline: 'Canner official documentation',
   url: 'https://www.canner.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
@@ -59,9 +59,10 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#f2b173',
-    secondaryColor: '#e4506d',
+    primaryColor: '#07a4b8',
+    secondaryColor: '#da836c',
   },
+  cleanUrl: true,
 
 
   /* custom fonts for website */
@@ -106,7 +107,7 @@ const siteConfig = {
   twitterImage: 'img/og-image.jpg',
   twitterUsername: 'cannerIO',
   facebookAppId: '1435592646549630',
-
+  enableUpdateTime: true,
   algolia: {
     apiKey: "c9ba81d7831a52129d133134abaf5f04",
     indexName: "canner",

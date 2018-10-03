@@ -76,7 +76,7 @@ canner
     <td>Options</td>
   </tr>
   <tr>
-    <td>data:import</td>
+    <td>data:import [options] [filename]</td>
     <td>
       Import your <code>canner.data.js</code>  to the default app url which is set in <code>.cannerrc</code>.
     </td>
@@ -96,9 +96,22 @@ canner
     <td>Options</td>
   </tr>
   <tr>
-    <td>script:deploy [filename]</td>
+    <td>script:serve [options] [filename]</td>
     <td>
-      Deploy your <a href="#cannerschemajs"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
+      Serve your CMS in local machine
+    </td>
+    <td>
+      <ul>
+        <li><code>-e &lt;env&gt;, --env &lt;env&gt;</code> Choose your environments.</li>
+        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
+        <li><code>-l &lt;listLength&gt;, --list-length &lt;listLength&gt;</code> Number of items of array data to be generated.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>script:deploy [options] [filename]</td>
+    <td>
+      Deploy your <a href="schema-overview"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
     </td>
     <td>
       <ul>

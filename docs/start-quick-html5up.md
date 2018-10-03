@@ -1,14 +1,14 @@
 ---
 id: start-quick-html5up
-title: First CMS using Canner in 3 minutes
-sidebar_label: First CMS in 3 minutes - HTML5UP
+title: First CMS using Canner in 3 minutes (Firebase)
+sidebar_label: First CMS in 3 minutes - HTML5UP (Firebase)
 ---
 
 HTML5UP is one of the most famous free template online, beautiful design and many template options, most importantly, all templates are released under Creative Commons Attribution license, which means you could use it for personal or commercial purpose.
 
 We are going to show you **how to build a HTML5UP CMS in 3 minutes and using Firebase as database**, in fact, after this tutorial you will find out you’re able to build any kind of applications with CMS in minutes, no matter it is mobile, web and IoT. You are able to not only build a CMS with beautiful UI, but also maintainable and scalable CMS.
 
-The demo code is at https://github.com/Canner/canner-html5up-demo/tree/master/html5up-lens, please download this repository before you start!
+The demo code is at https://github.com/Canner/canner-demo/tree/master/html5up-lens, please download this repository before you start!
 
 In this tutorial we will use, Firebase as database and [Canner](https://www.canner.io) as your CMS.
 

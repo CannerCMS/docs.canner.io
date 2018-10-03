@@ -37,6 +37,10 @@
         "title": "CMS UI Components",
         "sidebar_label": "CMS UI Components"
       },
+      "api-layouts": {
+        "title": "Layouts",
+        "sidebar_label": "Layouts"
+      },
       "api-schema": {
         "title": "Schema",
         "sidebar_label": "Schema"
@@ -45,13 +49,13 @@
         "title": "Toolbar",
         "sidebar_label": "Toolbar"
       },
+      "cli-canner-config-js": {
+        "title": "canner.config.js",
+        "sidebar_label": "canner.config.js"
+      },
       "cli-commands": {
         "title": "Commands",
         "sidebar_label": "Commands"
-      },
-      "cli-config-js": {
-        "title": "Canner.config.js",
-        "sidebar_label": "Canner.config.js"
       },
       "cli-development": {
         "title": "Development",
@@ -154,8 +158,8 @@
         "sidebar_label": "Customized Toolbar"
       },
       "guides-internationalization": {
-        "title": "internationalization (i18n)",
-        "sidebar_label": "internationalization (i18n)"
+        "title": "Internationalization (i18n)",
+        "sidebar_label": "Internationalization (i18n)"
       },
       "guides-resolver": {
         "title": "Resolver",
@@ -202,16 +206,20 @@
         "sidebar_label": "Building CMS in 3 commands"
       },
       "start-quick-html5up": {
-        "title": "First CMS using Canner in 3 minutes",
-        "sidebar_label": "First CMS in 3 minutes - HTML5UP"
+        "title": "First CMS using Canner in 3 minutes (Firebase)",
+        "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
       },
       "start-quick-intro": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "tips-schema": {
-        "title": "Tips for CMS schema",
-        "sidebar_label": "Schema"
+      "tips-reusable-schema": {
+        "title": "Reusable Schema Components",
+        "sidebar_label": "Reusable Schema Components"
+      },
+      "tips-schema-modules": {
+        "title": "Schema as Modules",
+        "sidebar_label": "Schema as Modules"
       },
       "tutorial-community-firebase": {
         "title": "Firebase CMS (Community edition)",
