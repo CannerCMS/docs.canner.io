@@ -10,17 +10,19 @@ First of all, you have to install at least [Node](https://nodejs.org/en/download
 
 > While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
+Then, you have to install required packages of canner to have a CMS.
+
 ### npm
 
 ```sh
-$ npm install --save canner canner-layouts canner-helpers canner-script
+$ npm install --save canner canner-script @canner/container @canner/router
 $ npm install --save-dev canner-schema-loader
 ```
 
 ### yarn
 
 ```sh
-$ yarn add canner canner-layouts canner-helpers canner-script
+$ yarn add canner canner-script @canner/container @canner/router
 $ yarn add -D canner-schema-loader
 ```
 
@@ -47,14 +49,14 @@ rules: [{
 ## Create `canner.schema.js`
 
 > Furthur Information
-> - [Writing a Schema](guides-writing-schema.md)
+> - [Schema Overview](schema-overview.md)
 
 ***canner.schema.js***
 
 ```jsx
 /** @jsx builder */
 
-var builder = require('canner-script');
+import builder from 'canner-script';
 
 module.exports = (
   <root>
@@ -72,31 +74,51 @@ module.exports = (
 
 Pass your `canner.schema.js` into `canner`, this will generate all the CMS for you!
 
-> `canner` relies on `react-router` to achieve routing in CMS, so you have to pass `history` prop into `<Canner/>`
-
 > `React` version must be >= 16.x version
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+
+// canner packages
 import Canner from 'canner';
+import Container from '@canner/container';
+import Router from '@canner/router';
 
 // your schema
 import schema from 'path/to/canner.schema.js';
 
-//render it 
-ReactDOM.render(
-  <Router>
-    <Route path="/" render={({history}) => (
-      <Canner
-        history={history}
-        schema={schema}
-      />
-    )} />
-  </Router>
-, document.getElementById("root"));
+
+class CMSExample extends React.Component {
+  router = new Router({
+    baseUrl: "/"
+  });
+
+  componentDidMount() {
+    // Trigger the Canner to update the UI with the corresponding part of your CMS.
+    this.unlisten = this.router.history.listen(() => this.forceUpdate());
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }
+
+  render() {
+    <Container
+      schema={schema}
+      router={this.router}
+      navbarConfig={
+        showSaveButton: true
+      }
+      sidebarConfig={
+        menuConfig: true
+      }
+    >
+      <Canner />
+    </Container>
+  }
+}
+
+//render it
+ReactDOM.render(<CMSExample />, document.getElementById("root"));
 ```
