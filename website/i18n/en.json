@@ -206,16 +206,20 @@
         "sidebar_label": "Building CMS in 3 commands"
       },
       "start-quick-html5up": {
-        "title": "First CMS using Canner in 3 minutes",
-        "sidebar_label": "First CMS in 3 minutes - HTML5UP"
+        "title": "First CMS using Canner in 3 minutes (Firebase)",
+        "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
       },
       "start-quick-intro": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "tips-schema": {
-        "title": "Tips for CMS schema",
-        "sidebar_label": "Schema"
+      "tips-reusable-schema": {
+        "title": "Reusable Schema Components",
+        "sidebar_label": "Reusable Schema Components"
+      },
+      "tips-schema-modules": {
+        "title": "Schema as Modules",
+        "sidebar_label": "Schema as Modules"
       },
       "tutorial-community-firebase": {
         "title": "Firebase CMS (Community edition)",

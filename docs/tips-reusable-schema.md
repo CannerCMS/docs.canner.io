@@ -1,5 +1,5 @@
 ---
-id: tips-schema-modules
+id: tips-reusable-schema
 title: Reusable Schema Components
 sidebar_label: Reusable Schema Components
 ---
