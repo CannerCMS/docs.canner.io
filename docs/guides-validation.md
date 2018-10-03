@@ -20,7 +20,7 @@ export default (
 )
 ```
 
-![validation with pattern](/docs/assets/guides-writing-schema/pattern.png)
+![validation with pattern](/docs/assets/guides-validation/pattern.png)
 
 ### Customize error message
 
@@ -40,7 +40,7 @@ export default (
 )
 ```
 
-![validation with customize error message](/docs/assets/guides-writing-schema/error-message.png)
+![validation with customize error message](/docs/assets/guides-validation/error-message.png)
 
 
 ### Required Field
@@ -58,7 +58,7 @@ export default (
 )
 ```
 
-![validation with required](/docs/assets/guides-writing-schema/required.png)
+![validation with required](/docs/assets/guides-validation/required.png)
 
 ### Customize Validation
 
@@ -91,7 +91,7 @@ export default (
   </root>
 )
 ```
-![customize validation](/docs/assets/guides-writing-schema/validator.png)
+![customize validation](/docs/assets/guides-validation/validator.png)
 
 ## References
 - [All CMS component tags](api-canner-script.md)
