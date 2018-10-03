@@ -4,118 +4,95 @@ title: Validation
 sidebar_label: Validation
 ---
 
-Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `<root/>`**. `storage` must be a object generated from https://github.com/Canner/image-service-config
+Canner relies on [ajv](https://github.com/epoberezkin/ajv#validation-keywords) for the validation.
 
-```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+You can add a `validation` prop to the data type tags such as `<string/>`, `<object />`, etc. Then it will validate the field before deploying it.
 
+**Example**
+
+```js
 export default (
   <root>
-    <object
-      keyName="overview"
-      title="Overview Tab"
-      storage={storage} // -------> your storage settings
-      connector={connector}
-      resolver={resolver}>
-      <string title="Your name" keyName="name"/>
-    </object>
-    <array
-      keyName="list"
-      title="Products"
-      storage={storage} // -------> your storage settings
-      connector={connector2}
-      resolver={resolver}>
-      <string title="Product name" keyName="name"/>
+    <array keyName="users">
+      <string title="User Name" keyName="name" validation={{pattern: '^[a-zA-Z0-9]{4,10}$'}} />
     </array>
   </root>
 )
 ```
 
-## Imgur
+![validation with pattern](/docs/assets/guides-validation/pattern.png)
 
-Upload image to [Imgur](https://imgur.com/).
+### Customize error message
 
-> Learn more [ImgurService](https://github.com/Canner/image-service-config#imgurservice-imgur)
+You can customize the error message by adding the `errorMessage` entry in the `validation` prop. The message will be displayed when the value is invalid with ajv.
 
+**Example**
 ```js
-import {ImgurService} from '@canner/image-service-config';
-
-const imageService = new ImgurService({
-  clientId, // https://apidocs.imgur.com/
-  mashapeKey // https://market.mashape.com/imgur/imgur-9#image-upload
-});
-
-const serviceConfig = imageService.getServiceConfig();
-// {
-//   name: "image",
-//   accept: "image/*",
-//   action: "https://api.imgur.com/3/image",
-//   headers: {
-//     Authorization: `Client-ID <YOUR CLIENTID>`,
-//     "X-Requested-With": null 
-//    }
-// }
-
 export default (
   <root>
-    <object
-      keyName="overview"
-      title="Overview Tab"
-      storage={serviceConfig} // -------> your storage settings
-      connector={connector}
-      resolver={resolver}>
-      <string title="Your name" keyName="name"/>
-    </object>
+    <array keyName="users">
+      <string keyName="email" title="Email" required validation={{
+        format: 'email',
+        errorMessage: 'Please enter a valid email address',
+      }} />
+    </array>
   </root>
 )
 ```
 
-## Firebase Client
+![validation with customize error message](/docs/assets/guides-validation/error-message.png)
 
-Enable Firebase storage to store your images, you can new a `FirebaseClientService` instance and pass to prop `imageServiceConfigs` into `<Canner>` component.
 
-> You don't have to install `@canner/image-service-config` maually because it's a dependency of canner
-> Learn more about [FirebaseClientService](https://github.com/Canner/image-service-config#firebaseclientservice-firebase-js-sdk)
+### Required Field
 
+Although ajv provides [required](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#required) keyword, we also provide a more intuitive way to set required by adding required prop. Note that it's implementation is same as `Boolean(value)`, so if you want to ensure `object` or `array` is not empty, you should use [required](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#required) or [minItems](https://github.com/epoberezkin/ajv/blob/master/KEYWORDS.md#maxitems--minitems).
+
+**Example**
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
-import {FirebaseClientService} from '@canner/image-service-config';
-import firebase from 'firebase';
-
-firebase.initializeApp({
-  apiKey,
-  storageBucket
-});
-
-// remember to authenticate firebase first, or uploading will be failed,
-// https://firebase.google.com/docs/auth/web/start
-firebase.auth().signInAnonymously();
-// or login your firebase Auth
-firebase.auth().signInWithEmailAndPassword("xxx", "xxx");
-
-
-const imageService = new FirebaseClientService({
-  firebase: firebase,
-  dir: "the/path/to", // specify the path you want upload to 
-  filename: "filename", // rename file without extension
-  hash: false, // if true, the filename will add a hash string, e.g.: `filename-${hash}.jpg`
-});
-
-const serviceConfig = imageService.getServiceConfig();
-
 export default (
   <root>
-    <object
-      keyName="overview"
-      title="Overview Tab"
-      storage={serviceConfig} // -------> your storage settings
-      connector={connector}
-      resolver={resolver}>
-      <string title="Your name" keyName="name"/>
+    <array keyName="users">
+      <string title="User Name" keyName="name" required />
+    </array>
+  </root>
+)
+```
+
+![validation with required](/docs/assets/guides-validation/required.png)
+
+### Customize Validation
+
+You can customize a validation by adding a `validator` in `validation` object, it's a function recieves the **immutable** value of this field and the `reject` function. When the field is invalid, call reject function to return error message `reject(<your error message>)`.
+
+Here is an example, in our `editor` component, if you want to ensure the field is empty, `required` prop won't work because it's an object which is always truthy. It this case, you should add a `validator` to validate the value yourself.
+
+**Example**
+
+```js
+export default (
+  <root>
+    <object keyName="about">
+      <object
+        keyName="content"
+        ui="editor"
+        title="Content"
+        validation={
+          {
+            validator: (content, reject) => {
+              content = content.toJS();
+              if (!content || content.html.length === 0) {
+                return reject('should be required'); // the message will show on field
+              }
+            }
+          }
+        }
+      />
     </object>
   </root>
 )
-
 ```
+![customize validation](/docs/assets/guides-validation/validator.png)
+
+## References
+- [All CMS component tags](api-canner-script.md)
+- [ajv validate keywords](https://github.com/epoberezkin/ajv#validation-keywords)
