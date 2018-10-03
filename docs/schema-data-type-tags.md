@@ -4,13 +4,11 @@ title: Data Type Tags
 sidebar_label: Data Type Tags
 ---
 
-## Data Types Tags
+## Introduction
 
-### What'this ?
+In canner CMS schema, we force developers to define the data type in each field because data sources (e.g. Firebase, parse, graphcool...) deal with the data types in different ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
 
-In canner CMS schema, we force developers to define the data type in each field because data sources (e.g. Firebase, parse, graphcool...) deal with the data types in a different ways. For example, when you're dealing with the `Datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
-
-Furthermore, while developing a component and making a query to the API, we provide additional query for some data types. For example, a field with an `array` type and objects as children can make a query as below:
+Furthermore, while developing a component and making a query to the API, we provide an additional query for some data types. For example, a field with an `array` type and objects as children can make a query as below:
 
 ```graphql
 // images with pagination query
@@ -23,24 +21,21 @@ Furthermore, while developing a component and making a query to the API, we prov
 }
 ```
 
-### The Most Common Property
+## The Most Common Properties
 
 The most common property is `keyName`, `ui`, and `title`.
 
 **`keyName`**
 
-Define the key name of this field, for examples, if there is a data `{title: 'Title'}` in an object you can define the string data with `<string keyName="title" />`
+Define the key name of this field, for examples, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
 
 **`ui`**
 
-We support serveral UI components for developers to use in different use case, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
+We support several UI components for developers to use in different use cases, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
 
 **`title`**
 
 The label of a field.
-
-## Tags
-> Currently, we support **11 kinds** of types listed below.
 
 ## Primitive Types
 
@@ -216,11 +211,11 @@ Static files that are images.
 
 You **must** pass `<relation/>` a prop called `relation` to setup.
 
-> Note that, relation can only point to the first level key in your data.
+> Note that relation can only point to the first level key in your data.
 
 keys in `relation` object:
 
-- type: the relation type to one or many, `toOne` will get a object, `toMany` will get a list.
+- type: the relation type to one or many, `toOne` will get an object, `toMany` will get a list.
 - to: first level data key.
 
 ```js
@@ -279,14 +274,14 @@ We'll use a data as below for example:
 
 Example for `toMany`.
 
-And you want your `topPost` key to relate to data `posts` (must be first level key of your data)
+Assuming that you want your `topPost` key to relate to data `posts` (must be the first level key of your data)
 
 ```js
 // schema
 <relation keyName="topPost" relation={{to: 'posts', type: 'toMany'}}>
 ```
 
-When user pick a data, it'll save as a object `{[id]: true}`
+The data is saved as an object `{[id]: true}`
 
 ```js
 // if user select post1 and post2
@@ -300,14 +295,14 @@ When user pick a data, it'll save as a object `{[id]: true}`
 
 **toOne**
 
-Example for `toOne`. Say you want your `topPost` key to relate to data `posts` (must be first level key of your data)
+Example for `toOne`. Say you want your `topPost` key to relate to data `posts` (must be the first level key of your data)
 
 ```js
 // schema
 <relation keyName="topPost" relation={{to: 'posts', type: 'toOne'}}>
 ```
 
-When user pick a data, it'll save as string `[id]`
+The data is saved as string `[id]`
 
 ```js
 // if user select post1
@@ -318,9 +313,9 @@ When user pick a data, it'll save as string `[id]`
 
 ### &lt;json/&gt;
 
-You can imagine this type is an `any` type, unlink other types, you don't have declare it's children type.
+You can imagine this type is an `any` type, unlink other types, you don't have to declare it's children type.
 
-For examples, there  is an `object` schema, we have to declare the children fileds, or `graphql` will throw the error about missing subset in `info` feild:
+For examples, there  is an `object` schema, we have to declare the children fields, or `graphql` will throw the error about missing subset in the `info` field:
 ```js
 <object keyName="info">
   <string keyName="title" />
@@ -332,7 +327,7 @@ And with json, you can write this schema like that:
 <json keyName="info" />
 ```
 
-This type is useful when you actually don't know what the type is, for examples, if you have a field with dynamic feilds in it, the data might be
+This type is useful when you actually don't know what the type is, for examples, if you have a field with dynamic fields in it, the data might be
 ```
 {
   key1: 'haha'

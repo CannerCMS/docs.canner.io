@@ -14,7 +14,7 @@ A CMS schema is constructed with the `jsx` syntax, describing the structure of t
 
 
 ## JSX Tags
-There are serveral available tags, as listed below.
+There are several available tags, as listed below.
 
 **Root**
 - \<root />
@@ -87,7 +87,7 @@ is equivalent to
 
 ### How
 
-We use `babel` with the `bable-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
+We use `babel` with the `babel-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
 
 ```js
 /** @jsx c */
@@ -95,7 +95,7 @@ import c from 'canner-script';
 ```
 
 ***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of react, and is **required**.
+> NOTE: The comment on the top, it declares `canner-script` as the builder of JSX, and it is **required**.
 
 ```jsx
 /** @jsx c */
@@ -138,7 +138,7 @@ c('root', null,
 
 ## Wrapped in &lt;root/&gt;
 
-The jsx schema **must** be wrapped in the `root` tag. `root` will return object with serveral keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
+The jsx schema **must** be wrapped in the `<root />`. `<root />` will return object with serveral keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
 
 
 ***Incorrect***
@@ -186,9 +186,40 @@ module.exports = (
 // }
 ```
 
+## First level tags
+The first level tags of <root/> must be one of `<object/>`, `<array/>` and `<page />`, first level tags will eventually become CMS's tabs. If you want to set up different connector in a different tab you could set connectors individually. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
+
+```js
+/** @jsx builder */
+import builder from 'canner-script';
+
+export default (
+  <root>
+    <page
+      keyName="dashbaord"
+      title="Dashboard"
+    >
+      <chart {...} />
+    </page>
+    <object
+      keyName="info"
+      title="Info"
+    >
+      <string title="Your name" keyName="name"/>
+    </object>
+    <array
+      keyName="products"
+      title="Products"
+    >
+      <string title="Product name" keyName="name"/>
+    </array>
+  </root>
+)
+```
+
 ## Data Type tags
 
-Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
+Type tags are the most basic UI component for CMS.  For example,  you could create a textarea for a string field.
 
 Using textarea UI:
 
@@ -196,7 +227,7 @@ Using textarea UI:
 <string ui="textarea">
 ```
 
-Every UI component should pass a `keyName`, which matchs to the key name of your data source.
+Every UI component should pass a `keyName`, which matches the key name of your data source.
 
 For example, your data is like below
 
@@ -219,11 +250,11 @@ So your `keyName` should define as `content`
 
 ## Layout tags
 
-Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
+Layout tags are used to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
 
 Every layout tag generates a new `visitor` which is used to edit the component tree will be collected in `root` tag.
 
-For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to seperate the three fields into two different blocks.
+For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to separate the three fields into two different blocks.
 
 ***without block***
 ```jsx
@@ -262,7 +293,7 @@ module.exports = <root>
 
 ## Toolbar tags
 
-Toolbar tags provide additional features for user to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc. They only can be put into **first level array** and **relation field**.
+Toolbar tags provide additional features for users to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc. They only can be put into **first level array** and **relation field**.
 
 **exmples**
 
