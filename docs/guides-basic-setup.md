@@ -120,5 +120,5 @@ class CMSExample extends React.Component {
 }
 
 //render it
-ReactDOM.render(<CMSExample>, document.getElementById("root"));
+ReactDOM.render(<CMSExample />, document.getElementById("root"));
 ```
