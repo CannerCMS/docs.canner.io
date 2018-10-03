@@ -9,6 +9,14 @@
         "title": "Canner CMS",
         "sidebar_label": "Canner CMS"
       },
+      "advance-canner-container": {
+        "title": "Canner Container",
+        "sidebar_label": "Canner Container"
+      },
+      "advance-canner-router": {
+        "title": "Canner Router",
+        "sidebar_label": "Canner Router"
+      },
       "advance-canner-script": {
         "title": "About canner-script (JSX for Canner)",
         "sidebar_label": "canner-script"

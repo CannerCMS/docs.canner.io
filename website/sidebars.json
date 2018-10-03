@@ -65,6 +65,8 @@
     ],
     "Advanced": [
       "advance-canner-cms",
+      "advance-canner-router",
+      "advance-canner-container",
       "advance-cms-helpers",
       "advance-cms-test"
     ],
