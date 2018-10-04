@@ -3,281 +3,367 @@ id: schema-data-type-tags
 title: Data Type Tags
 sidebar_label: Data Type Tags
 ---
-## Why
 
-`canner-script` is a sugar syntax of Canner CMS schema. In order to, make Canner's developers declare schema in a declarative and intuitive way.
+## Introduction
 
-```js
-// jsx
-<root>
-  <object keyName="info">
-    <string keyName="name">
-  </object>
-</root>
+In canner CMS schema, we force developers to define the data type in each field because data sources (e.g. Firebase, parse, graphcool...) deal with the data types in different ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
+
+Furthermore, while developing a component and making a query to the API, we provide an additional query for some data types. For example, a field with an `array` type and objects as children can make a query as below:
+
+```graphql
+// images with pagination query
+{
+  users {
+    id
+    images(pagination: {first: 1}) {
+      url
+    }
+}
 ```
 
-is equivalent to 
+## The Most Common Properties
+
+The most common property is `keyName`, `ui`, and `title`.
+
+**`keyName`**
+
+Define the key name of this field, for examples, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
+
+**`ui`**
+
+We support several UI components for developers to use in different use cases, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
+
+**`title`**
+
+The label of a field.
+
+## Primitive Types
+
+### &lt;string/&gt;
+
+***Data type:***
 
 ```js
-// schema in JSON
+string
+```
+
+> See complete [String components list](/component/?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;boolean/&gt;
+
+***Data type:***
+
+```js
+boolean
+```
+
+> See complete [Boolean components list](/component/?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;number/&gt;
+
+***Data type:***
+
+```js
+number
+```
+
+> See complete [Number components list](/component/?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;object/&gt;
+
+***Data type:***
+
+```js
+{[string]: any}
+```
+
+> See complete [Object components list](/component/?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+
+### &lt;array/&gt;
+
+***Data type:***
+
+```js
+Array<any>
+```
+
+> See complete [Array components list](/component/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+
+## Special types
+
+### &lt;date/&gt;
+
+ISO8601 without timezone. In other words, the value must postfix with `Z`
+
+***Data type:***
+
+**must** `ISO8601` string with zero UTC offset. [Reference ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+```js
+string
+```
+
+***Example***
+
+```sh
+2018-05-15T08:28Z
+```
+
+> See complete [Date components list](/component/?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;geoPoint/&gt;
+
+***Data type:***
+
+- lat: latitude
+- lng: longtitude
+- placeId: google map placeId
+
+```json
 {
-  info: {
-    type: 'object',
-    items: {
-      name: {
-        type: 'string',
-      }
+  lat: number,
+  lng: number,
+  placeId: string
+}
+```
+
+***Example***
+
+```json
+{
+  lat: 33.9259554,
+  lng:  -118.38406509999999,
+  placeId: "ChIJQap0KLe2woAR46AJ2Vczr1I"
+}
+```
+
+> See complete [GeoPoint components list](/component/?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;file/&gt;
+
+Static files that are not included in image types, such as pdf, csv, etc....
+
+- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+- name: Readable for humans
+- size: In bytes
+- url: Public image url
+
+***Data type:***
+
+```json
+{
+  contentType: string,
+  name: string,
+  size: number,
+  url: string
+}
+```
+
+***Example***
+
+```json
+{
+  contentType: "video/mp4",
+  name: "cool.mp4",
+  size: 1233,
+  url: "https://mp4.com/cool.mp4"
+}
+```
+
+> See complete [File components list](/component/?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;image/&gt;
+
+Static files that are images.
+
+- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+- name: Readable for human
+- size: In bytes
+- url: Public image url
+
+***Data type:***
+
+```js
+{
+  contentType: string,
+  name: string,
+  size: number,
+  url: string
+}
+```
+
+***Example***
+
+```js
+{
+  contentType: "image/jpg",
+  name: "mythumb.jpg",
+  size: 1233,
+  url: "https://image.com/mythumb.jpg"
+}
+```
+
+> See complete [Image components list](/component/?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
+### &lt;relation/&gt;
+
+You **must** pass `<relation/>` a prop called `relation` to setup.
+
+> Note that relation can only point to the first level key in your data.
+
+keys in `relation` object:
+
+- type: the relation type to one or many, `toOne` will get an object, `toMany` will get a list.
+- to: first level data key.
+
+```js
+{
+  type: 'toOne' | 'toMany',
+  to: string
+}
+```
+
+***Data type(received in component):***
+
+```
+Object | Array<any>
+```
+***Data type(stored in datasource):***
+
+id or idMap
+```
+string | {[id: string]: boolean}
+```
+
+***Example***
+
+We'll use a data as below for example:
+
+```js
+{
+  users: [{
+    name: "Bob",
+    topPost: {
+      post1: true,
+      ...
     }
+  }],
+  posts: [{
+    id: 'post1',
+    title: 'post1',
+    content: 'post content'
+  }, {
+    id: 'post2',
+    title: 'post2',
+    content: 'post content'
+  }, {
+    id: 'post3',
+    title: 'post3',
+    content: 'post content'
+  }, {
+    id: 'post4',
+    title: 'post4',
+    content: 'post content'
+  }]
+}
+```
+
+**toMany**
+
+Example for `toMany`.
+
+Assuming that you want your `topPost` key to relate to data `posts` (must be the first level key of your data)
+
+```js
+// schema
+<relation keyName="topPost" relation={{to: 'posts', type: 'toMany'}}>
+```
+
+The data is saved as an object `{[id]: true}`
+
+```js
+// if user select post1 and post2
+{
+  topPost: {
+    post1: true,
+    post2: true
   }
 }
 ```
 
-## How
+**toOne**
 
-We use `babel` with the `bable-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
+Example for `toOne`. Say you want your `topPost` key to relate to data `posts` (must be the first level key of your data)
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+// schema
+<relation keyName="topPost" relation={{to: 'posts', type: 'toOne'}}>
 ```
 
-***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of react, and is **required**.
+The data is saved as string `[id]`
 
-```jsx
-/** @jsx c */
-import c from 'canner-script';
-
-modules.export = (
-  <root>
-    <object keyName="info">
-      <string keyName="name">
-    </object>
-  </root>
-);
-```
-
-***Output***
-
-```jsx
-c('root', null, 
-  c('object', {name: 'info'}, 
-    c('string', {name: 'name'})
-  )
-)
-
-// canner-script will internally create a schema object with visitors as below:
+```js
+// if user select post1
 {
-  schema: info: {
-    name: 'info',
-    type: 'object',
-    items: {
-      name: {
-        name: 'name',
-        type: 'string'
-      }
-    }
-  },
-  visitors: []
+  topPost: "post1"
 }
 ```
 
-## Valid schema syntax
+### &lt;json/&gt;
 
-### JSX Tags
-There are serveral available tags, as listed below.
+You can imagine this type is an `any` type, unlink other types, you don't have to declare it's children type.
 
-***Types***: Represents the data types of the data:
-
-- string
-- boolean
-- number
-- date
-- mapPoint
-- file
-- relation
-- array
-- object
-
-***Layout***: Layout of CMS blocks and appearance
-
-- Collapse
-- Block
-
-***Query and miscellaneous***:
-
-- root (Outermost tag, the root)
-- toolbar
-  - sort
-  - filter
-  - pagination
-
-
-### Wrapped in &lt;root/&gt;
-
-The jsx schema **must** be wrapped in the `root` tag. `root` will return object with two keys, `schema` and `visitors`. `schema` contains the data structure and `visitors` contains the inputs for our `compiler` to build the complete `componentTree`.
-
-
-***Incorrect***
-
-```jsx
-module.exports = (
-  <object keyName="test">
-    {
-      /* other schema */
-    }
-  </object>
-);
-
-// which means
-// {
-//   type: 'object',
-//   name: 'test',
-//   items: ...
-// }
-```
-
-***Correct***
-```jsx
-module.exports = (
-  <root>
-    <object keyName="test">
-      {
-        /* other schema */
-      }
-    </object>
-  </root>
-);
-
-// which means
-// {
-//   schema: {
-//     test: {
-//       type: 'object',
-//       name: 'test',
-//       items: ...
-//     }
-//   },
-//   visitors: []
-// }
-```
-
-### Type tags
-
-Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
-
-Using textarea UI:
-
+For examples, there  is an `object` schema, we have to declare the children fields, or `graphql` will throw the error about missing subset in the `info` field:
 ```js
-<string ui="textarea">
+<object keyName="info">
+  <string keyName="title" />
+</object>
 ```
 
-Every UI component should pass a keyName, which matchs to the key name of your data source.
-
-For example, your data is like below
-
+And with json, you can write this schema like that:
 ```js
+<json keyName="info" />
+```
+
+This type is useful when you actually don't know what the type is, for examples, if you have a field with dynamic fields in it, the data might be
+```
 {
-  content: "This is your content"
+  key1: 'haha'
 }
 ```
 
-So your `keyName` should define as `content`
+or
+```
+{
+  key2: '
+}
+```
+
+- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+- name: Readable for human
+- size: In bytes
+- url: Public image url
+
+***Data type:***
 
 ```js
-<string ui="textarea" keyName="content">
+{
+  contentType: string,
+  name: string,
+  size: number,
+  url: string
+}
 ```
 
-> Further information
-> - [Antd CMS components docs](https://canner.github.io/antd-cms-component-docs)
-> - [API of CMS components](api-components.md) 
+***Example***
 
-### Layout tags
-
-Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
-
-Every layout tag will generate a new `visitor` that is inserted into the `visitors` array, which will be collected in `root` tag.
-
-For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to seperate the three fields into two different blocks.
-
-***without block***
-```jsx
-/** @jsx c */
-import c from 'canner-script';
-
-module.exports = <root>
-  <object keyName="info">
-    <string keyName="name" />
-    <string keyName="nickname" />
-    <string keyName="note" ui="editor"/>
-  </object>
-</root>
-```
-
-***with block***
-```jsx
-/** @jsx c */
-import c, {Block} from 'canner-script';
-
-module.exports = <root>
-  <object keyName="info">
-    <Block>
-      <string keyName="name" />
-      <string keyName="nickname" />
-    </Block>
-    <Block>
-      <string keyName="note"  ui="editor"/>
-    </Block>
-  </object>
-</root>
-```
-
-> Further information
-> - [Advance layout introduction](advance-layout.md)  
-
-### Query tags
-
-Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
-
-**exmples**
-
-```
-<root>
-  <array keyName="posts">
-    <toolbar>
-      <filter fields={[{
-        type: 'select',
-        label: 'Status',
-        options: [{
-          text: 'All',
-          condition: {}
-        }, {
-          text: 'Published',
-          condition: {
-            draft: {
-              eq: false
-            }
-          }
-        }, {
-          text: 'Draft',
-          condition: {
-            draft: {
-              eq: true
-            }
-          }
-        }]
-      }, {
-        type: 'number',
-        key: 'views',
-        label: 'Views',
-      }]}>
-      <sort defaultOption="views" options={[{
-        key: 'views',
-        title: 'Views'
-      }]}>
-      <pagination>
-    </toolbar>
-  </array>
-</root>
-
+```js
+{
+  contentType: "image/jpg",
+  name: "mythumb.jpg",
+  size: 1233,
+  url: "https://image.com/mythumb.jpg"
+}
 ```
