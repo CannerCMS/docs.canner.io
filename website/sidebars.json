@@ -19,6 +19,7 @@
       "guides-storage",
       "guides-internationalization",
       "guides-validation",
+      "guides-default-value",
       "guides-condition-fields",
       "guides-customized-component",
       "guides-customized-layout",
