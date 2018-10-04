@@ -144,7 +144,7 @@ c('root', null,
 
 ## Wrapped in &lt;root/&gt;
 
-The jsx schema **must** be wrapped in the `<root />`. `<root />` will return object with serveral keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
+The jsx schema **must** be wrapped in the `<root />`. `<root />` will return object with several keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
 
 
 ***Incorrect***
@@ -301,7 +301,7 @@ module.exports = <root>
 
 Toolbar tags provide additional features for users to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc. They only can be put into **first level array** and **relation field**.
 
-**exmples**
+**examples**
 
 ```
 <root>
@@ -342,7 +342,7 @@ module.exports = <root>
 
 Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `indicator` and `chart` to show the data.
 
-**exmples**
+**examples**
 
 ```
 <root>

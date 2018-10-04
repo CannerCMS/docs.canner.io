@@ -6,7 +6,7 @@ sidebar_label: Root Tag
 
 ## Introduction
 
-The outtest tag in canner schema. It actually returns an object containing the serveral information.
+The outermost tag in canner schema. It actually returns an object containing the several information.
 
 **Example**
 ```js
