@@ -6,11 +6,11 @@ sidebar_label: Condition Fields
 
 ## Introduction
 
-To control a field hidden or disabled in some situation in runtime, we can use `Condition` layout tag to achieve it. For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
+To control a field hidden or disabled in some conditions in runtime, we can use `Condition` layout tag to achieve it. For examples, if you want to show the field `address` only when users choose a certain delivery service, you can use `<Condition />` like below:
 
 ```jsx
 /** @jsx builder */
-// remember to import Condition tag before you import it
+// remember to import Condition tag before you use it
 import builder, {Condition} from 'canner-script';
 
 export default (
@@ -53,7 +53,7 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
 ## Properties
 
 - match: `(value: Object, operator: 'create'| 'update') => boolean`,
-- defaultMode: when unmatched, the field should be.
+- defaultMode: When unmatched, the field should be hidden or disabled.
 
 ## Nested Condition
 
