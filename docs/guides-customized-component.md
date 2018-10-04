@@ -8,9 +8,8 @@ sidebar_label: Customized CMS Component
 
 Use `packageName` to select your customized component to handle the data.
 
-> packageName **must** be a literal string, cannot be a variable.
-
-> If you want to load your package in your file system, you must use **relative or absolute path** start with `./` or `/`. Otherwise, it will be treated as a package in `node_modules`.
+> - packageName **must** be a literal string, cannot be a variable
+> - If you want to load your package in your file system, you must use **relative or absolute path** start with `./` or `/`. Otherwise, it will be treated as a package in `node_modules`
 
 
 ***npm package***
@@ -22,7 +21,7 @@ import c from 'canner-script';
 export default (
   <root>
     <array packageName="example-array-gallery">
-      <file keyName="imgSrc" />
+      <image keyName="imgSrc" />
       <string keyName="imgName" />
     </array>
   </root>
@@ -38,7 +37,7 @@ import path from 'path';
 export default (
   <root>
     <array packageName={path.resolve(__dirname, 'path/to/example-array-gallery')}>
-      <file keyName="imgSrc" />
+      <image keyName="imgSrc" />
       <string keyName="imgName" />
     </array>
   </root>
@@ -52,7 +51,7 @@ If you are developing customized CMS component you have to fit our naming conven
 `${prefix}-${type}-${name}`
 
 1. `prefix`: prefix namespace of your package
-2. `type`: **must** be one of [component types](advance-component-types.md).
+2. `type`: **must** be one of [data types](guides-data-type-tags.md).
 3. `name`: name of package.
 
 Some valid namings:
@@ -87,7 +86,7 @@ Add a new key in your `package.json`. If `canner` key is not set in your `packag
     <td>cannerDataType</td>
     <td>
       <code>
-    'array' | 'object' | 'string' | 'number' | 'boolean' | 'geoPoint' | 'date' | 'file' | 'relation'
+    'array' | 'object' | 'string' | 'number' | 'boolean' | 'geoPoint' | 'date' | 'file' | 'relation' | 'json'
       </code>
     </td>
     <td>
@@ -172,9 +171,11 @@ equals to
 </root>;
 ```
 
-## Customized CMS component
+## Re
 
-> `React` version must be >= 16.x version
+## Examples
+
+> `React` version must be >= 16.3 version
 
 ### Object type
 
