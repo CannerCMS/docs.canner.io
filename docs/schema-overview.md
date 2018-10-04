@@ -41,6 +41,12 @@ There are several available tags, as listed below.
 - \<Default />
 - \<Condition />
 
+***Page***: Provides overview features of the CMS
+
+- \<Page />
+- \<Indicator />
+- \<Chart />
+
 ***Toolbars***:
 
 - \<toolbar />
