@@ -5,6 +5,17 @@ sidebar_label: Internationalization (i18n)
 ---
 
 
+## Supported i18n properties
+
+The properties below supported i18n string.
+
+- title
+- description
+- uiParams
+- label
+- options
+- placeholder
+
 ## Usage
 
 Write the i18n `dict` and pass it to `<root />`, and change the text to `${<id>}` format.
@@ -33,14 +44,3 @@ export default (
   </root>
 )
 ```
-
-## Supported i18n properties
-
-The properties below support i18n string
-
-- title
-- description
-- uiParams
-- label
-- options
-- placeholder
