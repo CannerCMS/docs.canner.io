@@ -147,6 +147,8 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
 ```
 
 
+> Further information, see [condition fields](guides-condition-fields.md)
+
 ## Customized Layout
 
 You can add customized layout components through the `component` property in `<Layout/>`
