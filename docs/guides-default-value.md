@@ -4,9 +4,9 @@ title: Default Value
 sidebar_label: Default Value
 ---
 
-## usage
+## Usage
 
-Add the `defaultValue` property in your data type tag to generate the default value when creating.
+Add the `defaultValue` property in your data type tag to set the default value when creating. You can also pass a function in `defaultValue` so that you can set a random value.
 
 ```js
 /** @jsx builder */
@@ -15,13 +15,15 @@ import shortId from 'shortid';
 export default (
   <root>
     <array keyName="products" ui="tableRoute">
-      <string keyName="no" defaultValue={shortId.generate()}/>
+      <string keyName="no" defaultValue={() => shortId.generate()}/>
       <number keyName="order" defaultValue={1}/>
       {...}
     </array>
   </root>
 )
 ```
+
+
 
 ## Limitation
 
