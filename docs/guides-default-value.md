@@ -26,6 +26,3 @@ export default (
 ## Limitation
 
 - only works in `<array ui="tableRoute">` for now
-
-
-
