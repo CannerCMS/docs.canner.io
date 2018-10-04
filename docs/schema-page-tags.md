@@ -3,281 +3,359 @@ id: schema-page-tags
 title: Page Tags
 sidebar_label: Page Tags
 ---
-## Why
 
-`canner-script` is a sugar syntax of Canner CMS schema. In order to, make Canner's developers declare schema in a declarative and intuitive way.
+## Introduction
 
-```js
-// jsx
+Page tags are designed to create a **dashboard-like** page, which lets you have an overview of your data.
+
+## Basic Page
+
+Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the stat of a blog's users and posts.
+
+***Usage***
+
+```xml
 <root>
-  <object keyName="info">
-    <string keyName="name">
-  </object>
+  <page keyName="overview">
+    <Row>
+      <Col>
+        <indicator
+          ui="amount"
+          keyName="totalUsers"
+          graphql={
+            `
+              query users {
+                users {name age}
+              }
+            `
+          }
+          title="Total users"
+          uiParams={{
+            formatter: v => `${v}`
+          }}
+          getValue={v => v.length}
+        />
+      </Col>
+      <Col>
+        <indicator
+          ui="list"
+          keyName="posts"
+          graphql={
+            `
+              query posts {
+                posts(first: 10) {title image}
+              }
+            `
+          }
+          uiParams={postUIParams}
+        />
+      </Col>
+    </Row>
+    <Col>
+      <chart
+        ui="bar"
+        keyName="user-bar"
+        uiParams={userBarUIConfig}
+        graphql={
+          `
+            query users {
+              users(first: 10) {name age}
+            }
+          `
+        }
+      />
+    </Col>
+  </page>
 </root>
 ```
 
-is equivalent to 
+### &lt;page/&gt;
 
-```js
-// schema in JSON
-{
-  info: {
-    type: 'object',
-    items: {
-      name: {
-        type: 'string',
+This tag is the root tag of the other page tags. All its children will be rendered as a page content.
+
+### &lt;indicator ui="amount" /&gt;
+
+Display a value in a card form.
+
+**Properties**
+
+- keyName
+- graphql: The graphsql string to fetch the data
+- getValue: Get the vaule from fetched data
+- uiParams: For more detailed UI settings
+  - formatter: Format the value for the final view
+
+**Example:**
+
+```xml
+ <indicator
+  ui="amount"
+  keyName="totalUsers"
+  graphql={
+    `
+      query users {
+        users {name age}
       }
-    }
+    `
   }
-}
+  title="Total users"
+  uiParams={{
+    formatter: v => `${v}`
+  }}
+  getValue={v => v.length}
+/>
 ```
 
-## How
+### &lt;indicator ui="list" /&gt;
 
-We use `babel` with the `bable-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
+Display data as a [antd list](https://ant.design/components/list/).
 
-```js
-/** @jsx c */
-import c from 'canner-script';
-```
+- keyName
+- graphql: The graphsql string to fetch the data
+- uiParams: For more detailed UI settings
 
-***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of react, and is **required**.
-
-```jsx
-/** @jsx c */
-import c from 'canner-script';
-
-modules.export = (
-  <root>
-    <object keyName="info">
-      <string keyName="name">
-    </object>
-  </root>
-);
-```
-
-***Output***
-
-```jsx
-c('root', null, 
-  c('object', {name: 'info'}, 
-    c('string', {name: 'name'})
-  )
-)
-
-// canner-script will internally create a schema object with visitors as below:
-{
-  schema: info: {
-    name: 'info',
-    type: 'object',
-    items: {
-      name: {
-        name: 'name',
-        type: 'string'
+```xml
+<indicator
+  ui="list"
+  keyName="posts"
+  graphql={
+    `
+      query posts {
+        posts(first: 10) {title image}
       }
-    }
-  },
-  visitors: []
-}
+    `
+  }
+  uiParams={{
+    avatar: value => (
+      <Avatar // antd
+        src={value.image && value.image.url}
+        style={{color: '#f56a00', backgroundColor: '#fde3cf'}}
+      >
+        {value.title}
+      </Avatar>
+    ),
+    title: value => value.title,
+    description: () => null,
+    content: () => null
+  }}
+/>
 ```
 
-## Valid schema syntax
+### &lt;chart /&gt;
 
-### JSX Tags
-There are serveral available tags, as listed below.
+Create charts.
 
-***Types***: Represents the data types of the data:
+**Properties**
+- keyName
+- ui: Chart type. `line`, `bar`, `pie` or `scatter`
+- graphql: The graphsql string to fetch the data
+- uiParams: For more detailed UI settings
 
-- string
-- boolean
-- number
-- date
-- mapPoint
-- file
-- relation
-- array
-- object
+***ui="line" uiParams:***
 
-***Layout***: Layout of CMS blocks and appearance
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Types</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>interpolate</td>
+    <td><code>string // default linear</code></td>
+    <td>"basis" | "cardinal" | "catmull-rom" | "linear" | "monotone" | "natural" | "step" | "step-after" | "step-before"</td>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>y</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>fill</td>
+    <td><code>string // default #1890ff</code></td>
+    <td>color</td>
+  </tr>
+</table>
 
-- Collapse
-- Block
+***ui="bar" uiParams:***
 
-***Query and miscellaneous***:
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Types</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>y</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>fill</td>
+    <td><code>string // default #1890ff</code></td>
+    <td>color</td>
+  </tr>
+</table>
 
-- root (Outermost tag, the root)
-- toolbar
-  - sort
-  - filter
-  - pagination
+***ui="pie" uiParams:***
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Types</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>field</td>
+    <td><code>string</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td><code>{<br/>
+      range?: string, // default category20<br/>
+      field?: string // default id<br/>
+    }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales/#range">range</a></td>
+  </tr>
+   <tr>
+    <td>sort</td>
+    <td><code>boolean // default false</code></td>
+    <td>optional</td>
+  </tr>
+</table>
 
 
-### Wrapped in &lt;root/&gt;
+***ui="scatter" uiParams:***
 
-The jsx schema **must** be wrapped in the `root` tag. `root` will return object with two keys, `schema` and `visitors`. `schema` contains the data structure and `visitors` contains the inputs for our `compiler` to build the complete `componentTree`.
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Types</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>y</td>
+    <td><code>{
+    field: string,
+    scale?: string, // default linear
+    title?: string
+  }</code></td>
+    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td><code>number | string // default 100%</code></td>
+    <td>number or percent string</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td><code>{
+      field: string
+    }</code></td>
+    <td>The text of field will be shown once the hover event is fired</td>
+  </tr>
+  <tr>
+    <td>fill</td>
+    <td><code>string // default #1890ff</code></td>
+    <td>color</td>
+  </tr>
+</table>
 
 
-***Incorrect***
+**Chart example**
 
-```jsx
-module.exports = (
-  <object keyName="test">
-    {
-      /* other schema */
-    }
-  </object>
-);
-
-// which means
-// {
-//   type: 'object',
-//   name: 'test',
-//   items: ...
-// }
-```
-
-***Correct***
-```jsx
-module.exports = (
-  <root>
-    <object keyName="test">
-      {
-        /* other schema */
+```xml
+<chart ui="bar"
+  keyName="user-bar"
+  graphql={
+    `
+      query users {
+        users(first: 10) {name age}
       }
-    </object>
-  </root>
-);
-
-// which means
-// {
-//   schema: {
-//     test: {
-//       type: 'object',
-//       name: 'test',
-//       items: ...
-//     }
-//   },
-//   visitors: []
-// }
-```
-
-### Type tags
-
-Type tags are the most basic UI component for CMS.  For example you could create a textarea for string.
-
-Using textarea UI:
-
-```js
-<string ui="textarea">
-```
-
-Every UI component should pass a keyName, which matchs to the key name of your data source.
-
-For example, your data is like below
-
-```js
-{
-  content: "This is your content"
-}
-```
-
-So your `keyName` should define as `content`
-
-```js
-<string ui="textarea" keyName="content">
-```
-
-> Further information
-> - [Antd CMS components docs](https://canner.github.io/antd-cms-component-docs)
-> - [API of CMS components](api-components.md) 
-
-### Layout tags
-
-Layout tags is use to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
-
-Every layout tag will generate a new `visitor` that is inserted into the `visitors` array, which will be collected in `root` tag.
-
-For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to seperate the three fields into two different blocks.
-
-***without block***
-```jsx
-/** @jsx c */
-import c from 'canner-script';
-
-module.exports = <root>
-  <object keyName="info">
-    <string keyName="name" />
-    <string keyName="nickname" />
-    <string keyName="note" ui="editor"/>
-  </object>
-</root>
-```
-
-***with block***
-```jsx
-/** @jsx c */
-import c, {Block} from 'canner-script';
-
-module.exports = <root>
-  <object keyName="info">
-    <Block>
-      <string keyName="name" />
-      <string keyName="nickname" />
-    </Block>
-    <Block>
-      <string keyName="note"  ui="editor"/>
-    </Block>
-  </object>
-</root>
-```
-
-> Further information
-> - [Advance layout introduction](advance-layout.md)  
-
-### Query tags
-
-Query tags create components that user can use them to query requested content. There are three types of query tags in Canner: `<filter/>`, `<sort/>`, and `<pagination/>`, you **must** put them under the `<toolbar>` in **first-level** array of root.
-
-**exmples**
-
-```
-<root>
-  <array keyName="posts">
-    <toolbar>
-      <filter fields={[{
-        type: 'select',
-        label: 'Status',
-        options: [{
-          text: 'All',
-          condition: {}
-        }, {
-          text: 'Published',
-          condition: {
-            draft: {
-              eq: false
-            }
-          }
-        }, {
-          text: 'Draft',
-          condition: {
-            draft: {
-              eq: true
-            }
-          }
-        }]
-      }, {
-        type: 'number',
-        key: 'views',
-        label: 'Views',
-      }]}>
-      <sort defaultOption="views" options={[{
-        key: 'views',
-        title: 'Views'
-      }]}>
-      <pagination>
-    </toolbar>
-  </array>
-</root>
-
+    `
+  }
+  uiParams={{
+    height: 150,
+    width: 200,
+    color: {
+      field: 'name'
+    },
+    x: {
+      field: 'name'
+    },
+    y: {
+      field: 'age'
+    }
+  }}
+/>
 ```
