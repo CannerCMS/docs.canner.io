@@ -65,6 +65,8 @@ There are two fetch policies, `sync` and `async`, of `first level array` and `re
 
 > Notice that the pagination in async haven't support calculate total paging feature yet. 
 
+![pagination-async](assets/schema-toolbar-tags/pagination-async.png)
+
 ## &lt;filter /&gt;
 
 ### Filter Query Object
@@ -95,6 +97,13 @@ And it can also be nested.
 }
 ```
 
+#### Filter Tags
+
+- [\<textFilter>](schema-toolbar-tags#lt-textfilter-gt): Text filter
+- [\<numberFilter>](schema-toolbar-tags#lt-numberfilter-gt): Number filter
+- [\<selectFilter>](schema-toolbar-tags#lt-selectfilter-gt): Selection filter
+
+
 #### Operators
 - gt: greater than
 - gte: greater than or equal to
@@ -113,7 +122,7 @@ For string field, this filter generates a text input, has a different behavior i
 - sync mode: `eq` operator
 - async mode: `contains` operator
 
-**properties**
+**Properties**
 
 - field: the key name of a string field you want to query
 - placeholder: the placeholder of text input, support [i18n](guides-internationalization.md)
@@ -121,7 +130,7 @@ For string field, this filter generates a text input, has a different behavior i
 - alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
 
-**example**
+**Example**
 ```js
 <array keyName="users">
   <filter>
@@ -141,14 +150,14 @@ For number field, there are four operators in this filter.
 - `lt`
 - `lte`
 
-**properties**
+**Properties**
 
 - field: the key name of a number field you want to query
 - placeholder: the placeholder of the number input, support [i18n](guides-internationalization.md)
 - label: the label of the number input, support [i18n](guides-internationalization.md)
 - alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
-**example**
+**Example**
 ```js
 <array keyName="products">
   <actions>
@@ -167,14 +176,14 @@ For number field, there are four operators in this filter.
 
 Generate a selector which has options with query object.
 
-**properties**
+**Properties**
 
 - options: `Array<{text: string, condition: queryObject}>`
 - defaultOptionIndex: the index of default option
 - label: the label of the number input, support [i18n](guides-internationalization.md)
 - alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
-**example**
+**Example**
 ```js
 <array>
   <toolbar>
@@ -209,11 +218,11 @@ Generate a selector which has options with query object.
 
 ![sorter](assets/schema-toolbar-tags/sorter.png)
 
-**properties**
+**Properties**
 - defaultField: the keyName of the default sorted field
 - options: `Array<{label: string, field: string, defaultOrder: 'ASC' | 'DESC'}>`
 
-**example**
+**Example**
 ```js
 <array>
   <toolbar>
@@ -239,7 +248,7 @@ Pagination is the most basic query, so `<array>` and `<relation>` will add it by
 </root>
 ```
 
-is same as
+is the same as
 
 ```js
 <root>
@@ -265,12 +274,12 @@ The filter tag in actions is used to control the filters appear or not. So if yo
 
 <img src="assets/schema-toolbar-tags/exportModal.png" style="border: 1px solid #ccc"/>
 
-**properties**
+**Properties**
 - title: the title of the modal
-- filename: the csv filename
+- filename: the CSV filename
 - fields: `Array<{keyName: string, title: string, render?: (value: any) => string}>`
 
-**example**
+**Example**
 
 ```js
 <root>
