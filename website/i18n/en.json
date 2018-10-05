@@ -57,14 +57,6 @@
         "title": "Toolbar",
         "sidebar_label": "Toolbar"
       },
-      "cert-firebase": {
-        "title": "Credential in Firebase",
-        "sidebar_label": "Firebase"
-      },
-      "cert-prisma": {
-        "title": "Credential in Prisma",
-        "sidebar_label": "Prisma"
-      },
       "cli-canner-cloud-js": {
         "title": "canner.cloud.js",
         "sidebar_label": "canner.cloud.js"
@@ -112,6 +104,18 @@
       "concept-refid": {
         "title": "What is RefId?",
         "sidebar_label": "What is RefId?"
+      },
+      "credential-firebase": {
+        "title": "Credential in Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "credential-intro": {
+        "title": "Credential introduction",
+        "sidebar_label": "Introduction"
+      },
+      "credential-prisma": {
+        "title": "Credential in Prisma",
+        "sidebar_label": "Prisma"
       },
       "file-canner-data-js": {
         "title": "canner.data.js",

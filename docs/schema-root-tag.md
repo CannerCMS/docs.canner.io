@@ -6,7 +6,7 @@ sidebar_label: Root Tag
 
 ## Introduction
 
-The outermost tag in canner schema. It actually returns an object containing the several information.
+The outermost tag in canner schema. It actually returns an object containing with several information, which is need when compilation.
 
 **Example**
 ```js
@@ -39,6 +39,8 @@ console.log(schema)
 **/
 ```
 
+Following are the properties supported in `<root/>`
+
 ## schema
 
 A JSON object, created by [data type tags](schema-data-type-tags.md).
@@ -53,11 +55,11 @@ An array, created by [layout tags](schema-layout-tags.md). Each visitor will cha
 
 ## connector
 
-An [connector](guides-connector.md) map, decides the data source.
+A [connector](guides-connector.md) map, decides the data source.
 
 ## graphqlClient
 
-An [graphqlClient](guides-connector.md#graphql-client) map, decides the data source.
+A [graphqlClient](guides-connector.md#graphql-client) map, decides the data source.
 
 ## imageStorages
 
@@ -73,7 +75,7 @@ A [resolver](guides-resolver.md) map.
 
 ## dict
 
-An object records [i18n](guides-internationalization.md) texts.
+A object records [i18n](guides-internationalization.md) texts.
 
 **examples**
 ```js
