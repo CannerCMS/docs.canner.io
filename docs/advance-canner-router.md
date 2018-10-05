@@ -80,14 +80,16 @@ import Router from '@canner/router-history';
 
 
 class App extends React.Component {
-  router = new Router({
-    baseUrl: "/"
-  });
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
     // Trigger the Canner to update the UI with the corresponding part of your CMS.
     this.unlisten = this.router.history.listen(() => this.forceUpdate());
   }
+
+  router = new Router({
+    baseUrl: "/"
+  });
 
   componentWillUnmount() {
     this.unlisten();

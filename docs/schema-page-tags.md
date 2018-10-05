@@ -8,6 +8,8 @@ sidebar_label: Page Tags
 
 Page tags are designed to create a **dashboard-like** page, which lets you have an overview of your data.
 
+`<page/>`, `<indicator/>` and `<chart/>` tags works differently than [Data Type Tags](schema-data-type-tags.md). Page's `keyName` is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through `graphql` property.
+
 ## Basic Page
 
 Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the stat of a blog's users and posts.

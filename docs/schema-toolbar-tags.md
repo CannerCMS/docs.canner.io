@@ -8,7 +8,7 @@ sidebar_label: Toolbar Tags
 
 Toolbar tags provide additional features for users to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc.
 
-> Notice that toolbar only supported in **first level array field** and **relation field**.
+> Notice that, `<toolbar/>` can only placed in **first level array field** and **relation field**.
 
 ![toolbar](assets/schema-toolbar-tags/toolbar.png)
 
