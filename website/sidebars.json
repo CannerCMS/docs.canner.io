@@ -42,7 +42,7 @@
     "Files": [
       "file-canner-data-js",
       "file-canner-schema-js",
-      "file-cert",
+      "file-canner-cloud-js",
       "file-cannerrc",
       "file-canner-image-uploaded"
     ],

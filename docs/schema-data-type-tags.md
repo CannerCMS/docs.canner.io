@@ -6,9 +6,9 @@ sidebar_label: Data Type Tags
 
 ## Introduction
 
-In canner CMS schema, we force developers to define the data type in each field because data sources (e.g. Firebase, parse, graphcool...) deal with the data types in different ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
+In canner CMS schema, we force developers to define data types in each field because data sources (e.g. Firebase, Prisma...) deal with the data types in various ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
 
-Furthermore, while developing a component and making a query to the API, we provide an additional query for some data types. For example, a field with an `array` type and objects as children can make a query as below:
+Furthermore, while developing a component and making a query to the API, we provide additional queries for some data types. For example, a field with an `array` type and objects as children can make a query as below:
 
 ```graphql
 // images with pagination query
@@ -21,19 +21,19 @@ Furthermore, while developing a component and making a query to the API, we prov
 }
 ```
 
-## The Most Common Properties
+## Common Properties
 
-The most common property is `keyName`, `ui`, and `title`.
+Here is some common property for all data types `keyName`, `ui`, and `title`.
 
-**`keyName`**
+### keyName
 
-Define the key name of this field, for examples, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
+Define the key name of this field which will refer to data key in source. For example, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
 
-**`ui`**
+### ui
 
 We support several UI components for developers to use in different use cases, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
 
-**`title`**
+### title
 
 The label of a field.
 
@@ -141,39 +141,6 @@ string
 
 > See complete [GeoPoint components list](/component/?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
-### &lt;file/&gt;
-
-Static files that are not included in image types, such as pdf, csv, etc....
-
-- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
-- name: Readable for humans
-- size: In bytes
-- url: Public image url
-
-***Data type:***
-
-```json
-{
-  contentType: string,
-  name: string,
-  size: number,
-  url: string
-}
-```
-
-***Example***
-
-```json
-{
-  contentType: "video/mp4",
-  name: "cool.mp4",
-  size: 1233,
-  url: "https://mp4.com/cool.mp4"
-}
-```
-
-> See complete [File components list](/component/?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
-
 ### &lt;image/&gt;
 
 Static files that are images.
@@ -207,13 +174,47 @@ Static files that are images.
 
 > See complete [Image components list](/component/?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
+### &lt;file/&gt;
+
+Static files that are **not included** in [image types](schema-data-type-tags#lt-image-gt), such as pdf, csv, etc....
+
+- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+- name: Readable for humans
+- size: In bytes
+- url: Public image url
+
+
+***Data type:***
+
+```json
+{
+  contentType: string,
+  name: string,
+  size: number,
+  url: string
+}
+```
+
+***Example***
+
+```json
+{
+  contentType: "video/mp4",
+  name: "cool.mp4",
+  size: 1233,
+  url: "https://mp4.com/cool.mp4"
+}
+```
+
+> See complete [File components list](/component/?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+
 ### &lt;relation/&gt;
 
-You **must** pass `<relation/>` a prop called `relation` to setup.
+You **must** pass a property called `relation` to setup `<relation/>`.
 
-> Note that relation can only point to the first level key in your data.
+> Note that, relation can only point to the **first level key** in your data.
 
-keys in `relation` object:
+Settings in `relation` property:
 
 - type: the relation type to one or many, `toOne` will get an object, `toMany` will get a list.
 - to: first level data key.
@@ -313,7 +314,7 @@ The data is saved as string `[id]`
 
 ### &lt;json/&gt;
 
-You can imagine this type is an `any` type, unlink other types, you don't have to declare it's children type.
+You can imagine this type is a wildcard for `any` types, unlink other types, you don't have to declare it's children type.
 
 For examples, there  is an `object` schema, we have to declare the children fields, or `graphql` will throw the error about missing subset in the `info` field:
 ```js
@@ -322,7 +323,7 @@ For examples, there  is an `object` schema, we have to declare the children fiel
 </object>
 ```
 
-And with json, you can write this schema like that:
+With `<json/>`, you can write this schema like that(Without internal type declaring):
 ```js
 <json keyName="info" />
 ```
@@ -330,40 +331,16 @@ And with json, you can write this schema like that:
 This type is useful when you actually don't know what the type is, for examples, if you have a field with dynamic fields in it, the data might be
 ```
 {
-  key1: 'haha'
+  key1: 'foo1'
 }
 ```
 
 or
+
 ```
 {
-  key2: '
+  key2: 'foo2'
 }
 ```
 
-- contentType: Mime type ([Wiki reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
-- name: Readable for human
-- size: In bytes
-- url: Public image url
-
-***Data type:***
-
-```js
-{
-  contentType: string,
-  name: string,
-  size: number,
-  url: string
-}
-```
-
-***Example***
-
-```js
-{
-  contentType: "image/jpg",
-  name: "mythumb.jpg",
-  size: 1233,
-  url: "https://image.com/mythumb.jpg"
-}
-```
+Using `<json/>` type both data are valid.

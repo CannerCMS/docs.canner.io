@@ -117,6 +117,10 @@
         "title": "Credential in Prisma",
         "sidebar_label": "Prisma"
       },
+      "file-canner-cloud-js": {
+        "title": "canner.cloud.js",
+        "sidebar_label": "canner.cloud.js"
+      },
       "file-canner-data-js": {
         "title": "canner.data.js",
         "sidebar_label": "canner.data.js"
@@ -128,10 +132,6 @@
       "file-cannerrc": {
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
-      },
-      "file-cert": {
-        "title": "cert folder",
-        "sidebar_label": "cert folder"
       },
       "file-canner-image-uploaded": {
         "title": ".canner-image-uploaded.json file",
