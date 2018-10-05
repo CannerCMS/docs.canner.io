@@ -8,7 +8,7 @@ sidebar_label: Layout Tags
 
 Layout tags are used to create grids, containers, and blocks in CMS. This lets you create customized design layouts and visual design for your CMS.
 
-> Biggest difference between `Layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
+> Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
 
 ## Basic Layout
 
@@ -53,7 +53,7 @@ import c, {Default, Block, Tabs} from 'canner-script';
 
 ### &lt;Default/&gt;
 
-All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.
+All children will be rendered as normal, this layout is useful when you want to group some fields on UI without changing the data structure.
 
 Such as when you are using tab, the example below will become four tabs.
 
@@ -110,7 +110,10 @@ The grid system same as [antd grid](https://ant.design/components/grid/).
 
 ### &lt;Condition /&gt;
 
-Control the children field is hidden or disabled. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+Control the children field whether is meeting a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+
+- `value`: You could access all the data in the same block, could use to determine whether it should render or not.
+- `operator`: The action of the first level.
 
 For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
 
@@ -164,7 +167,7 @@ module.exports = <root>
   <object>
     <Card>
       <string name="name" />
-      <srting name="nickname" />
+      <string name="nickname" />
     </Card>
     <Card>
       <string name="note" />
