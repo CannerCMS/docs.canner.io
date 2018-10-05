@@ -1,12 +1,12 @@
 ---
-id: cli-canner-config-js
-title: canner.config.js
-sidebar_label: canner.config.js
+id: cli-canner-cloud-js
+title: canner.cloud.js
+sidebar_label: canner.cloud.js
 ---
 
-`canner.config.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
+`canner.cloud.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
 
-Canner now supporting three `canner.config.js` settings
+Canner now supporting three `canner.cloud.js` settings
 
 - [`env`](#environment-env)
 - [`theme`](#theme)
@@ -35,7 +35,7 @@ You could easily serve other environments via Canner CLI, learn more [here](cli-
 
 ## Theme
 
-Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). Customizing UI themes are a frequent request at Canner, by passing theme settings in `canner.config.js`.
+Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). Customizing UI themes are a frequent request at Canner, by passing theme settings in `canner.cloud.js`.
 
 - [Antd variable list](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
 

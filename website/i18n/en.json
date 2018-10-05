@@ -57,9 +57,17 @@
         "title": "Toolbar",
         "sidebar_label": "Toolbar"
       },
-      "cli-canner-config-js": {
-        "title": "canner.config.js",
-        "sidebar_label": "canner.config.js"
+      "cert-firebase": {
+        "title": "Credential in Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "cert-prisma": {
+        "title": "Credential in Prisma",
+        "sidebar_label": "Prisma"
+      },
+      "cli-canner-cloud-js": {
+        "title": "canner.cloud.js",
+        "sidebar_label": "canner.cloud.js"
       },
       "cli-commands": {
         "title": "Commands",
@@ -298,6 +306,7 @@
     "categories": {
       "Quick start": "Quick start",
       "Schema": "Schema",
+      "Credential": "Credential",
       "Guides": "Guides",
       "CLI": "CLI",
       "Files": "Files",

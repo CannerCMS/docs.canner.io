@@ -13,6 +13,11 @@
       "schema-toolbar-tags",
       "schema-page-tags"
     ],
+    "Credential": [
+      "credential-intro",
+      "credential-firebase",
+      "credential-prisma"
+    ],
     "Guides": [
       "guides-connector",
       "guides-resolver",
@@ -28,7 +33,7 @@
     ],
     "CLI": [
       "cli-installation",
-      "cli-canner-config-js",
+      "cli-canner-cloud-js",
       "cli-development",
       "cli-production",
       "cli-import-data",
