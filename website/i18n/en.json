@@ -57,9 +57,9 @@
         "title": "Toolbar",
         "sidebar_label": "Toolbar"
       },
-      "cli-canner-config-js": {
-        "title": "canner.config.js",
-        "sidebar_label": "canner.config.js"
+      "cli-canner-cloud-js": {
+        "title": "canner.cloud.js",
+        "sidebar_label": "canner.cloud.js"
       },
       "cli-commands": {
         "title": "Commands",
@@ -105,6 +105,22 @@
         "title": "What is RefId?",
         "sidebar_label": "What is RefId?"
       },
+      "credential-firebase": {
+        "title": "Credential in Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "credential-intro": {
+        "title": "Credential introduction",
+        "sidebar_label": "Introduction"
+      },
+      "credential-prisma": {
+        "title": "Credential in Prisma",
+        "sidebar_label": "Prisma"
+      },
+      "file-canner-cloud-js": {
+        "title": "canner.cloud.js",
+        "sidebar_label": "canner.cloud.js"
+      },
       "file-canner-data-js": {
         "title": "canner.data.js",
         "sidebar_label": "canner.data.js"
@@ -116,10 +132,6 @@
       "file-cannerrc": {
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
-      },
-      "file-cert": {
-        "title": "cert folder",
-        "sidebar_label": "cert folder"
       },
       "file-canner-image-uploaded": {
         "title": ".canner-image-uploaded.json file",
@@ -164,6 +176,10 @@
       "guides-customized-toolbar": {
         "title": "Customized Toolbar",
         "sidebar_label": "Customized Toolbar"
+      },
+      "guides-default-value": {
+        "title": "Default Value",
+        "sidebar_label": "Default Value"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
@@ -294,6 +310,7 @@
     "categories": {
       "Quick start": "Quick start",
       "Schema": "Schema",
+      "Credential": "Credential",
       "Guides": "Guides",
       "CLI": "CLI",
       "Files": "Files",

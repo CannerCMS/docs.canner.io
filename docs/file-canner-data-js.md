@@ -4,7 +4,7 @@ title: canner.data.js
 sidebar_label: canner.data.js
 ---
 
-`canner.data.js` is the default file that `@canner/cli` reads when importing your default data. Your data inside `canner.data.js` should build correspondence with your `canner.schema.js` schema structure, and should export a `json`.
+`canner.data.js` is the default file that `@canner/cli` reads when [importing your default data](cli-import-data.md). Your data inside `canner.data.js` should build correspondence with your `canner.schema.js` schema structure, and should export a `json`.
 
 ## Example
 

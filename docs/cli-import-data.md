@@ -4,7 +4,7 @@ title: Import Data
 sidebar_label: Import Data
 ---
 
-> NOTE: Importing data feature is not ONLY support Firebase realtime database
+> NOTE: Importing data feature is ONLY support Firebase realtime database
 
 ## Firebase realtime database
 
@@ -17,6 +17,10 @@ Install `@canner/cli-firebase-tool` by running
 ```
 npm i -g @canner/cli-firebase-tool
 ```
+
+Create `canner.data.js` in you root folder, this is the default file while we read the data.
+
+> Learn more [`canner.data.js`](file-canner-data-js.md)
 
 Command:
 

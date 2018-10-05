@@ -4,13 +4,15 @@ title: Layout Tags
 sidebar_label: Layout Tags
 ---
 
+## Introduction
+
 Layout tags are used to create grids, containers, and blocks in CMS. This lets you create customized design layouts and visual design for your CMS.
 
-> Biggest difference between `Layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
+> Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
 
 ## Basic Layout
 
-Canner supports serveral basic layouts. Remember to import them before using them.
+Canner supports several basic layouts. Remember to import them before using them.
 
 ```jsx
 /** @jsx c */
@@ -20,44 +22,42 @@ import c, {Default, Block, Tabs} from 'canner-script';
 ***Usage***
 ```xml
 <root>
-  <Body>
-    <object name="info">
-      <Tabs>
-        <Default>
-          <string name="name" />
-          <string name="nickname" />
-        </Default>
-        <Default>
-          <Block>
-            <object name="phones">
-              <string name="phone1" />
-              <string name="phone2" />
-            </object>
-            <object name="address">
-              <string name="address1" />
-              <string name="address2" />
-            </object>
-          </Block>
-          <Block>
-            <object name="emails">
-              <string name="email1" />
-              <string name="email2" />
-            </object>
-          </Block>
-        </Default>
-      </Tabs>
-    </object>
-  </Body>
+  <object name="info">
+    <Tabs>
+      <Default keyName="tab1" title="tab1">
+        <string name="name" />
+        <string name="nickname" />
+      </Default>
+      <Default keyName="tab2" title="tab2">
+        <Block>
+          <object name="phones">
+            <string name="phone1" />
+            <string name="phone2" />
+          </object>
+          <object name="address">
+            <string name="address1" />
+            <string name="address2" />
+          </object>
+        </Block>
+        <Block>
+          <object name="emails">
+            <string name="email1" />
+            <string name="email2" />
+          </object>
+        </Block>
+      </Default>
+    </Tabs>
+  </object>
 </root>
 ```
 
 ### &lt;Default/&gt;
 
-All children will be rendered as normal, this layout is useful when you want to group some fields on ui without changing the data structure.
+All children will be rendered as normal, this layout is useful when you want to group some fields on UI without changing the data structure.
 
 Such as when you are using tab, the example below will become four tabs.
 
-```xml
+```js
   <Tabs>
     <string {...}> // -----> tab 1
     <string {...}> // -----> tab 2
@@ -110,7 +110,10 @@ The grid system same as [antd grid](https://ant.design/components/grid/).
 
 ### &lt;Condition /&gt;
 
-Control the children field is hidden or disabled. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+Control the children field whether is meeting a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+
+- `value`: You could access all the data in the same block, could use to determine whether it should render or not.
+- `operator`: The action of the first level.
 
 For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
 
@@ -147,9 +150,11 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
 ```
 
 
+> Further information, see [condition fields](guides-condition-fields.md)
+
 ## Customized Layout
 
-You can add customized layout components through the `component` props in `<Layout/>`
+You can add customized layout components through the `component` property in `<Layout/>`
 
 ```jsx
 
@@ -162,7 +167,7 @@ module.exports = <root>
   <object>
     <Card>
       <string name="name" />
-      <srting name="nickname" />
+      <string name="nickname" />
     </Card>
     <Card>
       <string name="note" />
@@ -171,8 +176,5 @@ module.exports = <root>
 </root>
 ```
 
-> More customize layout techniques, see [Advance customized layout](advance-customized-layout.md)
+> More customize layout techniques, see [customized layout](guides-customized-layout.md)
  
-## Visitors
-
-Layout tags will create visitors, and exported to `canner-schema-loader` to transform the component tree.

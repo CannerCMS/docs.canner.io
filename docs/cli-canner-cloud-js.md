@@ -1,12 +1,12 @@
 ---
-id: cli-canner-config-js
-title: canner.config.js
-sidebar_label: canner.config.js
+id: cli-canner-cloud-js
+title: canner.cloud.js
+sidebar_label: canner.cloud.js
 ---
 
-`canner.config.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
+`canner.cloud.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
 
-Canner now supporting three `canner.config.js` settings
+Canner now supporting three `canner.cloud.js` settings
 
 - [`env`](#environment-env)
 - [`theme`](#theme)
@@ -14,16 +14,22 @@ Canner now supporting three `canner.config.js` settings
 
 ## Environment (env)
 
-`env` key allows you to set different environments with different use resources. It can only set with an object, different keys represent different environments, for example:
+`env` key allows you to set different environments with different resources. It can only set with an object, different keys represent different environments, each setting's value **must be an array**, for example:
 
-```json
-{
+```js
+const {FirebaseCert} = require("canner-credential");
+
+module.exports = {
   "env": {
-    "default": "firebase/prod", // ----> production firebase setting
-    "test1": "firebase/test1" // -----> test1 firebase settings
+    // production firebase setting
+    "default": [new FirebaseCert(require("path to firebase credential"))],
+    // test1 firebase settings
+    "test1": [new FirebaseCert(require("path to firebase credential"))]
   }
 }
 ```
+
+> Learn more about [credentials](credential-intro)
 
 ### Production
 
@@ -35,7 +41,7 @@ You could easily serve other environments via Canner CLI, learn more [here](cli-
 
 ## Theme
 
-Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). Customizing UI themes are a frequent request at Canner, by passing theme settings in `canner.config.js`.
+Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). Customizing UI themes are a frequent request at Canner, by passing theme settings in `canner.cloud.js`.
 
 - [Antd variable list](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
 
