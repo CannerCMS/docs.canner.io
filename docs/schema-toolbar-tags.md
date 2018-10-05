@@ -10,8 +10,10 @@ sidebar_label: Toolbar Tags
 
 > Notice that toolbar only supported in **first level array field** and **relation field**.
 
+![toolbar](assets/schema-toolbar-tags/toolbar.png)
 
-**exmple**
+
+**Example**
 
 ```
 <root>
@@ -47,30 +49,27 @@ sidebar_label: Toolbar Tags
 </root>
 
 ```
-![toolbar](assets/schema-toolbar-tags/toolbar.png)
-
 
 ### Fetch Policy
 
-There are two fetch policies, sync and async, of `first array` and `relation` data. We use `sync` as default which means fetch all data at once, you can simply change it by adding `async` on toolbar tag, for example, `<toolbar async>`.
+There are two fetch policies, `sync` and `async`, of `first level array` and `relation` data. We use `sync` as default which means fetch all data at once, you can simply change it by adding `async` on toolbar tag, for example, `<toolbar async>`.
 
 ### Sync
 
-**Fetch all data**, and all query features such as `filter`, `sorter`, and `pagination` are implemented in frontend. This policy is suitable for those whose data size is not huge, and who needs powerful query feature.
+**Fetch all data**, and all query features such as `filter`, `sorter`, and `pagination` are implemented in frontend. This policy is suitable for those whose data size is not huge (**You should consider using Async if your data points > 1000**), and who needs powerful query feature.
 
-
-> Notice that the pagination of sync is numbered pagination.
+![pagination-sync](assets/schema-toolbar-tags/pagination-sync.png)
 
 ### Async
 **Fetch data with query**, changing `filter`, `sorter`, `pagination` will actually request server again. This policy is suitable for those whose data size is huge, so you don't want fetch them at once.
 
-> Notice that the pagination of sync is cursor-based pagination.
+> Notice that the pagination in async haven't support calculate total paging feature yet. 
 
 ## &lt;filter /&gt;
 
 ### Filter Query Object
 
-In canner, we use filter query object to represent the specific query. The object is composed with data and filter operator, such as eq, lt, gt, ...etc.
+In Canner, we use filter query object to represent a specific query. The object is composed with data and filter operator, such as **eq, lt, gt**, ...etc.
 
 For example, a query object to find those price is greater than 300 will be:
 
@@ -82,7 +81,7 @@ For example, a query object to find those price is greater than 300 will be:
 }
 ```
 
-And it can also be nested and complex.
+And it can also be nested.
 ```js
 {
   info: {
@@ -96,7 +95,7 @@ And it can also be nested and complex.
 }
 ```
 
-#### operator
+#### Operators
 - gt: greater than
 - gte: greater than or equal to
 - lt: less than
