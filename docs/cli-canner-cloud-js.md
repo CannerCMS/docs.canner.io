@@ -17,14 +17,14 @@ Canner now supporting three `canner.cloud.js` settings
 `env` key allows you to set different environments with different resources. It can only set with an object, different keys represent different environments, each setting's value **must be an array**, for example:
 
 ```js
-const {FirebaseCert} = require("canner-credential");
+const {FirebaseCredential} = require("canner-credential");
 
 module.exports = {
   "env": {
     // production firebase setting
-    "default": [new FirebaseCert(require("path to firebase credential"))],
+    "default": [new FirebaseCredential(require("path to firebase credential"))],
     // test1 firebase settings
-    "test1": [new FirebaseCert(require("path to firebase credential"))]
+    "test1": [new FirebaseCredential(require("path to firebase credential"))]
   }
 }
 ```
