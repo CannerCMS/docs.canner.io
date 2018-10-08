@@ -45,24 +45,42 @@ const connector = new MemoryConnector({
 });
 ```
 
-### FirebaseRtdbAdminConnector
+### LocalStorageConnector
 
-Connect to Firebase realtime database using Firebase Admin SDK (Firebase Admin SDK provides more powerful features such as storage, complete APIs to Firebase, **if you are using CannerIO with Firebase use this.**)
+Use `localStorage` as your database.
 
 **Usage:**
 
 ```js
-import {FirebaseRtdbAdminConnector} from "canner-graphql-interface";
+import {LocalStorageConnector} from "canner-graphql-interface";
+
+const fakeData = {
+  users: [
+    {id: '1', age: 10, name: 'user1', email: 'test@email.com'},
+    {id: '2', age: 20, name: 'user2', email: 'test@email.com'}
+  ]
+}
 
 // pass `connector` to props
-const connector = new FirebaseRtdbAdminConnector({
-  projectId: '<PROJECT_ID>'
+const connector = new LocalStorageConnector({
+  defaultData?: fakeData
 });
+```
+
+**Clear Data:**
+
+If you want to reset the data, you can call `localStorage.removeItem` with `LocalStorageConnector.CANNER_LOCAL_STORAGE_KEY`.
+
+```js
+import {LocalStorageConnector} from "canner-graphql-interface";
+
+// clear the data
+localStorage.removeItem(LocalStorageConnector.CANNER_LOCAL_STORAGE_KEY);
 ```
 
 ### FirebaseRtdbClientConnector
 
-Connect to Firebase realtime database using Firebase client SDK (If you are using **Community edition** with Firebase, should use this.)
+Connect to Firebase realtime database using Firebase client SDK.
 
 **Usage:**
 
@@ -127,36 +145,6 @@ export default (
       resolver={resolver}>
       <string title="Product name" keyName="name"/>
     </array>
-  </root>
-)
-```
-
-## Supported GraphQL Services:
-### PrismaClient
-
-Connect to [Prisma](https://www.prisma.io/) service
-
-**Usage:**
-
-```js
-import {PrismaClient} from "canner-graphql-interface";
-
-// contruct graphQL client
-const graphqlClient = new PrismaClient();
-```
-
-## GraphQL Client
-```jsx
-/** @jsx builder */
-import builder from 'canner-script';
-import {PrismaClient} from "canner-graphql-interface";
-
-// contruct graphQL client
-const graphqlClient = new PrismaClient();
-
-export default (
-  <root graphqlClient={graphqlClient}>
-    // {... your schema}
   </root>
 )
 ```
