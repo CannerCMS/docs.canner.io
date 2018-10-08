@@ -81,11 +81,11 @@ Display a value in a card form.
 
 **Properties**
 
-- keyName
-- graphql: The graphql string to fetch the data
-- getValue: Get the vaule from fetched data
-- uiParams: For more detailed UI settings
-  - formatter: Format the value for the final view
+- `keyName`
+- `graphql`: The graphql string to fetch the data
+- `getValue`: Get the vaule from fetched data
+- `uiParams`: For more detailed UI settings
+  - `formatter`: Format the value for the final view
 
 **Example:**
 
@@ -114,9 +114,9 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 **Properties**
 
-- keyName
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
+- `keyName`
+- `graphql`: The graphql string to fetch the data
+- `uiParams`: For more detailed UI settings
 
 ```xml
 <indicator
@@ -150,10 +150,10 @@ Display data as a [antd list](https://ant.design/components/list/).
 Create charts.
 
 **Properties**
-- keyName
-- ui: Chart type. `line`, `bar`, `pie` or `scatter`
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
+- `keyName`
+- `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
+- `graphql`: The graphql string to fetch the data
+- `uiParams`: For more detailed UI settings
 
 ***ui="line" uiParams:***
 

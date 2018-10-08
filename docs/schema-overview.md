@@ -193,7 +193,7 @@ module.exports = (
 ```
 
 ## First level tags
-The first level tags of <root/> must be one of `<object/>`, `<array/>` and `<page />`, first level tags will eventually become CMS's tabs. If you want to set up different connector in a different tab you could set connectors individually. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
+The first level tags of <root/> must be one of `<object/>`, `<array/>` and `<page />`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver property into your tabs.
 
 ```js
 /** @jsx builder */
