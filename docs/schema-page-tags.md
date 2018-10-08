@@ -6,13 +6,13 @@ sidebar_label: Page Tags
 
 ## Introduction
 
-Page tags are designed to create a **dashboard-like** page, which lets you have an overview of your data.
+Page tags are designed to create a **dashboard/admin-like** page, which lets you have an overview of your data.
 
 `<page/>`, `<indicator/>` and `<chart/>` tags works differently than [Data Type Tags](schema-data-type-tags.md). Page's `keyName` is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through `graphql` property.
 
 ## Basic Page
 
-Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the stat of a blog's users and posts.
+Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.
 
 ***Usage***
 
@@ -81,11 +81,11 @@ Display a value in a card form.
 
 **Properties**
 
-- keyName
-- graphql: The graphql string to fetch the data
-- getValue: Get the vaule from fetched data
-- uiParams: For more detailed UI settings
-  - formatter: Format the value for the final view
+- `keyName`: A unique key
+- `graphql`: The graphql string to fetch the data
+- `getValue`: Get the vaule from fetched data
+- `uiParams`: For more detailed UI settings
+  - `formatter`: Format the value for the final view
 
 **Example:**
 
@@ -114,9 +114,9 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 **Properties**
 
-- keyName
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
+- `keyName`: A unique
+- `graphql`: The graphql string to fetch the data
+- `uiParams`: For more detailed UI settings
 
 ```xml
 <indicator
@@ -150,10 +150,10 @@ Display data as a [antd list](https://ant.design/components/list/).
 Create charts.
 
 **Properties**
-- keyName
-- ui: Chart type. `line`, `bar`, `pie` or `scatter`
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
+- `keyName`: A unique key.
+- `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
+- `graphql`: The graphql string to fetch the data
+- `uiParams`: For more detailed UI settings
 
 ***ui="line" uiParams:***
 

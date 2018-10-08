@@ -6,15 +6,17 @@ sidebar_label: Data Type Tags
 
 ## Introduction
 
-In canner CMS schema, we force developers to define data types in each field because data sources (e.g. Firebase, Prisma...) deal with the data types in various ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
+In canner CMS schema, we force developers to define data types in each field because data sources in platforms GraphQL servers, Prisma, Firebase, Firestore, etc... deal with the data types in various ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
 
 Furthermore, while developing a component and making a query to the API, we provide additional queries for some data types. For example, a field with an `array` type and objects as children can make a query as below:
 
 ```graphql
-// images with pagination query
+# images with pagination query
 {
   users {
     id
+
+    # get first page images
     images(pagination: {first: 1}) {
       url
     }
@@ -23,15 +25,15 @@ Furthermore, while developing a component and making a query to the API, we prov
 
 ## Common Properties
 
-Here is some common property for all data types `keyName`, `ui`, and `title`.
+Here are some common properties for all data types `keyName`, `ui`, and `title`.
 
 ### keyName
 
-Define the key name of this field which will refer to data key in source. For example, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
+Define the key name of certain field which will refer to data key in source. For example, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
 
 ### ui
 
-We support several UI components for developers to use in different use cases, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
+We support several UI components for developers to use in different use cases ([View complete lists](/components)), you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
 
 ### title
 
