@@ -4,23 +4,28 @@ title: canner.schema.js
 sidebar_label: canner.schema.js
 ---
 
-`canner.schema.js` is the file describing the schema of your data, how to connect to your service, and how to resolve data in your CMS. 
+`canner.schema.js` is the file describing the schema of your data, how should it be connected, and how your CMS should looks like.
 
-It is written in `jsx` language which is just like html tag and easy to learn.
+It is written in `jsx` language which is just like html tags and easy to learn.
 
 > Learn more about [Canner Schema](guides-writing-schema.html)
 
 ## Schema files
 
-Schema can seperate to multiple files, but must end with `.schema.js`.
+Schema can seperate to multiple files, **but must end with `.schema.js`**.
 
-> The entry of schema in CLI is `canner.schema.js` you could change the entry file by passing parameter in command line tool.
+> The default entry of schema in CLI is `canner.schema.js` you could change the entry file by passing parameter in command line tool.
 
 ## Example of canner.schema.js
 
-> NOTE: you need to install `cannner-script`, know more about [Canner Script](advance-canner-script.html)
+***Remember to add the first two lines, is needed!***
 
-***Remember to add the first two lines***
+```js
+/** @jsx c */
+import c from 'canner-script';
+```
+
+**Example**
 
 ```js
 /** @jsx c */
@@ -52,7 +57,7 @@ You could using CLI tool to indicate the filename.
 canner script:deploy [filename]
 ```
 
-If you want to use your own file naming, you could modify by adding key `schema` in `.cannerrc`
+Alternatively, you could add setting `schema` in `.cannerrc`.
 
 In `.cannerrc`
 

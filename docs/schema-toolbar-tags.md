@@ -6,9 +6,9 @@ sidebar_label: Toolbar Tags
 
 ## Introduction
 
-Toolbar tags provide additional features for users to build a powerful CMS, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc.
+**Toolbar** tags provide additional features for users to build a powerful CMS to manipulate array data, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc.
 
-> Notice that, `<toolbar/>` can only placed in **first level array field** and **relation field**.
+> Notice that, `<toolbar/>` can only placed in [**first level array field**](schema-overview#first-level-tags) and [**relation field**](schema-data-type-tags#lt-relation-gt).
 
 ![toolbar](assets/schema-toolbar-tags/toolbar.png)
 
@@ -52,11 +52,11 @@ sidebar_label: Toolbar Tags
 
 ### Fetch Policy
 
-There are two fetch policies, `sync` and `async`, of `first level array` and `relation` data. We use `sync` as default which means fetch all data at once, you can simply change it by adding `async` on toolbar tag, for example, `<toolbar async>`.
+There are two fetch policies, `sync` and `async`, of [**first level array field**](schema-overview#first-level-tags) and [**relation field**](schema-data-type-tags#lt-relation-gt). We use `sync` as default which means fetch all data at once, you can simply change it by adding `async` on toolbar tag, for example, `<toolbar async>`.
 
 ### Sync
 
-**Fetch all data**, and all query features such as `filter`, `sorter`, and `pagination` are implemented in frontend. This policy is suitable for those whose data size is not huge (**You should consider using Async if your data points > 1000**), and who needs powerful query feature.
+**Fetch all data in initial request**, and all query features such as `filter`, `sorter`, and `pagination` are implemented in frontend. This policy is suitable for those whose data size is not huge (**You should consider using Async if your data points > 1000**), and who needs powerful query features.
 
 ![pagination-sync](assets/schema-toolbar-tags/pagination-sync.png)
 
@@ -105,12 +105,12 @@ And it can also be nested.
 
 
 #### Operators
-- gt: greater than
-- gte: greater than or equal to
-- lt: less than
-- lte: less than or equal to
-- eq: equal to
-- contains: use `indexOf` method, only supported in sync for now
+- `gt`: greater than
+- `gte`: greater than or equal to
+- `lt`: less than
+- `lte`: less than or equal to
+- `eq`: equal to
+- `contains`: use `indexOf` method, only supported in sync for now
 
 
 ### &lt;textFilter /&gt;
@@ -119,15 +119,15 @@ And it can also be nested.
 
 For string field, this filter generates a text input, has a different behavior in `sync` and `async` mode.
 
-- sync mode: `eq` operator
-- async mode: `contains` operator
+- `sync` mode: `eq` operator
+- `async` mode: `contains` operator
 
 **Properties**
 
-- field: the key name of a string field you want to query
-- placeholder: the placeholder of text input, support [i18n](guides-internationalization.md)
-- label: the label of text input, support [i18n](guides-internationalization.md)
-- alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
+- `field`: the key name of a string field you want to query
+- `placeholder`: the placeholder of text input, support [i18n](guides-internationalization.md)
+- `label`: the label of text input, support [i18n](guides-internationalization.md)
+- `alwaysDisplay`: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
 
 **Example**
@@ -152,10 +152,10 @@ For number field, there are four operators in this filter.
 
 **Properties**
 
-- field: the key name of a number field you want to query
-- placeholder: the placeholder of the number input, support [i18n](guides-internationalization.md)
-- label: the label of the number input, support [i18n](guides-internationalization.md)
-- alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
+- `field`: the key name of a number field you want to query
+- `placeholder`: the placeholder of the number input, support [i18n](guides-internationalization.md)
+- `label`: the label of the number input, support [i18n](guides-internationalization.md)
+- `alwaysDisplay`: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
 **Example**
 ```js
@@ -178,12 +178,13 @@ Generate a selector which has options with query object.
 
 **Properties**
 
-- options: `Array<{text: string, condition: queryObject}>`
-- defaultOptionIndex: the index of default option
-- label: the label of the number input, support [i18n](guides-internationalization.md)
-- alwaysDisplay: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
+- `options`: `Array<{text: string, condition: queryObject}>`
+- `defaultOptionIndex`: the index of default option
+- `label`: the label of the number input, support [i18n](guides-internationalization.md)
+- `alwaysDisplay`: filter is hidden by default, you can set alwaysDisplay true to let it visible. 
 
 **Example**
+
 ```js
 <array>
   <toolbar>
@@ -219,8 +220,8 @@ Generate a selector which has options with query object.
 ![sorter](assets/schema-toolbar-tags/sorter.png)
 
 **Properties**
-- defaultField: the keyName of the default sorted field
-- options: `Array<{label: string, field: string, defaultOrder: 'ASC' | 'DESC'}>`
+- `defaultField`: the keyName of the default sorted field
+- `options`: `Array<{label: string, field: string, defaultOrder: 'ASC' | 'DESC'}>`
 
 **Example**
 ```js
@@ -238,7 +239,7 @@ Generate a selector which has options with query object.
 
 ## &lt;pagination /&gt;
 
-Pagination is the most basic query, so `<array>` and `<relation>` will add it by default even you don't write `<toolbar />` in it.
+Pagination is the most basic query, so `<array>` and `<relation>` will add it by default even you don't write `<toolbar />` with `<pagination/>` in it.
 
 ```js
 <root>
@@ -268,16 +269,16 @@ is the same as
 For now we support three actions, `filter`, `export`, and `import`.
 
 ### &lt;filter /&gt;
-The filter tag in actions is used to control the filters appear or not. So if you want to use filter feature, remember to add this tag or all filters are hidden by default.
+The `filter` tag in actions is used to control the filters appear or not. So if you want to use filter feature, remember to add this tag or all filters are hidden by default.
 
 ### &lt;export /&gt;
 
 <img src="assets/schema-toolbar-tags/exportModal.png" style="border: 1px solid #ccc"/>
 
 **Properties**
-- title: the title of the modal
-- filename: the CSV filename
-- fields: `Array<{keyName: string, title: string, render?: (value: any) => string}>`
+- `title`: the title of the modal
+- `filename`: the CSV filename
+- `fields`: `Array<{keyName: string, title: string, render?: (value: any) => string}>`
 
 **Example**
 
@@ -309,10 +310,10 @@ The filter tag in actions is used to control the filters appear or not. So if yo
 
 <img src="assets/schema-toolbar-tags/importModal.png" style="border: 1px solid #ccc"/>
 
-**properties**
-- title: the title of the modal
-- filename: the template csv filename
-- fields: `Array<{keyName: string, title: string>`
+**Properties**
+- `title`: the title of the modal
+- `filename`: the template csv filename
+- `fields`: `Array<{keyName: string, title: string>`
 
 **example**
 

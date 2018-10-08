@@ -8,7 +8,7 @@ The goal of Canner is to build a universal CMS framwork, which should be flexibl
 
 ## Declarative
 
-We want the configuration to be declarative. With `JSX`, developers can control what their CMS should look like by writing XML-like tags and also have the full power of JavaScript.
+We want the configuration to be declarative. With `JSX`, developers can control what their CMS should look like by writing XML-like tags and also have the full power of JavaScript, such as import modules, declare variables, function calls, etc...
 
 ## Readability
 
@@ -47,15 +47,31 @@ JSX looks a lot better to read, right?
 When it comes to data flow, sometimes we need declare arguments or create instances, functions more than simple primary types. For example, in `JSX`, we can write following code:
 
 ```js
-const connector = new FirebaseConnector({
-  ...firebaseConfigs,
-  fieldTransform: {
-    name: data => `${data.firstName} ${data.lastName}`
-  }
-})
+<object keyName="shipment">
+  <string
+    keyName="type"
+    ui="select"
+    // we are able to use objects and array.
+    uiParams={{
+      options: [{
+        text: 'Delivery service',
+        value: 'DELIVERY_SERVICE'
+      }, {
+        text: 'Customer picks up ',
+        value: 'PICK_UP'
+      }]
+    }}
+  />
+  // function calls are also vaild in JSX
+  <Condition match={(value, operator) => {
+    return value.type === 'DELIVERY_SERVICE';
+  }}>
+    <string keyName="address" />
+  <Condition />
+</object>
 ```
 
-This kind of logic is impossible in static configuration like `JSON` or `YAML`.
+This kind of logic is impossible in static configuration files like `JSON` or `YAML`.
 
 ## Customization
 `JSX` is actually JavaScript, so with `JSX` as configuration, Canner import customized packages natively such as `React` components into our framework.
