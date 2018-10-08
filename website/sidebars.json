@@ -11,7 +11,8 @@
       "schema-data-type-tags",
       "schema-layout-tags",
       "schema-toolbar-tags",
-      "schema-page-tags"
+      "schema-page-tags",
+      "schema-type-tags"
     ],
     "Credential": [
       "credential-intro",

@@ -191,7 +191,7 @@ module.exports = (
 ```
 
 ## First level tags
-The first level tags of <root/> must be one of `<object/>`, `<array/>` and `<page />`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
+The first level tags of <root/> must be one of [`<object/>`](schema-data-type-tags#lt-object-gt), [`<array/>`](schema-data-type-tags#lt-array-gt), [`<page />`](schema-page-tags), `<objectType/>`, and `<arrayType/>`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
 
 ```js
 /** @jsx builder */

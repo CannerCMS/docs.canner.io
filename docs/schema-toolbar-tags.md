@@ -6,7 +6,7 @@ sidebar_label: Toolbar Tags
 
 ## Introduction
 
-Toolbar tags provide additional features for users to build a powerful CMS to manipulate array data, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc.
+**Toolbar** tags provide additional features for users to build a powerful CMS to manipulate array data, such as `filter`, `sort`, `pagination`, `export`, `import`, ...etc.
 
 > Notice that, `<toolbar/>` can only placed in [**first level array field**](schema-overview#first-level-tags) and [**relation field**](schema-data-type-tags#lt-relation-gt).
 

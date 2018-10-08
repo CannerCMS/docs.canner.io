@@ -10,13 +10,19 @@ Page tags are designed to create a **dashboard/admin-like** page, which lets you
 
 `<page/>`, `<indicator/>` and `<chart/>` tags works differently than [Data Type Tags](schema-data-type-tags.md). Page's `keyName` is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through `graphql` property.
 
+![vega](/docs/assets/schema-page-tags/vega.png)
+
+> Canner `<chart/>` is based on an awesome chart library [Vega](https://github.com/vega/vega). Source code: [vega-canner-components](https://github.com/Canner/vega-canner-components)
+
 ## Basic Page
 
 Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.
 
+***IMPORTANT:*** `<indicator/>` and `<chart/>` tags provide `graphql` props to access any data in your data sources, but you will need to declare your data types before accessing your data. If you don't want your data to render into UI, you can use [Type tags](schema-type-tags.md).
+
 ***Usage***
 
-```xml
+```jsx
 <root>
   <page keyName="overview">
     <Row>
@@ -89,7 +95,7 @@ Display a value in a card form.
 
 **Example:**
 
-```xml
+```jsx
  <indicator
   ui="amount"
   keyName="totalUsers"
@@ -118,7 +124,7 @@ Display data as a [antd list](https://ant.design/components/list/).
 - `graphql`: The graphql string to fetch the data
 - `uiParams`: For more detailed UI settings
 
-```xml
+```jsx
 <indicator
   ui="list"
   keyName="posts"
@@ -338,7 +344,7 @@ Create charts.
 
 **Chart example**
 
-```xml
+```jsx
 <chart ui="bar"
   keyName="user-bar"
   graphql={
