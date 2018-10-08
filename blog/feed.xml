@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Canner (alpha) Blog</title>
+        <title>Canner (BETA) Blog</title>
         <link>https://www.canner.io/blog</link>
-        <description>The best place to stay up-to-date with the latest Canner (alpha) news and events.</description>
+        <description>The best place to stay up-to-date with the latest Canner (BETA) news and events.</description>
         <lastBuildDate>Wed, 08 Aug 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>Canner (alpha) Blog</title>
+            <title>Canner (BETA) Blog</title>
             <url>https://www.canner.io/img/icon.png</url>
             <link>https://www.canner.io/blog</link>
         </image>

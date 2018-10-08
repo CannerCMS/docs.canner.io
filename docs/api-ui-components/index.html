@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CMS UI Components · Canner (BETA)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Basic"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CMS UI Components · Canner (BETA)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="## Basic"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (BETA) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (BETA) Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner (BETA)"/><h2 class="headerTitleWithLogo">Canner (BETA)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/why-canner" target="_self">Why?</a></li><li class=""><a href="/docs/start-quick-intro" target="_self">Docs</a></li><li class=""><a href="/docs/tutorial-connect-to-firebase" target="_self">Tutorials</a></li><li class=""><a href="/docs/guides-community-intro" target="_self">Community</a></li><li class="siteNavGroupActive"><a href="/docs/api-schema" target="_self">API</a></li><li class=""><a href="/component" target="_self">Components</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-schema">Schema</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-ui-components">CMS UI Components</a></li><li class="navListItem"><a class="navItem" href="/docs/api-layouts">Layouts</a></li><li class="navListItem"><a class="navItem" href="/docs/api-toolbar">Toolbar</a></li><li class="navListItem"><a class="navItem" href="/docs/api-canner">canner</a></li><li class="navListItem"><a class="navItem" href="/docs/api-canner-helpers">Canner Helpers</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">CMS UI Components</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="basic"></a><a href="#basic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic</h2>
+<table>
+  <tr>
+    <th>name</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+  <tr>
+    <td>keyName</td>
+    <td>string</td>
+    <td>the key</td>
+  </tr>
+  <tr>
+    <td>refId</td>
+    <td>RefId</td>
+    <td>Every component has its unique RefId. In order to get specific field. See <a href="concept-refid.html">refId</a> for details</td>
+  </tr>
+  <tr>
+    <td>items</td>
+    <td>object</td>
+    <td>The items in schema. For example, an object schema:
+      <pre><code class="hljs">{type: 'object', items: {name: {type: 'string'}}}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>uiParams</td>
+    <td>object</td>
+    <td>
+      The additional of UI parameters.
+    </td>
+  </tr>
+  <tr>
+    <td>disabled</td>
+    <td>boolean | {create: boolean, update: boolean, delete: boolean}</td>
+    <td>Whether field is disabled</td>
+  </tr>
+  <tr>
+    <td>imageServiceConfig</td>
+    <td>ImageServiceConfig</td>
+    <td>The configuration for antd upload. See <a href="https://github.com/Canner/image-service-config">@canner/image-service-config</a> for details.</td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td><code>(refId, changeType, value) => Promise<*></code></td>
+    <td><code>onChange</code> function is how you update data from component to CMS data, the first argument is the field's <code>refId</code>, second argument is change type, third is its value</td>
+  </tr>
+  <tr>
+    <td>onDeploy</td>
+    <td><code>(callback: (value: any) => any) => void</code></td>
+    <td>
+      Will execute before Canner deploys all changes to servers, you can do expensive transformation on the value instead of transforming them at every change.
+    </td>
+  </tr>
+  <tr>
+    <td>goTo</td>
+    <td><code>string => void</code></td>
+    <td>the method direct to other page</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="advanced"></a><a href="#advanced" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced</h2>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>description</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>
+      <code>
+        Query
+      </code>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>fetch</td>
+    <td>
+      <code>
+        (key: string) => Promise&lt;RootValue>
+      </code>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>subscribe</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>deploy</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>reset</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-schema"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/api-layouts"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/2/2018, 12:09:54 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#basic">Basic</a></li><li><a href="#advanced">Advanced</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+            ((window.gitter = {}).chat = {}).options = {
+              room: 'Canner/CannerCMS'
+            };
+
+            const script = document.createElement("script");
+
+            script.src = "https://sidecar.gitter.im/dist/sidecar.v1.js";
+            script.async = true;
+            script.defer = true;
+
+            document.body.appendChild(script);
+            </script><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/guides-community-intro.html">Community Edition</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a target="_blank" href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link">Project Chat</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner (BETA)"/></a></div><section class="copyright">Copyright © 2018 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+              var search = docsearch({
+                
+                apiKey: 'c9ba81d7831a52129d133134abaf5f04',
+                indexName: 'canner',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
