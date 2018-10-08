@@ -19,7 +19,6 @@
       "credential-prisma"
     ],
     "Guides": [
-      "guides-connector",
       "guides-resolver",
       "guides-storage",
       "guides-internationalization",
@@ -64,6 +63,7 @@
     "Guides": [
       "guides-community-intro",
       "guides-basic-setup",
+      "guides-connector",
       "guides-canner-schema-loader"
     ],
     "Tutorial": [
