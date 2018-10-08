@@ -221,6 +221,10 @@ export default (
 )
 ```
 
+As below
+
+![preview menu](/docs/assets/schema-overview/default-sidebar.png)
+
 ## Data Type tags
 
 Type tags are the most basic UI component for CMS.  For example,  you could create a textarea for a string field.
@@ -233,7 +237,7 @@ Using textarea UI:
 
 Every UI component should pass a `keyName`, which matches the key name of your data source.
 
-For example, your data is like below
+For example, your data in your source is as below
 
 ```js
 {
@@ -293,7 +297,7 @@ module.exports = <root>
 ```
 
 > Further information
-> - [All layout tags](schema-layout-tags.md)  
+> - [All \<layout/> tags](schema-layout-tags.md)  
 
 ## Toolbar tags
 
@@ -333,7 +337,7 @@ module.exports = <root>
 
 ```
 > Further information
-> - [All toolbar tags](schema-toolbar-tags.md)  
+> - [All \<toolbar/> tags](schema-toolbar-tags.md)  
 
 
 ## Page tags
@@ -366,4 +370,4 @@ Pages tags are used to create the additional page that is not included the data,
 
 ```
 > Further information
-> - [All page tags](schema-page-tags.md)  
+> - [All \<page/> tags](schema-page-tags.md)  
