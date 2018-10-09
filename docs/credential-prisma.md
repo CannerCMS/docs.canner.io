@@ -8,17 +8,17 @@ After [initialize your Prisma project](https://www.prisma.io/docs/reference/cli-
 
 ## Setup Prisma credential in `canner.cloud.js`
 
-In your `canner.cloud.js`, setup `env` settings using `PrismaCert` in `canner-credential`.
+In your `canner.cloud.js`, setup `env` settings using `PrismaCredential` in `canner-credential`.
 
 **Example**
 
 ```js
-const {PrismaCert} = require("canner-credential");
+const {PrismaCredential} = require("canner-credential");
 
 module.exports = {
   env: {
-    default: [new PrismaCert("path to prisma.yml")],
-    test: [new PrismaCert("path to prisma.yml")]
+    default: [new PrismaCredential("path to prisma.yml")],
+    test: [new PrismaCredential("path to prisma.yml")]
   }
 }
 ```
