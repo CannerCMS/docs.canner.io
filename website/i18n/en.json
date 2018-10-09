@@ -29,10 +29,6 @@
         "title": "Test CMS components",
         "sidebar_label": "Test CMS components"
       },
-      "advance-component-types": {
-        "title": "Types of CMS components",
-        "sidebar_label": "Types of CMS components"
-      },
       "api-canner": {
         "title": "canner",
         "sidebar_label": "canner"
