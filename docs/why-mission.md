@@ -44,7 +44,7 @@ Now, you want an array of form, just wrap with `<array/>`, and that's it!
 
 As you see, Canner CMS schema's flexibility open a new opportunity, to build tens of thousands of CMS applications using Canner.
 
-> To learn more about [types and layouts](advance-canner-script.md)
+> To learn more about [Canner Schema](schema-overview)
 
 ## 2. Adaptivity
 
@@ -96,7 +96,7 @@ Changing data sources by passing **connector** to your source.
 
 Transform data structure to fit your need by using **resolver**.
 
-> Learn more about [resolver](guides-resolver.md)
+> Learn more about [resolver](guides-resolver)
 
 ## 3. Simplicity
 
@@ -118,7 +118,7 @@ As for editor
 <object keyName="editor" ui="editor"/>
 ```
 
-> See all [UI list here](/component/)
+> See all [UI list here](/component)
 
 ### CMS structure as code
 
@@ -147,7 +147,7 @@ Here's an example for a blog post, you can replace and modify any specification 
 </root>
 ```
 
-> Learn more about [CMS schema](advance-canner-script.md)
+> Learn more about [CMS schema](schema-overview)
 
 ## 4. Scalability
 
@@ -174,7 +174,7 @@ export default (
 );
 ```
 
-> Learn more about [Customize your Canner CMS component](https://framework.canner.io/docs/advance-customized-component.html)
+> Learn more about [Customize your Canner CMS component](guides-customized-component)
 
 ## Conclusion
 

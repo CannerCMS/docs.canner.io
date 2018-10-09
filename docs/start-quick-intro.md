@@ -22,5 +22,5 @@ You only need to upload a configuration file in **JSX**(easy to learn) syntax, t
 
 Quick start for 
 
-- [Firebase - Realtime database](start-quick-firebase.md)
-- [Prisma - GraphQL](start-quick-prisma.md)
+- [Firebase - Realtime database](tutorial-connect-to-firebase)
+- [Prisma - GraphQL](tutorial-connect-to-prisma)

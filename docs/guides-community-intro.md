@@ -49,18 +49,18 @@ ReactDOM.render(
 , document.getElementById("root"));
 ```
 
-- ***[canner-compiler](https://github.com/Canner/canner-compiler)***: This is how Canner compile UI components into `componentTree`, which is how Canner generate it's CMS UI.
+- ***[canner-compiler](https://github.com/Canner/canner/tree/canary/packages/canner-compiler)***: This is how Canner compile UI components into `componentTree`, which is how Canner generate it's CMS UI.
 
-- ***[canner-schema-loader](https://github.com/Canner/canner-schema-loader)***: Deconstruct Canner JSX syntax into objects schema object and `componentTree`.
+- ***[canner-schema-loader](https://github.com/Canner/canner/tree/canary/packages/canner-schema-loader)***: Deconstruct Canner JSX syntax into objects schema object and `componentTree`.
 
-- ***[canner-script](https://github.com/Canner/canner-script)***: `canner-script` is a sugar syntax (JSX) of Canner CMS schema
+- ***[canner-script](https://github.com/Canner/canner/tree/canary/packages/canner-script)***: `canner-script` is a sugar syntax (JSX) of Canner CMS schema
 
-- ***[canner-helpers](https://github.com/Canner/canner-helpers)***: Helpers utility functions for Canner CMS framework.
+- ***[canner-helpers](https://github.com/Canner/canner/tree/canary/packages/canner-helpers)***: Helpers utility functions for Canner CMS framework.
 
 - ***[antd-canner-components](https://github.com/Canner/antd-canner-components)***: Ant design based CMS components, which is now our default CMS UI components.
 
-- ***[canner-layouts](https://github.com/Canner/canner-layouts)***: Layout components for Canner CMS.
+- ***[canner-layouts](https://github.com/Canner/canner/tree/canary/packages/canner-layouts)***: Layout components for Canner CMS.
 
-- ***[canner-simulator](https://github.com/Canner/canner-simulator)***: Testing tool for Canner CMS.
+- ***[canner-simulator](https://github.com/Canner/canner/tree/canary/packages/canner-simulator)***: Testing tool for Canner CMS.
 
-- ***[canner-graphql-interface](https://github.com/Canner/canner-graphql-interface)***: GraphQL resolvers for Canner CMS.
+- ***[canner-graphql-interface](https://github.com/Canner/canner/tree/canary/packages/canner-graphql-interface)***: GraphQL resolvers for Canner CMS.
