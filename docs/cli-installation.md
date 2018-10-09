@@ -17,11 +17,7 @@ Through npm:
 $ npm install -g @canner/cli
 ```
 
-or yarn
-
-```sh
-$ yarn global add @canner/cli --prefix /usr/local
-```
+> If you fail install through `yarn` please try install via `npm`.
 
 ### Check if install successfully
 

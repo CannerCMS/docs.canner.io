@@ -52,11 +52,11 @@ It will ask you some questions to initialize your project with template schema.
 ? What data source do you want to use? Prisma
 ```
 
-Then you'll see `.cannerrc`, `canner.schema.js`, `schema`, `cert` in your folder.
+Then you'll see `.cannerrc`, `canner.schema.js`, `canner.cloud.js` in your folder.
 
 > - Learn more about [`.cannerrc`](file-cannerrc.md) 
 > - Learn more about [`canner.schema.js`](file-canner-schema-js.md) 
-> - Learn more about [`cert`](file-cert.md)
+> - Learn more about [`canner.cloud.js`](cli-canner-cloud-js.md)
 
 ## 4. Start a Prisma project
 
@@ -68,12 +68,17 @@ After these steps your get two files (`datamodel.graphql` and `prisma.yml`) that
 ## 5. Copy Prisma's files
 Canner needs prisma's `datamodel.graphql` and `prisma.yml` to create a proxy server that deliver requests to your prisma server.
 
-Copy these two files from your prisma project folder to `cert/prisma`
+Initialize your Prisma project into your project
 
-```sh
-$ mkdir -p cert/prisma
-$ cp path/to/prisma-project/prisma.yml ./cert/prisma
-$ cp path/to/prisma-project/datamodel.graphql ./cert/prisma
+```js
+const {PrismaCert} = require("canner-credential");
+
+module.exports = {
+  env: {
+    // production env
+    default: [new PrismaCert("path to prisma.yml")]
+  }
+}
 ```
 
 ## 6. Write canner.schema.js
@@ -81,7 +86,7 @@ You only need to create a file called `canner.schema.js` to complete your CMS.
 
 `canner.schema.js` defines how your CMS and data structure looks like, and how your CMS should connect to your sources.
 
-> Learn how to [write schema](guides-writing-schema)
+> Learn how to [write schema](schema-overview)
 
 A basic `Post` schema from a blog application with following graphql model
 ``` js
@@ -213,9 +218,15 @@ export default (
 )
 ```
 
-> To learn more about how to define Canner Schema's tag correspoding to prisma's datatype, see [Canner and Prisma Datatype Comparison](/docs/advance-canner-prisma-type)
+> To learn more about how to define Canner Schema's tag correspoding to prisma's datatype, see [Canner and Prisma Datatype Comparison](guides-canner-prisma-type)
 
 ## 7. Deploy
+
+You could preview CMS in your local machine, by entering
+
+```sh
+canner script:serve --env prod
+```
 
 After writing your `canner.schema.js` you could deploy your script to Canner through our CLI tool by entering
 
@@ -230,4 +241,4 @@ Run `canner open:dashboard` and click `Edit Content`, you will seed your CMS liv
 ![editContent](/img/editContent.png)
 
 ## Resource
-* [Canner and Prisma datatype comparison](/docs/advance-canner-prisma-type.html)
+* [Canner and Prisma datatype comparison](guides-canner-prisma-type)
