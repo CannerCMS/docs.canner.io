@@ -94,5 +94,5 @@ export default (
 ![customize validation](/docs/assets/guides-validation/validator.png)
 
 ## References
-- [All CMS component tags](api-canner-script.md)
+- [All CMS component tags](schema-data-type-tags)
 - [ajv validate keywords](https://github.com/epoberezkin/ajv#validation-keywords)
