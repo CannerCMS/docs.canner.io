@@ -17,10 +17,6 @@
         "title": "Canner Router",
         "sidebar_label": "Canner Router"
       },
-      "advance-canner-script": {
-        "title": "About canner-script (JSX for Canner)",
-        "sidebar_label": "canner-script"
-      },
       "advance-cms-helpers": {
         "title": "canner-helpers",
         "sidebar_label": "CMS component helpers"
@@ -192,10 +188,6 @@
       "guides-validation": {
         "title": "Validation",
         "sidebar_label": "Validation"
-      },
-      "guides-writing-schema": {
-        "title": "CMS Schema",
-        "sidebar_label": "CMS Schema"
       },
       "schema-data-type-tags": {
         "title": "Data Type Tags",
