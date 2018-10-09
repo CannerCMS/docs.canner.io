@@ -10,7 +10,6 @@
 <url> <loc>https://www.canner.io/docs/advance-canner-cms</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-cms" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-container</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-container" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-canner-router</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-router" /> </url>
-<url> <loc>https://www.canner.io/docs/advance-canner-script</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-canner-script" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-cms-helpers</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-cms-helpers" /> </url>
 <url> <loc>https://www.canner.io/docs/advance-cms-test</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/advance-cms-test" /> </url>
 <url> <loc>https://www.canner.io/docs/api-canner</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/api-canner" /> </url>
@@ -54,7 +53,6 @@
 <url> <loc>https://www.canner.io/docs/guides-resolver</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-resolver" /> </url>
 <url> <loc>https://www.canner.io/docs/guides-storage</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-storage" /> </url>
 <url> <loc>https://www.canner.io/docs/guides-validation</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-validation" /> </url>
-<url> <loc>https://www.canner.io/docs/guides-writing-schema</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/guides-writing-schema" /> </url>
 <url> <loc>https://www.canner.io/docs/schema-data-type-tags</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/schema-data-type-tags" /> </url>
 <url> <loc>https://www.canner.io/docs/schema-layout-tags</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/schema-layout-tags" /> </url>
 <url> <loc>https://www.canner.io/docs/schema-overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/schema-overview" /> </url>
