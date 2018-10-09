@@ -49,7 +49,7 @@ The label of a field.
 string
 ```
 
-> See complete [String components list](/component/?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [String components list](/component?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;boolean/&gt;
 
@@ -59,7 +59,7 @@ string
 boolean
 ```
 
-> See complete [Boolean components list](/component/?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Boolean components list](/component?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;number/&gt;
 
@@ -69,7 +69,7 @@ boolean
 number
 ```
 
-> See complete [Number components list](/component/?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Number components list](/component?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;object/&gt;
 
@@ -79,7 +79,7 @@ number
 {[string]: any}
 ```
 
-> See complete [Object components list](/component/?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Object components list](/component?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ### &lt;array/&gt;
@@ -90,7 +90,7 @@ number
 Array<any>
 ```
 
-> See complete [Array components list](/component/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Array components list](/component?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ## Special types
@@ -113,7 +113,7 @@ string
 2018-05-15T08:28Z
 ```
 
-> See complete [Date components list](/component/?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Date components list](/component?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;geoPoint/&gt;
 
@@ -141,7 +141,7 @@ string
 }
 ```
 
-> See complete [GeoPoint components list](/component/?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [GeoPoint components list](/component?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;image/&gt;
 
@@ -174,7 +174,7 @@ Static files that are images.
 }
 ```
 
-> See complete [Image components list](/component/?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Image components list](/component?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;file/&gt;
 
@@ -208,7 +208,7 @@ Static files that are **not included** in [image types](schema-data-type-tags#lt
 }
 ```
 
-> See complete [File components list](/component/?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [File components list](/component?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;relation/&gt;
 
