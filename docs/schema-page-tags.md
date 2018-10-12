@@ -12,8 +12,6 @@ Page tags are designed to create a **dashboard/admin-like** page, which lets you
 
 ![vega](/docs/assets/schema-page-tags/vega.png)
 
-> Canner `<chart/>` is based on an awesome chart library [Vega](https://github.com/vega/vega). Source code: [vega-canner-components](https://github.com/Canner/vega-canner-components)
-
 ## Basic Page
 
 Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.
@@ -155,10 +153,13 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 `<chart/>` allows you to build charts in your CMS.
 
+> Canner `<chart/>` is based on an awesome chart library [Vega](https://github.com/vega/vega). Source code: [vega-canner-components](https://github.com/Canner/vega-canner-components)
+
 **Properties**
 - `keyName`: A unique key.
 - `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
 - `getValue`: Get the value from fetched data, this could allow you to transform your data.
+- `spec`: Overwrite the default `specs` in charts. Learn more from [Vega Specification](https://vega.github.io/vega/docs/specification/).
 - `graphql`: The graphql string to fetch the data
 - `uiParams`: For more detailed UI settings
 
