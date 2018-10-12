@@ -89,14 +89,14 @@ Display a value in a card form.
 
 - `keyName`: A unique key
 - `graphql`: The graphql string to fetch the data
-- `getValue`: Get the vaule from fetched data
+- `getValue`: Get the value from fetched data, this could allow you to transform your data.
 - `uiParams`: For more detailed UI settings
   - `formatter`: Format the value for the final view
 
 **Example:**
 
 ```jsx
- <indicator
+<indicator
   ui="amount"
   keyName="totalUsers"
   graphql={
@@ -153,11 +153,12 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 ### &lt;chart /&gt;
 
-Create charts.
+`<chart/>` allows you to build charts in your CMS.
 
 **Properties**
 - `keyName`: A unique key.
 - `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
+- `getValue`: Get the value from fetched data, this could allow you to transform your data.
 - `graphql`: The graphql string to fetch the data
 - `uiParams`: For more detailed UI settings
 
@@ -176,20 +177,21 @@ Create charts.
   </tr>
   <tr>
     <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td>
+<pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
     <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td><pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
@@ -219,20 +221,20 @@ Create charts.
   </tr>
   <tr>
     <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td><pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
     <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td><pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
@@ -277,10 +279,11 @@ Create charts.
   </tr>
   <tr>
     <td>color</td>
-    <td><code>{<br/>
-      range?: string, // default category20<br/>
-      field?: string // default id<br/>
-    }</code></td>
+    <td>
+<pre><code>{
+  range?: string, // default category20
+  field?: string // default id
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales/#range">range</a></td>
   </tr>
    <tr>
@@ -301,20 +304,20 @@ Create charts.
   </tr>
   <tr>
     <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td><pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
     <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
+    <td><pre><code>{
+  field: string,
+  scale?: string, // default linear
+  title?: string
+}</code></pre></td>
     <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
   </tr>
   <tr>
@@ -345,7 +348,8 @@ Create charts.
 **Chart example**
 
 ```jsx
-<chart ui="bar"
+<chart
+  ui="bar"
   keyName="user-bar"
   graphql={
     `

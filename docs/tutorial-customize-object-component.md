@@ -35,7 +35,6 @@ export default class Fields extends Component {
   onChange = (e, type) => {
     const {value } = this.props;
     const newValue = e.target.value;
-    console.log(newValue)
   }
 
   render() {
