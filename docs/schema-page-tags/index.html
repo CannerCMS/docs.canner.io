@@ -59,7 +59,7 @@
           <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
             formatter<span class="token punctuation">:</span> v <span class="token operator">=></span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>v<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
           <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
-          <span class="token attr-name">getValue</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>v <span class="token operator">=></span> v<span class="token punctuation">.</span>length<span class="token punctuation">}</span></span>
+          <span class="token attr-name">transformData</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>v <span class="token operator">=></span> v<span class="token punctuation">.</span>length<span class="token punctuation">}</span></span>
         <span class="token punctuation">/></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Col</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Col</span><span class="token punctuation">></span></span>
@@ -102,7 +102,7 @@
 <ul>
 <li><code>keyName</code>: A unique key</li>
 <li><code>graphql</code>: The graphql string to fetch the data</li>
-<li><code>getValue</code>: Get the value from fetched data, this could allow you to transform your data.</li>
+<li><code>transformData</code>: Get the value from fetched data, this could allow you to transform your data.</li>
 <li><code>uiParams</code>: For more detailed UI settings
 <ul>
 <li><code>formatter</code>: Format the value for the final view</li>
@@ -123,7 +123,7 @@
   <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
     formatter<span class="token punctuation">:</span> v <span class="token operator">=></span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>v<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
   <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
-  <span class="token attr-name">getValue</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>v <span class="token operator">=></span> v<span class="token punctuation">.</span>length<span class="token punctuation">}</span></span>
+  <span class="token attr-name">transformData</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>v <span class="token operator">=></span> v<span class="token punctuation">.</span>length<span class="token punctuation">}</span></span>
 <span class="token punctuation">/></span></span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="lt-indicator-ui-list-gt"></a><a href="#lt-indicator-ui-list-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;indicator ui=&quot;list&quot; /&gt;</h3>
@@ -168,15 +168,12 @@
 <ul>
 <li><code>keyName</code>: A unique key.</li>
 <li><code>ui</code>: Chart type. <code>line</code>, <code>bar</code>, <code>pie</code> or <code>scatter</code></li>
-<li><code>getValue</code>: Get the value from fetched data, this could allow you to transform your data.</li>
-<li><code>spec</code>: Overwrite the default <code>specs</code> in charts, each chart specification could reference below in each section. Learn more from <a href="https://vega.github.io/vega/docs/specification/">Vega Specification</a>.</li>
+<li><code>transformData</code>: Get the value from fetched data, this could allow you to transform your data.</li>
+<li><code>spec</code>: Overwrite the default <code>specs</code> in charts. Learn more from <a href="https://vega.github.io/vega/docs/specification/">Vega Specification</a>.</li>
 <li><code>graphql</code>: The graphql string to fetch the data</li>
 <li><code>uiParams</code>: For more detailed UI settings</li>
 </ul>
 <p><strong><em>ui=&quot;line&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-line/src/createSpec.js">Default specification</a></li>
-</ul>
 <table>
   <tr>
     <th>Name</th>
@@ -224,9 +221,6 @@
   </tr>
 </table>
 <p><strong><em>ui=&quot;bar&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-bar/src/createSpec.js">Default specification</a></li>
-</ul>
 <table>
   <tr>
     <th>Name</th>
@@ -268,9 +262,6 @@
   </tr>
 </table>
 <p><strong><em>ui=&quot;pie&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-pie/src/createSpec.js">Default specification</a></li>
-</ul>
 <table>
   <tr>
     <th>Name</th>
@@ -308,9 +299,6 @@
   </tr>
 </table>
 <p><strong><em>ui=&quot;scatter&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-scatter/src/createSpec.js">Default specification</a></li>
-</ul>
 <table>
   <tr>
     <th>Name</th>
@@ -384,7 +372,7 @@
   <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
 <span class="token punctuation">/></span></span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-toolbar-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-type-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/12/2018, 6:12:06 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#basic-page">Basic Page</a><ul class="toc-headings"><li><a href="#lt-page-gt">&lt;page/&gt;</a></li><li><a href="#lt-indicator-ui-amount-gt">&lt;indicator ui=&quot;amount&quot; /&gt;</a></li><li><a href="#lt-indicator-ui-list-gt">&lt;indicator ui=&quot;list&quot; /&gt;</a></li><li><a href="#lt-chart-gt">&lt;chart /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-toolbar-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-type-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-13 14:08:31</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#basic-page">Basic Page</a><ul class="toc-headings"><li><a href="#lt-page-gt">&lt;page/&gt;</a></li><li><a href="#lt-indicator-ui-amount-gt">&lt;indicator ui=&quot;amount&quot; /&gt;</a></li><li><a href="#lt-indicator-ui-list-gt">&lt;indicator ui=&quot;list&quot; /&gt;</a></li><li><a href="#lt-chart-gt">&lt;chart /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
