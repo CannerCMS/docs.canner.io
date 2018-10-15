@@ -1,7 +1,7 @@
 ---
 id: api-ui-components
-title: CMS UI Components
-sidebar_label: CMS UI Components
+title: UI Components
+sidebar_label: UI Components
 ---
 
 ## Basic

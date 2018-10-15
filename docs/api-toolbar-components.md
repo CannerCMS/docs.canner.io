@@ -1,7 +1,7 @@
 ---
-id: api-toolbar
-title: Toolbar
-sidebar_label: Toolbar
+id: api-toolbar-components
+title: Toolbar Components
+sidebar_label: Toolbar Components
 ---
 
 ## Toolbar
