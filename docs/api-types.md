@@ -134,3 +134,33 @@ sidebar_label: Types
 }
 ```
 
+### MenuConfig
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</>
+  </tr>
+  <tr>
+    <th>MenuConfig</th>
+    <th><code>Array&lt;SubmenuConfig | MenuItemConfig></code></th>
+    <th>The configuration of sidebar menu.</th>
+  </tr>
+  <tr>
+    <th>SubmenuConfig</th>
+    <th><code>{title: string, items: Array&lt;MenuItemConfig>}</code></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th>MenuItemConfig</th>
+    <th>
+      <code>
+        {
+          title: string,
+          pathname: string,
+          params?: <a href="#routerparams">RouterParams</a>
+        }
+      </code>
+    </th>
+  </tr>
+</table>

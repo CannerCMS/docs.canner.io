@@ -4,7 +4,7 @@ title: Canner
 sidebar_label: Canner
 ---
 
-## Props
+## Properties
 
 <table>
   <tr>
@@ -27,7 +27,7 @@ sidebar_label: Canner
       <code><a href="api-types#changeddata">ChangedData</a> => void</code>
     </td>
     <td>
-      The callback when data change.
+      The callback when data change. Unavailable if you are using <a href="guides-container">container</a>.
     </td>
   </tr>
   <tr>

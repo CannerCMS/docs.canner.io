@@ -4,7 +4,6 @@ title: Container
 sidebar_label: Container
 ---
 
-
 ## Properties
 
 <table>
@@ -30,11 +29,22 @@ sidebar_label: Container
     <td>sidebarConfig</td>
     <td>
       <code>
-        <a href="#menuconfig">MenuConfig</a> | boolean
+        <a href="api-types#menuconfig">MenuConfig</a> | boolean
       </code>
     </td>
     <td>
       The configuration of the sidebar, if the value is <code>true</code>, it will generate the default sidebar.
+    </td>
+  </tr>
+  <tr>
+    <td>navbarConfig</td>
+    <td>
+      <code>
+        <a href="api-types#navbarconfig">NavbarConfig</a>
+      </code>
+    </td>
+    <td>
+      The configuration of the navbar.
     </td>
   </tr>
   <tr>
@@ -47,7 +57,16 @@ sidebar_label: Container
       </code>
     </td>
     <td>
-      -
+      Controlling the routing and provides methods to get url parameter.
+    </td>
+  </tr>
+  <tr>
+    <td>dataDidChange</td>
+    <td>
+      <code><a href="api-types#changeddata">ChangedData</a> => void</code>
+    </td>
+    <td>
+      The callback when data change, same as the <code>dataDidChange</code> in properties of <code><a href="api-canner#properties">canner</a></code>.
     </td>
   </tr>
 </table>
