@@ -70,5 +70,3 @@ sidebar_label: Container
     </td>
   </tr>
 </table>
-
-<table>
