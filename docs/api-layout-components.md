@@ -4,4 +4,5 @@ title: Layout Components
 sidebar_label: Layout Components
 ---
 
-## Layout
+### Properties
+
