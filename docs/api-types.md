@@ -61,7 +61,7 @@ sidebar_label: Types
         </a>
       </code>
     </td>
-    <td>The dictionary which records the texts in different locales</td>
+    <td>The dictionary which records the data in different locales</td>
   </tr>
 </table>
 
@@ -89,7 +89,7 @@ sidebar_label: Types
   <tr>
     <td>payload</td>
     <td><code>Object</code></td>
-    <td>The default data in create form.</td>
+    <td>The payload when creating form.</td>
   </tr>
 </table>
 
@@ -120,7 +120,7 @@ sidebar_label: Types
         </a>
       </code>
     </td>
-    <td>The dictionay which records the texts in different locales.</td>
+    <td>The dictionay which records i18n data in different locales.</td>
   </tr>
 </table>
 
@@ -161,6 +161,8 @@ sidebar_label: Types
           params?: <a href="#routerparams">RouterParams</a>
         }
       </code>
+    </th>
+    <th>
     </th>
   </tr>
 </table>

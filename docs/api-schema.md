@@ -35,7 +35,7 @@ These are some properties you will use frequently.
     <td>packageName</td>
     <td>string</td>
     <td><b>false</b></td>
-    <td>If you are using customized components, enter your package name or the path of your component. <b>Must be eithor relative path or absolute path</b></td>
+    <td>If you are using customized components, enter your package name or the path of your component (<b>Must be either relative path or absolute path</b>). </td>
   </tr>
   <tr>
     <td>uiParams</td>
@@ -87,7 +87,7 @@ These are some properties you will use frequently.
 
 ### &lt;relation/&gt;
 
-There must be a relation property in relation tag. It is a object containing two key '`type`' and '`to`', which represent the relation type and relation to which key
+There must be a relation property in relation tag. It is a object containing two keys `type` and `to`, which represents the relation type and relation to which data key in first level data entry.
 
 ```
 <relation relation={{
@@ -95,9 +95,12 @@ There must be a relation property in relation tag. It is a object containing two
   to: '<a first level key>'
 }}>
 ```
+
+> [Usage instruction of `<relation/>`](schema-data-type-tags#lt-relation-gt)
+
 #### toOne type
 
-For now, we only support ui `singleSelect` to deal with the toOne relationships, which is also the default UI of relation tag. You must give indicated uiParams to make the component works. Let's look at the example.
+For now, we only support ui `singleSelect` to deal with toOne relationship, which is also the default UI of relation tag. You must assign indicated uiParams to make the component works. Let's look at the example.
 
 **toOne relationship example**
 ```
@@ -108,7 +111,7 @@ For now, we only support ui `singleSelect` to deal with the toOne relationships,
       type: 'toOne'
     }}
     uiParams: {{
-      textCol: 'name', // decide field to represent the user
+      textCol: 'name', // decide the field to represent the user
       columns: [{ // the columns config of the table which is used to pick relation data.
         title: 'Name',
         dataIndex: 'name'
@@ -123,13 +126,13 @@ For now, we only support ui `singleSelect` to deal with the toOne relationships,
 
 **Data**
 
-The data of toOne relationship will be a `string`, for examples, the data of the schema about will be:
+The data of toOne relationship will be a `string`, for examples, the data of the schema will like below:
 
 ```
 {
   posts: [{
     id: 'postId1',
-    author: 'userId1' // this is the relation field
+    author: 'userId1' // this is the relation field, to users's id 'userId1'
   }],
   users: [{
     id: 'userId1',
@@ -170,7 +173,7 @@ For now, we only support UI `multipleSelect` to deal with the `toMany` relations
 ```
 
 **Data**
-The data of toMany relationship will be a object and the selected key's value will be `true`. For examples, the data of the schema will be:
+The data of toMany relationship will be a object and the selected key's value will become `true`. For examples, the data of the schema will be like:
 
 ```
 {
@@ -210,7 +213,7 @@ The data of toMany relationship will be a object and the selected key's value wi
 
 ### Common Properties
 
-Here are common properties which are available for every layout. 
+Here are common properties which are available for every layouts. 
 
 <table>
   <tr>
@@ -261,9 +264,13 @@ Here are common properties which are available for every layout.
   </tr>
 </table>
 
+> [Usage instruction of `<Block/>`](schema-layout-tags#lt-block-gt)
+
 ### &lt;Tabs /&gt;
 
-There is no other properties in Tabs, just remember to give titles to its every child.
+There are no other properties in Tabs, just remember to give titles to its every child.
+
+> [Usage instruction of `<Tabs/>`](schema-layout-tags#lt-tabs-gt)
 
 ### &lt;Row /&gt;
 
@@ -306,6 +313,8 @@ There is no other properties in Tabs, just remember to give titles to its every 
     </th>
   </tr>
 </table>
+
+> [Usage instruction of `<Row/> and <Col/>`](schema-layout-tags#lt-row-gt-and-lt-col-gt)
 
 ### &lt;Col /&gt;
 
@@ -386,6 +395,8 @@ There is no other properties in Tabs, just remember to give titles to its every 
   </tr>
 </table>
 
+> [Usage instruction of `<Row/> and <Col/>`](schema-layout-tags#lt-row-gt-and-lt-col-gt)
+
 ### &lt;Condition /&gt;
 
 <table>
@@ -408,3 +419,5 @@ There is no other properties in Tabs, just remember to give titles to its every 
     <th>If match function returns false, then the children field will be. Default <code>disabled</code></th>
   </tr>
 </table>
+
+> [Usage instruction of `<Condition/>`](schema-layout-tags#lt-condition-gt)
