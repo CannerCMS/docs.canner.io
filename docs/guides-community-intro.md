@@ -27,26 +27,48 @@ Usage:
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+
+// canner packages
 import Canner from 'canner';
+import Container from '@canner/container';
+import Router from '@canner/router';
 
 // your schema
 import schema from 'path/to/canner.schema.js';
 
-//render it 
-ReactDOM.render(
-  <Router>
-    <Route path="/" render={({history}) => (
-      <Canner
-        history={history}
-        schema={schema}
-      />
-    )} />
-  </Router>
-, document.getElementById("root"));
+
+class CMSExample extends React.Component {
+  router = new Router({
+    baseUrl: "/"
+  });
+
+  componentDidMount() {
+    // Trigger the Canner to update the UI with the corresponding part of your CMS.
+    this.unlisten = this.router.history.listen(() => this.forceUpdate());
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }
+
+  render() {
+    <Container
+      schema={schema}
+      router={this.router}
+      navbarConfig={
+        showSaveButton: true
+      }
+      sidebarConfig={
+        menuConfig: true
+      }
+    >
+      <Canner />
+    </Container>
+  }
+}
+
+//render it
+ReactDOM.render(<CMSExample />, document.getElementById("root"));
 ```
 
 - ***[canner-compiler](https://github.com/Canner/canner/tree/canary/packages/canner-compiler)***: This is how Canner compile UI components into `componentTree`, which is how Canner generate it's CMS UI.

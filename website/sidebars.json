@@ -74,8 +74,7 @@
       "advance-canner-cms",
       "advance-canner-router",
       "advance-canner-container",
-      "advance-cms-helpers",
-      "advance-cms-test"
+      "advance-cms-helpers"
     ],
     "Concept": [
       "concept-refid",
@@ -88,11 +87,12 @@
   "api": {
     "API": [
       "api-schema",
-      "api-ui-components",
-      "api-layouts",
-      "api-toolbar",
       "api-canner",
-      "api-canner-helpers"
+      "api-container",
+      "api-ui-components",
+      "api-layout-components",
+      "api-toolbar-components",
+      "api-types"
     ]
   },
   "why": {

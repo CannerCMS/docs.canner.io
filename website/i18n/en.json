@@ -25,29 +25,37 @@
         "title": "Test CMS components",
         "sidebar_label": "Test CMS components"
       },
-      "api-canner": {
-        "title": "canner",
-        "sidebar_label": "canner"
-      },
       "api-canner-helpers": {
         "title": "Canner Helpers",
         "sidebar_label": "Canner Helpers"
       },
-      "api-ui-components": {
-        "title": "CMS UI Components",
-        "sidebar_label": "CMS UI Components"
+      "api-canner": {
+        "title": "Canner",
+        "sidebar_label": "Canner"
       },
-      "api-layouts": {
-        "title": "Layouts",
-        "sidebar_label": "Layouts"
+      "api-container": {
+        "title": "Container",
+        "sidebar_label": "Container"
+      },
+      "api-layout-components": {
+        "title": "Layout Components",
+        "sidebar_label": "Layout Components"
       },
       "api-schema": {
         "title": "Schema",
         "sidebar_label": "Schema"
       },
-      "api-toolbar": {
-        "title": "Toolbar",
-        "sidebar_label": "Toolbar"
+      "api-toolbar-components": {
+        "title": "Toolbar Components",
+        "sidebar_label": "Toolbar Components"
+      },
+      "api-types": {
+        "title": "Types",
+        "sidebar_label": "Types"
+      },
+      "api-ui-components": {
+        "title": "UI Components",
+        "sidebar_label": "UI Components"
       },
       "cli-canner-cloud-js": {
         "title": "canner.cloud.js",
