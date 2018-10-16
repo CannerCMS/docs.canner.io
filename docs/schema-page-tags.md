@@ -158,13 +158,8 @@ Display data as a [antd list](https://ant.design/components/list/).
 **Properties**
 - `keyName`: A unique key.
 - `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
-<<<<<<< HEAD
-- `getValue`: Get the value from fetched data, this could allow you to transform your data.
-- `spec`: Overwrite the default `specs` in charts, each chart specification could reference below in each section. Learn more from [Vega Specification](https://vega.github.io/vega/docs/specification/).
-=======
 - `transformData`: Get the value from fetched data, this could allow you to transform your data.
 - `spec`: Overwrite the default `specs` in charts. Learn more from [Vega Specification](https://vega.github.io/vega/docs/specification/).
->>>>>>> api
 - `graphql`: The graphql string to fetch the data
 - `uiParams`: For more detailed UI settings
 
