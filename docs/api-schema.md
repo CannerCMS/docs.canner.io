@@ -21,37 +21,61 @@ These are some properties you will use frequently.
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>true</b></td>
     <td>Corresponding data key from source.</td>
   </tr>
   <tr>
     <td>ui</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Choose CMS component to display this data. </td>
   </tr>
   <tr>
     <td>packageName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If you are using customized components, enter your package name or the path of your component (<b>Must be either relative path or absolute path</b>). </td>
   </tr>
   <tr>
     <td>uiParams</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Additional UI parameters for components. </td>
   </tr>
   <tr>
     <td>title</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The label of the field.</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The description of the field.</td>
   </tr>
@@ -112,13 +136,21 @@ Here are common properties which are available for every layouts.
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If it's necessary, parent component will use keyName to decide render which children. </td>
   </tr>
   <tr>
     <td>style</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>
       The style of layout, See
@@ -140,13 +172,21 @@ Here are common properties which are available for every layouts.
   </tr>
   <tr>
     <td>title</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>    
+    </td>
     <td><b>false</b></td>
     <td>-</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>boolean</b></td>
     <td>-</td>
   </tr>
@@ -173,25 +213,41 @@ There are no other properties in Tabs, just remember to give titles to its every
   </tr>
   <tr>
     <td>align</td>
-    <td>'top' | 'middle' | 'bottom'</td>
+    <td>
+      <code>
+        'top' | 'middle' | 'bottom'
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The vertical alignment of the flex layout.</td>
   </tr>
   <tr>
     <td>justify</td>
-    <td>'start' | 'end' | 'center' | 'space-around' | 'space-between'</td>
+    <td>
+      <code>
+        'start' | 'end' | 'center' | 'space-around' | 'space-between'
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Horizontal arrangement of the flex layout.</td>
   </tr>
   <tr>
     <td>type</td>
-    <td>'flex'</td>
+    <td>
+      <code>
+        'flex'
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Layout mode</td>
   </tr>
   <tr>
     <td>gutter</td>
-    <td>number | object</td>
+    <td>
+      <code>
+        number | object
+      </code>
+    </td>
     <td><b>boolean</b></td>
     <td>
       Spacing between grids, could be a number or a object like
@@ -217,67 +273,71 @@ There are no other properties in Tabs, just remember to give titles to its every
   </tr>
   <tr>
     <td>offset</td>
-    <td>number</td>
+    <td width="30%">
+      <code>
+        number
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The number of cells to offset Col from the left.</td>
   </tr>
   <tr>
     <td>order</td>
-    <td>number</td>
+    <td><code>number</code</td>
     <td><b>false</b></td>
     <td>Raster order, used in flex layout mode.</td>
   </tr>
   <tr>
     <td>pull</td>
-    <td>number</td>
+    <td><code>number</code</td>
     <td><b>false</b></td>
     <td>The number of cells that raster is moved to the left.</td>
   </tr>
   <tr>
     <td>push</td>
-    <td>number</td>
+    <td><code>number</code</td>
     <td><b>false</b></td>
     <td>The number of cells that raster is moved to the right.</td>
   </tr>
   <tr>
     <td>span</td>
-    <td>number</td>
+    <td><code>number</code</td>
     <td><b>false</b></td>
     <td>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</td>
   </tr>
   <tr>
     <td>xs</td>
-    <td>number|object</td>
+    <td><code>number | object</code></td>
     <td><b>false</b></td>
     <td><code>< 576px</code> and also default setting, could be a span value or an object containing above props</td>
   </tr>
   <tr>
     <td>sm</td>
-    <td>number|object</td>
+    <td><code>number | object</code></td>
     <td><b>false</b></td>
     <td><code>≥ 576px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
     <td>md</td>
-    <td>number|object</td>
+    <td><code>number | object</code></td>
     <td><b>false</b></td>
     <td><code>≥ 768px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
     <td>lg</td>
-    <td>number|object</td>
+    <td><code>number | object</code></td>
     <td><b>false</b></td>
     <td><code>≥ 992px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
     <td>xl</td>
-    <td>number|object</td>
+    <td><code>number|object</code></td>
     <td><b>false</b></td>
     <td><code>≥ 1200px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
     <td>xxl</td>
-    <td>number|object</td>
+    <td><code>number|object</code></td>
     <td><b>false</b></td>
     <td><code>≥ 1600px</code> could be a span value or an object containing above props</td>
   </tr>
@@ -297,19 +357,17 @@ There are no other properties in Tabs, just remember to give titles to its every
   <tr>
     <td>match</td>
     <td>
-      <pre>
-(
+      <pre><code>(
   value: Object,
   operator: 'create' | 'update'
-) => boolean
-      </pre>
+) => boolean</code></pre>
     </td>
     <td><b>false</b></td>
     <td>If it returns true, the children of Condition will show as normal.</td>
   </tr>
   <tr>
     <td>defaultMode</td>
-    <td>'hidden' | 'disabled'</td>
+    <td><code>'hidden' | 'disabled'</code></td>
     <td><b>false</b></td>
     <td>If match function returns false, then the children field will be. Default <code>disabled</code></td>
   </tr>

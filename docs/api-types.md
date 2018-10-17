@@ -14,60 +14,60 @@ sidebar_label: Types
   </tr>
   <tr>
     <td>schema</td>
-    <td>CannerSchema</td>
+    <td><code>CannerSchema</code></td>
     <td>The JSON object which represents the structure and UI config of the CMS.</td>
   </tr>
   <tr>
     <td>pageSchema</td>
-    <td>CannerSchema</td>
+    <td><code>CannerSchema</code></td>
     <td>The JSON object which represents the pages which are contructed with charts and indicators.</td>
   </tr>
   <tr>
     <td>visitors</td>
-    <td>Array&lt;Object></td>
+    <td><code>Array&lt;Object></code></td>
     <td>The vistors which will transform the componentTree.</td>
   </tr>
   <tr>
     <td>connector</td>
     <td>
-      <pre>
-Connector | {
+      <pre><code>Connector | {
   [key: string]: Connector
-}</pre>
+}</code></pre>
     </td>
     <td>See <a href="guides-connector">Connector Guide</a></td>
   </tr>
   <tr>
     <td>graphqlClient</td>
     <td>
-      <pre>
-GraphqlClient | {
+      <pre><code>GraphqlClient | {
   [key: string]: GraphqlClient
-}</pre>
+}</code></pre>
       </td>
     <td>See <a href="guides-connector">Connector Guide</a></td>
   </tr>
   <tr>
     <td>resolvers</td>
-    <td>{[key: string]: Resolver}</td>
+    <td><code>{[key: string]: Resolver}</code></td>
     <td>See <a href="guides-resolver">Resolver Guide</a></td>
   </tr>
   <tr>
     <td>imageStorages</td>
-    <td>{[key: string]: Storage}</td>
+    <td><code>{[key: string]: Storage}</code></td>
     <td>See <a href="#storage">Storage</a></td>
   </tr>
   <tr>
     <td>fileStorages</td>
-    <td>{[key: string]: Storage}</td>
+    <td><code>{[key: string]: Storage}</code></td>
     <td>See <a href="#storage">Storage</a></td>
   </tr>
   <tr>
     <td>dict</td>
     <td>
-      <a href="api-types#intldict">
-        IntlDict
-      </a>
+      <code>
+        <a href="api-types#intldict">
+          IntlDict
+        </a>
+      <code>
     </td>
     <td>The dictionary which records the data in different locales</td>
   </tr>
@@ -92,20 +92,22 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>locale</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>defaultLocale</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>messages</td>
     <td>
-      <a href="api-types#intldict">
-        IntlDict
-      </a>
+      <code>
+        <a href="api-types#intldict">
+          IntlDict
+        </a>
+      </code>
     </td>
     <td>The dictionay which records the texts in different locales.</td>
   </tr>
@@ -130,29 +132,31 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>MenuConfig</td>
-    <td>Array&lt;SubmenuConfig | MenuItemConfig></td>
+    <td>
+      <code>
+        Array&lt;SubmenuConfig | MenuItemConfig>
+      </code>
+    </td>
     <td>The configuration of sidebar menu.</td>
   </tr>
   <tr>
     <td>SubmenuConfig</td>
     <td>
-      <pre>
-{
+      <pre><code>{
   title: string,
   items: Array&lt;MenuItemConfig>
-}</pre>
+}</code></pre>
     </td>
     <td>-</td>
   </tr>
   <tr>
     <td>MenuItemConfig</td>
     <td>
-      <pre>
-{
+      <pre><code>{
   title: string,
   pathname: string,
   params?: <a href="#routerparams">RouterParams</a>
-}</pre>
+}</code></pre>
     </td>
     <td>
       -
@@ -169,18 +173,20 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>logo</td>
-    <td width="40%">string | React.Node</td>
+    <td width="40%"><code>string | React.Node</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>renderMenu</td>
-    <td>() => React.Node</td>
+    <td><code>() => React.Node</code></td>
     <td>The method to render your customized menu, recommand you to use < href="https://ant.design/components/menu/">antd menu</a></td>
   </tr>
   <tr>
     <td>showSaveButton</td>
     <td>
-      boolean
+      <code>
+        boolean
+      </code>
     </td>
     <td>
       Show a save button at the top-right corner.
@@ -198,22 +204,38 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>getRoutes</td>
-    <td>() => Array&lt;string></td>
+    <td>
+      <code>
+        () => Array&lt;string>
+      </code>
+    </td>
     <td>Get current routes.</td>
   </tr>
   <tr>
     <td>getOperator</td>
-    <td>() => 'create' | 'update'</td>
+    <td>
+      <code>
+      () => 'create' | 'update'
+      </code>
+    </td>
     <td>-</td>
   </tr>
   <tr>
     <td>getPayload</td>
-    <td>() => Object</td>
+    <td>
+      <code>
+        () => Object
+      </code>
+    </td>
     <td>-</td>
   </tr>
   <tr>
     <td>goTo</td>
-    <td>() => ({pathname: string} & <a href="#routerparams">RouterParams</a>)</td>
+    <td>
+      <code>
+        () => ({pathname: string} & <a href="#routerparams">RouterParams</a>)
+      </code>
+    </td>
     <td></td>
   </tr>
 </table>
@@ -229,7 +251,7 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>operator</td>
-    <td>'create' | 'update'</td>
+    <td><code>'create' | 'update'</code></td>
     <td>-</td>
   </tr>
   <tr>
@@ -249,27 +271,27 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>async</td>
-    <td>boolean</td>
+    <td><code>boolean</code></td>
     <td>The async value is true represents that the all queries is done by server, so it cost less network because of that the pagination limits the count of the responsed data. But it also limits the flexibility of query since Canner supports serveral APIs, so we have to define the most general interface. </td>
   </tr>
   <tr>
     <td>sorter</td>
-    <td><a href="#sorter">Sorter</a></td>
+    <td><code><a href="#sorter">Sorter</a></code></td>
     <td>The sorter schema.</td>
   </tr>
   <tr>
     <td>filter</td>
-    <td><a href="#filter">filter</a></td>
+    <td><code><a href="#filter">filter</a></code></td>
     <td>The filter schema.</td>
   </tr>
   <tr>
     <td>pagination</td>
-    <td>boolean</td>
+    <td><code>boolean</code></td>
     <td>Use pagination or not.</td>
   </tr>
   <tr>
     <td>actions</td>
-    <td><a href="#actions">Actions</a></td>
+    <td><code><a href="#actions">Actions</a></code></td>
     <td>The actions schema.</td>
   </tr>
 </table>
@@ -286,18 +308,17 @@ The default sorter is showed as a select component, so it has the `options` prop
   </tr>
   <tr>
     <td>defaultField</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>Thie initial sorted field.</td>
   </tr>
   <tr>
     <td>options</td>
     <td>
-      <pre>
-{
+      <pre><code>{
   field: string,
   label: string,
   defaultOrder?: 'ASC' | 'DESC'
-}</pre>
+}</code></pre>
     </td>
     <td>Every option respresents the field you want to sort by, the label you want to show to user, and the default order type you want to use.</td>
   </tr>
@@ -313,9 +334,10 @@ The default sorter is showed as a select component, so it has the `options` prop
   <tr>
     <td>filters</td>
     <td>
-      Array&lt;<a href="#textfilter">TextFilterConfig</a> | 
+      <code>Array&lt;<a href="#textfilter">TextFilterConfig</a> | 
         <a href="#numberfilter">NumberFilterConfig</a> | 
         <a href="#selectfilter">SelectFilterConfig</a>>
+      </code>
     </td>
     <td>
       The configuration of your filters. Canner provides serveral filters, each of them may has its different configuration.
@@ -324,7 +346,9 @@ The default sorter is showed as a select component, so it has the `options` prop
   <tr>
     <td>permanentFilter</td>
     <td>
+      <code>
       <a href="#queryobject">QueryObject</a>
+      </code>
     </td>
     <td>
       The permanent filter condition which can't be changed.
@@ -346,22 +370,22 @@ The default sorter is showed as a select component, so it has the `options` prop
   </tr>
   <tr>
     <td>field</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>The field you want to filter</td>
   </tr>
   <tr>
     <td>label</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>placeholder</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>alwaysDisplay</td>
-    <td>boolean</td>
+    <td><code>boolean</code></td>
     <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
   </tr>
 </table>
@@ -378,22 +402,22 @@ The default sorter is showed as a select component, so it has the `options` prop
   </tr>
   <tr>
     <td>field</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>The field you want to filter</td>
   </tr>
   <tr>
     <td>label</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>placeholder</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>alwaysDisplay</td>
-    <td>boolean</td>
+    <td><code>boolean</code></td>
     <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
   </tr>
 </table>
@@ -410,28 +434,27 @@ The default sorter is showed as a select component, so it has the `options` prop
   </tr>
   <tr>
     <td>label</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>-</td>
   </tr>
   <tr>
     <td>options</td>
     <td>
-      <pre>
-Array&lt;{
+      <pre><code>Array&lt;{
   text: string,
   condition: <a href="#queryobject">QueryObject</a>
-}></pre>
+}></code></pre>
     </td>
     <td>-</td>
   </tr>
   <tr>
     <td>alwaysDisplay</td>
-    <td>boolean</td>
+    <td><code>boolean</code></td>
     <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
   </tr>
   <tr>
     <td>defaultOptionIndex</td>
-    <td>number</td>
+    <td><code>number</code></td>
     <td>You can specify the initial filter with its index of options.</td>
   </tr>
 </table>
@@ -456,32 +479,32 @@ The object represents the filter condition. Composited with `field`, `comparison
   </tr>
   <tr id="queryobjecteq">
     <td>eq</td>
-    <td>string | number</td>
+    <td><code>string | number</code></td>
     <td>equal</td>
   </tr>
   <tr>
     <td id="queryobjectcontains">contains</td>
-    <td>string | Array</td>
+    <td><code>string | Array</code></td>
     <td>Use indexOf method, only supported in sync for now.</td>
   </tr>
   <tr>
     <td>gt</td>
-    <td>number</td>
+    <td><code>number</code></td>
     <td>greater than</td>
   </tr>
   <tr>
     <td>gte</td>
-    <td>number</td>
+    <td><code>number</code></td>
     <td>greater than or equal to</td>
   </tr>
   <tr>
     <td>lt</td>
-    <td>number</td>
+    <td><code>number</code></td>
     <td>less than</td>
   </tr>
   <tr>
     <td>lte</td>
-    <td>number</td>
+    <td><code>number</code></td>
     <td>less than equal to</td>
   </tr>
 </table>
@@ -499,13 +522,11 @@ The object represents the filter condition. Composited with `field`, `comparison
   <tr>
     <td>upload</td>
     <td>
-      <pre>
-(
+      <pre><code>(
   file: File,
   options: { filename: string },
   onProgress: (e: { precent: number }) => void
-) => Promise<{ link: string }>
-      </pre>
+) => Promise<{ link: string }></code></pre>
     </td>
     <td>upload file.</td>
   </tr>
@@ -525,22 +546,22 @@ The object represents the filter condition. Composited with `field`, `comparison
   </tr>
   <tr>
     <td>getPathArr</td>
-    <td>() => Array&lt;string></td>
+    <td><code>() => Array&lt;string></code></td>
     <td>Get the array of paths.</td>
   </tr>
   <tr>
     <td>toString</td>
-    <td>() => string</td>
+    <td><code>() => string</code></td>
     <td>Change refId to string.</td>
   </tr>
   <tr>
     <td>child</td>
-    <td>(keyName: string) => RefId</td>
+    <td><code>(keyName: string) => RefId</code></td>
     <td>Append a keyName after the current refId. Return a new RefId instance.</td>
   </tr>
   <tr>
     <td>remove</td>
-    <td>(count: number) => RefId</td>
+    <td><code>(count: number) => RefId</code></td>
     <td>Get the ancestor's refId. Return a new RefId instance.</td>
   </tr>
 </table>
