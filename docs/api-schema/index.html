@@ -48,37 +48,61 @@
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>true</b></td>
     <td>Corresponding data key from source.</td>
   </tr>
   <tr>
     <td>ui</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Choose CMS component to display this data. </td>
   </tr>
   <tr>
     <td>packageName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If you are using customized components, enter your package name or the path of your component (<b>Must be either relative path or absolute path</b>). </td>
   </tr>
   <tr>
     <td>uiParams</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Additional UI parameters for components. </td>
   </tr>
   <tr>
     <td>title</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The label of the field.</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The description of the field.</td>
   </tr>
@@ -112,102 +136,9 @@
 <p>See complete <a href="/component/?selectedKind=File&amp;selectedStory=Image&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">File components list</a></p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="lt-relation-gt"></a><a href="#lt-relation-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;relation/&gt;</h3>
-<p>There must be a relation property in relation tag. It is a object containing two keys <code>type</code> and <code>to</code>, which represents the relation type and relation to which data key in first level data entry.</p>
-<pre><code class="hljs">&lt;relation relation={{
-  <span class="hljs-keyword">type</span>: <span class="hljs-string">'toOne'</span> | <span class="hljs-string">'toMany'</span>,
-  <span class="hljs-keyword">to</span>: <span class="hljs-string">'&lt;a first level key&gt;'</span>
-}}&gt;
-</code></pre>
 <blockquote>
-<p><a href="schema-data-type-tags#lt-relation-gt">Usage instruction of <code>&lt;relation/&gt;</code></a></p>
+<p>See complete <a href="/component/?selectedKind=Relation&amp;selectedStory=SingleSelect&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">Relation components list</a></p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="toone-type"></a><a href="#toone-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toOne type</h4>
-<p>For now, we only support ui <code>singleSelect</code> to deal with toOne relationship, which is also the default UI of relation tag. You must assign indicated uiParams to make the component works. Let's look at the example.</p>
-<p><strong>toOne relationship example</strong></p>
-<pre><code class="hljs">&lt;array <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"posts"</span>&gt;
-  &lt;relation <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"author"</span>
-    relation={{
-      <span class="hljs-keyword">to</span>: <span class="hljs-string">'users'</span>,
-      <span class="hljs-built_in">type</span>: <span class="hljs-string">'toOne'</span>
-    }}
-    uiParams: {{
-      textCol: <span class="hljs-string">'name'</span>, <span class="hljs-comment">// decide the field to represent the user</span>
-      columns: [{ <span class="hljs-comment">// the columns config of the table which is used to pick relation data.</span>
-        title: <span class="hljs-string">'Name'</span>,
-        dataIndex: <span class="hljs-string">'name'</span>
-      }]
-    }}
-  &gt;
-&lt;/array&gt;
-&lt;array <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"users"</span> &gt;
-  &lt;string <span class="hljs-built_in">keyName</span>=<span class="hljs-string">"name"</span> &gt;
-&lt;/array&gt;
-</code></pre>
-<p><strong>Data</strong></p>
-<p>The data of toOne relationship will be a <code>string</code>, for examples, the data of the schema will like below:</p>
-<pre><code class="hljs">{
-  <span class="hljs-attribute">posts</span>: [{
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId1'</span>,
-    <span class="hljs-attribute">author</span>: <span class="hljs-string">'userId1'</span> <span class="hljs-comment">// this is the relation field, to users's id 'userId1'</span>
-  }],
-  <span class="hljs-attribute">users</span>: [{
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId1'</span>,
-    <span class="hljs-attribute">name</span>: <span class="hljs-string">'userName1'</span>
-  }, {
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId2'</span>,
-    <span class="hljs-attribute">name</span>: <span class="hljs-string">'userName2'</span>
-  }]
-}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="tomany-type"></a><a href="#tomany-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toMany type</h4>
-<p>For now, we only support UI <code>multipleSelect</code> to deal with the <code>toMany</code> relationship. You must give it <code>uiParams</code> to make the component works. Let's look at the example.</p>
-<p><strong>toMany relationship example</strong></p>
-<pre><code class="hljs">&lt;<span class="hljs-built_in">array</span> keyName=<span class="hljs-string">"posts"</span>&gt;
-  &lt;<span class="hljs-built_in">string</span> keyName=<span class="hljs-string">"title"</span> &gt;
-&lt;/<span class="hljs-built_in">array</span>&gt;
-&lt;<span class="hljs-built_in">array</span> keyName=<span class="hljs-string">"users"</span> &gt;
-  &lt;relation keyName=<span class="hljs-string">"posts"</span>
-    relation={{
-      <span class="hljs-keyword">to</span>: <span class="hljs-string">'posts'</span>,
-      <span class="hljs-keyword">type</span>: <span class="hljs-string">'toMany'</span>
-    }}
-    uiParams: {{
-      textCol: <span class="hljs-string">'title'</span>, <span class="hljs-comment">// decide field to represent the post</span>
-      columns: <span class="hljs-meta">[</span>{ <span class="hljs-comment">// the columns config of the table which is used to pick relation data.</span>
-        title: <span class="hljs-string">'Title'</span>,
-        dataIndex: <span class="hljs-string">'title'</span>
-      }<span class="hljs-meta">]</span>
-    }}
-  &gt;
-&lt;/array&gt;
-</code></pre>
-<p><strong>Data</strong>
-The data of toMany relationship will be a object and the selected key's value will become <code>true</code>. For examples, the data of the schema will be like:</p>
-<pre><code class="hljs">{
-  <span class="hljs-attribute">posts</span>: [{
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId1'</span>,
-    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle1'</span>
-  }, {
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId2'</span>,
-    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle2'</span>
-  }, {
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'postId3'</span>,
-    <span class="hljs-attribute">title</span>: <span class="hljs-string">'postTitle3'</span>
-  }],
-  <span class="hljs-attribute">users</span>: [{
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId1'</span>,
-    <span class="hljs-attribute">posts</span>: { <span class="hljs-comment">// the relation field</span>
-      <span class="hljs-attribute">postId1</span>: true,
-      <span class="hljs-attribute">postId2</span>: true
-    }
-  }, {
-    <span class="hljs-attribute">id</span>: <span class="hljs-string">'userId2'</span>,
-    <span class="hljs-attribute">posts</span>: {  <span class="hljs-comment">// the relation field</span>
-      <span class="hljs-attribute">postId3</span>: true
-    }
-  }]
-}
-</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="lt-object-gt"></a><a href="#lt-object-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;object/&gt;</h3>
 <blockquote>
 <p>See complete <a href="/component/?selectedKind=Object&amp;selectedStory=Options&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybook%2Factions%2Factions-panel">Object components list</a></p>
@@ -227,13 +158,21 @@ The data of toMany relationship will be a object and the selected key's value wi
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If it's necessary, parent component will use keyName to decide render which children. </td>
   </tr>
   <tr>
     <td>style</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>
       The style of layout, See
@@ -252,16 +191,24 @@ The data of toMany relationship will be a object and the selected key's value wi
     <th>Description</th>
   </tr>
   <tr>
-    <th>title</th>
-    <th>string</th>
-    <th><b>false</b></th>
-    <th>-</th>
+    <td>title</td>
+    <td>
+      <code>
+        string
+      </code>    
+    </td>
+    <td><b>false</b></td>
+    <td>-</td>
   </tr>
   <tr>
-    <th>description</th>
-    <th>string</th>
-    <th><b>boolean</b></th>
-    <th>-</th>
+    <td>description</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
+    <td><b>boolean</b></td>
+    <td>-</td>
   </tr>
 </table>
 <blockquote>
@@ -284,33 +231,49 @@ The data of toMany relationship will be a object and the selected key's value wi
     <th>Description</th>
   </tr>
   <tr>
-    <th>align</th>
-    <th>'top' | 'middle' | 'bottom'</th>
-    <th><b>false</b></th>
-    <th>The vertical alignment of the flex layout.</th>
+    <td>align</td>
+    <td>
+      <code>
+        'top' | 'middle' | 'bottom'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>The vertical alignment of the flex layout.</td>
   </tr>
   <tr>
-    <th>justify</th>
-    <th>'start' | 'end' | 'center' | 'space-around' | 'space-between'</th>
-    <th><b>false</b></th>
-    <th>Horizontal arrangement of the flex layout.</th>
+    <td>justify</td>
+    <td>
+      <code>
+        'start' | 'end' | 'center' | 'space-around' | 'space-between'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>Horizontal arrangement of the flex layout.</td>
   </tr>
   <tr>
-    <th>type</th>
-    <th>'flex'</th>
-    <th><b>false</b></th>
-    <th>Layout mode</th>
+    <td>type</td>
+    <td>
+      <code>
+        'flex'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>Layout mode</td>
   </tr>
   <tr>
-    <th>gutter</th>
-    <th>number | object</th>
-    <th><b>boolean</b></th>
-    <th>
+    <td>gutter</td>
+    <td>
+      <code>
+        number | object
+      </code>
+    </td>
+    <td><b>boolean</b></td>
+    <td>
       Spacing between grids, could be a number or a object like
       <code>
         { xs: 8, sm: 16, md: 24}
       </code>
-    </th>
+    </td>
   </tr>
 </table>
 <blockquote>
@@ -328,70 +291,74 @@ The data of toMany relationship will be a object and the selected key's value wi
     <th>Description</th>
   </tr>
   <tr>
-    <th>offset</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells to offset Col from the left.</th>
+    <td>offset</td>
+    <td width="30%">
+      <code>
+        number
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>The number of cells to offset Col from the left.</td>
   </tr>
   <tr>
-    <th>order</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster order, used in flex layout mode.</th>
+    <td>order</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>Raster order, used in flex layout mode.</td>
   </tr>
   <tr>
-    <th>pull</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the left.</th>
+    <td>pull</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the left.</td>
   </tr>
   <tr>
-    <th>push</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the right.</th>
+    <td>push</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the right.</td>
   </tr>
   <tr>
-    <th>span</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</th>
+    <td>span</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</td>
   </tr>
   <tr>
-    <th>xs</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>< 576px</code> and also default setting, could be a span value or an object containing above props</th>
+    <td>xs</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>< 576px</code> and also default setting, could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>sm</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 576px</code> could be a span value or an object containing above props</th>
+    <td>sm</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 576px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>md</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 768px</code> could be a span value or an object containing above props</th>
+    <td>md</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 768px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>lg</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 992px</code> could be a span value or an object containing above props</th>
+    <td>lg</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 992px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1200px</code> could be a span value or an object containing above props</th>
+    <td>xl</td>
+    <td><code>number|object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 1200px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xxl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1600px</code> could be a span value or an object containing above props</th>
+    <td>xxl</td>
+    <td><code>number|object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 1600px</code> could be a span value or an object containing above props</td>
   </tr>
 </table>
 <blockquote>
@@ -406,22 +373,27 @@ The data of toMany relationship will be a object and the selected key's value wi
     <th>Description</th>
   </tr>
   <tr>
-    <th>match</th>
-    <th><code>(value: Object, operator: 'create' | 'update') => boolean </code></th>
-    <th><b>false</b></th>
-    <th>If it returns true, the children of Condition will show as normal.</th>
+    <td>match</td>
+    <td>
+      <pre><code class="hljs">(
+  value: Object,
+  operator: 'create' | 'update'
+) => boolean</code></pre>
+    </td>
+    <td><b>false</b></td>
+    <td>If it returns true, the children of Condition will show as normal.</td>
   </tr>
   <tr>
-    <th>defaultMode</th>
-    <th>'hidden' | 'disabled'</th>
-    <th><b>false</b></th>
-    <th>If match function returns false, then the children field will be. Default <code>disabled</code></th>
+    <td>defaultMode</td>
+    <td><code>'hidden' | 'disabled'</code></td>
+    <td><b>false</b></td>
+    <td>If match function returns false, then the children field will be. Default <code>disabled</code></td>
   </tr>
 </table>
 <blockquote>
 <p><a href="schema-layout-tags#lt-condition-gt">Usage instruction of <code>&lt;Condition/&gt;</code></a></p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/api-canner"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/16/2018, 7:04:33 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#type-tags">Type tags</a><ul class="toc-headings"><li><a href="#common-properties">Common Properties</a></li><li><a href="#lt-array-gt">&lt;array/&gt;</a></li><li><a href="#lt-string-gt">&lt;string/&gt;</a></li><li><a href="#lt-boolean-gt">&lt;boolean/&gt;</a></li><li><a href="#lt-number-gt">&lt;number/&gt;</a></li><li><a href="#lt-date-gt">&lt;date/&gt;</a></li><li><a href="#lt-geopoint-gt">&lt;geoPoint/&gt;</a></li><li><a href="#lt-file-gt">&lt;file/&gt;</a></li><li><a href="#lt-relation-gt">&lt;relation/&gt;</a></li><li><a href="#lt-object-gt">&lt;object/&gt;</a></li></ul></li><li><a href="#layout-tags">Layout tags</a><ul class="toc-headings"><li><a href="#common-properties-1">Common Properties</a></li><li><a href="#lt-block-gt">&lt;Block /&gt;</a></li><li><a href="#lt-tabs-gt">&lt;Tabs /&gt;</a></li><li><a href="#lt-row-gt">&lt;Row /&gt;</a></li><li><a href="#lt-col-gt">&lt;Col /&gt;</a></li><li><a href="#lt-condition-gt">&lt;Condition /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/api-canner"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/17/2018, 4:13:47 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#type-tags">Type tags</a><ul class="toc-headings"><li><a href="#common-properties">Common Properties</a></li><li><a href="#lt-array-gt">&lt;array/&gt;</a></li><li><a href="#lt-string-gt">&lt;string/&gt;</a></li><li><a href="#lt-boolean-gt">&lt;boolean/&gt;</a></li><li><a href="#lt-number-gt">&lt;number/&gt;</a></li><li><a href="#lt-date-gt">&lt;date/&gt;</a></li><li><a href="#lt-geopoint-gt">&lt;geoPoint/&gt;</a></li><li><a href="#lt-file-gt">&lt;file/&gt;</a></li><li><a href="#lt-relation-gt">&lt;relation/&gt;</a></li><li><a href="#lt-object-gt">&lt;object/&gt;</a></li></ul></li><li><a href="#layout-tags">Layout tags</a><ul class="toc-headings"><li><a href="#common-properties-1">Common Properties</a></li><li><a href="#lt-block-gt">&lt;Block /&gt;</a></li><li><a href="#lt-tabs-gt">&lt;Tabs /&gt;</a></li><li><a href="#lt-row-gt">&lt;Row /&gt;</a></li><li><a href="#lt-col-gt">&lt;Col /&gt;</a></li><li><a href="#lt-condition-gt">&lt;Condition /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };

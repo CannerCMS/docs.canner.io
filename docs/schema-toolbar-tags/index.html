@@ -86,7 +86,7 @@
 <p><img src="/docs/assets/schema-toolbar-tags/pagination-async.png" alt="pagination-async"></p>
 <h2><a class="anchor" aria-hidden="true" id="lt-filter-gt"></a><a href="#lt-filter-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;filter /&gt;</h2>
 <h3><a class="anchor" aria-hidden="true" id="filter-query-object"></a><a href="#filter-query-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filter Query Object</h3>
-<p>In Canner, we use filter query object to represent a specific query. The object is composed with data and filter operator, such as <strong>eq, lt, gt</strong>, ...etc.</p>
+<p>In Canner, we use filter query object to represent a specific query. The object is composed with data and filter comparison, such as <strong>eq, lt, gt</strong>, ...etc.</p>
 <p>For example, a query object to find those price is greater than 300 will be:</p>
 <pre><code class="hljs css language-js"><span class="token punctuation">{</span>
   price<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -112,7 +112,7 @@
 <li><a href="schema-toolbar-tags#lt-numberfilter-gt">&lt;numberFilter&gt;</a>: Number filter</li>
 <li><a href="schema-toolbar-tags#lt-selectfilter-gt">&lt;selectFilter&gt;</a>: Selection filter</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="operators"></a><a href="#operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operators</h4>
+<h4><a class="anchor" aria-hidden="true" id="comparisons"></a><a href="#comparisons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparisons</h4>
 <ul>
 <li><code>gt</code>: greater than</li>
 <li><code>gte</code>: greater than or equal to</li>
@@ -125,8 +125,8 @@
 <p><img src="/docs/assets/schema-toolbar-tags/textFilter.png" alt="textFilter"></p>
 <p>For string field, this filter generates a text input, has a different behavior in <code>sync</code> and <code>async</code> mode.</p>
 <ul>
-<li><code>sync</code> mode: <code>eq</code> operator</li>
-<li><code>async</code> mode: <code>contains</code> operator</li>
+<li><code>sync</code> mode: <code>eq</code> comparison</li>
+<li><code>async</code> mode: <code>contains</code> comparison</li>
 </ul>
 <p><strong>Properties</strong></p>
 <ul>
@@ -145,7 +145,7 @@
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="lt-numberfilter-gt"></a><a href="#lt-numberfilter-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;numberFilter /&gt;</h3>
 <p><img src="/docs/assets/schema-toolbar-tags/numberFilter.png" alt="numberFilter"></p>
-<p>For number field, there are four operators in this filter.</p>
+<p>For number field, there are four comparisons in this filter.</p>
 <ul>
 <li><code>gt</code></li>
 <li><code>gte</code></li>
@@ -312,7 +312,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-layout-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-page-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/8/2018, 5:12:45 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a><ul class="toc-headings"><li><a href="#fetch-policy">Fetch Policy</a></li><li><a href="#sync">Sync</a></li><li><a href="#async">Async</a></li></ul></li><li><a href="#lt-filter-gt">&lt;filter /&gt;</a><ul class="toc-headings"><li><a href="#filter-query-object">Filter Query Object</a></li><li><a href="#lt-textfilter-gt">&lt;textFilter /&gt;</a></li><li><a href="#lt-numberfilter-gt">&lt;numberFilter /&gt;</a></li><li><a href="#lt-selectfilter-gt">&lt;selectFilter /&gt;</a></li></ul></li><li><a href="#lt-sorter-gt">&lt;sorter /&gt;</a></li><li><a href="#lt-pagination-gt">&lt;pagination /&gt;</a></li><li><a href="#lt-actions-gt">&lt;actions /&gt;</a><ul class="toc-headings"><li><a href="#lt-filter-gt-1">&lt;filter /&gt;</a></li><li><a href="#lt-export-gt">&lt;export /&gt;</a></li><li><a href="#lt-import-gt">&lt;import /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-layout-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-page-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/17/2018, 11:19:13 AM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a><ul class="toc-headings"><li><a href="#fetch-policy">Fetch Policy</a></li><li><a href="#sync">Sync</a></li><li><a href="#async">Async</a></li></ul></li><li><a href="#lt-filter-gt">&lt;filter /&gt;</a><ul class="toc-headings"><li><a href="#filter-query-object">Filter Query Object</a></li><li><a href="#lt-textfilter-gt">&lt;textFilter /&gt;</a></li><li><a href="#lt-numberfilter-gt">&lt;numberFilter /&gt;</a></li><li><a href="#lt-selectfilter-gt">&lt;selectFilter /&gt;</a></li></ul></li><li><a href="#lt-sorter-gt">&lt;sorter /&gt;</a></li><li><a href="#lt-pagination-gt">&lt;pagination /&gt;</a></li><li><a href="#lt-actions-gt">&lt;actions /&gt;</a><ul class="toc-headings"><li><a href="#lt-filter-gt-1">&lt;filter /&gt;</a></li><li><a href="#lt-export-gt">&lt;export /&gt;</a></li><li><a href="#lt-import-gt">&lt;import /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Layout Components · Canner (BETA)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Layout"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Layout Components · Canner (BETA)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="## Layout"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (BETA) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (BETA) Blog RSS Feed"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Layout Components · Canner (BETA)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Here are the the properties of layout components. In general, you don&#x27;t have to know this properties unless you want to [customize your layout componet in Canner](guides-customized-layout)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Layout Components · Canner (BETA)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="Here are the the properties of layout components. In general, you don&#x27;t have to know this properties unless you want to [customize your layout componet in Canner](guides-customized-layout)."/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (BETA) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (BETA) Blog RSS Feed"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -33,8 +33,53 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Layout Components</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="layout"></a><a href="#layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Layout</h2>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-ui-components"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/api-toolbar-components"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/15/2018, 6:26:58 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#layout">Layout</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Layout Components</h1></header><article><div><span><p>Here are the the properties of layout components. In general, you don't have to know this properties unless you want to <a href="guides-customized-layout">customize your layout componet in Canner</a>.</p>
+<table>
+  <tr>
+    <th>name</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+  <tr>
+    <td>keyName</td>
+    <td width="30%">
+      <code>
+        string
+      </code>
+    </td>
+    <td>the key</td>
+  </tr>
+  <tr>
+    <td>refId</td>
+    <td>
+      <code>
+        RefId
+      </code>
+    </td>
+    <td>Every component has its unique RefId. In order to get specific field. See <a href="concept-refid">refId</a> for details</td>
+  </tr>
+  <tr>
+    <td>goTo</td>
+    <td>
+      <code>
+        string => void
+      </code>
+    </td>
+    <td>the method to change route</td>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td>
+      <code>
+        Array&lt;Object>
+      </code>
+    </td>
+    <td>
+      The schema of children.
+    </td>
+  </tr>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-ui-components"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/api-toolbar-components"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/17/2018, 4:13:47 PM</p></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };

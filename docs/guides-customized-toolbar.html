@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customized Toolbar · Canner (BETA)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `&lt;root/&gt;`**. `storage` must be a object generated from https://github.com/Canner/image-service-config"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customized Toolbar · Canner (BETA)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="Setup image uploader in your CMS, pass a `storage` prop in to **first level tags in `&lt;root/&gt;`**. `storage` must be a object generated from https://github.com/Canner/image-service-config"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (BETA) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (BETA) Blog RSS Feed"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customized Toolbar · Canner (BETA)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Canner official documentation"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customized Toolbar · Canner (BETA)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="Canner official documentation"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner (BETA) Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner (BETA) Blog RSS Feed"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -33,114 +33,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Customized Toolbar</h1></header><article><div><span><p>Setup image uploader in your CMS, pass a <code>storage</code> prop in to <strong>first level tags in <code>&lt;root/&gt;</code></strong>. <code>storage</code> must be a object generated from <a href="https://github.com/Canner/image-service-config">https://github.com/Canner/image-service-config</a></p>
-<pre><code class="hljs css language-jsx"><span class="token comment">/** @jsx builder */</span>
-<span class="token keyword">import</span> builder <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
-    <span class="token operator">&lt;</span>object
-      keyName<span class="token operator">=</span><span class="token string">"overview"</span>
-      title<span class="token operator">=</span><span class="token string">"Overview Tab"</span>
-      storage<span class="token operator">=</span><span class="token punctuation">{</span>storage<span class="token punctuation">}</span> <span class="token comment">// -------> your storage settings</span>
-      connector<span class="token operator">=</span><span class="token punctuation">{</span>connector<span class="token punctuation">}</span>
-      resolver<span class="token operator">=</span><span class="token punctuation">{</span>resolver<span class="token punctuation">}</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Your name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span>
-    <span class="token operator">&lt;</span>array
-      keyName<span class="token operator">=</span><span class="token string">"list"</span>
-      title<span class="token operator">=</span><span class="token string">"Products"</span>
-      storage<span class="token operator">=</span><span class="token punctuation">{</span>storage<span class="token punctuation">}</span> <span class="token comment">// -------> your storage settings</span>
-      connector<span class="token operator">=</span><span class="token punctuation">{</span>connector2<span class="token punctuation">}</span>
-      resolver<span class="token operator">=</span><span class="token punctuation">{</span>resolver<span class="token punctuation">}</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Product name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
-<span class="token punctuation">)</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="imgur"></a><a href="#imgur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Imgur</h2>
-<p>Upload image to <a href="https://imgur.com/">Imgur</a>.</p>
-<blockquote>
-<p>Learn more <a href="https://github.com/Canner/image-service-config#imgurservice-imgur">ImgurService</a></p>
-</blockquote>
-<pre><code class="hljs css language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>ImgurService<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@canner/image-service-config'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> imageService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ImgurService</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  clientId<span class="token punctuation">,</span> <span class="token comment">// https://apidocs.imgur.com/</span>
-  mashapeKey <span class="token comment">// https://market.mashape.com/imgur/imgur-9#image-upload</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> serviceConfig <span class="token operator">=</span> imageService<span class="token punctuation">.</span><span class="token function">getServiceConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// {</span>
-<span class="token comment">//   name: "image",</span>
-<span class="token comment">//   accept: "image/*",</span>
-<span class="token comment">//   action: "https://api.imgur.com/3/image",</span>
-<span class="token comment">//   headers: {</span>
-<span class="token comment">//     Authorization: `Client-ID &lt;YOUR CLIENTID>`,</span>
-<span class="token comment">//     "X-Requested-With": null </span>
-<span class="token comment">//    }</span>
-<span class="token comment">// }</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
-    <span class="token operator">&lt;</span>object
-      keyName<span class="token operator">=</span><span class="token string">"overview"</span>
-      title<span class="token operator">=</span><span class="token string">"Overview Tab"</span>
-      storage<span class="token operator">=</span><span class="token punctuation">{</span>serviceConfig<span class="token punctuation">}</span> <span class="token comment">// -------> your storage settings</span>
-      connector<span class="token operator">=</span><span class="token punctuation">{</span>connector<span class="token punctuation">}</span>
-      resolver<span class="token operator">=</span><span class="token punctuation">{</span>resolver<span class="token punctuation">}</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Your name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
-<span class="token punctuation">)</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="firebase-client"></a><a href="#firebase-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Firebase Client</h2>
-<p>Enable Firebase storage to store your images, you can new a <code>FirebaseClientService</code> instance and pass to prop <code>imageServiceConfigs</code> into <code>&lt;Canner&gt;</code> component.</p>
-<blockquote>
-<p>You don't have to install <code>@canner/image-service-config</code> maually because it's a dependency of canner
-Learn more about <a href="https://github.com/Canner/image-service-config#firebaseclientservice-firebase-js-sdk">FirebaseClientService</a></p>
-</blockquote>
-<pre><code class="hljs css language-js"><span class="token comment">/** @jsx builder */</span>
-<span class="token keyword">import</span> builder <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span>FirebaseClientService<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@canner/image-service-config'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> firebase <span class="token keyword">from</span> <span class="token string">'firebase'</span><span class="token punctuation">;</span>
-
-firebase<span class="token punctuation">.</span><span class="token function">initializeApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  apiKey<span class="token punctuation">,</span>
-  storageBucket
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// remember to authenticate firebase first, or uploading will be failed,</span>
-<span class="token comment">// https://firebase.google.com/docs/auth/web/start</span>
-firebase<span class="token punctuation">.</span><span class="token function">auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">signInAnonymously</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// or login your firebase Auth</span>
-firebase<span class="token punctuation">.</span><span class="token function">auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">signInWithEmailAndPassword</span><span class="token punctuation">(</span><span class="token string">"xxx"</span><span class="token punctuation">,</span> <span class="token string">"xxx"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-
-<span class="token keyword">const</span> imageService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FirebaseClientService</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  firebase<span class="token punctuation">:</span> firebase<span class="token punctuation">,</span>
-  dir<span class="token punctuation">:</span> <span class="token string">"the/path/to"</span><span class="token punctuation">,</span> <span class="token comment">// specify the path you want upload to </span>
-  filename<span class="token punctuation">:</span> <span class="token string">"filename"</span><span class="token punctuation">,</span> <span class="token comment">// rename file without extension</span>
-  hash<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// if true, the filename will add a hash string, e.g.: `filename-${hash}.jpg`</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> serviceConfig <span class="token operator">=</span> imageService<span class="token punctuation">.</span><span class="token function">getServiceConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
-    <span class="token operator">&lt;</span>object
-      keyName<span class="token operator">=</span><span class="token string">"overview"</span>
-      title<span class="token operator">=</span><span class="token string">"Overview Tab"</span>
-      storage<span class="token operator">=</span><span class="token punctuation">{</span>serviceConfig<span class="token punctuation">}</span> <span class="token comment">// -------> your storage settings</span>
-      connector<span class="token operator">=</span><span class="token punctuation">{</span>connector<span class="token punctuation">}</span>
-      resolver<span class="token operator">=</span><span class="token punctuation">{</span>resolver<span class="token punctuation">}</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Your name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
-<span class="token punctuation">)</span>
-
-</code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/guides-customized-layout"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/guides-canner-prisma-type"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/2/2018, 11:50:10 AM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#imgur">Imgur</a></li><li><a href="#firebase-client">Firebase Client</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Customized Toolbar</h1></header><article><div><span></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/guides-customized-layout"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/guides-canner-prisma-type"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/17/2018, 12:10:54 PM</p></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
