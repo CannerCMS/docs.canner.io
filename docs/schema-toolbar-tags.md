@@ -71,7 +71,7 @@ There are two fetch policies, `sync` and `async`, of [**first level array field*
 
 ### Filter Query Object
 
-In Canner, we use filter query object to represent a specific query. The object is composed with data and filter operator, such as **eq, lt, gt**, ...etc.
+In Canner, we use filter query object to represent a specific query. The object is composed with data and filter comparison, such as **eq, lt, gt**, ...etc.
 
 For example, a query object to find those price is greater than 300 will be:
 
@@ -104,7 +104,7 @@ And it can also be nested.
 - [\<selectFilter>](schema-toolbar-tags#lt-selectfilter-gt): Selection filter
 
 
-#### Operators
+#### Comparisons
 - `gt`: greater than
 - `gte`: greater than or equal to
 - `lt`: less than
@@ -119,8 +119,8 @@ And it can also be nested.
 
 For string field, this filter generates a text input, has a different behavior in `sync` and `async` mode.
 
-- `sync` mode: `eq` operator
-- `async` mode: `contains` operator
+- `sync` mode: `eq` comparison
+- `async` mode: `contains` comparison
 
 **Properties**
 
@@ -144,7 +144,7 @@ For string field, this filter generates a text input, has a different behavior i
 
 ![numberFilter](assets/schema-toolbar-tags/numberFilter.png)
 
-For number field, there are four operators in this filter.
+For number field, there are four comparisons in this filter.
 - `gt`
 - `gte`
 - `lt`
