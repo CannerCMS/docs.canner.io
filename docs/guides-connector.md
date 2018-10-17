@@ -16,9 +16,6 @@ Connector in Canner CMS is a **Apollo** connector, definition quoted from [Apoll
 >
 > Both batching and caching are more important in GraphQL than in traditional endpoints, because one GraphQL query may make many separate calls to the backend to retrieve all the items where a REST endpoint would only retrieve a few items, usually in one query. The separate calls let GraphQL support a wide range of queries, whereas a single REST endpoint typically only allows querying for a narrow set of objects.
 
-> NOTE: you will need to install `canner-graphql-interface` to require essential connectors, and select `FirebaseRtdbAdminConnector` if you using CannerIO platform.
-
-
 To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance`.
 
 ## Supported connectors:
@@ -133,9 +130,19 @@ const connector = new FirestoreClientConnector({
 ```jsx
 /** @jsx builder */
 import builder from 'canner-script';
-import {FirebaseRtdbAdminConnector} from 'canner-graphql-interface';
+import {FirestoreClientConnector} from "canner-graphql-interface";
 
-const myDefultConnector = new FirebaseRtdbAdminConnector({
+const config = {
+    apiKey: "<API_KEY>",
+    authDomain: "<PROJECT_ID>.firebaseapp.com",
+    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+    projectId: "<PROJECT_ID>",
+    storageBucket: "<BUCKET>.appspot.com",
+    messagingSenderId: "<SENDER_ID>",
+  };
+firebase.initializeApp(config);
+
+const myDefultConnector = new FirestoreClientConnector({
   projectId: "<PROJECT_ID>"
 });
 
