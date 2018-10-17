@@ -31,7 +31,7 @@ Here are the useful properties that a UI component receieves. In general, you do
   </tr>
   <tr>
     <td>relation</td>
-    <td><code>{to: string, relation: 'toMany' | 'toOne'}</code></td>
+    <td>{to: string, relation: 'toMany' | 'toOne'}</td>
     <td>The relation schema of children.</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ Here are the useful properties that a UI component receieves. In general, you do
   </tr>
   <tr>
     <td>disabled</td>
-    <td>boolean | {create: boolean, update: boolean, delete: boolean}</td>
+    <td>boolean</td>
     <td>Whether field is disabled</td>
   </tr>
   <tr>
@@ -58,17 +58,19 @@ Here are the useful properties that a UI component receieves. In general, you do
   </tr>
   <tr>
     <td>onChange</td>
-    <td><code>(<a href="api-types#refid" />refId</a>, 'create' | 'update' | 'delete' | 'swap', value) => Promise<*></code></td>
+    <td width="30%">
+      (<a href="api-types#refid" />refId</a>, 'create' | 'update' | 'delete' | 'swap', value) => Promise<*>
+    </td>
     <td><code>onChange</code> function let you update data from component to CMS data, the first argument is the field's <a href="api-types#refid">refId</a>, second argument is change type, third one is its value</td>
   </tr>
   <tr>
     <td>goTo</td>
-    <td><code>string => void</code></td>
+    <td>string => void</td>
     <td>the method to change route</td>
   </tr>
   <tr>
     <td>value</td>
-    <td><code>string | number | boolean | array | object</code></td>
+    <td>string | number | boolean | array | object</td>
     <td>The value of this component.</td>
   </tr>
   <tr>
@@ -82,32 +84,30 @@ Here are the useful properties that a UI component receieves. In general, you do
 
 <table>
   <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>description</td>
+    <th>name</th>
+    <th>type</th>
+    <th>description</th>
   </tr>
   <tr>
     <td>fetch</td>
-    <td>
-      <code>
-        (key: string) => Promise&lt;OriginValue>
-      </code>
+    <td width="50%">
+      (key: string) => Promise&lt;OriginValue>
     </td>
     <td>Get the value of the given key.</td>
   </tr>
   <tr>
     <td>subscribe</td>
-    <td><code>(key: string, callback: (data: *) => void) => Subscription</code></td>
+    <td>(key: string, callback: (data: *) => void) => Subscription</td>
     <td>Subscribe the data of the given key, and then when the data changes, the callback will be executed with the new data.</td>
   </tr>
   <tr>
     <td>deploy</td>
-    <td><code>(key: string) => Promise&lt;void></code></td>
+    <td>(key: string) => Promise&lt;void></td>
     <td>Deploy the changes of the given key.</td>
   </tr>
   <tr>
     <td>reset</td>
-    <td><code>(key: string) => Promise&lt;void></code></td>
+    <td>(key: string) => Promise&lt;void></td>
     <td>Reset the changes of the given key.</td>
   </tr>
 </table>

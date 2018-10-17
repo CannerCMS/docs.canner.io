@@ -24,7 +24,7 @@ sidebar_label: Canner
   <tr>
     <td>dataDidChange</td>
     <td>
-      <code><a href="api-types#changeddata">ChangedData</a> => void</code>
+      <a href="api-types#changeddata">ChangedData</a> => void
     </td>
     <td>
       The callback when data change. Unavailable if you are using <a href="guides-container">container</a>.
@@ -33,9 +33,7 @@ sidebar_label: Canner
   <tr>
     <td>afterDeploy</td>
     <td>
-      <code>
-        void => void
-      </code>
+      void => void
     </td>
     <td>
       Callback for listening the successful deployment.
@@ -44,9 +42,7 @@ sidebar_label: Canner
   <tr>
     <td>baseUrl</td>
     <td>
-      <code>
-        string
-      </code>
+      string
     </td>
     <td>
       The fixed url before cms routes.
@@ -54,33 +50,27 @@ sidebar_label: Canner
   </tr>
   <tr>
     <td>goTo</td>
-    <td><code>({pathname: string} & <a href="api-types#routerparams">RouterParams</a>) => void</code></td>
+    <td>({pathname: string} & <a href="api-types#routerparams">RouterParams</a>) => void</td>
     <td>Change the current location.</td>
   </tr>
   <tr>
     <td>routes</td>
     <td>
-      <code>
-        Array&lt;string>
-      </code>
+      Array&lt;string>
     </td>
     <td>update the current query and refetch data.</td>
   </tr>
   <tr>
     <td>routerParams</td>
     <td>
-      <code>
        <a href="api-types#routerparams">RouterParams</a>
-      </code>  
     </td>
     <td>The parameters in url.</td>
   </tr>
   <tr>
     <td>intl</td>
     <td>
-      <code>
-        <a href="api-types#intlobject">IntlObject</a>
-      </code>
+      <a href="api-types#intlobject">IntlObject</a>
     </td>
     <td>The internationalization configuration.</td>
   </tr>

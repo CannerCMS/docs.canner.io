@@ -25,15 +25,13 @@ Here are the the properties of toolbar components. In general, you don't have to
   </tr>
   <tr>
     <td>goTo</td>
-    <td><code>string => void</code></td>
+    <td>string => void</td>
     <td>the method to change route</td>
   </tr>
   <tr>
     <td>children</td>
     <td>
-      <code>
-        Array&lt;Object>
-      </code>
+      Array&lt;Object>
     </td>
     <td>
       The schema of children.

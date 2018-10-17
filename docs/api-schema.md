@@ -139,16 +139,16 @@ Here are common properties which are available for every layout.
     <th>Description</th>
   </tr>
   <tr>
-    <th>title</th>
-    <th>string</th>
-    <th><b>false</b></th>
-    <th>-</th>
+    <td>title</td>
+    <td>string</td>
+    <td><b>false</b></td>
+    <td>-</td>
   </tr>
   <tr>
-    <th>description</th>
-    <th>string</th>
-    <th><b>boolean</b></th>
-    <th>-</th>
+    <td>description</td>
+    <td>string</td>
+    <td><b>boolean</b></td>
+    <td>-</td>
   </tr>
 </table>
 
@@ -168,33 +168,33 @@ There is no other properties in Tabs, just remember to give titles to its every 
     <th>Description</th>
   </tr>
   <tr>
-    <th>align</th>
-    <th>'top' | 'middle' | 'bottom'</th>
-    <th><b>false</b></th>
-    <th>The vertical alignment of the flex layout.</th>
+    <td>align</td>
+    <td>'top' | 'middle' | 'bottom'</td>
+    <td><b>false</b></td>
+    <td>The vertical alignment of the flex layout.</td>
   </tr>
   <tr>
-    <th>justify</th>
-    <th>'start' | 'end' | 'center' | 'space-around' | 'space-between'</th>
-    <th><b>false</b></th>
-    <th>Horizontal arrangement of the flex layout.</th>
+    <td>justify</td>
+    <td>'start' | 'end' | 'center' | 'space-around' | 'space-between'</td>
+    <td><b>false</b></td>
+    <td>Horizontal arrangement of the flex layout.</td>
   </tr>
   <tr>
-    <th>type</th>
-    <th>'flex'</th>
-    <th><b>false</b></th>
-    <th>Layout mode</th>
+    <td>type</td>
+    <td>'flex'</td>
+    <td><b>false</b></td>
+    <td>Layout mode</td>
   </tr>
   <tr>
-    <th>gutter</th>
-    <th>number | object</th>
-    <th><b>boolean</b></th>
-    <th>
+    <td>gutter</td>
+    <td>number | object</td>
+    <td><b>boolean</b></td>
+    <td>
       Spacing between grids, could be a number or a object like
       <code>
         { xs: 8, sm: 16, md: 24}
       </code>
-    </th>
+    </td>
   </tr>
 </table>
 
@@ -210,70 +210,70 @@ There is no other properties in Tabs, just remember to give titles to its every 
     <th>Description</th>
   </tr>
   <tr>
-    <th>offset</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells to offset Col from the left.</th>
+    <td>offset</td>
+    <td>number</td>
+    <td><b>false</b></td>
+    <td>The number of cells to offset Col from the left.</td>
   </tr>
   <tr>
-    <th>order</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster order, used in flex layout mode.</th>
+    <td>order</td>
+    <td>number</td>
+    <td><b>false</b></td>
+    <td>Raster order, used in flex layout mode.</td>
   </tr>
   <tr>
-    <th>pull</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the left.</th>
+    <td>pull</td>
+    <td>number</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the left.</td>
   </tr>
   <tr>
-    <th>push</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the right.</th>
+    <td>push</td>
+    <td>number</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the right.</td>
   </tr>
   <tr>
-    <th>span</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</th>
+    <td>span</td>
+    <td>number</td>
+    <td><b>false</b></td>
+    <td>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</td>
   </tr>
   <tr>
-    <th>xs</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>< 576px</code> and also default setting, could be a span value or an object containing above props</th>
+    <td>xs</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>< 576px</code> and also default setting, could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>sm</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 576px</code> could be a span value or an object containing above props</th>
+    <td>sm</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>≥ 576px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>md</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 768px</code> could be a span value or an object containing above props</th>
+    <td>md</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>≥ 768px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>lg</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 992px</code> could be a span value or an object containing above props</th>
+    <td>lg</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>≥ 992px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1200px</code> could be a span value or an object containing above props</th>
+    <td>xl</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>≥ 1200px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xxl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1600px</code> could be a span value or an object containing above props</th>
+    <td>xxl</td>
+    <td>number|object</td>
+    <td><b>false</b></td>
+    <td><code>≥ 1600px</code> could be a span value or an object containing above props</td>
   </tr>
 </table>
 
@@ -287,15 +287,22 @@ There is no other properties in Tabs, just remember to give titles to its every 
     <th>Description</th>
   </tr>
   <tr>
-    <th>match</th>
-    <th><code>(value: Object, operator: 'create' | 'update') => boolean </code></th>
-    <th><b>false</b></th>
-    <th>If it returns true, the children of Condition will show as normal.</th>
+    <td>match</td>
+    <td>
+      <pre>
+(
+  value: Object,
+  operator: 'create' | 'update'
+) => boolean
+      </pre>
+    </td>
+    <td><b>false</b></td>
+    <td>If it returns true, the children of Condition will show as normal.</td>
   </tr>
   <tr>
-    <th>defaultMode</th>
-    <th>'hidden' | 'disabled'</th>
-    <th><b>false</b></th>
-    <th>If match function returns false, then the children field will be. Default <code>disabled</code></th>
+    <td>defaultMode</td>
+    <td>'hidden' | 'disabled'</td>
+    <td><b>false</b></td>
+    <td>If match function returns false, then the children field will be. Default <code>disabled</code></td>
   </tr>
 </table>

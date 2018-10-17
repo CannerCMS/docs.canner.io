@@ -17,27 +17,42 @@ Here are the the properties of toolbar components. In general, you don't have to
   </tr>
   <tr>
     <td>orderField</td>
-    <td><code>string</code></td>
+    <td>string</td>
     <td>The current sorted field</td>
   </td>
   <tr>
     <td>orderType</td>
-    <td><code>'ASC' | 'DESC'</code></td>
+    <td>'ASC' | 'DESC'</td>
     <td>ascendancy or descendancy</td>
   </tr>
   <tr>
     <td>options</td>
-    <td><code>{field: string, label: string, defaultOrder?: 'ASC' | 'DESC'}</code></td>
+    <td width="30%">
+      <pre>
+{
+  field: string,
+  label: string,
+  defaultOrder?: 'ASC' | 'DESC'
+}
+      </pre>
+    </td>
     <td>Every option respresents the field you want to sort by, the label you want to show to user, and the default order type you want to use</td>
   </tr>
   <tr>
     <td>changeOrder</td>
-    <td><code>() => {orderField: string, orderType: OrderType}</code></td>
+    <td>
+      <pre>
+() => {
+  orderField: string,
+  orderType: OrderType
+}
+      </pre>
+    </td>
     <td>The method to change orderField and orderType.</td>
   </tr>
   <tr>
     <td>defaultField</td>
-    <td><code>string</code></td>
+    <td>string</td>
     <td>The initial field to be sorted.</td>
   </tr>
 <table>
@@ -52,17 +67,17 @@ Here are the the properties of toolbar components. In general, you don't have to
   </tr>
   <tr>
     <td>changeFilter</td>
-    <td><code><a href="api-types#queryobject">QueryObject</a> => void</code></td>
+    <td><a href="api-types#queryobject">QueryObject</a> => void</td>
     <td>The method to change the current filter.</td>
   </tr>
   <tr>
     <td>deleteFilter</td>
-    <td><code>(filterIndex: numver) => void</code></td>
+    <td>(filterIndex: numver) => void</td>
     <td>The method to delete the specfic filter.</td>
   </tr>
   <tr>
     <td>displayedFilters</td>
-    <td><code>Array&lt;filterIndex: number></code></td>
+    <td>Array&lt;filterIndex: number></td>
     <td>The indexs of visiable filters</td>
   </tr>
   <tr>
@@ -91,22 +106,22 @@ Here are the the properties of toolbar components. In general, you don't have to
   </tr>
   <tr>
     <td>prevPage</td>
-    <td><code>() => void</code></td>
+    <td>() => void</td>
     <td>The method to go to the previous page.</td>
   </tr>
   <tr>
     <td>nextPage</td>
-    <td><code>() => void</code></td>
+    <td>() => void</td>
     <td>The method to go to the next page.</td>
   </tr>
   <tr>
     <td>hasNextPage</td>
-    <td><code>boolean</code></td>
+    <td>boolean</td>
     <td>Whether the next page exists.</td>
   </tr>
   <tr>
     <td>hasPreviousPage</td>
-    <td><code>boolean</code></td>
+    <td>boolean</td>
     <td>Whether the previous page exists.</td>
   </tr>
 </table>
@@ -122,17 +137,17 @@ Here are the the properties of toolbar components. In general, you don't have to
   </tr>
   <tr>
     <td>total</td>
-    <td><code>number</code></td>
+    <td>number</td>
     <td>Total number of data items.</td>
   </tr>
    <tr>
     <td>current</td>
-    <td><code>number</code></td>
+    <td>number</td>
     <td>The current page.</td>
   </tr>
   <tr>
     <td>changePage</td>
-    <td><code>(page: number) => void</code></td>
+    <td>(page: number) => void</td>
     <td>The method to change page.</td>
   </tr>
 </table>
