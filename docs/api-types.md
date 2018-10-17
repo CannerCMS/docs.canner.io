@@ -69,7 +69,7 @@ GraphqlClient | {
         IntlDict
       </a>
     </td>
-    <td>The dictionary which records the texts in different locales</td>
+    <td>The dictionary which records the data in different locales</td>
   </tr>
 </table>
 
@@ -234,8 +234,8 @@ GraphqlClient | {
   </tr>
   <tr>
     <td>payload</td>
-    <td>Object</td>
-    <td>The default data in create form.</td>
+    <td><code>Object</code></td>
+    <td>The payload when creating form.</td>
   </tr>
 </table>
 

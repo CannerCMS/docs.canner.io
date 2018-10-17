@@ -35,7 +35,7 @@ These are some properties you will use frequently.
     <td>packageName</td>
     <td>string</td>
     <td><b>false</b></td>
-    <td>If you are using customized components, enter your package name or the path of your component. <b>Must be eithor relative path or absolute path</b></td>
+    <td>If you are using customized components, enter your package name or the path of your component (<b>Must be either relative path or absolute path</b>). </td>
   </tr>
   <tr>
     <td>uiParams</td>
@@ -101,7 +101,7 @@ These are some properties you will use frequently.
 
 ### Common Properties
 
-Here are common properties which are available for every layout. 
+Here are common properties which are available for every layouts. 
 
 <table>
   <tr>
@@ -152,9 +152,13 @@ Here are common properties which are available for every layout.
   </tr>
 </table>
 
+> [Usage instruction of `<Block/>`](schema-layout-tags#lt-block-gt)
+
 ### &lt;Tabs /&gt;
 
-There is no other properties in Tabs, just remember to give titles to its every child.
+There are no other properties in Tabs, just remember to give titles to its every child.
+
+> [Usage instruction of `<Tabs/>`](schema-layout-tags#lt-tabs-gt)
 
 ### &lt;Row /&gt;
 
@@ -197,6 +201,8 @@ There is no other properties in Tabs, just remember to give titles to its every 
     </td>
   </tr>
 </table>
+
+> [Usage instruction of `<Row/> and <Col/>`](schema-layout-tags#lt-row-gt-and-lt-col-gt)
 
 ### &lt;Col /&gt;
 
@@ -277,6 +283,8 @@ There is no other properties in Tabs, just remember to give titles to its every 
   </tr>
 </table>
 
+> [Usage instruction of `<Row/> and <Col/>`](schema-layout-tags#lt-row-gt-and-lt-col-gt)
+
 ### &lt;Condition /&gt;
 
 <table>
@@ -306,3 +314,5 @@ There is no other properties in Tabs, just remember to give titles to its every 
     <td>If match function returns false, then the children field will be. Default <code>disabled</code></td>
   </tr>
 </table>
+
+> [Usage instruction of `<Condition/>`](schema-layout-tags#lt-condition-gt)

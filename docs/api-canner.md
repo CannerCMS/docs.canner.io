@@ -45,27 +45,27 @@ sidebar_label: Canner
       string
     </td>
     <td>
-      The fixed url before cms routes.
+      The base URL before cms routes.
     </td>
   </tr>
   <tr>
     <td>goTo</td>
     <td>({pathname: string} & <a href="api-types#routerparams">RouterParams</a>) => void</td>
-    <td>Change the current location.</td>
+    <td>Change the current location to a pathname.</td>
   </tr>
   <tr>
     <td>routes</td>
     <td>
       Array&lt;string>
     </td>
-    <td>update the current query and refetch data.</td>
+    <td>Update the current query and refetch data.</td>
   </tr>
   <tr>
     <td>routerParams</td>
     <td>
        <a href="api-types#routerparams">RouterParams</a>
     </td>
-    <td>The parameters in url.</td>
+    <td>The parameters in URL.</td>
   </tr>
   <tr>
     <td>intl</td>
@@ -77,7 +77,7 @@ sidebar_label: Canner
   <tr>
     <td>hideButtons</td>
     <td>boolean</td>
-    <td>Default <code>true</code>, set false to hide the confirm and reset buttons at below</td>
+    <td>Default <code>true</code>, set <code>false</code> to hide the confirm and reset buttons at the bottom of the page</td>
   </tr>
   <tr>
     <td>errorHandler</td>

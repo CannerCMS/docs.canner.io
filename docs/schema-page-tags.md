@@ -158,12 +158,19 @@ Display data as a [antd list](https://ant.design/components/list/).
 **Properties**
 - `keyName`: A unique key.
 - `ui`: Chart type. `line`, `bar`, `pie` or `scatter`
+<<<<<<< HEAD
+- `getValue`: Get the value from fetched data, this could allow you to transform your data.
+- `spec`: Overwrite the default `specs` in charts, each chart specification could reference below in each section. Learn more from [Vega Specification](https://vega.github.io/vega/docs/specification/).
+=======
 - `transformData`: Get the value from fetched data, this could allow you to transform your data.
 - `spec`: Overwrite the default `specs` in charts. Learn more from [Vega Specification](https://vega.github.io/vega/docs/specification/).
+>>>>>>> api
 - `graphql`: The graphql string to fetch the data
 - `uiParams`: For more detailed UI settings
 
 ***ui="line" uiParams:***
+
+- [Default specification](https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-line/src/createSpec.js)
 
 <table>
   <tr>
@@ -214,6 +221,8 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 ***ui="bar" uiParams:***
 
+- [Default specification](https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-bar/src/createSpec.js)
+
 <table>
   <tr>
     <th>Name</th>
@@ -257,6 +266,8 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 ***ui="pie" uiParams:***
 
+- [Default specification](https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-pie/src/createSpec.js)
+
 <table>
   <tr>
     <th>Name</th>
@@ -296,6 +307,8 @@ Display data as a [antd list](https://ant.design/components/list/).
 
 
 ***ui="scatter" uiParams:***
+
+- [Default specification](https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-scatter/src/createSpec.js)
 
 <table>
   <tr>
