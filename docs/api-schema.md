@@ -21,37 +21,61 @@ These are some properties you will use frequently.
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>true</b></td>
     <td>Corresponding data key from source.</td>
   </tr>
   <tr>
     <td>ui</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Choose CMS component to display this data. </td>
   </tr>
   <tr>
     <td>packageName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If you are using customized components, enter your package name or the path of your component (<b>Must be either relative path or absolute path</b>). </td>
   </tr>
   <tr>
     <td>uiParams</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>Additional UI parameters for components. </td>
   </tr>
   <tr>
     <td>title</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The label of the field.</td>
   </tr>
   <tr>
     <td>description</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>The description of the field.</td>
   </tr>
@@ -87,120 +111,8 @@ These are some properties you will use frequently.
 
 ### &lt;relation/&gt;
 
-There must be a relation property in relation tag. It is a object containing two keys `type` and `to`, which represents the relation type and relation to which data key in first level data entry.
+> See complete [Relation components list](/component/?selectedKind=Relation&selectedStory=SingleSelect&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
-```
-<relation relation={{
-  type: 'toOne' | 'toMany',
-  to: '<a first level key>'
-}}>
-```
-
-> [Usage instruction of `<relation/>`](schema-data-type-tags#lt-relation-gt)
-
-#### toOne type
-
-For now, we only support ui `singleSelect` to deal with toOne relationship, which is also the default UI of relation tag. You must assign indicated uiParams to make the component works. Let's look at the example.
-
-**toOne relationship example**
-```
-<array keyName="posts">
-  <relation keyName="author"
-    relation={{
-      to: 'users',
-      type: 'toOne'
-    }}
-    uiParams: {{
-      textCol: 'name', // decide the field to represent the user
-      columns: [{ // the columns config of the table which is used to pick relation data.
-        title: 'Name',
-        dataIndex: 'name'
-      }]
-    }}
-  >
-</array>
-<array keyName="users" >
-  <string keyName="name" >
-</array>
-```
-
-**Data**
-
-The data of toOne relationship will be a `string`, for examples, the data of the schema will like below:
-
-```
-{
-  posts: [{
-    id: 'postId1',
-    author: 'userId1' // this is the relation field, to users's id 'userId1'
-  }],
-  users: [{
-    id: 'userId1',
-    name: 'userName1'
-  }, {
-    id: 'userId2',
-    name: 'userName2'
-  }]
-}
-```
-
-
-#### toMany type
-
-For now, we only support UI `multipleSelect` to deal with the `toMany` relationship. You must give it `uiParams` to make the component works. Let's look at the example.
-
-**toMany relationship example**
-
-```
-<array keyName="posts">
-  <string keyName="title" >
-</array>
-<array keyName="users" >
-  <relation keyName="posts"
-    relation={{
-      to: 'posts',
-      type: 'toMany'
-    }}
-    uiParams: {{
-      textCol: 'title', // decide field to represent the post
-      columns: [{ // the columns config of the table which is used to pick relation data.
-        title: 'Title',
-        dataIndex: 'title'
-      }]
-    }}
-  >
-</array>
-```
-
-**Data**
-The data of toMany relationship will be a object and the selected key's value will become `true`. For examples, the data of the schema will be like:
-
-```
-{
-  posts: [{
-    id: 'postId1',
-    title: 'postTitle1'
-  }, {
-    id: 'postId2',
-    title: 'postTitle2'
-  }, {
-    id: 'postId3',
-    title: 'postTitle3'
-  }],
-  users: [{
-    id: 'userId1',
-    posts: { // the relation field
-      postId1: true,
-      postId2: true
-    }
-  }, {
-    id: 'userId2',
-    posts: {  // the relation field
-      postId3: true
-    }
-  }]
-}
-```
 
 ### &lt;object/&gt;
 
@@ -224,13 +136,21 @@ Here are common properties which are available for every layouts.
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>If it's necessary, parent component will use keyName to decide render which children. </td>
   </tr>
   <tr>
     <td>style</td>
-    <td>Object</td>
+    <td>
+      <code>
+        Object
+      </code>
+    </td>
     <td><b>false</b></td>
     <td>
       The style of layout, See
@@ -251,16 +171,24 @@ Here are common properties which are available for every layouts.
     <th>Description</th>
   </tr>
   <tr>
-    <th>title</th>
-    <th>string</th>
-    <th><b>false</b></th>
-    <th>-</th>
+    <td>title</td>
+    <td>
+      <code>
+        string
+      </code>    
+    </td>
+    <td><b>false</b></td>
+    <td>-</td>
   </tr>
   <tr>
-    <th>description</th>
-    <th>string</th>
-    <th><b>boolean</b></th>
-    <th>-</th>
+    <td>description</td>
+    <td>
+      <code>
+        string
+      </code>
+    </td>
+    <td><b>boolean</b></td>
+    <td>-</td>
   </tr>
 </table>
 
@@ -284,33 +212,49 @@ There are no other properties in Tabs, just remember to give titles to its every
     <th>Description</th>
   </tr>
   <tr>
-    <th>align</th>
-    <th>'top' | 'middle' | 'bottom'</th>
-    <th><b>false</b></th>
-    <th>The vertical alignment of the flex layout.</th>
+    <td>align</td>
+    <td>
+      <code>
+        'top' | 'middle' | 'bottom'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>The vertical alignment of the flex layout.</td>
   </tr>
   <tr>
-    <th>justify</th>
-    <th>'start' | 'end' | 'center' | 'space-around' | 'space-between'</th>
-    <th><b>false</b></th>
-    <th>Horizontal arrangement of the flex layout.</th>
+    <td>justify</td>
+    <td>
+      <code>
+        'start' | 'end' | 'center' | 'space-around' | 'space-between'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>Horizontal arrangement of the flex layout.</td>
   </tr>
   <tr>
-    <th>type</th>
-    <th>'flex'</th>
-    <th><b>false</b></th>
-    <th>Layout mode</th>
+    <td>type</td>
+    <td>
+      <code>
+        'flex'
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>Layout mode</td>
   </tr>
   <tr>
-    <th>gutter</th>
-    <th>number | object</th>
-    <th><b>boolean</b></th>
-    <th>
+    <td>gutter</td>
+    <td>
+      <code>
+        number | object
+      </code>
+    </td>
+    <td><b>boolean</b></td>
+    <td>
       Spacing between grids, could be a number or a object like
       <code>
         { xs: 8, sm: 16, md: 24}
       </code>
-    </th>
+    </td>
   </tr>
 </table>
 
@@ -328,70 +272,74 @@ There are no other properties in Tabs, just remember to give titles to its every
     <th>Description</th>
   </tr>
   <tr>
-    <th>offset</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells to offset Col from the left.</th>
+    <td>offset</td>
+    <td width="30%">
+      <code>
+        number
+      </code>
+    </td>
+    <td><b>false</b></td>
+    <td>The number of cells to offset Col from the left.</td>
   </tr>
   <tr>
-    <th>order</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster order, used in flex layout mode.</th>
+    <td>order</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>Raster order, used in flex layout mode.</td>
   </tr>
   <tr>
-    <th>pull</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the left.</th>
+    <td>pull</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the left.</td>
   </tr>
   <tr>
-    <th>push</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>The number of cells that raster is moved to the right.</th>
+    <td>push</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>The number of cells that raster is moved to the right.</td>
   </tr>
   <tr>
-    <th>span</th>
-    <th>number</th>
-    <th><b>false</b></th>
-    <th>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</th>
+    <td>span</td>
+    <td><code>number</code</td>
+    <td><b>false</b></td>
+    <td>Raster number of cells to occupy, 0 corresponds to <code>display: none</code>.</td>
   </tr>
   <tr>
-    <th>xs</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>< 576px</code> and also default setting, could be a span value or an object containing above props</th>
+    <td>xs</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>< 576px</code> and also default setting, could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>sm</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 576px</code> could be a span value or an object containing above props</th>
+    <td>sm</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 576px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>md</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 768px</code> could be a span value or an object containing above props</th>
+    <td>md</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 768px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>lg</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 992px</code> could be a span value or an object containing above props</th>
+    <td>lg</td>
+    <td><code>number | object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 992px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1200px</code> could be a span value or an object containing above props</th>
+    <td>xl</td>
+    <td><code>number|object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 1200px</code> could be a span value or an object containing above props</td>
   </tr>
   <tr>
-    <th>xxl</th>
-    <th>number|object</th>
-    <th><b>false</b></th>
-    <th><code>≥ 1600px</code> could be a span value or an object containing above props</th>
+    <td>xxl</td>
+    <td><code>number|object</code></td>
+    <td><b>false</b></td>
+    <td><code>≥ 1600px</code> could be a span value or an object containing above props</td>
   </tr>
 </table>
 
@@ -407,16 +355,21 @@ There are no other properties in Tabs, just remember to give titles to its every
     <th>Description</th>
   </tr>
   <tr>
-    <th>match</th>
-    <th><code>(value: Object, operator: 'create' | 'update') => boolean </code></th>
-    <th><b>false</b></th>
-    <th>If it returns true, the children of Condition will show as normal.</th>
+    <td>match</td>
+    <td>
+      <pre><code>(
+  value: Object,
+  operator: 'create' | 'update'
+) => boolean</code></pre>
+    </td>
+    <td><b>false</b></td>
+    <td>If it returns true, the children of Condition will show as normal.</td>
   </tr>
   <tr>
-    <th>defaultMode</th>
-    <th>'hidden' | 'disabled'</th>
-    <th><b>false</b></th>
-    <th>If match function returns false, then the children field will be. Default <code>disabled</code></th>
+    <td>defaultMode</td>
+    <td><code>'hidden' | 'disabled'</code></td>
+    <td><b>false</b></td>
+    <td>If match function returns false, then the children field will be. Default <code>disabled</code></td>
   </tr>
 </table>
 
