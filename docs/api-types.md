@@ -401,3 +401,55 @@ The object represents the filter condition. Composited with `field`, `comparison
     <td>less than equal to</td>
   </tr>
 </table>
+
+## Storage
+
+[source code](https://github.com/Canner/canner/tree/canary/packages/canner-storage/src)
+
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>description</td>
+  </tr>
+  <tr>
+    <td>upload</td>
+    <td><code>(file: File, options: {filename: string}, onProgress: (e: {precent: number}) => void)
+    => Promise<{link: string}></code></td>
+    <td>upload file.</td>
+  </tr>
+</table>
+
+## RefId
+
+[source code](https://github.com/Canner/canner/blob/canary/packages/canner-ref-id/src/index.js)
+
+**methods**
+
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>description</td>
+  </tr>
+  <tr>
+    <td>getPathArr</td>
+    <td><code>() => Array&lt;string></code></td>
+    <td>Get the array of paths.</td>
+  </tr>
+  <tr>
+    <td>toString</td>
+    <td><code>() => string</code></td>
+    <td>Change refId to string.</td>
+  </tr>
+  <tr>
+    <td>child</td>
+    <td><code>(keyName: string) => RefId</code></td>
+    <td>Append a keyName after the current refId. Return a new RefId instance.</td>
+  </tr>
+  <tr>
+    <td>remove</td>
+    <td><code>(count: number) => RefId</code></td>
+    <td>Get the ancestor's refId. Return a new RefId instance.</td>
+  </tr>
+</table>
