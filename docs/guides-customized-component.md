@@ -52,7 +52,7 @@ If you are developing customized CMS component you have to fit our naming conven
 `${prefix}-${type}-${name}`
 
 1. `prefix`: prefix namespace of your package
-2. `type`: **must** be one of [component types](advance-component-types.md).
+2. `type`: **must** be one of [data types](schema-data-type-tags.md).
 3. `name`: name of package.
 
 Some valid namings:

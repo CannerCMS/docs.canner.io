@@ -4,6 +4,8 @@ title: UI Components
 sidebar_label: UI Components
 ---
 
+Here are the useful properties that a UI component receieves. In general, you don't have to know this properties unless you want to [customize your component in Canner](guides-customized-component).
+
 ## Basic
 
 <table>
@@ -14,54 +16,75 @@ sidebar_label: UI Components
   </tr>
   <tr>
     <td>keyName</td>
-    <td>string</td>
+    <td><code>string</code></td>
     <td>the key</td>
   </tr>
   <tr>
     <td>refId</td>
-    <td>RefId</td>
-    <td>Every component has its unique RefId. In order to get specific field. See <a href="concept-refid.html">refId</a> for details</td>
+    <td><code>RefId</code></td>
+    <td>Every component has its unique <code>refId</code>, in order to get the specific field. See <a href="concept-refid">refId</a> for details</td>
   </tr>
   <tr>
     <td>items</td>
-    <td>object</td>
-    <td>The items in schema. For example, an object schema:
-      <pre><code>{type: 'object', items: {name: {type: 'string'}}}</code></pre>
+    <td><code>object</code></td>
+    <td>The data schema of children.</td>
+  </tr>
+  <tr>
+    <td>relation</td>
+    <td><pre><code>{
+  to: string,
+  relation: 'toMany' | 'toOne'
+}</code></pre>
     </td>
+    <td>The relation schema of children.</td>
+  </tr>
+  <tr>
+    <td>toolbar</td>
+    <td><code><a href="api-types#toolbar">Toolbar</a></code></td>
+    <td>The toolbar schema.</td>
   </tr>
   <tr>
     <td>uiParams</td>
-    <td>object</td>
+    <td><code>object</code></td>
     <td>
-      The additional of UI parameters.
+      The additional UI parameters.
     </td>
   </tr>
   <tr>
     <td>disabled</td>
-    <td>boolean | {create: boolean, update: boolean, delete: boolean}</td>
+    <td><code>boolean</code></td>
     <td>Whether field is disabled</td>
   </tr>
   <tr>
-    <td>imageServiceConfig</td>
-    <td>ImageServiceConfig</td>
-    <td>The configuration for antd upload. See <a href="https://github.com/Canner/image-service-config">@canner/image-service-config</a> for details.</td>
+    <td>imageStorage</td>
+    <td><code><a href="api-types#storage">Storage</a></code></td>
+    <td>Used to upload images, see <a href="guides-storage">Storage</a> to know more.</td>
   </tr>
   <tr>
     <td>onChange</td>
-    <td><code>(refId, changeType, value) => Promise<*></code></td>
-    <td><code>onChange</code> function is how you update data from component to CMS data, the first argument is the field's <code>refId</code>, second argument is change type, third is its value</td>
-  </tr>
-  <tr>
-    <td>onDeploy</td>
-    <td><code>(callback: (value: any) => any) => void</code></td>
-    <td>
-      Will execute before Canner deploys all changes to servers, you can do expensive transformation on the value instead of transforming them at every change.
+    <td width="30%">
+      <pre><code>(
+  <a href="api-types#refid" />refId</a>,
+  'create' | 'update' | 'delete' | 'swap',
+  value
+) => Promise<*></code></pre>
     </td>
+    <td><code>onChange</code> function let you update data from component to CMS data, the first argument is the field's <a href="api-types#refid">refId</a>, second argument is change type, third one is its value</td>
   </tr>
   <tr>
     <td>goTo</td>
     <td><code>string => void</code></td>
-    <td>the method direct to other page</td>
+    <td>the method to change route</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td><code>string | number | boolean | array | object</code></td>
+    <td>The value of this component.</td>
+  </tr>
+  <tr>
+    <td>rootValue</td>
+    <td><code>Object</code></td>
+    <td>The root value, it's useful if you want to get other field values.</td>
   </tr>
 </table>
 
@@ -69,46 +92,37 @@ sidebar_label: UI Components
 
 <table>
   <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>description</td>
-  </tr>
-  <tr>
-    <td>query</td>
-    <td>
-      <code>
-        Query
-      </code>
-    </td>
-    <td></td>
+    <th>name</th>
+    <th>type</th>
+    <th>description</th>
   </tr>
   <tr>
     <td>fetch</td>
-    <td>
+    <td width="50%">
       <code>
-        (key: string) => Promise&lt;RootValue>
+        (key: string) => Promise&lt;OriginValue>
       </code>
     </td>
-    <td></td>
+    <td>Get the value of the given key.</td>
   </tr>
   <tr>
     <td>subscribe</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>request</td>
-    <td></td>
-    <td></td>
+    <td>
+      <pre><code>(
+  key: string,
+  callback: (data: *) => void
+) => Subscription</code></pre>
+    </td>
+    <td>Subscribe the data of the given key, and then when the data changes, the callback will be executed with the new data.</td>
   </tr>
   <tr>
     <td>deploy</td>
-    <td></td>
-    <td></td>
+    <td><code>(key: string) => Promise&lt;void></code></td>
+    <td>Deploy the changes of the given key.</td>
   </tr>
   <tr>
     <td>reset</td>
-    <td></td>
-    <td></td>
+    <td><code>(key: string) => Promise&lt;void></code></td>
+    <td>Reset the changes of the given key.</td>
   </tr>
 </table>

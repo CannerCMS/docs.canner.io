@@ -14,7 +14,7 @@ sidebar_label: Container
   </tr>
   <tr>
     <td>schema</td>
-    <td>
+    <td width="30%">
       <code>
         <a href="api-types#loadedschema">
           LoadedSchema
@@ -63,7 +63,9 @@ sidebar_label: Container
   <tr>
     <td>dataDidChange</td>
     <td>
-      <code><a href="api-types#changeddata">ChangedData</a> => void</code>
+      <code>
+        <a href="api-types#changeddata">ChangedData</a> => void
+      </code>
     </td>
     <td>
       The callback when data change, same as the <code>dataDidChange</code> in properties of <code><a href="api-canner#properties">canner</a></code>.

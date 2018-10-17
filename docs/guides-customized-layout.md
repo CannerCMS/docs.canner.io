@@ -6,7 +6,7 @@ sidebar_label: Customized Layout
 
 > `React` version must be >= 16.x version
 
-If you don't know **Layout**, please read [Advance Layout](advance-layout.md) first.
+If you don't know **Layout**, please read [Layout](schema-layout-tags.md) first.
 
 ## Write a Layout (Tab pane)
 
@@ -40,7 +40,7 @@ export default class Tab extends React.Component {
 }
 ```
 
-> See full list of [API of layouts](api-layouts.md)
+> See full list of [API of layouts](api-layout-components.md)
 
 ## Add Customized Layout Tag
 
