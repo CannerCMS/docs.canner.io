@@ -6,6 +6,8 @@ sidebar_label: Storage
 
 Canner provides different storages for you to customize where to store files of your CMS.
 
+> Currently, files are not your local data, files are supported cloud services data.
+
 ## Usage
 
 New the storage instances, and put them into `imageStorage` or `fileStorage` properties of any data tags. Storage instance must be an object generated from [@canner/storage]( https://github.com/Canner/canner/blob/canary/packages/canner-storage/src/index.js).
