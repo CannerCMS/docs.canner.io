@@ -6,7 +6,7 @@ sidebar_label: Storage
 
 Canner provides different storages for you to customize where to store files of your CMS.
 
-> Currently, files are not your local data, files are supported cloud services data.
+> Currently, files are not from your local server, storage features are supported cloud services data.
 
 ## Usage
 
