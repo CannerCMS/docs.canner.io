@@ -39,7 +39,7 @@ There are several available tags, as listed below and it's categorized into five
 - \<Default />
 - \<Condition />
 
-[***Page***](schema-page-tags.md): Provides analytics features of the CMS, using with `<component>`
+[***Page***](schema-page-tags.md): Provides analytics features of the CMS, works with `<component>`
 
 - \<page />
 - \<component />
@@ -341,7 +341,7 @@ module.exports = <root>
 
 ## Page tags
 
-Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `component` to show the data.
+Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `<component>` to show the data.
 
 **examples**
 
