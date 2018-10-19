@@ -15,7 +15,7 @@ import builder, {Block} from 'canner-script';
 const schema = (
   <root dict={dict} imageStorage={imageStorage} fileStorage={fileStorage}>
     <page keyName="dashboard">
-      <indicator keyName="productsAmount" {...} />
+      <component keyName="productsAmount" {...} />
     </page>
     <object keyName="info" resolver={InfoResolver}>
       <Block>

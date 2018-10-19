@@ -19,7 +19,7 @@ This is mostly use with [`<Page/>` tags](schema-page-tags.md), Since **Page tags
 If you want to build a chart using `users` data, but you don't want to appear in your CMS.
 
 ```jsx
-<chart
+<component
   ui="bar"
   keyName="user-bar"
   uiParams={userBarUIConfig}
