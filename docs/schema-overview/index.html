@@ -67,11 +67,10 @@
 <li>&lt;Default /&gt;</li>
 <li>&lt;Condition /&gt;</li>
 </ul>
-<p><a href="/docs/schema-page-tags"><strong><em>Page</em></strong></a>: Provides analytics features of the CMS, such as indicators, charts, etc...</p>
+<p><a href="/docs/schema-page-tags"><strong><em>Page</em></strong></a>: Provides analytics features of the CMS, works with <code>&lt;component&gt;</code></p>
 <ul>
-<li>&lt;Page /&gt;</li>
-<li>&lt;Indicator /&gt;</li>
-<li>&lt;Chart /&gt;</li>
+<li>&lt;page /&gt;</li>
+<li>&lt;component /&gt;</li>
 </ul>
 <p><a href="schema-toolbar-tags"><strong><em>Toolbars</em></strong></a>: Toolbar allows you to make queries, export, import and pagination features.</p>
 <ul>
@@ -210,7 +209,7 @@ modules<span class="token punctuation">.</span><span class="token keyword">expor
       <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dashbaord<span class="token punctuation">"</span></span>
       <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Dashboard<span class="token punctuation">"</span></span>
     <span class="token punctuation">></span></span>
-      <span class="token operator">&lt;</span>chart <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>component <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>page</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span>
       <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span>
@@ -329,11 +328,11 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </ul>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="page-tags"></a><a href="#page-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Page tags</h2>
-<p>Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use <code>indicator</code> and <code>chart</code> to show the data.</p>
+<p>Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use <code>&lt;component&gt;</code> to show the data.</p>
 <p><strong>examples</strong></p>
 <pre><code class="hljs">&lt;root&gt;
   &lt;page keyName=<span class="hljs-string">"dashboard"</span>&gt;
-    &lt;indicator
+    &lt;component
       ui=<span class="hljs-string">"amount"</span>
       keyName=<span class="hljs-string">"productsPie"</span>
       graphql={`
@@ -359,7 +358,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><a href="/docs/schema-page-tags">All &lt;page/&gt; tags</a></li>
 </ul>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start-quick-html5up"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-root-tag"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/8/2018, 6:36:48 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#jsx-tags">JSX Tags</a><ul class="toc-headings"><li><a href="#why">Why</a></li><li><a href="#how">How</a></li></ul></li><li><a href="#wrapped-in-lt-root-gt">Wrapped in &lt;root/&gt;</a></li><li><a href="#first-level-tags">First level tags</a></li><li><a href="#data-type-tags">Data Type tags</a></li><li><a href="#layout-tags">Layout tags</a></li><li><a href="#toolbar-tags">Toolbar tags</a></li><li><a href="#page-tags">Page tags</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start-quick-html5up"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-root-tag"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-19 17:48:31</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#jsx-tags">JSX Tags</a><ul class="toc-headings"><li><a href="#why">Why</a></li><li><a href="#how">How</a></li></ul></li><li><a href="#wrapped-in-lt-root-gt">Wrapped in &lt;root/&gt;</a></li><li><a href="#first-level-tags">First level tags</a></li><li><a href="#data-type-tags">Data Type tags</a></li><li><a href="#layout-tags">Layout tags</a></li><li><a href="#toolbar-tags">Toolbar tags</a></li><li><a href="#page-tags">Page tags</a></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };

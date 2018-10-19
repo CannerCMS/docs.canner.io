@@ -35,19 +35,18 @@
             });
         </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Page Tags</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
 <p>Page tags are designed to create a <strong>dashboard/admin-like</strong> page, which lets you have an overview of your data.</p>
-<p><code>&lt;page/&gt;</code>, <code>&lt;indicator/&gt;</code> and <code>&lt;chart/&gt;</code> tags works differently than <a href="/docs/schema-data-type-tags">Data Type Tags</a>. Page's <code>keyName</code> is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through <code>graphql</code> property.</p>
+<p>Canner supports two page tags, <code>&lt;page&gt;</code> and <code>&lt;component&gt;</code>, which work differently than <a href="/docs/schema-data-type-tags">Data Type Tags</a>. Page's <code>keyName</code> is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through <code>graphql</code> property.</p>
 <p><img src="/docs/assets/schema-page-tags/vega.png" alt="vega"></p>
-<h2><a class="anchor" aria-hidden="true" id="basic-page"></a><a href="#basic-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Page</h2>
-<p>Canner supports <code>&lt;page&gt;</code>, <code>&lt;indicator&gt;</code> and <code>&lt;chart&gt;</code> page tags. For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.</p>
-<p><strong><em>IMPORTANT:</em></strong> <code>&lt;indicator/&gt;</code> and <code>&lt;chart/&gt;</code> tags provide <code>graphql</code> props to access any data in your data sources, but you will need to declare your data types before accessing your data. If you don't want your data to render into UI, you can use <a href="/docs/schema-type-tags">Type tags</a>.</p>
+<p>For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.</p>
 <p><strong><em>Usage</em></strong></p>
 <pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>page</span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>overview<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Row</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Col</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>indicator</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
           <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>amount<span class="token punctuation">"</span></span>
           <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>totalUsers<span class="token punctuation">"</span></span>
+          <span class="token attr-name">packageName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@canner/antd-indicator-amount<span class="token punctuation">"</span></span>
           <span class="token attr-name">graphql</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
             <span class="token template-string"><span class="token string">`
               query users {
@@ -63,9 +62,9 @@
         <span class="token punctuation">/></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Col</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Col</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>indicator</span>
-          <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list<span class="token punctuation">"</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
           <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>posts<span class="token punctuation">"</span></span>
+          <span class="token attr-name">packageName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@canner/antd-indicator-list<span class="token punctuation">"</span></span>
           <span class="token attr-name">graphql</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
             <span class="token template-string"><span class="token string">`
               query posts {
@@ -78,10 +77,10 @@
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Col</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Row</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Col</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chart</span>
-        <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
         <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user-bar<span class="token punctuation">"</span></span>
         <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>userBarUIConfig<span class="token punctuation">}</span></span>
+        <span class="token attr-name">packageName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@canner/victory-bar<span class="token punctuation">"</span></span>
         <span class="token attr-name">graphql</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
           <span class="token template-string"><span class="token string">`
             query users {
@@ -94,297 +93,45 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>page</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="lt-page-gt"></a><a href="#lt-page-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;page/&gt;</h3>
-<p>This tag is the root tag of the other page tags. All its children will be rendered as a page content.</p>
-<h3><a class="anchor" aria-hidden="true" id="lt-indicator-ui-amount-gt"></a><a href="#lt-indicator-ui-amount-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;indicator ui=&quot;amount&quot; /&gt;</h3>
-<p>Display a value in a card form.</p>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>keyName</code>: A unique key</li>
-<li><code>graphql</code>: The graphql string to fetch the data</li>
-<li><code>transformData</code>: Get the value from fetched data, this could allow you to transform your data.</li>
-<li><code>uiParams</code>: For more detailed UI settings
-<ul>
-<li><code>formatter</code>: Format the value for the final view</li>
-</ul></li>
-</ul>
-<p><strong>Example:</strong></p>
-<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>indicator</span>
-  <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>amount<span class="token punctuation">"</span></span>
-  <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>totalUsers<span class="token punctuation">"</span></span>
-  <span class="token attr-name">graphql</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
-    <span class="token template-string"><span class="token string">`
-      query users {
-        users {name age}
-      }
-    `</span></span>
-  <span class="token punctuation">}</span></span>
-  <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Total users<span class="token punctuation">"</span></span>
-  <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
-    formatter<span class="token punctuation">:</span> v <span class="token operator">=></span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>v<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
-  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
-  <span class="token attr-name">transformData</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>v <span class="token operator">=></span> v<span class="token punctuation">.</span>length<span class="token punctuation">}</span></span>
-<span class="token punctuation">/></span></span>
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="lt-indicator-ui-list-gt"></a><a href="#lt-indicator-ui-list-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;indicator ui=&quot;list&quot; /&gt;</h3>
-<p>Display data as a <a href="https://ant.design/components/list/">antd list</a>.</p>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>keyName</code>: A unique</li>
-<li><code>graphql</code>: The graphql string to fetch the data</li>
-<li><code>uiParams</code>: For more detailed UI settings</li>
-</ul>
-<pre><code class="hljs css language-jsx"><span class="token operator">&lt;</span>indicator
-  ui<span class="token operator">=</span><span class="token string">"list"</span>
-  keyName<span class="token operator">=</span><span class="token string">"posts"</span>
-  graphql<span class="token operator">=</span><span class="token punctuation">{</span>
-    <span class="token template-string"><span class="token string">`
-      query posts {
-        posts(first: 10) {title image}
-      }
-    `</span></span>
-  <span class="token punctuation">}</span>
-  uiParams<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
-    avatar<span class="token punctuation">:</span> value <span class="token operator">=></span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>Avatar <span class="token comment">// antd</span>
-        src<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">.</span>image <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span>image<span class="token punctuation">.</span>url<span class="token punctuation">}</span>
-        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>color<span class="token punctuation">:</span> <span class="token string">'#f56a00'</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token string">'#fde3cf'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
-      <span class="token operator">></span>
-        <span class="token punctuation">{</span>value<span class="token punctuation">.</span>title<span class="token punctuation">}</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Avatar</span><span class="token punctuation">></span></span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> value <span class="token operator">=></span> value<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
-    description<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">null</span><span class="token punctuation">,</span>
-    content<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">null</span>
-  <span class="token punctuation">}</span><span class="token punctuation">}</span>
-<span class="token operator">/</span><span class="token operator">></span>
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="lt-chart-gt"></a><a href="#lt-chart-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;chart /&gt;</h3>
-<p><code>&lt;chart/&gt;</code> allows you to build charts in your CMS.</p>
-<blockquote>
-<p>Canner <code>&lt;chart/&gt;</code> is based on an awesome chart library <a href="https://github.com/vega/vega">Vega</a>. Source code: <a href="https://github.com/Canner/vega-canner-components">vega-canner-components</a></p>
-</blockquote>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>keyName</code>: A unique key.</li>
-<li><code>ui</code>: Chart type. <code>line</code>, <code>bar</code>, <code>pie</code> or <code>scatter</code></li>
-<li><code>transformData</code>: Get the value from fetched data, this could allow you to transform your data.</li>
-<li><code>spec</code>: Overwrite the default <code>specs</code> in charts. Learn more from <a href="https://vega.github.io/vega/docs/specification/">Vega Specification</a>.</li>
-<li><code>graphql</code>: The graphql string to fetch the data</li>
-<li><code>uiParams</code>: For more detailed UI settings</li>
-</ul>
-<p><strong><em>ui=&quot;line&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-line/src/createSpec.js">Default specification</a></li>
-</ul>
+<h2><a class="anchor" aria-hidden="true" id="lt-page-gt"></a><a href="#lt-page-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;page/&gt;</h2>
+<p>Page tag is one of the <a href="schema-overview#firstleveltags">first level tag</a>, you can use it to create a page whose route is same as the <code>keyName</code> property.</p>
+<h2><a class="anchor" aria-hidden="true" id="lt-component-gt"></a><a href="#lt-component-gt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&lt;component /&gt;</h2>
+<p>Unlike <a href="schema-data-type-tags">data tags</a>, there is no <code>ui</code> property in <code>&lt;component/&gt;</code> tag, you have to give it a <code>packageName</code> property instead. It provides you a way to simply use your react components.</p>
+<p><strong><em>IMPORTANT:</em></strong> <code>&lt;component/&gt;</code> tag provides <code>graphql</code> property to access any data in your data sources, but you will need to declare your data types before accessing your data. If you don't want your data to render into UI, you can use <a href="/docs/schema-type-tags">Type tags</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="common-properties"></a><a href="#common-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Properties</h3>
 <table>
   <tr>
     <th>Name</th>
-    <th>Types</th>
+    <th>Type</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>interpolate</td>
-    <td><code>string // default linear</code></td>
-    <td>"basis" | "cardinal" | "catmull-rom" | "linear" | "monotone" | "natural" | "step" | "step-after" | "step-before"</td>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td>
-<pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
-<p><strong><em>ui=&quot;bar&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-bar/src/createSpec.js">Default specification</a></li>
-</ul>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td><pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
-<p><strong><em>ui=&quot;pie&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-pie/src/createSpec.js">Default specification</a></li>
-</ul>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>field</td>
+    <td>packageName</td>
     <td><code>string</code></td>
-    <td></td>
+    <td>It can be a name or path of a node modules.</td>
   </tr>
   <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
+    <td>graphql</td>
+    <td><code>string</code></td>
+    <td>The graphql query. Canner uses it to fetch the data for the component.</td>
   </tr>
   <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>color</td>
-    <td>
-<pre><code class="hljs">{
-  range?: string, // default category20
-  field?: string // default id
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales/#range">range</a></td>
-  </tr>
-   <tr>
-    <td>sort</td>
-    <td><code>boolean // default false</code></td>
-    <td>optional</td>
+    <td>transformData</td>
+    <td><code>* => *</code></td>
+    <td>Transform the data which is fetched from graphql query, so that the component can directly receive the data it needs. </td>
   </tr>
 </table>
-<p><strong><em>ui=&quot;scatter&quot; uiParams:</em></strong></p>
-<ul>
-<li><a href="https://github.com/Canner/vega-canner-components/blob/master/packages/vega-chart-scatter/src/createSpec.js">Default specification</a></li>
-</ul>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td><pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><pre><code class="hljs">{
-  field: string,
-  scale?: string, // default linear
-  title?: string
-}</code></pre></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td><code>{
-      field: string
-    }</code></td>
-    <td>The text of field will be shown once the hover event is fired</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
-<p><strong>Chart example</strong></p>
-<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chart</span>
-  <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span>
-  <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user-bar<span class="token punctuation">"</span></span>
-  <span class="token attr-name">graphql</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
-    <span class="token template-string"><span class="token string">`
-      query users {
-        users(first: 10) {name age}
-      }
-    `</span></span>
-  <span class="token punctuation">}</span></span>
-  <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
-    height<span class="token punctuation">:</span> <span class="token number">150</span><span class="token punctuation">,</span>
-    width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-    color<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      field<span class="token punctuation">:</span> <span class="token string">'name'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    x<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      field<span class="token punctuation">:</span> <span class="token string">'name'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    y<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      field<span class="token punctuation">:</span> <span class="token string">'age'</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
-<span class="token punctuation">/></span></span>
-</code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-toolbar-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-type-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>10/16/2018, 7:19:01 PM</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#basic-page">Basic Page</a><ul class="toc-headings"><li><a href="#lt-page-gt">&lt;page/&gt;</a></li><li><a href="#lt-indicator-ui-amount-gt">&lt;indicator ui=&quot;amount&quot; /&gt;</a></li><li><a href="#lt-indicator-ui-list-gt">&lt;indicator ui=&quot;list&quot; /&gt;</a></li><li><a href="#lt-chart-gt">&lt;chart /&gt;</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
+<h3><a class="anchor" aria-hidden="true" id="victory-chart"></a><a href="#victory-chart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Victory Chart</h3>
+<blockquote>
+<p><a href="https://formidable.com/open-source/victory/">Victory</a> is an opinionated, but fully overridable, ecosystem of composable React components for building interactive data visualizations</p>
+</blockquote>
+<p>To generate chart components with Victory, see <a href="https://github.com/Canner/victory-canner-components">victory-canner-components</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="vega-chart"></a><a href="#vega-chart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vega Chart</h3>
+<blockquote>
+<p><a href="https://vega.github.io/vega/">Vega</a> is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.</p>
+</blockquote>
+<p>To generate chart components with Vega, see <a href="https://github.com/Canner/vega-canner-components">vega-canner-components</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/schema-toolbar-tags"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/schema-type-tags"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-19 18:01:50</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#lt-page-gt">&lt;page/&gt;</a></li><li><a href="#lt-component-gt">&lt;component /&gt;</a><ul class="toc-headings"><li><a href="#common-properties">Common Properties</a></li><li><a href="#victory-chart">Victory Chart</a></li><li><a href="#vega-chart">Vega Chart</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><script>
             ((window.gitter = {}).chat = {}).options = {
               room: 'Canner/CannerCMS'
             };
