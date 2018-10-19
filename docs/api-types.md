@@ -20,7 +20,7 @@ sidebar_label: Types
   <tr>
     <td>pageSchema</td>
     <td><code>CannerSchema</code></td>
-    <td>The JSON object which represents the pages which are contructed with charts and indicators.</td>
+    <td>The JSON object which represents the pages which are contructed with &lt;component>.</td>
   </tr>
   <tr>
     <td>visitors</td>

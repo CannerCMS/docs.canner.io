@@ -39,11 +39,10 @@ There are several available tags, as listed below and it's categorized into five
 - \<Default />
 - \<Condition />
 
-[***Page***](schema-page-tags.md): Provides analytics features of the CMS, such as indicators, charts, etc...
+[***Page***](schema-page-tags.md): Provides analytics features of the CMS, works with `<component>`
 
-- \<Page />
-- \<Indicator />
-- \<Chart />
+- \<page />
+- \<component />
 
 [***Toolbars***](schema-toolbar-tags): Toolbar allows you to make queries, export, import and pagination features.
 
@@ -203,7 +202,7 @@ export default (
       keyName="dashbaord"
       title="Dashboard"
     >
-      <chart {...} />
+      <component {...} />
     </page>
     <object
       keyName="info"
@@ -342,14 +341,14 @@ module.exports = <root>
 
 ## Page tags
 
-Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `indicator` and `chart` to show the data.
+Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `<component>` to show the data.
 
 **examples**
 
 ```
 <root>
   <page keyName="dashboard">
-    <indicator
+    <component
       ui="amount"
       keyName="productsPie"
       graphql={`
