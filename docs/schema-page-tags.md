@@ -58,7 +58,7 @@ For example, the schema below can be used to create a dashboard page shows about
       <component
         keyName="user-bar"
         uiParams={userBarUIConfig}
-        packageName="@canner/vega-chart-bar"
+        packageName="@canner/victory-bar"
         graphql={
           `
             query users {
@@ -78,7 +78,7 @@ Page tag is one of the [first level tag](schema-overview#firstleveltags), you ca
 
 ## &lt;component /&gt;
 
-Unlike [data tags](schema-data-type-tags), there is no `ui` property in `<component/>` tag, you have to give it a `packageName` property instead. It provides you a way to use your react components simply. 
+Unlike [data tags](schema-data-type-tags), there is no `ui` property in `<component/>` tag, you have to give it a `packageName` property instead. It provides you a way to simply use your react components.
 
 ***IMPORTANT:*** `<component/>` tag provides `graphql` property to access any data in your data sources, but you will need to declare your data types before accessing your data. If you don't want your data to render into UI, you can use [Type tags](schema-type-tags.md).
 
@@ -108,14 +108,16 @@ Unlike [data tags](schema-data-type-tags), there is no `ui` property in `<compon
   </tr>
 </table>
 
+### Victory Chart
+
+> [Victory](https://formidable.com/open-source/victory/) is an opinionated, but fully overridable, ecosystem of composable React components for building interactive data visualizations
+
+To generate chart components with Victory, see [victory-canner-components](https://github.com/Canner/victory-canner-components).
+
+
 ### Vega Chart
 > [Vega](https://vega.github.io/vega/) is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.
 
 
 To generate chart components with Vega, see [vega-canner-components](https://github.com/Canner/vega-canner-components).
 
-### Victory Chart
-
-> [Victory](https://formidable.com/open-source/victory/) is an opinionated, but fully overridable, ecosystem of composable React components for building interactive data visualizations
-
-To generate chart components with Victory, see [victory-canner-components](https://github.com/Canner/victory-canner-components).
