@@ -4,7 +4,7 @@ title: Development
 sidebar_label: Development
 ---
 
-We try to make development Canner in local environment as easy as possible.  You can easily serve and preview your Content Management System in your local machine by running
+We try to make developing Canner in local environment as easy as possible.  You can easily serve and preview your Content Management System in your local machine by running
 
 ```sh
 canner script:serve
