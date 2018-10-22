@@ -55,6 +55,7 @@ For example, if you want to replace `primary-color` with `#07a4b8`
 }
 ```
 
+> See [theme guide](guides-theme) to know more usage.
 
 ## Sidebar Menu (sidebarMenu)
 
@@ -86,3 +87,5 @@ Each menu should contains two properties `title` and `pathname`. `pathname` must
 This will generate sidebar menu as below
 
 ![result](/docs/assets/cli/canner-config-sidebar.png)
+
+> See [sidebar guide](guides-sidebar) to know more usage.
