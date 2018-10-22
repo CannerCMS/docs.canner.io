@@ -65,10 +65,6 @@
         "title": "Commands",
         "sidebar_label": "Commands"
       },
-      "cli-development": {
-        "title": "Development",
-        "sidebar_label": "Development"
-      },
       "cli-import-data": {
         "title": "Import Data",
         "sidebar_label": "Import Data"
@@ -181,6 +177,14 @@
         "title": "Default Value",
         "sidebar_label": "Default Value"
       },
+      "guides-deployment": {
+        "title": "Deployment",
+        "sidebar_label": "Deployment"
+      },
+      "guides-development": {
+        "title": "Development",
+        "sidebar_label": "Development"
+      },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
@@ -188,6 +192,10 @@
       "guides-resolver": {
         "title": "Resolver",
         "sidebar_label": "Resolver"
+      },
+      "guides-setup": {
+        "title": "Setup",
+        "sidebar_label": "Setup"
       },
       "guides-storage": {
         "title": "Storage",
