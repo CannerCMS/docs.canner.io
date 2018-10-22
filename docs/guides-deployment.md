@@ -6,7 +6,7 @@ sidebar_label: Deployment
 
 ## Introduction
 
-Just two files [canner.schema.js](guides-setup#intitialyourschema) and [cloud.config.js](cli-cloud-config-js), and then you can publish your CMS on Canner with the simple command.
+Just two files [canner.schema.js](guides-setup#initial-your-schema) and [cloud.config.js](cli-cloud-config-js), and then you can publish your CMS on Canner with the simple command.
 
 ```
 $ canner script:deploy

@@ -22,7 +22,7 @@ By default, `script:serve` is using the [localStorage](https://developer.mozilla
 
 ## Changing Number of Items in an Array
 
-We provides the `-l, --listLength` option for you to edit the number of fake items in an array.
+We provide the `-l, --listLength` option for you to edit the number of fake items in an array.
 
 ```sh
 $ canner script:serve --listLength 50
