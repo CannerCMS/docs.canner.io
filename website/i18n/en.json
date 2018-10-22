@@ -69,14 +69,6 @@
         "title": "Import Data",
         "sidebar_label": "Import Data"
       },
-      "cli-installation": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
-      },
-      "cli-production": {
-        "title": "Production",
-        "sidebar_label": "Production"
-      },
       "cli-upload-image": {
         "title": "Upload image via CLI",
         "sidebar_label": "Upload image"
@@ -197,9 +189,17 @@
         "title": "Setup",
         "sidebar_label": "Setup"
       },
+      "guides-sidebar": {
+        "title": "Sidebar",
+        "sidebar_label": "Sidebar"
+      },
       "guides-storage": {
         "title": "Storage",
         "sidebar_label": "Storage"
+      },
+      "guides-theme": {
+        "title": "Theme",
+        "sidebar_label": "Theme"
       },
       "guides-validation": {
         "title": "Validation",

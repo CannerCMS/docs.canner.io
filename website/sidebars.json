@@ -23,6 +23,8 @@
       "guides-setup",
       "guides-development",
       "guides-deployment",
+      "guides-theme",
+      "guides-sidebar",
       "guides-storage",
       "guides-internationalization",
       "guides-validation",
