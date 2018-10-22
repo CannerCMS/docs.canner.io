@@ -114,6 +114,28 @@ Unlike [data tags](schema-data-type-tags), there is no `ui` property in `<compon
 
 To generate chart components with Victory, see [victory-canner-components](https://github.com/Canner/victory-canner-components).
 
+#### Example
+
+```js
+ <component
+  packageName="@canner/victory-area"
+  keyName="victory-area"
+  transformData={data => {
+    return data.map(datum => ({
+      x: datum.type,
+      y: datum.value
+    }));
+  }}
+  graphql={`
+    query {
+      data {
+        type
+        value
+      }
+    }
+  `}
+/>
+```
 
 ### Vega Chart
 > [Vega](https://vega.github.io/vega/) is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.
@@ -121,3 +143,33 @@ To generate chart components with Victory, see [victory-canner-components](https
 
 To generate chart components with Vega, see [vega-canner-components](https://github.com/Canner/vega-canner-components).
 
+#### Example
+
+```js
+<component
+  packageName="@canner/vega-chart-bar"
+  keyName="vega-bar"
+  uiParams={{
+    fill: "#07a4b8",
+    x: {
+      field: "type",
+      title: "Types"
+    },
+    y: {
+      field: "value",
+      title: "Value"
+    },
+    height: 200,
+    width: "100%"
+  }}
+  transformData={data => data}
+  graphql={`
+    query {
+      chart {
+        type
+        value
+      }
+    }
+  `}
+  />
+```
