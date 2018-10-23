@@ -8,9 +8,8 @@ sidebar_label: Customized CMS Component
 
 Use `packageName` to select your customized component to handle the data.
 
-> packageName **must** be a literal string, cannot be a variable.
-
-> If you want to load your package in your file system, you must use **relative or absolute path** start with `./` or `/`. Otherwise, it will be treated as a package in `node_modules`.
+> - packageName **must** be a literal string, cannot be a variable
+> - If you want to load your package in your file system, you must use **relative or absolute path** start with `./` or `/`. Otherwise, it will be treated as a package in `node_modules`
 
 
 ***npm package***
@@ -22,7 +21,7 @@ import c from 'canner-script';
 export default (
   <root>
     <array packageName="example-array-gallery">
-      <file keyName="imgSrc" />
+      <image keyName="imgSrc" />
       <string keyName="imgName" />
     </array>
   </root>
@@ -38,7 +37,7 @@ import path from 'path';
 export default (
   <root>
     <array packageName={path.resolve(__dirname, 'path/to/example-array-gallery')}>
-      <file keyName="imgSrc" />
+      <image keyName="imgSrc" />
       <string keyName="imgName" />
     </array>
   </root>
@@ -87,7 +86,7 @@ Add a new key in your `package.json`. If `canner` key is not set in your `packag
     <td>cannerDataType</td>
     <td>
       <code>
-    'array' | 'object' | 'string' | 'number' | 'boolean' | 'geoPoint' | 'date' | 'file' | 'relation'
+    'array' | 'object' | 'string' | 'number' | 'boolean' | 'geoPoint' | 'date' | 'file' | 'relation' | 'json'
       </code>
     </td>
     <td>
@@ -172,9 +171,174 @@ equals to
 </root>;
 ```
 
-## Customized CMS component
 
-> `React` version must be >= 16.x version
+## Get Value
+
+In your customize component, canner will fetch and parse the data corresponding the given [schema](guides-schema-overview.md), so you can directly get the value from the props.
+
+## Change Value
+
+You can use `onChange` method to mutate the data with the arguments, `refId`, `action`, `value`.
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>type</th>
+  </tr>
+  <tr>
+    <td>refId</td>
+    <td>
+      <code>
+      Ref | {firstRefId: RefId, secondRefId: RefId}
+      </code>
+    </td>
+  </tr>
+  <tr>
+    <td>action</td>
+    <td>
+      <code>
+      'update' | 'create' | 'delete' | 'swap'
+      </code>
+    </td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>
+      <code>
+      boolean | number | string | array | object
+      </code>
+    </td>
+  </tr>
+</table>
+
+### RefId
+
+`refId` is the instance of [RefId](https://github.com/Canner/canner/blob/canary/packages/canner-ref-id/src/index.js) which represents the position of the component in the data. Every component will receive a unique `refId`, so we can use it to let canner know what data I want to edit.
+
+
+**data**
+```json
+{
+  info: {
+    name: {
+      first: 'First Name',
+      last: 'Last Name'
+    }
+  },
+  posts: [{
+    info: {
+      description: 'post description'
+    }
+  }]
+}
+```
+The `name` and the `posts` refIds in the data above.
+
+**example**
+
+```js
+const nameId = new RefId('info/name');
+console.log(nameId.getPathArr());
+// ['info', 'name']
+console.log(nameId.toString());
+// 'info/name'
+console.log(nameId.child('first').toString());
+// 'info/name/first
+console.log(nameId.remove().toString());
+// 'info'
+const postsId = new RefId('posts/0/info');
+console.log(postsId.getPathArr());
+// ['info', '0']
+console.log(postsId.toString());
+// 'info/0'
+console.log(postsId.child('description').toString());
+// 'info/0/description
+console.log(postsId.remove().toString());
+// 'info'
+```
+
+### Usage
+
+#### Create Action
+
+The refId should point to an array.
+
+```js
+// correct
+onChange(new RefId('posts'), 'create', newItem)
+// incorrect
+onChange(new RefId('posts/0'), 'create', newItem)
+
+```
+
+The third argument is optional, if yout don't give it, canner will automatically create an empty data according the schema.
+
+```js
+// posts schema
+// {
+//   posts: {
+//     type: 'array',
+//     items: {
+//       type: 'object',
+//       items: {
+//         title: {
+//           type: 'string'
+//         }
+//       }
+//     }
+//   }
+// }
+onChange(new RefId('posts'), 'create');
+// eqauls to
+onChange(new RefId('posts'), 'create', {title: ''});
+```
+
+#### Update Action
+
+[TODO]
+
+This action is most common used. The actual behavior is `set`, so if you want to update an object data, merge with the origin data first.
+
+For an example, a customized component for the name field in the data below:
+
+```js
+{
+  info: {
+    name: {
+      first: 'First',
+      last: 'Last'
+    }
+  }
+}
+```
+
+```js
+// --- in react component---
+onFirstNameChange = newValue => {
+  const {ref, onChange, value} = this.props;
+  // call onChange with mergedValue
+  //
+}
+
+render() {
+  return (
+    <React.Fragment>
+      <React.
+    </React.Fragment>
+  )
+}
+//---------------------------
+
+```
+#### Delete Action
+[TODO]
+
+#### Swap Action
+[TODO]
+
+## Examples
+
+> `React` version must be >= 16.3 version
 
 ### Object type
 
