@@ -20,7 +20,11 @@
       "credential-prisma"
     ],
     "Guides": [
-      "guides-resolver",
+      "guides-setup",
+      "guides-development",
+      "guides-deployment",
+      "guides-theme",
+      "guides-sidebar",
       "guides-storage",
       "guides-internationalization",
       "guides-validation",
@@ -32,10 +36,7 @@
       "guides-canner-prisma-type"
     ],
     "CLI": [
-      "cli-installation",
       "cli-canner-cloud-js",
-      "cli-development",
-      "cli-production",
       "cli-import-data",
       "cli-commands"
     ],
