@@ -162,8 +162,7 @@
         "sidebar_label": "Customized Layout"
       },
       "guides-customized-toolbar": {
-        "title": "Customized Toolbar",
-        "sidebar_label": "Customized Toolbar"
+        "title": "guides-customized-toolbar"
       },
       "guides-default-value": {
         "title": "Default Value",
