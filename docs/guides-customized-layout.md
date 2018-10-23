@@ -4,14 +4,36 @@ title: Customized Layout
 sidebar_label: Customized Layout
 ---
 
-> `React` version must be >= 16.x version
+> `React` version must be >= 16.3 version
 
 If you don't know **Layout**, please read [Layout](schema-layout-tags.md) first.
 
-## Write a Layout (Tab pane)
+## Introduction
 
-Below is a customized layout for a tab pane that maps each child to a tab.
+You can simply customize your layout tag by giving the component in `<Layout />` which exported from `canner-script`.
 
+```js
+/** @jsx builder */
+import builder, {Layout} from 'canner-script';
+import CustomizeLayoutComponent from 'path/to/component';
+
+const CustomizeLayout = props => <Layout component={CustomizeLayoutComponent} {...props} />;
+
+export default (
+  <root>
+    <object keyName="info">
+      <CustomizeLayout>
+        <string keyName="name" />
+      </CustomizeLayout>
+    </object>
+  </root>
+)
+```
+
+## Example
+
+### Tabs layout
+**customize tabs layout**
 ```js
 import * as React from 'react';
 import {Tabs} from 'antd';
@@ -46,8 +68,8 @@ export default class Tab extends React.Component {
 
 Using your customized layout is as easy as defining it in the `name` prop in `<Layout/>`.
 
+**canner.schema.js**
 ```jsx
-// canner.schema.js
 /** @jsx builder */
 
 import builder, {Layout} from '@canenr/canner-script';
@@ -78,3 +100,5 @@ module.exports = (
   </root>
 );
 ```
+
+> Further information, see [layout api](api-layouts.md)
