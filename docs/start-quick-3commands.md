@@ -14,6 +14,8 @@ Make sure you have already install NodeJS and use the command below to install `
 npm install -g @canner/cli
 ```
 
+> If you have trouble install through `yarn`, please try `npm`.
+
 ## 2. Initialize Schema
 
 After installing **Canner CLI** in your own project, go in current project folder and run the command:
@@ -32,24 +34,27 @@ Initializing schema...
 ✔ Initialized
 ```
 
-Choose any except `None`, and you'll see the folders `schema`, `cert` and `canner.schema.js` appearing in your project folder. `canner.schema.js` and the folder `schema` are the schemas that Canner use them to build the CMS. The folder `cert` stores certification files for Canner to connect data source.
+Choose any except `None`, and you'll see the folders `schema` and `canner.schema.js` appearing in your project folder. `canner.schema.js` and the folder `schema` are the schemas that Canner use them to build the CMS.
 
 > - Learn more about [`schema`](file-canner-schema-js.md)
-> - Learn more about [`cert`](file-cert.md) 
 
-## 3. Serving in Local Machine
+## 3. Preview in Local Machine
 
-In your project folder, you can just run `canner script:serve` to build your CMS and host it. Open [http://localhost:9090](http://localhost:9090), you will see the result as below.
+You can use `canner script:serve` to preview your result on local machines.
+
+In your project folder, you can run `canner script:serve` to build your CMS. Open [http://localhost:9090](http://localhost:9090), you will see the result as below.
 
 ![users-cms](/docs/assets/users-cms.png)
 
+You could preview your data in different environments by using `--env` to preview CMS with different data sources. If you didn't provide `--env`, data will serve through localstorage.
 
-> You can also serve data from different environment settings, learn more [here](cli-development.md).
+
+> Serve data from different environment settings, learn more [here](cli-development.md).
 
 
 ## 4. Next Step
 
-You can follow the document below to build CMS on Canner with connecting your data source.
+You can follow the instruction below to build CMS on Canner with connecting your data source.
 
-- [connect to Firebase admin](start-quick-firebase.md)
-- [connect to Prisma](start-quick-prisma.md)
+- [connect to Firebase admin](tutorial-connect-to-firebase.md)
+- [connect to Prisma](tutorial-connect-to-prisma.md)

@@ -13,9 +13,9 @@ The outermost tag in canner schema. It actually returns an object containing wit
 /** @jsx builder */
 import builder, {Block} from 'canner-script';
 const schema = (
-  <root dict={dict} connector={Connector} graphqlClient={GraphqlClient} imageStorage={imageStorage} fileStorage={fileStorage}>
+  <root dict={dict} imageStorage={imageStorage} fileStorage={fileStorage}>
     <page keyName="dashboard">
-      <indicator keyName="productsAmount" {...} />
+      <component keyName="productsAmount" {...} />
     </page>
     <object keyName="info" resolver={InfoResolver}>
       <Block>
@@ -30,11 +30,10 @@ console.log(schema)
  *   schema: {info: {...}},
  *   pageSchema: {dashboard: {...}},
  *   visitors: [{...}], // created by Block
- *   connector: Connector,
- *   graphqlClient: GraphqlClient,
  *   imageStorages: {info: imageStorage},
  *   fileStorages: {info: fileStorage},
- *   dict: dict
+ *   dict: dict,
+ *   // other internal settings...
  * }
 **/
 ```

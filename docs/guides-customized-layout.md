@@ -6,7 +6,7 @@ sidebar_label: Customized Layout
 
 > `React` version must be >= 16.3 version
 
-If you don't know **Layout**, please read [layout tags](guides-layout.md) first.
+If you don't know **Layout**, please read [Layout](schema-layout-tags.md) first.
 
 ## Introduction
 
@@ -61,6 +61,12 @@ export default class Tab extends React.Component {
   }
 }
 ```
+
+> See full list of [API of layouts](api-layout-components.md)
+
+## Add Customized Layout Tag
+
+Using your customized layout is as easy as defining it in the `name` prop in `<Layout/>`.
 
 **canner.schema.js**
 ```jsx

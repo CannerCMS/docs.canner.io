@@ -6,15 +6,17 @@ sidebar_label: Data Type Tags
 
 ## Introduction
 
-In canner CMS schema, we force developers to define data types in each field because data sources (e.g. Firebase, Prisma...) deal with the data types in various ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
+In canner CMS schema, we force developers to define data types in each field because data sources in platforms GraphQL servers, Prisma, Firebase, Firestore, etc... deal with the data types in various ways. For example, when you're dealing with the `datetime` type, you can either save it as `Date` type if supported in your data source or save as an ISO8601 string.
 
 Furthermore, while developing a component and making a query to the API, we provide additional queries for some data types. For example, a field with an `array` type and objects as children can make a query as below:
 
 ```graphql
-// images with pagination query
+# images with pagination query
 {
   users {
     id
+
+    # get first page images
     images(pagination: {first: 1}) {
       url
     }
@@ -23,15 +25,15 @@ Furthermore, while developing a component and making a query to the API, we prov
 
 ## Common Properties
 
-Here is some common property for all data types `keyName`, `ui`, and `title`.
+Here are some common properties for all data types `keyName`, `ui`, and `title`.
 
 ### keyName
 
-Define the key name of this field which will refer to data key in source. For example, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
+Define the key name of certain field which will refer to data key in source. For example, if there is a data `{title: 'Title'}` in an object, you can define the string data with `<string keyName="title" />`
 
 ### ui
 
-We support several UI components for developers to use in different use cases, you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
+We support several UI components for developers to use in different use cases ([View complete lists](/components)), you can simply choose your UI Component with a string. For examples, `<string keyName="content" ui="textarea">`.
 
 ### title
 
@@ -47,7 +49,7 @@ The label of a field.
 string
 ```
 
-> See complete [String components list](/component/?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [String components list](/component?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;boolean/&gt;
 
@@ -57,7 +59,7 @@ string
 boolean
 ```
 
-> See complete [Boolean components list](/component/?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Boolean components list](/component?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;number/&gt;
 
@@ -67,7 +69,7 @@ boolean
 number
 ```
 
-> See complete [Number components list](/component/?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Number components list](/component?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;object/&gt;
 
@@ -77,7 +79,7 @@ number
 {[string]: any}
 ```
 
-> See complete [Object components list](/component/?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Object components list](/component?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ### &lt;array/&gt;
@@ -88,7 +90,7 @@ number
 Array<any>
 ```
 
-> See complete [Array components list](/component/?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Array components list](/component?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ## Special types
@@ -111,7 +113,7 @@ string
 2018-05-15T08:28Z
 ```
 
-> See complete [Date components list](/component/?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Date components list](/component?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;geoPoint/&gt;
 
@@ -139,7 +141,7 @@ string
 }
 ```
 
-> See complete [GeoPoint components list](/component/?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [GeoPoint components list](/component?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;image/&gt;
 
@@ -172,7 +174,7 @@ Static files that are images.
 }
 ```
 
-> See complete [Image components list](/component/?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [Image components list](/component?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;file/&gt;
 
@@ -206,7 +208,7 @@ Static files that are **not included** in [image types](schema-data-type-tags#lt
 }
 ```
 
-> See complete [File components list](/component/?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> See complete [File components list](/component?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;relation/&gt;
 

@@ -17,14 +17,14 @@ Canner now supporting three `canner.cloud.js` settings
 `env` key allows you to set different environments with different resources. It can only set with an object, different keys represent different environments, each setting's value **must be an array**, for example:
 
 ```js
-const {FirebaseCert} = require("canner-credential");
+const {FirebaseCredential} = require("canner-credential");
 
 module.exports = {
   "env": {
     // production firebase setting
-    "default": [new FirebaseCert(require("path to firebase credential"))],
+    "default": [new FirebaseCredential(require("path to firebase credential"))],
     // test1 firebase settings
-    "test1": [new FirebaseCert(require("path to firebase credential"))]
+    "test1": [new FirebaseCredential(require("path to firebase credential"))]
   }
 }
 ```
@@ -55,6 +55,7 @@ For example, if you want to replace `primary-color` with `#07a4b8`
 }
 ```
 
+> See [theme guide](guides-theme) to learn more usages.
 
 ## Sidebar Menu (sidebarMenu)
 
@@ -86,3 +87,5 @@ Each menu should contains two properties `title` and `pathname`. `pathname` must
 This will generate sidebar menu as below
 
 ![result](/docs/assets/cli/canner-config-sidebar.png)
+
+> See [sidebar guide](guides-sidebar) to learn more usages.

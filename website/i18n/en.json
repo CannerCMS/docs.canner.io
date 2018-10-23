@@ -17,10 +17,6 @@
         "title": "Canner Router",
         "sidebar_label": "Canner Router"
       },
-      "advance-canner-script": {
-        "title": "About canner-script (JSX for Canner)",
-        "sidebar_label": "canner-script"
-      },
       "advance-cms-helpers": {
         "title": "canner-helpers",
         "sidebar_label": "CMS component helpers"
@@ -29,33 +25,37 @@
         "title": "Test CMS components",
         "sidebar_label": "Test CMS components"
       },
-      "advance-component-types": {
-        "title": "Types of CMS components",
-        "sidebar_label": "Types of CMS components"
-      },
-      "api-canner": {
-        "title": "canner",
-        "sidebar_label": "canner"
-      },
       "api-canner-helpers": {
         "title": "Canner Helpers",
         "sidebar_label": "Canner Helpers"
       },
-      "api-ui-components": {
-        "title": "CMS UI Components",
-        "sidebar_label": "CMS UI Components"
+      "api-canner": {
+        "title": "Canner",
+        "sidebar_label": "Canner"
       },
-      "api-layouts": {
-        "title": "Layouts",
-        "sidebar_label": "Layouts"
+      "api-container": {
+        "title": "Container",
+        "sidebar_label": "Container"
+      },
+      "api-layout-components": {
+        "title": "Layout Components",
+        "sidebar_label": "Layout Components"
       },
       "api-schema": {
         "title": "Schema",
         "sidebar_label": "Schema"
       },
-      "api-toolbar": {
-        "title": "Toolbar",
-        "sidebar_label": "Toolbar"
+      "api-toolbar-components": {
+        "title": "Toolbar Components",
+        "sidebar_label": "Toolbar Components"
+      },
+      "api-types": {
+        "title": "Types",
+        "sidebar_label": "Types"
+      },
+      "api-ui-components": {
+        "title": "UI Components",
+        "sidebar_label": "UI Components"
       },
       "cli-canner-cloud-js": {
         "title": "canner.cloud.js",
@@ -65,21 +65,9 @@
         "title": "Commands",
         "sidebar_label": "Commands"
       },
-      "cli-development": {
-        "title": "Development",
-        "sidebar_label": "Development"
-      },
       "cli-import-data": {
         "title": "Import Data",
         "sidebar_label": "Import Data"
-      },
-      "cli-installation": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
-      },
-      "cli-production": {
-        "title": "Production",
-        "sidebar_label": "Production"
       },
       "cli-upload-image": {
         "title": "Upload image via CLI",
@@ -181,6 +169,14 @@
         "title": "Default Value",
         "sidebar_label": "Default Value"
       },
+      "guides-deployment": {
+        "title": "Deployment",
+        "sidebar_label": "Deployment"
+      },
+      "guides-development": {
+        "title": "Development",
+        "sidebar_label": "Development"
+      },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
@@ -189,17 +185,25 @@
         "title": "Resolver",
         "sidebar_label": "Resolver"
       },
+      "guides-setup": {
+        "title": "Setup",
+        "sidebar_label": "Setup"
+      },
+      "guides-sidebar": {
+        "title": "Sidebar",
+        "sidebar_label": "Sidebar"
+      },
       "guides-storage": {
         "title": "Storage",
         "sidebar_label": "Storage"
       },
+      "guides-theme": {
+        "title": "Theme",
+        "sidebar_label": "Theme"
+      },
       "guides-validation": {
         "title": "Validation",
         "sidebar_label": "Validation"
-      },
-      "guides-writing-schema": {
-        "title": "CMS Schema",
-        "sidebar_label": "CMS Schema"
       },
       "schema-data-type-tags": {
         "title": "Data Type Tags",
@@ -224,6 +228,10 @@
       "schema-toolbar-tags": {
         "title": "Toolbar Tags",
         "sidebar_label": "Toolbar Tags"
+      },
+      "schema-type-tags": {
+        "title": "Type Tags",
+        "sidebar_label": "Type Tags"
       },
       "start-quick-3commands": {
         "title": "Building CMS in 3 commands",

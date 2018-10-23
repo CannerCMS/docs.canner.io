@@ -5,21 +5,19 @@ sidebar_label: Overview
 ---
 
 ## Introduction
-Unlike other CMS solutions, Canner CMS provides components for developers to pick and assemble components that fit their needs.
+Unlike other CMS solutions, Canner CMS provides components for developers to pick and assemble components that fits their needs.
 
 A CMS schema is constructed with the `jsx` syntax, describing the structure of the source data, how to connect to your service, and what the CMS UI should expect in certain fields.
 
 > Normally, CMS schema is stored in `canner.schema.js` file.
 
-
-
 ## JSX Tags
-There are several available tags, as listed below.
+There are several available tags, as listed below and it's categorized into five categories.
 
-**Root**
+[***Root***](schema-root-tag.md)
 - \<root />
 
-***Data Types***: Represents the data types of the data:
+[***Data Types***](schema-data-type-tags.md): Data types of the data from source and which UI should it rendered:
 
 - \<string />
 - \<boolean />
@@ -31,7 +29,7 @@ There are several available tags, as listed below.
 - \<array />
 - \<object />
 
-***Layouts***: The layouts and appearance of the CMS
+[***Layouts***](schema-layout-tags.md): The layouts and visual designs of the CMS.
 
 - \<Collapse />
 - \<Block />
@@ -41,13 +39,12 @@ There are several available tags, as listed below.
 - \<Default />
 - \<Condition />
 
-***Page***: Provides overview features of the CMS
+[***Page***](schema-page-tags.md): Provides analytics features of the CMS, works with `<component>`
 
-- \<Page />
-- \<Indicator />
-- \<Chart />
+- \<page />
+- \<component />
 
-***Toolbars***:
+[***Toolbars***](schema-toolbar-tags): Toolbar allows you to make queries, export, import and pagination features.
 
 - \<toolbar />
   - \<sorter />
@@ -64,7 +61,7 @@ There are several available tags, as listed below.
 
 ### Why
 
-JSX lets developers declare schema in a declarative and intuitive way.
+JSX lets developers declare schema in a declarative and intuitive way. JSX is like XML but with more powerful abilities of Javascript such as import modules, declare variables, function calls, and [more](why-jsx.md).
 
 ```js
 // jsx
@@ -75,7 +72,7 @@ JSX lets developers declare schema in a declarative and intuitive way.
 </root>
 ```
 
-is equivalent to 
+is equivalent to (Canner compiler will compile into a JSON format)
 
 ```js
 // schema in JSON
@@ -144,7 +141,7 @@ c('root', null,
 
 ## Wrapped in &lt;root/&gt;
 
-The jsx schema **must** be wrapped in the `<root />`. `<root />` will return object with several keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
+The JSX schema **must** be wrapped in the `<root />`. `<root />` will return object with several keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
 
 
 ***Incorrect***
@@ -193,7 +190,7 @@ module.exports = (
 ```
 
 ## First level tags
-The first level tags of <root/> must be one of `<object/>`, `<array/>` and `<page />`, first level tags will eventually become CMS's tabs. If you want to set up different connector in a different tab you could set connectors individually. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
+The first level tags of `<root/>` must be one of [`<object/>`](schema-data-type-tags#lt-object-gt), [`<array/>`](schema-data-type-tags#lt-array-gt), [`<page />`](schema-page-tags), `<objectType/>`, and `<arrayType/>`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
 
 ```js
 /** @jsx builder */
@@ -205,7 +202,7 @@ export default (
       keyName="dashbaord"
       title="Dashboard"
     >
-      <chart {...} />
+      <component {...} />
     </page>
     <object
       keyName="info"
@@ -223,6 +220,10 @@ export default (
 )
 ```
 
+As below
+
+![preview menu](/docs/assets/schema-overview/default-sidebar.png)
+
 ## Data Type tags
 
 Type tags are the most basic UI component for CMS.  For example,  you could create a textarea for a string field.
@@ -235,7 +236,7 @@ Using textarea UI:
 
 Every UI component should pass a `keyName`, which matches the key name of your data source.
 
-For example, your data is like below
+For example, your data in your source is as below
 
 ```js
 {
@@ -295,7 +296,7 @@ module.exports = <root>
 ```
 
 > Further information
-> - [All layout tags](schema-layout-tags.md)  
+> - [All \<layout/> tags](schema-layout-tags.md)  
 
 ## Toolbar tags
 
@@ -335,19 +336,19 @@ module.exports = <root>
 
 ```
 > Further information
-> - [All toolbar tags](schema-toolbar-tags.md)  
+> - [All \<toolbar/> tags](schema-toolbar-tags.md)  
 
 
 ## Page tags
 
-Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `indicator` and `chart` to show the data.
+Pages tags are used to create the additional page that is not included the data, such as dashboard or overview page. You can use `<component>` to show the data.
 
 **examples**
 
 ```
 <root>
   <page keyName="dashboard">
-    <indicator
+    <component
       ui="amount"
       keyName="productsPie"
       graphql={`
@@ -368,4 +369,4 @@ Pages tags are used to create the additional page that is not included the data,
 
 ```
 > Further information
-> - [All page tags](schema-page-tags.md)  
+> - [All \<page/> tags](schema-page-tags.md)  

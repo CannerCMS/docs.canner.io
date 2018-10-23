@@ -35,7 +35,6 @@ export default class Fields extends Component {
   onChange = (e, type) => {
     const {value } = this.props;
     const newValue = e.target.value;
-    console.log(newValue)
   }
 
   render() {
@@ -112,7 +111,7 @@ module.exports = function({attributes}) {
 }
 ```
 
-> Learn more about [`canner.def.js`](advance-customized-component.md#canner.def.js)
+> Learn more about [`canner.def.js`](guides-customized-component#cannerdefjs)
 
 ## 4. Publish
 
@@ -123,10 +122,10 @@ Your `name` in `package.json` **must** be format like
 `${prefix}-${type}-${name}` or `@${scope}/${prefix}-${type}-${name}`
 
 1. `prefix`: prefix namespace of your package
-2. `type`: **must** be one of [component types](advance-component-types.md).
+2. `type`: **must** be one of [component types](schema-data-type-tags).
 3. `name`: name of package.
 
-> Learn more at [customized component - Naming](advance-customized-component.md#naming)
+> Learn more at [customized component - Naming](guides-customized-component#naming)
 
 Here's your `package.json` might look like.
 
@@ -163,7 +162,7 @@ And remember to add a new key called `canner` in `package.json`, in here add
 }
 ```
 
-> Learn more how to setup [Canner configuration](advance-customized-component.md#canner-configuration)
+> Learn more how to setup [Canner configuration](guides-customized-component#canner-configuration)
 
 
 ## 5. Install in CMS

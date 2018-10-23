@@ -11,7 +11,8 @@
       "schema-data-type-tags",
       "schema-layout-tags",
       "schema-toolbar-tags",
-      "schema-page-tags"
+      "schema-page-tags",
+      "schema-type-tags"
     ],
     "Credential": [
       "credential-intro",
@@ -19,8 +20,11 @@
       "credential-prisma"
     ],
     "Guides": [
-      "guides-connector",
-      "guides-resolver",
+      "guides-setup",
+      "guides-development",
+      "guides-deployment",
+      "guides-theme",
+      "guides-sidebar",
       "guides-storage",
       "guides-internationalization",
       "guides-validation",
@@ -32,10 +36,7 @@
       "guides-canner-prisma-type"
     ],
     "CLI": [
-      "cli-installation",
       "cli-canner-cloud-js",
-      "cli-development",
-      "cli-production",
       "cli-import-data",
       "cli-commands"
     ],
@@ -64,6 +65,7 @@
     "Guides": [
       "guides-community-intro",
       "guides-basic-setup",
+      "guides-connector",
       "guides-canner-schema-loader"
     ],
     "Tutorial": [
@@ -73,8 +75,7 @@
       "advance-canner-cms",
       "advance-canner-router",
       "advance-canner-container",
-      "advance-cms-helpers",
-      "advance-cms-test"
+      "advance-cms-helpers"
     ],
     "Concept": [
       "concept-refid",
@@ -87,11 +88,12 @@
   "api": {
     "API": [
       "api-schema",
-      "api-ui-components",
-      "api-layouts",
-      "api-toolbar",
       "api-canner",
-      "api-canner-helpers"
+      "api-container",
+      "api-ui-components",
+      "api-layout-components",
+      "api-toolbar-components",
+      "api-types"
     ]
   },
   "why": {

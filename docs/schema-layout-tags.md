@@ -6,9 +6,9 @@ sidebar_label: Layout Tags
 
 ## Introduction
 
-Layout tags are used to create grids, containers, and blocks in CMS. This lets you create customized design layouts and visual design for your CMS.
+Layout tags are used to create grids, containers, and blocks in CMS. And allows you create customized design layouts and visual design for your CMS.
 
-> Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged in your CMS**.
+> Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged (Grids, tabs, etc..) in your CMS**.
 
 ## Basic Layout
 
@@ -16,7 +16,7 @@ Canner supports several basic layouts. Remember to import them before using them
 
 ```jsx
 /** @jsx c */
-import c, {Default, Block, Tabs} from 'canner-script';
+import c, {Default, Block, Tabs, Row, Col, Condition} from 'canner-script';
 ```
 
 ***Usage***
@@ -53,9 +53,16 @@ import c, {Default, Block, Tabs} from 'canner-script';
 
 ### &lt;Default/&gt;
 
-All children will be rendered as normal, this layout is useful when you want to group some fields on UI without changing the data structure.
+**Usage**
 
-Such as when you are using tab, the example below will become four tabs.
+```js
+/** @jsx c */
+import c, {Default} from 'canner-script';
+```
+
+`<Default/>` is used to group tags. All children will be rendered as normal, this layout is useful when you want to group some fields on UI without changing the data structure.
+
+Such as when you are using tab, example below will become four tabs.
 
 ```js
   <Tabs>
@@ -66,7 +73,7 @@ Such as when you are using tab, the example below will become four tabs.
   </Tabs>
 ```
 
-you can use `<Default/>` to group fields, it will become only two tabs.
+You can use `<Default/>` to group fields, it will become only two tabs.
 
 ```jsx
 <Tabs>
@@ -83,13 +90,37 @@ you can use `<Default/>` to group fields, it will become only two tabs.
 
 ### &lt;Block/&gt;
 
+**Usage**
+
+```js
+/** @jsx c */
+import c, {Block} from 'canner-script';
+```
+
 The children in `Block` will be put into a Card component.
+
+**Preview**
+
+```jsx
+<Block title="Your Profile">
+  <string title="What is your name?" keyName="name"/>
+</Block>
+```
+
+Will render to
+
+![card](/docs/assets/schema-overview/layout-card.png)
 
 ### &lt;Tabs/&gt;
 
-Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default />` because it can group fields without adding other styles. 
+**Usage**
 
-> Notice that each child in Tabs should have keyName to let it works because `<Tabs />` will use the keyName to tell canner to render which child.
+```js
+/** @jsx c */
+import c, {Tabs} from 'canner-script';
+```
+
+Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default />` because it can group fields without adding other styles. 
 
 ```js
 <Tabs>
@@ -104,11 +135,62 @@ Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default /
 <Tabs>
 ```
 
+**Preview**
+
+> Notice that each child in Tabs should have keyName to let it works because `<Tabs />` will use the keyName to tell canner to render which child.
+
+```js
+<Tabs>
+  <string title="Your profile" keyName="name"/>
+  <string title="Your resume" keyName="employee"/>
+</Tabs>
+```
+
+Will render to
+
+![tabs](/docs/assets/schema-overview/layout-tabs.png)
+
 ### &lt;Row /&gt; and &lt;Col /&gt;
+
+**Usage**
+
+```js
+/** @jsx c */
+import c, {Row, Col} from 'canner-script';
+```
 
 The grid system same as [antd grid](https://ant.design/components/grid/).
 
+**Preview**
+
+```js
+<Row>
+  <Col span={8}>
+    <Block title="Your Profile">
+      <string title="What is your name?" keyName="name"/>
+    </Block>
+  </Col>
+  <Col span={15} offset={1}>
+    <Block title="Your Resume">
+      <string title="Where to you graduate?" keyName="college"/>
+    </Block>
+  </Col>
+</Row>
+```
+
+Will render to
+
+![grid](/docs/assets/schema-overview/layout-grid.png)
+
+
 ### &lt;Condition /&gt;
+
+**Usage**
+
+```js
+/** @jsx c */
+import c, {Condition} from 'canner-script';
+```
 
 Control the children field whether is meeting a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
 
@@ -132,7 +214,7 @@ For examples, if you want to show the field `address` only when users choose the
     return value.type === 'DELIVERY';
   }}>
     <string keyName="address" />
-  <Condition />
+  </Condition>
 </object>
 ```
 
@@ -148,6 +230,43 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
   >
 // ...
 ```
+
+**Preview**
+
+```js
+<object keyName="shipment">
+  <string
+    keyName="type"
+    ui="select"
+    uiParams={{
+      options: [{
+        text: 'FedEx',
+        value: "fedex"
+      }, {
+        text: 'In Person',
+        value: "inperson"
+      }, {
+        text: 'None',
+        value: "none"
+      }]
+    }}
+  />
+  <Condition match={(value, operator) => {
+    return value.type === 'fedex';
+  }}>
+    <string keyName="address" title="Enter address please?" />
+  </Condition>
+  <Condition match={(value, operator) => {
+    return value.type === 'inperson';
+  }}>
+    <string keyName="name" title="What is your name?" />
+  </Condition>
+</object>
+```
+
+Will render to
+
+![preview](/docs/assets/schema-overview/layout-condition.gif)
 
 
 > Further information, see [condition fields](guides-condition-fields.md)

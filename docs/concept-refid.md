@@ -8,7 +8,7 @@ sidebar_label: What is RefId?
 
 > Normally, you don't need to handle `RefId` yourself, since it is managed by our framework.
 
-> Full list of [RefId APIs](https://github.com/Canner/canner-ref-id#methods)
+> Full list of [RefId APIs](https://github.com/Canner/canner/tree/canary/packages/canner-ref-id)
 
 Here an example how we reference to a specific data in an object:
 

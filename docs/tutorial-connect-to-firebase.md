@@ -40,31 +40,41 @@ It will ask you some questions to initialize your project with template schema.
 ? What data source do you want to use? Firbase Admin
 ```
 
-Then you'll see `.cannerrc`, `canner.schema.js`, `schema`, `cert` in your folder.
+Then you'll see `.cannerrc`, `canner.schema.js`, `canner.cloud.js` in your folder.
 
 > - Learn more about [`.cannerrc`](file-cannerrc.md) 
 > - Learn more about [`canner.schema.js`](file-canner-schema-js.md) 
-> - Learn more about [`cert`](file-cert.md) 
+> - Learn more about [`canner.cloud.js`](cli-canner-cloud-js.md) 
 
 
 ## 3 Edit Firebase configuration.
 
-Download the firebase private key and put in `cert/firebase` folder.
+Download the firebase private key and place in your project.
 
 Go to **Project settings** > **Service accounts** > **Generate new private key**
 
 ![firebasesdk](/img/firebasesdk.gif)
 
-Edit the `schema/utils.js` with your Firebae project id.
+Edit `canner.cloud.js`:
+
 ```js
-exports.connector = new FirebaseRtdbAdminConnector({
-  projectId: '<your firebase projectId>'
-});
+const {FirebaseCredential} = require("canner-credential");
+
+module.exports = {
+  "env": {
+    // production firebase setting
+    "default": [new FirebaseCredential(require("path to firebase credential"))]
+  }
+}
 ```
 
 > We need your Firebase private key to access more control in your Firebase, such as more complete APIs, and storage APIs.
 
+You could preview your CMS locally, by entering
 
+```
+canner script:serve --env=prod
+```
 
 
 ## 4. Deploy

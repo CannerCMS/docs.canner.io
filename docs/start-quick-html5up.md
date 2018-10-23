@@ -46,13 +46,7 @@ npm install -g firebase-tools
 npm install -g @canner/cli
 ```
 
-if you can’t install try yarn
-
-```sh
-yarn global add @canner/cli
-```
-
-And login your account
+And login your Canner account
 
 ```sh
 canner login
@@ -73,7 +67,7 @@ canner init
   Create a new app
 ```
 
-select **"Create a new app"** , this will create a new project and init. If you create through website select **“Select from existed apps”** and select the app.
+select **"Create a new app"** , this will create a new project and initialize. If you create through website select **“Select from existed apps”** and select the app.
 
 ## 5. Replace ‘public/index.html’ & ‘canner.schema.js’ Firebase config
 
@@ -94,9 +88,31 @@ Replace `public/index.html` & `./utils.js` firebase config to your config.
 
 ## 6. Download firebase private key
 
-Because Canner CMS needs to integrate with your Firebase database, Firebase storage and more. So you have to download your private key on Firebase and put it in `cert/firebase `folder (create one in `htmlup-lens` folder).
+Because Canner CMS needs to integrate with your Firebase database, Firebase storage and more. So you have to download your private key on Firebase, edit `canner.cloud.js` (create one in `htmlup-lens` folder if it's not exist).
+
+```js
+const {FirebaseCredential} = require("canner-credential");
+
+module.exports = {
+  env: {
+    // production data endpoint configuration
+    default: new FirebaseCredential(require("path to your firebase config"))
+  }
+};
+
+```
 
 ![firebase-key](/docs/assets/tutorial-html5up/firebase-key.gif)
+
+## 7. Preview in your local machine
+
+Now, you could preview your CMS in your local machine.
+
+```sh
+canner script:serve --env prod
+```
+
+> `--env prod` will use your default `env` setting in `canner.cloud.js`.
 
 ## 7. Deploy your website on Firebase
 
@@ -126,11 +142,6 @@ Deploy schema
 
 ```sh
 canner script:deploy
-```
-
-Install required package in global
-```
-npm i -g install @canner/cli-firebase-tool
 ```
 
 Import data

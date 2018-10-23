@@ -6,22 +6,25 @@ sidebar_label: Page Tags
 
 ## Introduction
 
-Page tags are designed to create a **dashboard-like** page, which lets you have an overview of your data.
+Page tags are designed to create a **dashboard/admin-like** page, which lets you have an overview of your data.
 
-## Basic Page
+Canner supports two page tags, `<page>` and `<component>`, which work differently than [Data Type Tags](schema-data-type-tags.md). Page's `keyName` is not reference to data, instead it is only a unique id for each component. Each tags could access to any data in the database by querying through `graphql` property.
 
-Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, the schema below can be used to create a dashboard page shows about the stat of a blog's users and posts.
+![vega](/docs/assets/schema-page-tags/vega.png)
+
+For example, the schema below can be used to create a dashboard page shows about the statistics of a blog's users and posts.
 
 ***Usage***
 
-```xml
+```jsx
 <root>
   <page keyName="overview">
     <Row>
       <Col>
-        <indicator
+        <component
           ui="amount"
           keyName="totalUsers"
+          packageName="@canner/antd-indicator-amount"
           graphql={
             `
               query users {
@@ -33,13 +36,13 @@ Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, th
           uiParams={{
             formatter: v => `${v}`
           }}
-          getValue={v => v.length}
+          transformData={v => v.length}
         />
       </Col>
       <Col>
-        <indicator
-          ui="list"
+        <component
           keyName="posts"
+          packageName="@canner/antd-indicator-list"
           graphql={
             `
               query posts {
@@ -52,10 +55,10 @@ Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, th
       </Col>
     </Row>
     <Col>
-      <chart
-        ui="bar"
+      <component
         keyName="user-bar"
         uiParams={userBarUIConfig}
+        packageName="@canner/victory-bar"
         graphql={
           `
             query users {
@@ -69,295 +72,104 @@ Canner supports `<page>`, `<indicator>` and `<chart>` page tags. For example, th
 </root>
 ```
 
-### &lt;page/&gt;
+## &lt;page/&gt;
 
-This tag is the root tag of the other page tags. All its children will be rendered as a page content.
+Page tag is one of the [first level tag](schema-overview#firstleveltags), you can use it to create a page whose route is same as the `keyName` property.
 
-### &lt;indicator ui="amount" /&gt;
+## &lt;component /&gt;
 
-Display a value in a card form.
+Unlike [data tags](schema-data-type-tags), there is no `ui` property in `<component/>` tag, you have to give it a `packageName` property instead. It provides you a way to simply use your react components.
 
-**Properties**
+***IMPORTANT:*** `<component/>` tag provides `graphql` property to access any data in your data sources, but you will need to declare your data types before accessing your data. If you don't want your data to render into UI, you can use [Type tags](schema-type-tags.md).
 
-- keyName
-- graphql: The graphql string to fetch the data
-- getValue: Get the vaule from fetched data
-- uiParams: For more detailed UI settings
-  - formatter: Format the value for the final view
 
-**Example:**
-
-```xml
- <indicator
-  ui="amount"
-  keyName="totalUsers"
-  graphql={
-    `
-      query users {
-        users {name age}
-      }
-    `
-  }
-  title="Total users"
-  uiParams={{
-    formatter: v => `${v}`
-  }}
-  getValue={v => v.length}
-/>
-```
-
-### &lt;indicator ui="list" /&gt;
-
-Display data as a [antd list](https://ant.design/components/list/).
-
-**Properties**
-
-- keyName
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
-
-```xml
-<indicator
-  ui="list"
-  keyName="posts"
-  graphql={
-    `
-      query posts {
-        posts(first: 10) {title image}
-      }
-    `
-  }
-  uiParams={{
-    avatar: value => (
-      <Avatar // antd
-        src={value.image && value.image.url}
-        style={{color: '#f56a00', backgroundColor: '#fde3cf'}}
-      >
-        {value.title}
-      </Avatar>
-    ),
-    title: value => value.title,
-    description: () => null,
-    content: () => null
-  }}
-/>
-```
-
-### &lt;chart /&gt;
-
-Create charts.
-
-**Properties**
-- keyName
-- ui: Chart type. `line`, `bar`, `pie` or `scatter`
-- graphql: The graphql string to fetch the data
-- uiParams: For more detailed UI settings
-
-***ui="line" uiParams:***
+### Common Properties
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Types</th>
+    <th>Type</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>interpolate</td>
-    <td><code>string // default linear</code></td>
-    <td>"basis" | "cardinal" | "catmull-rom" | "linear" | "monotone" | "natural" | "step" | "step-after" | "step-before"</td>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
-
-***ui="bar" uiParams:***
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
-
-***ui="pie" uiParams:***
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>field</td>
+    <td>packageName</td>
     <td><code>string</code></td>
-    <td></td>
+    <td>It can be a name or path of a node modules.</td>
   </tr>
   <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
+    <td>graphql</td>
+    <td><code>string</code></td>
+    <td>The graphql query. Canner uses it to fetch the data for the component.</td>
   </tr>
   <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>color</td>
-    <td><code>{<br/>
-      range?: string, // default category20<br/>
-      field?: string // default id<br/>
-    }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales/#range">range</a></td>
-  </tr>
-   <tr>
-    <td>sort</td>
-    <td><code>boolean // default false</code></td>
-    <td>optional</td>
+    <td>transformData</td>
+    <td><code>* => *</code></td>
+    <td>Transform the data which is fetched from graphql query, so that the component can directly receive the data it needs. </td>
   </tr>
 </table>
 
+### Victory Chart
 
-***ui="scatter" uiParams:***
+> [Victory](https://formidable.com/open-source/victory/) is an opinionated, but fully overridable, ecosystem of composable React components for building interactive data visualizations
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Types</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>y</td>
-    <td><code>{
-    field: string,
-    scale?: string, // default linear
-    title?: string
-  }</code></td>
-    <td><a href="https://vega.github.io/vega/docs/scales">scale</a></td>
-  </tr>
-  <tr>
-    <td>width</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td><code>number | string // default 100%</code></td>
-    <td>number or percent string</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td><code>{
-      field: string
-    }</code></td>
-    <td>The text of field will be shown once the hover event is fired</td>
-  </tr>
-  <tr>
-    <td>fill</td>
-    <td><code>string // default #1890ff</code></td>
-    <td>color</td>
-  </tr>
-</table>
+To generate chart components with Victory, see [victory-canner-components](https://github.com/Canner/victory-canner-components).
 
+#### Example
 
-**Chart example**
-
-```xml
-<chart ui="bar"
-  keyName="user-bar"
-  graphql={
-    `
-      query users {
-        users(first: 10) {name age}
+```js
+ <component
+  packageName="@canner/victory-area"
+  keyName="victory-area"
+  transformData={data => {
+    return data.map(datum => ({
+      x: datum.type,
+      y: datum.value
+    }));
+  }}
+  graphql={`
+    query {
+      data {
+        type
+        value
       }
-    `
-  }
+    }
+  `}
+/>
+```
+
+### Vega Chart
+> [Vega](https://vega.github.io/vega/) is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.
+
+
+To generate chart components with Vega, see [vega-canner-components](https://github.com/Canner/vega-canner-components).
+
+#### Example
+
+```js
+<component
+  packageName="@canner/vega-chart-bar"
+  keyName="vega-bar"
   uiParams={{
-    height: 150,
-    width: 200,
-    color: {
-      field: 'name'
-    },
+    fill: "#07a4b8",
     x: {
-      field: 'name'
+      field: "type",
+      title: "Types"
     },
     y: {
-      field: 'age'
-    }
+      field: "value",
+      title: "Value"
+    },
+    height: 200,
+    width: "100%"
   }}
-/>
+  transformData={data => data}
+  graphql={`
+    query {
+      chart {
+        type
+        value
+      }
+    }
+  `}
+  />
 ```
