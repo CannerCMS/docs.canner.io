@@ -6,7 +6,7 @@ sidebar_label: Deployment
 
 ## Introduction
 
-Just two files [canner.schema.js](guides-setup#initial-your-schema) and [cloud.config.js](cli-cloud-config-js), and then you can publish your CMS on Canner with the simple command.
+Building a CMS on Canner only need two main files [canner.schema.js](guides-setup#initial-your-schema) and [cloud.config.js](cli-cloud-config-js), and then you can publish your CMS on Canner with the simple command.
 
 ```
 $ canner script:deploy
@@ -14,7 +14,7 @@ $ canner script:deploy
 
 ## Deploy CMS with LocalStorage as the Storage
 
-The code below is the simplest `cloud.config.js` which represents using localStorage as the storage in your CMS. 
+The code below is the simplest `cloud.config.js` which represents using localStorage as the default storage in your CMS. 
 
 **cloud.config.js**
 ```
@@ -33,7 +33,7 @@ $ canner script:deploy
 
 ## Setting Up Production Environment
 
-To setup production environment, in your `canner.config.js` set your key `default` in `env` to your resource.
+To setup **production** environment, in your `canner.config.js` set your key `default` in `env` to your resource.
 
 Example:
 

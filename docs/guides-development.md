@@ -8,7 +8,7 @@ sidebar_label: Development
 
 We try to make developing Canner in local environment as easy as possible. You can easily serve and preview your Content Management System in your local machine by running
 
-## Local Serving
+## Preview locally
 
 Ensure that there is a file called `canner.schema.js` in the current working directory and enter the command `canner srcipt:serve`, you will get your CMS running in [http://localhost:9090](http://localhost:9090).
 
