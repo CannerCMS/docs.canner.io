@@ -69,6 +69,56 @@ There are two fetch policies, `sync` and `async`, of [**first level array field*
 
 ## &lt;filter /&gt;
 
+There two usages of `<filter />`:
+1. <b>Wraps the filters.</b> There are serveral filter tags such as [\<textFilter>](schema-toolbar-tags#lt-textfilter-gt), [\<numberFilter>](schema-toolbar-tags#lt-numberfilter-gt), and [\<selectFilter>](schema-toolbar-tags#lt-selectfilter-gt). They all should be wrapped by a `<filter />`.
+2. <b>Add the control button in `<actions>`.</b> By default, all filters are invisible and controlled by the filter button in [`<actions>`](#lt-actions-gt).
+
+
+### Usage
+**With Control Button in &lt;Actions />**
+
+```js
+<root>
+  <array keyName="posts">
+    <toolbar>
+      <actions>
+        {/* add filter tag in actions to control the visibility of filters */}
+        <filter /> 
+      </actions>
+      <filter>
+        <textFilter
+          label="BuyerName"
+          field="orderInfo.buyerName"
+          placeholder="BuyerName"
+        />
+      </filter>
+    </toolbar>
+    {otherDataSchema}
+  </array>
+</root>
+```
+
+**With AlwaysDisplay Property**
+
+```js
+<root>
+  <array keyName="posts">
+    <toolbar>
+      <filter>
+        {/* add `alwaysDisplay` property to let the filter become visible */}
+        <textFilter
+          label="BuyerName"
+          field="orderInfo.buyerName"
+          placeholder="BuyerName"
+          alwaysDisplay 
+        />
+      </filter>
+    </toolbar>
+    {otherDataSchema}
+  </array>
+</root>
+```
+
 ### Filter Query Object
 
 In Canner, we use filter query object to represent a specific query. The object is composed with data and filter comparison, such as **eq, lt, gt**, ...etc.
