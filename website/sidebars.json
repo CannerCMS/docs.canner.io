@@ -69,7 +69,8 @@
       "guides-canner-schema-loader"
     ],
     "Tutorial": [
-      "tutorial-community-firebase"
+      "tutorial-community-firebase",
+      "tutorial-community-firestore"
     ],
     "Advanced": [
       "advance-canner-cms",

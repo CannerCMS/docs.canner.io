@@ -1,18 +1,12 @@
 ---
-id: tutorial-community-firebase
-title: Firebase CMS with NextJS (Community edition)
-sidebar_label: Firebase CMS with NextJS (Community edition)
+id: tutorial-community-firestore
+title: Firestore CMS (Community edition)
+sidebar_label: Firestore CMS (Community edition)
 ---
 
-Canner is a open source CMS framework that you could build from any kind of different sources. And one of most common use cases is integrate with [Firebase](https://firebase.google.com/).
+In this tutorial, you can learn how to build your own **[Firestore]((https://firebase.google.com/docs/firestore/)) CMS** on your Firebase hosting. And build any kind and form of CMS by using it. Get source code please go to [Canner/canner-firestore-cms](https://github.com/Canner/canner-firestore-cms) 
 
-In this tutorial, we are going to help you build your CMS using Canner(Community edition) with [NextJS](https://nextjs.org/) and deploy to [Now](https://zeit.co/now). Get source code please go to [Canner/canner-firebase-cms](https://github.com/Canner/canner-firebase-cms) 
-
-> - **Firebase** is one of the biggest BaaS (Backend as a service) service nowadays, that is backed by Google.
-> - **NextJS** is a small framework for server-rendered universal JavaScript webapps.
-> - **Now** is a deployment service.
-
-Your final result, live demo: https://canner-firebase.now.sh/
+Your final result, live demo: https://fir-cms-15f83.firebaseapp.com
 
 ![preview](/docs/assets/tutorial-firebase/preview/1.png)
 
@@ -21,7 +15,7 @@ Your final result, live demo: https://canner-firebase.now.sh/
 
 ## 1. Clone Github repository
 
-Please clone the repository [on Github Canner/canner-firebase-cms](https://github.com/Canner/canner-firebase-cms)
+Please clone the repository on Github [Canner/canner-firestore-cms](https://github.com/Canner/canner-firestore-cms)
 
 ## 2. Install prerequisite packages
 
@@ -31,23 +25,19 @@ Please clone the repository [on Github Canner/canner-firebase-cms](https://githu
 
 > While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
-1. First of all, install needed packages navigate to the root of the folder and enter:
-    ```sh
-    npm install
-    ```
+First of all, install needed packages navigate to the root of the folder and enter:
 
-2. Install **Firebase tool** , a command line interface (CLI) tools, that helps you control your Firebase project through command line.
+```sh
+npm install
+```
 
-    ```sh
-    npm install -g firebase-tools
-    ```
+And install **Firebase tool** , `firebase-tools` is a Firebase command line interface (CLI) tools, that helps you control your Firebase project through command line.
+
+```sh
+npm install -g firebase-tools
+```
 
 > Learn more about [firebase-tools](https://github.com/firebase/firebase-tools)
-3. Install **Now CLI** ,  a command line interface (CLI) tools, that helps you deploy your web app to now,
-
-    ```sh
-    npm install -g now
-    ```
 
 ## 3. Create a new project on Firebase
 
@@ -79,7 +69,7 @@ firebase use test-firebase778be
 Your get feedback as below
 
 ```sh
-➜  canner-firebase-cms git:(master) firebase use test-firebase-778be
+➜  canner-firestore-cms git:(master) firebase use test-firebase-778be
 Now using project test-firebase-778be
 ```
 
@@ -133,13 +123,13 @@ copy the `config` in the script, in this case
 }
 ```
 
-And replace it in `src/app/config/firebase.ts` in your project.
+And replace it in `schema/utils/index.js` in your project.
 
 ## 6. Write you CMS schema, resolver, connector
 
 Now, create your own CMS!
 
-You'll find a file called `canner.schema.js`. Rewrite with your own settings.
+You'll find a file called `canner.schema.js` in the schema folder. Rewrite with your own settings.
 
 > Learn to [write schema](guides-write-schema.md)
 
@@ -148,24 +138,33 @@ If you want to try for now, you could use default scripts.
 
 ## 7. Bundle your script and deploy
 
-Bundle up your scripts and deploy it to **Now**. Just enter `now`:
+Bundle up your scripts and deploy it to **Firebase Hosting**, command below will build your script into new folder called `public`.
 
 ```sh
-$ now
+npm run build
 ```
 
-And then you'll get a response URL, where now host your service on `https://canner-firebase-cms-<HASH>.now.sh`.
+Finally, enter deploy your CMS.
+
+```sh
+firebase deploy --only hosting
+```
+
+You'll probably get a response URL, where Firebase host your service on `*.firebaseapp.com`.
 
 In this case, shown as below
 
 ```sh
-> NOTE: You can use `now --public` or upgrade your plan (https://zeit.co/account/plan) to skip this prompt
-> Synced 3 files (256.1KB) [2s]
-> Using Node.js 8.11.3 (default)
-> https://canner-firebase-cms-upidizmgzw.now.sh [in clipboard] (sfo1) [2s]
-> Building…
-> ▲ yarn
-> yarn install v1.9.4
-> [1/4] Resolving packages...
-> [2/4] Fetching packages...
+➜  canner-firestore-cms git:(master) firebase deploy --only hosting
+
+=== Deploying to 'test-firebase-778be'...
+
+i  deploying hosting
+i  hosting: preparing public directory for upload...
+✔  hosting: 30 files uploaded successfully
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/test-firebase-778be/overview
+Hosting URL: https://test-firebase-778be.firebaseapp.com
 ```

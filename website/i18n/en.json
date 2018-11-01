@@ -254,8 +254,12 @@
         "sidebar_label": "Schema as Modules"
       },
       "tutorial-community-firebase": {
-        "title": "Deploying Firebase CMS by NextJS (Community edition)",
-        "sidebar_label": "Deploying Firebase CMS by NextJS (Community edition)"
+        "title": "Firebase CMS with NextJS (Community edition)",
+        "sidebar_label": "Firebase CMS with NextJS (Community edition)"
+      },
+      "tutorial-community-firestore": {
+        "title": "Firestore CMS (Community edition)",
+        "sidebar_label": "Firestore CMS (Community edition)"
       },
       "tutorial-connect-to-firebase": {
         "title": "Connect to Firebase Realtime Database",
