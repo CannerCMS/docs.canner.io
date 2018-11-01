@@ -15,21 +15,22 @@ Then, you have to install required packages of canner to have a CMS.
 ### npm
 
 ```sh
-$ npm install --save canner canner-script @canner/container @canner/router
-$ npm install --save-dev canner-schema-loader
+$ npm install --save canner antd firebase
+$ npm install --save-dev canner-schema-loader canner-script less less-loader css-loader style-loader
 ```
 
 ### yarn
 
 ```sh
-$ yarn add canner canner-script @canner/container @canner/router
-$ yarn add -D canner-schema-loader
+$ yarn add canner antd firebase
+$ yarn add -D canner-schema-loader canner-script less less-loader css-loader style-loader
 ```
 
 
-## Add `canner-schema-loader` in webpack configuation
+## Add `canner-schema-loader` and `less-loader` in webpack configuation
 
-`canner-schema-loader` is used to transform your CMS schema in `canner.schema.js` into configurations that Canner CMS needs. [TODO: learn more what things generate from loader]
+- `canner-schema-loader` is used to transform your CMS schema in `canner.schema.js` into configurations that Canner CMS needs.
+- `less-loader` is required because the [antd](https://ant.design) components of canner were transpiled with [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) to archive [customizing theme](https://ant.design/docs/react/customize-theme)
 
 ```js
 // ...
@@ -40,8 +41,17 @@ rules: [{
       loader: 'canner-schema-loader'
     }, {
       loader: 'babel-loader',
-    }]
+    }
   ],
+}, {
+  test: /\.less$/,
+  use: [{
+    loader: 'style-loader'
+  }, {
+    loader: 'css-loader'
+  }, {
+    loader: 'less-loader'
+  }]
 }]
 // ...
 ```
@@ -86,12 +96,12 @@ import Container from '@canner/container';
 import Router from '@canner/router';
 
 // your schema
-import schema from 'path/to/canner.schema.js';
+import schema from './schema/canner.schema.js';
 
 
 class CMSExample extends React.Component {
   router = new Router({
-    baseUrl: "/"
+    baseUrl: "/dashboard"
   });
 
   componentDidMount() {
@@ -104,18 +114,20 @@ class CMSExample extends React.Component {
   }
 
   render() {
-    <Container
-      schema={schema}
-      router={this.router}
-      navbarConfig={
-        showSaveButton: true
-      }
-      sidebarConfig={
-        menuConfig: true
-      }
-    >
-      <Canner />
-    </Container>
+    return (
+      <Container
+        schema={schema}
+        router={this.router}
+        navbarConfig={{
+          showSaveButton: true
+        }}
+        sidebarConfig={{
+          menuConfig: true
+        }}
+      >
+        <Canner />
+      </Container>
+    );
   }
 }
 
