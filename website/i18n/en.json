@@ -97,6 +97,10 @@
         "title": "Credential in Firebase",
         "sidebar_label": "Firebase"
       },
+      "credential-firestore": {
+        "title": "Credential in Firestore",
+        "sidebar_label": "Firestore"
+      },
       "credential-intro": {
         "title": "Credential introduction",
         "sidebar_label": "Introduction"
@@ -162,7 +166,8 @@
         "sidebar_label": "Customized Layout"
       },
       "guides-customized-toolbar": {
-        "title": "guides-customized-toolbar"
+        "title": "Customized Toolbar",
+        "sidebar_label": "Customized Toolbar"
       },
       "guides-default-value": {
         "title": "Default Value",
