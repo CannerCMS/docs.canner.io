@@ -17,6 +17,7 @@
     "Credential": [
       "credential-intro",
       "credential-firebase",
+      "credential-firestore",
       "credential-prisma"
     ],
     "Guides": [
