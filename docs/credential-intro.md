@@ -16,5 +16,6 @@ npm install canner-credential
 
 Supported services:
 
-- [Firebase](credential-firebase)
+- [Firebase - Realtime database](credential-firebase)
+- [Firebase - Firestore](credential-firestore)
 - [Prisma](credential-prisma)
