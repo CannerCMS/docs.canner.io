@@ -16,17 +16,17 @@ Visit your Firebase console, and navigate to **Project settings** > **Service ac
 
 In order to let Canner platfrom access to your Firestore you have to upload the credentials.
 
-In your `canner.cloud.js`, setup `env` settings using `FirestoreCredentail` in `canner-credential`.
+In your `canner.cloud.js`, setup `env` settings using `FirestoreCredential` in `canner-credential`.
 
 **Example**
 
 ```js
-const {FirestoreCredentail} = require("canner-credential");
+const {FirestoreCredential} = require("canner-credential");
 
 module.exports = {
   env: {
-    default: [new FirestoreCredentail(require("path to your credential"))],
-    test: [new FirestoreCredentail(require("path to your credential"))]
+    default: [new FirestoreCredential(require("path to your credential"))],
+    test: [new FirestoreCredential(require("path to your credential"))]
   }
 }
 ```
