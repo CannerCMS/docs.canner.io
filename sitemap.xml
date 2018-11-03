@@ -30,6 +30,7 @@
 <url> <loc>https://www.canner.io/docs/concept-hocs</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/concept-hocs" /> </url>
 <url> <loc>https://www.canner.io/docs/concept-refid</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/concept-refid" /> </url>
 <url> <loc>https://www.canner.io/docs/credential-firebase</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/credential-firebase" /> </url>
+<url> <loc>https://www.canner.io/docs/credential-firestore</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/credential-firestore" /> </url>
 <url> <loc>https://www.canner.io/docs/credential-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/credential-intro" /> </url>
 <url> <loc>https://www.canner.io/docs/credential-prisma</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/credential-prisma" /> </url>
 <url> <loc>https://www.canner.io/docs/file-canner-cloud-js</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/file-canner-cloud-js" /> </url>
