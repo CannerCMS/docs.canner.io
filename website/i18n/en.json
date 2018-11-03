@@ -162,8 +162,7 @@
         "sidebar_label": "Customized Layout"
       },
       "guides-customized-toolbar": {
-        "title": "Customized Toolbar",
-        "sidebar_label": "Customized Toolbar"
+        "title": "guides-customized-toolbar"
       },
       "guides-default-value": {
         "title": "Default Value",
@@ -254,8 +253,8 @@
         "sidebar_label": "Schema as Modules"
       },
       "tutorial-community-firebase": {
-        "title": "Deploying Firebase CMS by NextJS (Community edition)",
-        "sidebar_label": "Deploying Firebase CMS by NextJS (Community edition)"
+        "title": "Firebase CMS on Now (Community edition)",
+        "sidebar_label": "Firebase CMS on Now (Community edition)"
       },
       "tutorial-connect-to-firebase": {
         "title": "Connect to Firebase Realtime Database",
