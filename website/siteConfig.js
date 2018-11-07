@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   // cname: 'docs.canner.io',
-  title: 'Canner (BETA)' /* title for your website */,
+  title: 'Canner' /* title for your website */,
   tagline: 'Canner official documentation',
   url: 'https://www.canner.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
