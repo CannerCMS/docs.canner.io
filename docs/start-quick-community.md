@@ -1,10 +1,10 @@
 ---
-id: start-quick-community-intro
+id: start-quick-community
 title: Introduction
 sidebar_label: Introduction
 ---
 
-Our team at Canner, Inc. believe in open community, so we open sourced our CMS framework to share our reseach and technology to everyone. Canner is a friendly community and open to any contributors to join and collaborate.
+Our team at Canner, Inc. believe in open community, so we open sourced our CMS [core](https://en.wikipedia.org/wiki/Open-core_model) framework to share our reseach and technology to everyone. Canner is a friendly community and open to any contributors to join and collaborate.
 
 What things do we open source? **We open source all our framework including how we compile, generate UI & data model, Canner parsers, etc..., but not our platform**, which means if you choose to use our open source edition, you have to build your own membership, credential system, role permission, host CMS servers, etc. All by yourself. 
 
@@ -16,6 +16,10 @@ We open source a simple edition of our CMS using Firebase as database.
 
 - Source: https://github.com/Canner/canner-firebase-cms
 - Tutorial: https://www.canner.io/docs/tutorial-community-firebase.html
+
+and a Firestore version
+
+- Source: https://github.com/Canner/canner-firestore-cms
 
 
 ## Open source projects

@@ -4,9 +4,9 @@ title: Canner Container
 sidebar_label: Canner Container
 ---
 
-`CannerContainer` is a component that renders sidebar, navbar and provides the features that are not included in `CannerCMS`.
+`@canner/container` is a component that renders sidebar, navbar and provides the features that are not included in [`Canner component`](guides-canner).
 
-For examples, the code below will **ONLY** generate the UI of `CMS form` without sidebar and navbar, etc.
+For examples, the code below will **ONLY** generate the UI of CMS form without sidebar and navbar, etc.
 
 ```jsx
 import Canner from 'canner';
@@ -28,17 +28,19 @@ render() {
 );
 ```
 
+Preview as below:
+
 ![render CMS without container](/docs/assets/advance-canner-container/without-container.png)
 
 
-With `CannerContainer`, you can generate the extra components.
+With `@canner/container`, you can generate the extra components.
 
 ![render CMS with container](/docs/assets/advance-canner-container/with-container.png)
 
 
 ## Usage
 
-Put the `<Canner>` inside `<Container>` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `<Container>`, this will generate full CMS for you. Remember the properties of `<Canner>`, **schema**, **routes**, **routerParams**, **dataDidChange**, **baseUrl** and **goTo** will be passed by `<Container>` so you don't need to pass them again.
+Put the `canner` inside `@canner/container` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `@canner/container`, this will generate full CMS for you. Remember the properties of `canner`, **schema**, **routes**, **routerParams**, **dataDidChange**, **baseUrl** and **goTo** will be passed by `@canner/container` so you don't need to pass them again.
 
 
 ```jsx
@@ -69,7 +71,7 @@ import Container from '@canner/container';
 
 #### sidebarConfig
 
-`CannerContainer` will use `sidebarConfig` to generate the sidebar.
+`@canner/container` will use `sidebarConfig` to generate the sidebar.
 
 <table>
   <tr>
@@ -79,51 +81,63 @@ import Container from '@canner/container';
   </tr>
   <tr>
     <td>sidebarConfig</td>
-    <td><code>{<br/>
-      menuConfig: MenuConfig | boolean<br/>
-      }</code></td>
     <td>
-      <li><code>MenuConfig object</code>: Render the sidebar with given the object.</li>
+<pre><code>{
+  menuConfig: MenuConfig | boolean
+}
+</code></pre></td>
+    <td>
+      menuConfig property can be:
+      <li><code>MenuConfig (object)</code>: Render the sidebar with given the object.</li>
       <li><code>false</code>: Render without the sidebar.</li>
       <li><code>true</code>: Render a sidebar according to the given schema.</li>
     </td>
   </tr>
+</table>
+
+Variables definition:
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
   <tr>
     <td>MenuConfig</td>
     <td>
-      <code>
-        Array&lt;<br/>SubmenuConfig | MenuItemConfig<br/>>
-      </code>
+<pre><code>Array<
+  SubmenuConfig | MenuItemConfig
+>
+</code></pre>
     </td>
     <td>The type of <code>SubmenuConfig</code> or <code>MenuItemConfig</code></td>
   </tr>
   <tr>
     <td>SubmenuConfig</td>
     <td>
-      <code>
-        {<br/>
-          title: string,<br/>
-          items: Array&lt;MenuItemConfig><br/>
-        }
-      </code>
+<pre><code>{
+  title: string,
+  items: Array&lt;MenuItemConfig>
+}
+</code></pre>
     </td>
-    <td>Generate the antd submenu</td>
+    <td>Generate the submenu</td>
   </tr>
   <tr>
   <td>MenuItemConfig</td>
     <td>
-      <code>
-        {<br/>
-        title: string,<br/>
-        pathname: string,<br/>
-        params?: {<br/>
-          operation?: 'create' | 'update',<br/>
-          defaultPayload?: string,<br/>
-          filter?: string<br/>
-        }
-      </code>
+<pre><code>{
+  title: string,
+  pathname: string,
+  params?: {
+    operation?: 'create' | 'update',
+    defaultPayload?: string,
+    filter?: string
+  }
+}</code></pre>
     </td>
-    <td>Generate the antd menu item</td>
+    <td>Generate the menu item</td>
   </tr>
 </table>
 
@@ -144,10 +158,11 @@ import Container from '@canner/container';
 
 #### navbarConfig
 
-`CannerContainer` will use `navbarConfig` to generate the navbar. A navbar can be divided to three parts from left to right: logo, menu, and save button. And there are three properties corresponding to the three parts on navbar.
+`@canner/container` will use `navbarConfig` to generate the navbar. Navbar can be divided to three parts from left to right: logo, menu, and save button.
 
 ![Three parts of Navbar](/docs/assets/advance-canner-container/navbar.png)
 
+To control the navbar elements you can use `logo`, `renderMenu`, `showSaveButton` in `navbarConfig` to control them.
 
 <table>
   <tr>
@@ -157,11 +172,12 @@ import Container from '@canner/container';
   </tr>
   <tr>
     <td>navbarConfig</td>
-    <td><code>{<br/>
-      logo: string, <br/>
-      renderMenu: () => React.Node,<br/>
-      showSaveButton: boolean<br/>
-    }</code></td>
+    <td>
+<pre><code>{
+  logo: string, 
+  renderMenu: () => React.Node,
+  showSaveButton: boolean
+}</code></pre></td>
     <td><code>logo</code>: image url</li></td>
   </tr>
 </table>

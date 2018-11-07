@@ -1,12 +1,15 @@
 ---
 id: guides-canner
-title: Canner
-sidebar_label: Canner
+title: Canner Component
+sidebar_label: Canner Component
 ---
 
 > `React` version must be >= 16.x version
 
-Canner is a react component that helps you to build the whole CMS including the view and the data flow, so you don't have to concern how to connect the APIs. If you want to render the whole page including the sidebar and navbar, please check out [Canner Container](guides-canner-container).
+Canner component is a React component that helps you to build the whole CMS including the view and the data flow, so you don't have to concern how to connect the APIs. **If you want to render the whole page including the sidebar and navbar, please check out [Canner Container](guides-canner-container)**.
+
+
+Below is a preview of Canner component without [Canner Container](guides-canner-container).
 
 ![render CMS without container](/docs/assets/advance-canner-container/without-container.png)
 
@@ -17,7 +20,7 @@ First of all, you have to install at least [Node](https://nodejs.org/en/download
 
 > While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
-Then, you have to install required packages of canner to have a CMS.
+Then, you have to install packages which Canner requires to have a CMS.
 
 ### npm
 
@@ -36,8 +39,8 @@ $ yarn add -D canner-schema-loader canner-script less less-loader css-loader sty
 
 ## Add `canner-schema-loader` and `less-loader` in webpack configuation
 
-- `canner-schema-loader` is used to transform your CMS schema in `canner.schema.js` into configurations that Canner CMS needs.
-- `less-loader` is required because the [antd](https://ant.design) components of canner were transpiled with [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) to archive [customizing theme](https://ant.design/docs/react/customize-theme)
+- `canner-schema-loader` is used to transform your CMS schema in `canner.schema.js` into configurations that Canner needs.
+- `less-loader` is required because the [antd](https://ant.design) components used in Canner need to transpile through [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) to archive [customizing theme feature](https://ant.design/docs/react/customize-theme).
 
 ```js
 // ...
@@ -87,15 +90,15 @@ module.exports = (
 );
 ```
 
-## Usage
+## Canner component usage
 
-Give it a schema and specify the routes, Canner will render the form.
+Pass a schema and assign the routes, Canner will render the form.
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Canner from 'canner';
+import Canner from 'canner';  // <----- use canner component
 
 // your schema
 import schema from './canner.schema.js';

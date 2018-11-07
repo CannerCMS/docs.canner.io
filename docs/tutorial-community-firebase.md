@@ -8,6 +8,7 @@ Canner is a open source CMS framework that you could build from any kind of diff
 
 In this tutorial, we are going to help you build your CMS using Canner(Community edition) with [NextJS](https://nextjs.org/) and deploy to [Now](https://zeit.co/now). Get source code please go to [Canner/canner-firebase-cms](https://github.com/Canner/canner-firebase-cms) 
 
+> Terms
 > - **Firebase** is one of the biggest BaaS (Backend as a service) service nowadays, that is backed by Google.
 > - **NextJS** is a small framework for server-rendered universal JavaScript webapps.
 > - **Now** is a deployment service.

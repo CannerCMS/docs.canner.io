@@ -18,7 +18,7 @@ Connector in Canner CMS is a **Apollo** connector, definition quoted from [Apoll
 
 ## Usage
 
-To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance`.
+To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance` which you can import from `canner-graphql-interface`.
 
 ### Single connector
 
@@ -77,6 +77,12 @@ export default (
 ```
 
 ## Supported connectors:
+
+- [MemoryConnector](#memoryconnector): Browser memory.
+- [LocalStorageConnector](#localstorageconnector): Local storage.
+- [FirebaseRtdbClientConnector](#firebasertdbclientconnector): Firebase Realtime Database.
+- [FirestoreClientConnector](#firestoreclientconnector): Firestore.
+
 
 ### MemoryConnector
 
