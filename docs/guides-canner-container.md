@@ -38,7 +38,7 @@ With `CannerContainer`, you can generate the extra components.
 
 ## Usage
 
-Put the `<Canner>` inside `<Container>` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `<Container>`, this will generate full CMS for you. Remember the properties of `<Canner>`, **schema**, **routes**, **routesParams**, **dataDidChange**, **baseUrl** and **goTo** will be passed by `<Container>` so you don't need to pass them agagin.
+Put the `<Canner>` inside `<Container>` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `<Container>`, this will generate full CMS for you. Remember the properties of `<Canner>`, **schema**, **routes**, **routerParams**, **dataDidChange**, **baseUrl** and **goTo** will be passed by `<Container>` so you don't need to pass them again.
 
 
 ```jsx
