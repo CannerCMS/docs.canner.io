@@ -1,5 +1,5 @@
 ---
-id: advance-canner-container
+id: guides-canner-container
 title: Canner Container
 sidebar_label: Canner Container
 ---
@@ -10,7 +10,7 @@ For examples, the code below will **ONLY** generate the UI of `CMS form` without
 
 ```jsx
 import Canner from 'canner';
-import schema from 'canner.schema.js';
+import schema from './canner.schema.js';
 // ...
 render() {
   return (
@@ -19,8 +19,6 @@ render() {
         return (
           <Canner
             schema={schema}
-            routes={router.getRoutes()}
-            goTo={router.goTo}
             ...
           />
         );
@@ -40,7 +38,7 @@ With `CannerContainer`, you can generate the extra components.
 
 ## Usage
 
-Put the `<Canner>` inside `<Container>` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `<Container>`, this will generate full CMS for you.
+Put the `<Canner>` inside `<Container>` and pass **schema**, **router**, **sidebarConfig** and **navbarConfig** as props to the `<Container>`, this will generate full CMS for you. Remember the properties of `<Canner>`, **schema**, **routes**, **routerParams**, **dataDidChange**, **baseUrl** and **goTo** will be passed by `<Container>` so you don't need to pass them again.
 
 
 ```jsx
@@ -54,10 +52,8 @@ import Container from '@canner/container';
    router={router}
    sidebarConfig={SidebarConfig}
    navbarConfig={{navbarConfig}}
-   >
-  <Canner
-    ...
-  />
+>
+  <Canner />
 </Container>
 ```
 
@@ -69,7 +65,7 @@ import Container from '@canner/container';
 
 #### router
 
-> see [Canner Router](advance-canner-router.md)
+> see [Canner Router](guides-canner-router.md)
 
 #### sidebarConfig
 

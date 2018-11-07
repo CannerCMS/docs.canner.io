@@ -1,7 +1,7 @@
 ---
-id: advance-cms-helpers
+id: advance-canner-helpers
 title: canner-helpers
-sidebar_label: CMS component helpers
+sidebar_label: Canner Helpers
 ---
 
 > `React` version must be >= 16.x version

@@ -5,21 +5,13 @@
     "previous": "Previous",
     "tagline": "Canner official documentation",
     "docs": {
-      "advance-canner-cms": {
-        "title": "Canner CMS",
-        "sidebar_label": "Canner CMS"
-      },
-      "advance-canner-container": {
-        "title": "Canner Container",
-        "sidebar_label": "Canner Container"
-      },
-      "advance-canner-router": {
-        "title": "Canner Router",
-        "sidebar_label": "Canner Router"
-      },
-      "advance-cms-helpers": {
+      "advance-canner-helpers": {
         "title": "canner-helpers",
-        "sidebar_label": "CMS component helpers"
+        "sidebar_label": "Canner Helpers"
+      },
+      "advance-canner-schema-loader": {
+        "title": "Canner Schema Loader",
+        "sidebar_label": "Canner Schema Loader"
       },
       "advance-cms-test": {
         "title": "Test CMS components",
@@ -129,21 +121,21 @@
         "title": ".canner-image-uploaded.json file",
         "sidebar_label": ".canner-image-uploaded.json"
       },
-      "guides-basic-setup": {
-        "title": "Basic setups",
-        "sidebar_label": "Basic setups"
+      "guides-canner-container": {
+        "title": "Canner Container",
+        "sidebar_label": "Canner Container"
       },
       "guides-canner-prisma-type": {
         "title": "Canner and Prisma datatype comparison",
         "sidebar_label": "Canner and Prisma datatype comparison"
       },
-      "guides-canner-schema-loader": {
-        "title": "Setup canner-schema-loader in webpack",
-        "sidebar_label": "Setup canner-schema-loader"
+      "guides-canner-router": {
+        "title": "Canner Router",
+        "sidebar_label": "Canner Router"
       },
-      "guides-community-intro": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
+      "guides-canner": {
+        "title": "Canner",
+        "sidebar_label": "Canner"
       },
       "guides-component": {
         "title": "Component",
@@ -241,6 +233,14 @@
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
+      "start-quick-build-the-cms": {
+        "title": "Build the CMS",
+        "sidebar_label": "Build the CMS"
+      },
+      "start-quick-community-intro": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
       "start-quick-html5up": {
         "title": "First CMS using Canner in 3 minutes (Firebase)",
         "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
@@ -332,6 +332,7 @@
       "Files": "Files",
       "Tips": "Tips",
       "Tutorial": "Tutorial",
+      "Quick Start": "Quick Start",
       "Advanced": "Advanced",
       "Concept": "Concept",
       "API": "API",

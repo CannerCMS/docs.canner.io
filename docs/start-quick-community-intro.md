@@ -1,5 +1,5 @@
 ---
-id: guides-community-intro
+id: start-quick-community-intro
 title: Introduction
 sidebar_label: Introduction
 ---
@@ -34,12 +34,12 @@ import Container from '@canner/container';
 import Router from '@canner/router';
 
 // your schema
-import schema from 'path/to/canner.schema.js';
+import schema from './schema/canner.schema.js';
 
 
 class CMSExample extends React.Component {
   router = new Router({
-    baseUrl: "/"
+    baseUrl: "/dashboard"
   });
 
   componentDidMount() {
@@ -52,18 +52,21 @@ class CMSExample extends React.Component {
   }
 
   render() {
-    <Container
-      schema={schema}
-      router={this.router}
-      navbarConfig={
-        showSaveButton: true
-      }
-      sidebarConfig={
-        menuConfig: true
-      }
-    >
-      <Canner />
-    </Container>
+    return (
+      <Container
+        schema={schema}
+        router={this.router}
+        navbarConfig={{
+          showSaveButton: true,
+          renderMenu: () => null
+        }}
+        sidebarConfig={{
+          menuConfig: true
+        }}
+      >
+        <Canner />
+      </Container>
+    );
   }
 }
 

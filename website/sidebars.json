@@ -63,21 +63,23 @@
     ]
   },
   "community": {
+    "Quick Start": [
+      "start-quick-community-intro",
+      "start-quick-build-the-cms"
+    ],
     "Guides": [
-      "guides-community-intro",
-      "guides-basic-setup",
-      "guides-connector",
-      "guides-canner-schema-loader"
+      "guides-canner",
+      "guides-canner-container",
+      "guides-canner-router",
+      "guides-connector"
     ],
     "Tutorial": [
       "tutorial-community-firebase",
       "tutorial-community-firestore"
     ],
     "Advanced": [
-      "advance-canner-cms",
-      "advance-canner-router",
-      "advance-canner-container",
-      "advance-cms-helpers"
+      "advance-canner-helpers",
+      "advance-canner-schema-loader"
     ],
     "Concept": [
       "concept-refid",
