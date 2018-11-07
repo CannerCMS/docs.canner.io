@@ -1,5 +1,5 @@
 ---
-id: advance-canner-router
+id: guides-canner-router
 title: Canner Router
 sidebar_label: Canner Router
 ---
@@ -27,7 +27,6 @@ export default class App extends React.Component {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/dashboard" component={CMS} />
-        <Route path="/dashboard/:activeKey" component={CMS} />
         <Redirect to="/" />
       </Switch>
     )
@@ -72,38 +71,47 @@ Otherwise, the `@canner/router` is a simple way for you to start!
 
 ```jsx
 // app.js
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+
+// canner packages
 import Canner from 'canner';
 import Container from '@canner/container';
-import Router from '@canner/router-history';
+import Router from '@canner/router';
+
+// your schema
+import schema from './schema/canner.schema.js';
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+class CMSExample extends React.Component {
+  router = new Router({
+    baseUrl: "/dashboard"
+  });
 
+  componentDidMount() {
     // Trigger the Canner to update the UI with the corresponding part of your CMS.
     this.unlisten = this.router.history.listen(() => this.forceUpdate());
   }
-
-  router = new Router({
-    baseUrl: "/"
-  });
 
   componentWillUnmount() {
     this.unlisten();
   }
 
   render() {
-    <Container
-      schema={schema}
-      router={this.router}
-      navbarConfig={{navbarConfig}}
-      sidebarConfig={sidebarConfig}
-    >
-      <Canner />
-    </Container>
+    return (
+      <Container
+        schema={schema}
+        router={this.router}
+        navbarConfig={{
+          showSaveButton: true
+        }}
+        sidebarConfig={{
+          menuConfig: true
+        }}
+      >
+        <Canner />
+      </Container>
+    );
   }
 }
 ```

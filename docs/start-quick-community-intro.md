@@ -1,5 +1,5 @@
 ---
-id: guides-community-intro
+id: start-quick-community-intro
 title: Introduction
 sidebar_label: Introduction
 ---

@@ -1,7 +1,7 @@
 ---
-id: guides-basic-setup
-title: Basic setups
-sidebar_label: Basic setups
+id: start-quick-build-the-cms
+title: Build the CMS
+sidebar_label: Build the CMS
 ---
 
 ## Installation

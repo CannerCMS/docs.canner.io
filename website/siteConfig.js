@@ -42,7 +42,7 @@ const siteConfig = {
     {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-intro', label: 'Docs'},
     {doc: 'tutorial-connect-to-firebase', label: 'Tutorials'},
-    {doc: 'guides-community-intro', label: 'Community'},
+    {doc: 'start-quick-community-intro', label: 'Community'},
     {doc: 'api-schema', label: 'API'},
     {href: "/component", label: "Components"},
     // {page: 'help', label: 'Help'},
