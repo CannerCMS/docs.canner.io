@@ -4,8 +4,6 @@ title: Connect to Firebase Realtime Database
 sidebar_label: Connect to Firebase Realtime Database
 ---
 
-> NOTE: We are not supporting **Firestore** at this moment
-
 ## 1. Install Canner CLI
 
 Make sure you have already install NodeJS and use the command below to install `@canner/cli` globally.
@@ -48,6 +46,8 @@ Then you'll see `.cannerrc`, `canner.schema.js`, `canner.cloud.js` in your folde
 
 
 ## 3 Edit Firebase configuration.
+
+> NOTE: For how to connect to **Firestore** you can reference [here](credential-firestore)
 
 Download the firebase private key and place in your project.
 

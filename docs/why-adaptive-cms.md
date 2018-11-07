@@ -20,7 +20,7 @@ Adaptive CMS move a step further, it's a CMS framework that provides different a
 
 1. **Own your data:** CMS doesn't own your data, you can host it on your backend services.
 2. **Easy to learn:** Support main backend services, you don't need to learn another API.
-3. **Hybrid CMS solution:** You could host on both public and private clouds in a single CMS.
+3. **Hybrid CMS solution:** You could host on both public and private clouds in a central hub.
 
 ## Why now? The raise of backend services
 

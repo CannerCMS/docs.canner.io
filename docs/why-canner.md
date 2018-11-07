@@ -6,12 +6,12 @@ sidebar_label: Why Canner?
 
 Why create Canner?
 
-> ***Most developers struggle with building maintainable and extendable CMS, so we design an CMS framework that you can build CMS with only few lines of code and interact with different data sources.***
+> ***Canner's core concept is using configuration as structure, and component as a unit. To achieve fast delivery and stability for developers and companies.***
 
 Before we built Canner CMS framework, we've tried most of CMS framework such as Wordpress, Drupal, etc. What we found was that getting simple functions to work was easy enough, but once you try to build and scale into your product or your service you ran into deeper issues...
 
 
-1. **Humongous codebase:**  Each CMS framework is humongous and complex, if you want to use them you have to install a huge codebase into your system, and most of the time it'll affect and mess with all your existing code.
+1. **Humongous codebase:**  Each CMS framework is humongous and complex, if you want to use them you have to install a huge codebase into your system, and most of the time it will affect and mess with all your existing code.
 
 > Canner's CMS is only a React component.
 

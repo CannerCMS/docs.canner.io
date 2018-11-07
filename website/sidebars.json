@@ -71,7 +71,8 @@
       "guides-canner",
       "guides-canner-container",
       "guides-canner-router",
-      "guides-connector"
+      "guides-connector",
+      "guides-resolver"
     ],
     "Tutorial": [
       "tutorial-community-firebase",
