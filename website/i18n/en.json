@@ -42,8 +42,8 @@
         "sidebar_label": "Toolbar Components"
       },
       "api-types": {
-        "title": "Types",
-        "sidebar_label": "Types"
+        "title": "Reference Types",
+        "sidebar_label": "Reference Types"
       },
       "api-ui-components": {
         "title": "UI Components",
@@ -234,8 +234,8 @@
         "sidebar_label": "Building CMS in 3 commands"
       },
       "start-quick-build-the-cms": {
-        "title": "Build the CMS",
-        "sidebar_label": "Build the CMS"
+        "title": "Build your first CMS",
+        "sidebar_label": "Build your first CMS"
       },
       "start-quick-community": {
         "title": "Introduction",
