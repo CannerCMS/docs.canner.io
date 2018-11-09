@@ -1,7 +1,7 @@
 ---
 id: guides-customized-layout
 title: Customized Layout
-sidebar_label: Customized Layout
+sidebar_label: Layout
 ---
 
 > `React` version must be >= 16.3 version

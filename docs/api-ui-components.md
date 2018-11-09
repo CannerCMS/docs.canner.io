@@ -4,7 +4,7 @@ title: UI Components
 sidebar_label: UI Components
 ---
 
-Here are the useful properties that a UI component receieves. In general, you don't have to know this properties unless you want to [customize your component in Canner](guides-customized-component).
+Here are some useful properties that a UI component receieves. In general, you don't have to know this properties unless you want to [customize your component in Canner](guides-customized-component).
 
 ## Basic
 
@@ -17,7 +17,7 @@ Here are the useful properties that a UI component receieves. In general, you do
   <tr>
     <td>keyName</td>
     <td><code>string</code></td>
-    <td>the key</td>
+    <td>The key value of the data</td>
   </tr>
   <tr>
     <td>refId</td>
@@ -46,19 +46,18 @@ Here are the useful properties that a UI component receieves. In general, you do
   <tr>
     <td>uiParams</td>
     <td><code>object</code></td>
-    <td>
-      The additional UI parameters.
+    <td>The additional UI parameters.
     </td>
   </tr>
   <tr>
     <td>disabled</td>
     <td><code>boolean</code></td>
-    <td>Whether field is disabled</td>
+    <td>Whether field is disabled or not</td>
   </tr>
   <tr>
     <td>imageStorage</td>
     <td><code><a href="api-types#storage">Storage</a></code></td>
-    <td>Used to upload images, see <a href="guides-storage">Storage</a> to know more.</td>
+    <td>Used to upload images, see <a href="guides-storage">Storage</a> to learn more.</td>
   </tr>
   <tr>
     <td>onChange</td>
@@ -69,7 +68,7 @@ Here are the useful properties that a UI component receieves. In general, you do
   value
 ) => Promise<*></code></pre>
     </td>
-    <td><code>onChange</code> function let you update data from component to CMS data, the first argument is the field's <a href="api-types#refid">refId</a>, second argument is change type, third one is its value</td>
+    <td><code>onChange</code> function let you update data from component level to central state data, the first argument is the field's <a href="api-types#refid">refId</a>, second argument is change type, third one is its value</td>
   </tr>
   <tr>
     <td>goTo</td>

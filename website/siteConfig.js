@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   // cname: 'docs.canner.io',
-  title: 'Canner (BETA)' /* title for your website */,
+  title: 'Canner' /* title for your website */,
   tagline: 'Canner official documentation',
   url: 'https://www.canner.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
@@ -42,7 +42,7 @@ const siteConfig = {
     {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-intro', label: 'Docs'},
     {doc: 'tutorial-connect-to-firebase', label: 'Tutorials'},
-    {doc: 'guides-community-intro', label: 'Community'},
+    {doc: 'start-quick-community', label: 'Community'},
     {doc: 'api-schema', label: 'API'},
     {href: "/component", label: "Components"},
     // {page: 'help', label: 'Help'},

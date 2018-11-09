@@ -6,7 +6,7 @@ sidebar_label: Resolver
 
 ## Introduction
 
-By assigning `connector` to schema, the requests from view layer will be handled in connectors, then adapted to different API; nevertheless, there are some situations where we want to customize the data flow. In these situations, we write resolvers. By convention, we put all resolvers in `Fields` and define the `resolve`, `create` and `update` functions.
+By assigning `connector` to schema, the requests from view layer will be handled in connectors, then adapted into different APIs; nevertheless, there are some situations where we want to customize the data flow. In these situations, we write resolvers. By convention, we put all resolvers in `Fields` and define the `resolve`, `create` and `update` functions.
 * `resolve`: `resolve` function should return value of the field
 * `create`: `create` function should return payload that will be passed to connector's create method.
 * `update`: `update` function should return payload that will be passed to connector's update method.
@@ -14,7 +14,6 @@ By assigning `connector` to schema, the requests from view layer will be handled
 ## Usage
 
 **Only first level tags in `<root/>`** can have a prop called resolver.
-
 
 ```jsx
 /** @jsx builder */
@@ -41,7 +40,8 @@ export default (
 ```
 
 ### Virtual Field
-We can create a virtual field that is composed of existing fields that are not saved to a DB.
+We can create a virtual field that is composed of existing fields that are not saved to a database.
+
 ``` js
 const postsResolver = {
   Fields: {
@@ -57,6 +57,7 @@ const postsResolver = {
 
 ### Join Data
 We can fetch data from another remote API.
+
 ``` js
 const postsResolver = {
   Fields: {
@@ -73,7 +74,7 @@ const postsResolver = {
 ```
 
 ### Transform Field
-We can transform field values based on data type on the fly. For example, we have a field named `date` with `DateTime` type and we want to save as YYYYMMDD in API, then transform back to Canner's `Datetime` type during query.
+We can transform field values based on data type on the fly. For example, we have a field named `date` with `DateTime` type and we want to save as `YYYYMMDD` in API, then transform back to Canner's `Datetime` type during query.
 ``` js
 const postsResolver = {
   Fields: {

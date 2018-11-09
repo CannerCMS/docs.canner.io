@@ -1,7 +1,7 @@
 ---
 id: guides-customized-component
 title: Customized CMS Component
-sidebar_label: Customized CMS Component
+sidebar_label: CMS Component
 ---
 
 ## Introduction

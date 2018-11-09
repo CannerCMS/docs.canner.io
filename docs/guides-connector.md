@@ -16,9 +16,73 @@ Connector in Canner CMS is a **Apollo** connector, definition quoted from [Apoll
 >
 > Both batching and caching are more important in GraphQL than in traditional endpoints, because one GraphQL query may make many separate calls to the backend to retrieve all the items where a REST endpoint would only retrieve a few items, usually in one query. The separate calls let GraphQL support a wide range of queries, whereas a single REST endpoint typically only allows querying for a narrow set of objects.
 
-To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance`.
+## Usage
+
+To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance` which you can import from `canner-graphql-interface`.
+
+### Single connector
+
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
+import {FirestoreClientConnector} from "canner-graphql-interface";
+
+const config = {
+    apiKey: "<API_KEY>",
+    authDomain: "<PROJECT_ID>.firebaseapp.com",
+    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+    projectId: "<PROJECT_ID>",
+    storageBucket: "<BUCKET>.appspot.com",
+    messagingSenderId: "<SENDER_ID>",
+  };
+firebase.initializeApp(config);
+
+const myDefultConnector = new FirestoreClientConnector({
+  projectId: "<PROJECT_ID>"
+});
+
+export default (
+  <root connector={myDefultConnector}>
+    // {... your schema}
+  </root>
+)
+```
+
+### Multiple connectors
+
+If you want to connect different sources in different tabs, you can pass `connector` props to **first level tags in `<root/>`**.
+
+```jsx
+/** @jsx builder */
+import builder from 'canner-script';
+
+export default (
+  <root>
+    <object
+      keyName="overview"
+      title="Overview Tab"
+      connector={connector}
+      resolver={resolver}>
+      <string title="Your name" keyName="name"/>
+    </object>
+    <array
+      keyName="list"
+      title="Products"
+      connector={connector2}
+      resolver={resolver}>
+      <string title="Product name" keyName="name"/>
+    </array>
+  </root>
+)
+```
 
 ## Supported connectors:
+
+- [MemoryConnector](#memoryconnector): Browser memory.
+- [LocalStorageConnector](#localstorageconnector): Local storage.
+- [FirebaseRtdbClientConnector](#firebasertdbclientconnector): Firebase Realtime Database.
+- [FirestoreClientConnector](#firestoreclientconnector): Firestore.
+
 
 ### MemoryConnector
 
@@ -123,60 +187,4 @@ firebase.initializeApp(config);
 const connector = new FirestoreClientConnector({
   database: firebase.firestore()
 });
-```
-
-## Single connector
-
-```jsx
-/** @jsx builder */
-import builder from 'canner-script';
-import {FirestoreClientConnector} from "canner-graphql-interface";
-
-const config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    projectId: "<PROJECT_ID>",
-    storageBucket: "<BUCKET>.appspot.com",
-    messagingSenderId: "<SENDER_ID>",
-  };
-firebase.initializeApp(config);
-
-const myDefultConnector = new FirestoreClientConnector({
-  projectId: "<PROJECT_ID>"
-});
-
-export default (
-  <root connector={myDefultConnector}>
-    // {... your schema}
-  </root>
-)
-```
-
-## Multiple connectors
-
-If you want to connect different sources in different tabs, you can pass `connector` props to **first level tags in `<root/>`**.
-
-```jsx
-/** @jsx builder */
-import builder from 'canner-script';
-
-export default (
-  <root>
-    <object
-      keyName="overview"
-      title="Overview Tab"
-      connector={connector}
-      resolver={resolver}>
-      <string title="Your name" keyName="name"/>
-    </object>
-    <array
-      keyName="list"
-      title="Products"
-      connector={connector2}
-      resolver={resolver}>
-      <string title="Product name" keyName="name"/>
-    </array>
-  </root>
-)
 ```

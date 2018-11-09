@@ -17,23 +17,36 @@
     "Credential": [
       "credential-intro",
       "credential-firebase",
+      "credential-firestore",
       "credential-prisma"
     ],
     "Guides": [
       "guides-setup",
-      "guides-development",
-      "guides-deployment",
-      "guides-theme",
-      "guides-sidebar",
+      {
+        "type": "subcategory",
+        "label": "Environment",
+        "ids": [
+          "guides-development",
+          "guides-deployment"
+        ]
+      },
       "guides-storage",
       "guides-internationalization",
       "guides-validation",
       "guides-default-value",
       "guides-condition-fields",
-      "guides-customized-component",
-      "guides-customized-layout",
-      "guides-customized-toolbar",
-      "guides-canner-prisma-type"
+      "guides-canner-prisma-type",
+      {
+        "type": "subcategory",
+        "label": "Customization",
+        "ids": [
+          "guides-theme",
+          "guides-sidebar",
+          "guides-customized-component",
+          "guides-customized-layout",
+          "guides-customized-toolbar"
+        ]
+      }
     ],
     "CLI": [
       "cli-canner-cloud-js",
@@ -56,26 +69,36 @@
     "Tutorial": [
       "tutorial-connect-to-firebase",
       "tutorial-connect-to-prisma",
-      "tutorial-customize-string-component",
-      "tutorial-customize-array-component",
-      "tutorial-customize-object-component"
+      {
+        "type": "subcategory",
+        "label": "Customization",
+        "ids": [
+          "tutorial-customize-string-component",
+          "tutorial-customize-array-component",
+          "tutorial-customize-object-component"
+        ]
+      }
     ]
   },
   "community": {
+    "Quick Start": [
+      "start-quick-community",
+      "start-quick-build-the-cms"
+    ],
     "Guides": [
-      "guides-community-intro",
-      "guides-basic-setup",
+      "guides-canner",
+      "guides-canner-container",
+      "guides-canner-router",
       "guides-connector",
-      "guides-canner-schema-loader"
+      "guides-resolver"
     ],
     "Tutorial": [
-      "tutorial-community-firebase"
+      "tutorial-community-firebase",
+      "tutorial-community-firestore"
     ],
     "Advanced": [
-      "advance-canner-cms",
-      "advance-canner-router",
-      "advance-canner-container",
-      "advance-cms-helpers"
+      "advance-canner-helpers",
+      "advance-canner-schema-loader"
     ],
     "Concept": [
       "concept-refid",

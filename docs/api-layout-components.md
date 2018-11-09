@@ -4,7 +4,7 @@ title: Layout Components
 sidebar_label: Layout Components
 ---
 
-Here are the the properties of layout components. In general, you don't have to know this properties unless you want to [customize your layout componet in Canner](guides-customized-layout).
+Here are some properties of layout components. In general, you don't have to know this properties unless you want to [customize your layout component in Canner](guides-customized-layout).
 
 
 <table>
@@ -38,7 +38,7 @@ Here are the the properties of layout components. In general, you don't have to 
         string => void
       </code>
     </td>
-    <td>the method to change route</td>
+    <td>The method to change route</td>
   </tr>
   <tr>
     <td>children</td>

@@ -1,7 +1,7 @@
 ---
 id: api-types
-title: Types
-sidebar_label: Types
+title: Reference Types
+sidebar_label: Reference Types
 ---
 
 ## LoadedSchema
@@ -109,7 +109,7 @@ sidebar_label: Types
         </a>
       </code>
     </td>
-    <td>The dictionay which records the texts in different locales.</td>
+    <td>The dictionary which records the texts in different locales.</td>
   </tr>
 </table>
 
@@ -179,7 +179,7 @@ sidebar_label: Types
   <tr>
     <td>renderMenu</td>
     <td><code>() => React.Node</code></td>
-    <td>The method to render your customized menu, recommand you to use < href="https://ant.design/components/menu/">antd menu</a></td>
+    <td>The method to render your customized menu, recommand you to use <a  href="https://ant.design/components/menu/">antd menu</a></td>
   </tr>
   <tr>
     <td>showSaveButton</td>

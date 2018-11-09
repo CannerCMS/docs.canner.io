@@ -5,7 +5,7 @@ sidebar_label: Toolbar Components
 ---
 
 
-Here are the the properties of toolbar components. In general, you don't have to know this properties unless you want to [customize your toolbar componet in Canner](guides-customized-toolbar).
+Here are some properties of toolbar components. In general, you don't have to know this properties unless you want to [customize your toolbar component in Canner](guides-customized-toolbar).
 
 ## Sorter Component
 

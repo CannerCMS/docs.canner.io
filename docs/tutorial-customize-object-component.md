@@ -1,7 +1,7 @@
 ---
 id: tutorial-customize-object-component
 title: Customize object component
-sidebar_label: Customize object component
+sidebar_label: Object component
 ---
 
 In this tutorial, we are going to build a **component that contains multiple fields internally** that deal with object type data.

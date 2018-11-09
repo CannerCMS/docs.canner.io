@@ -1,7 +1,7 @@
 ---
-id: guides-canner-schema-loader
-title: Setup canner-schema-loader in webpack
-sidebar_label: Setup canner-schema-loader
+id: advance-canner-schema-loader
+title: Canner Schema Loader
+sidebar_label: Canner Schema Loader
 ---
 
 ## Introduction

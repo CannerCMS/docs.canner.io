@@ -5,21 +5,13 @@
     "previous": "Previous",
     "tagline": "Canner official documentation",
     "docs": {
-      "advance-canner-cms": {
-        "title": "Canner CMS",
-        "sidebar_label": "Canner CMS"
-      },
-      "advance-canner-container": {
-        "title": "Canner Container",
-        "sidebar_label": "Canner Container"
-      },
-      "advance-canner-router": {
-        "title": "Canner Router",
-        "sidebar_label": "Canner Router"
-      },
-      "advance-cms-helpers": {
+      "advance-canner-helpers": {
         "title": "canner-helpers",
-        "sidebar_label": "CMS component helpers"
+        "sidebar_label": "Canner Helpers"
+      },
+      "advance-canner-schema-loader": {
+        "title": "Canner Schema Loader",
+        "sidebar_label": "Canner Schema Loader"
       },
       "advance-cms-test": {
         "title": "Test CMS components",
@@ -97,6 +89,10 @@
         "title": "Credential in Firebase",
         "sidebar_label": "Firebase"
       },
+      "credential-firestore": {
+        "title": "Credential in Firestore",
+        "sidebar_label": "Firestore"
+      },
       "credential-intro": {
         "title": "Credential introduction",
         "sidebar_label": "Introduction"
@@ -125,21 +121,21 @@
         "title": ".canner-image-uploaded.json file",
         "sidebar_label": ".canner-image-uploaded.json"
       },
-      "guides-basic-setup": {
-        "title": "Basic setups",
-        "sidebar_label": "Basic setups"
+      "guides-canner-container": {
+        "title": "Canner Container",
+        "sidebar_label": "Canner Container"
       },
       "guides-canner-prisma-type": {
         "title": "Canner and Prisma datatype comparison",
         "sidebar_label": "Canner and Prisma datatype comparison"
       },
-      "guides-canner-schema-loader": {
-        "title": "Setup canner-schema-loader in webpack",
-        "sidebar_label": "Setup canner-schema-loader"
+      "guides-canner-router": {
+        "title": "Canner Router",
+        "sidebar_label": "Canner Router"
       },
-      "guides-community-intro": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
+      "guides-canner": {
+        "title": "Canner Component",
+        "sidebar_label": "Canner Component"
       },
       "guides-component": {
         "title": "Component",
@@ -155,14 +151,15 @@
       },
       "guides-customized-component": {
         "title": "Customized CMS Component",
-        "sidebar_label": "Customized CMS Component"
+        "sidebar_label": "CMS Component"
       },
       "guides-customized-layout": {
         "title": "Customized Layout",
-        "sidebar_label": "Customized Layout"
+        "sidebar_label": "Layout"
       },
       "guides-customized-toolbar": {
-        "title": "guides-customized-toolbar"
+        "title": "Customized Toolbar",
+        "sidebar_label": "Toolbar"
       },
       "guides-default-value": {
         "title": "Default Value",
@@ -236,6 +233,14 @@
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
+      "start-quick-build-the-cms": {
+        "title": "Build the CMS",
+        "sidebar_label": "Build the CMS"
+      },
+      "start-quick-community": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
       "start-quick-html5up": {
         "title": "First CMS using Canner in 3 minutes (Firebase)",
         "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
@@ -253,8 +258,12 @@
         "sidebar_label": "Schema as Modules"
       },
       "tutorial-community-firebase": {
-        "title": "Firebase CMS on Now (Community edition)",
-        "sidebar_label": "Firebase CMS on Now (Community edition)"
+        "title": "Firebase CMS with NextJS (Community edition)",
+        "sidebar_label": "Firebase CMS with NextJS (Community edition)"
+      },
+      "tutorial-community-firestore": {
+        "title": "Firestore CMS (Community edition)",
+        "sidebar_label": "Firestore CMS (Community edition)"
       },
       "tutorial-connect-to-firebase": {
         "title": "Connect to Firebase Realtime Database",
@@ -266,15 +275,15 @@
       },
       "tutorial-customize-array-component": {
         "title": "Customize array component",
-        "sidebar_label": "Customize array component"
+        "sidebar_label": "Array component"
       },
       "tutorial-customize-object-component": {
         "title": "Customize object component",
-        "sidebar_label": "Customize object component"
+        "sidebar_label": "Object component"
       },
       "tutorial-customize-string-component": {
         "title": "Customize string component",
-        "sidebar_label": "Customize string component"
+        "sidebar_label": "String component"
       },
       "why-adaptive-cms": {
         "title": "Why Adaptive CMS?",
@@ -323,6 +332,7 @@
       "Files": "Files",
       "Tips": "Tips",
       "Tutorial": "Tutorial",
+      "Quick Start": "Quick Start",
       "Advanced": "Advanced",
       "Concept": "Concept",
       "API": "API",

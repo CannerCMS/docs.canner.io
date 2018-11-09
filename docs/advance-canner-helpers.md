@@ -1,7 +1,7 @@
 ---
-id: advance-cms-helpers
+id: advance-canner-helpers
 title: canner-helpers
-sidebar_label: CMS component helpers
+sidebar_label: Canner Helpers
 ---
 
 > `React` version must be >= 16.x version
@@ -25,14 +25,14 @@ Components can simply render their **children** with `<Item/>` component, which 
 }
 ```
 
-> See how `<Item/>` help:
+> See how `<Item/>` helps building object and array components:
 > 1. [object CMS component](advance-customized-component.md#object-type)
 > 2. [array CMS component](advance-customized-component.md#array-type)
 
 
 ### Filter children
 
-You can pass the hidden prop to decide whether or not the child should be rendered.
+You can pass the hidden prop to decide whether the child should be rendered or not.
 
 ```jsx
 import {Item} from 'canner-helpers';

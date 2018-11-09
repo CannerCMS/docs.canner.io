@@ -37,7 +37,7 @@ These are some properties you will use frequently.
       </code>
     </td>
     <td><b>false</b></td>
-    <td>Choose CMS component to display this data. </td>
+    <td>Select CMS UI component to display this data. </td>
   </tr>
   <tr>
     <td>packageName</td>

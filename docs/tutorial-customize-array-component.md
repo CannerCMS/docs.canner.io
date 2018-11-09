@@ -1,7 +1,7 @@
 ---
 id: tutorial-customize-array-component
 title: Customize array component
-sidebar_label: Customize array component
+sidebar_label: Array component
 ---
 
 In this tutorial, we are going to demo how you build an array component.  **This example demonstrate a common technique of building a customized component that is able to render customized component's children**.

@@ -1,7 +1,7 @@
 ---
 id: tutorial-customize-string-component
 title: Customize string component
-sidebar_label: Customize string component
+sidebar_label: String component
 ---
 
 In this tutorial, we are going to build a **string component** that deal with object type data.
