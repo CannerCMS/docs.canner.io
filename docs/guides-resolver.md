@@ -75,6 +75,7 @@ const postsResolver = {
 
 ### Transform Field
 We can transform field values based on data type on the fly. For example, we have a field named `date` with `DateTime` type and we want to save as `YYYYMMDD` in API, then transform back to Canner's `Datetime` type during query.
+
 ``` js
 const postsResolver = {
   Fields: {
