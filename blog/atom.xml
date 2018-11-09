@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
     <title>Canner Blog</title>
-    <updated>2018-08-08T06:00:00Z</updated>
+    <updated>2018-11-09T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Canner news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 Canner.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Canner Open Source - Stable Version]]></title>
+        <id>https://www.canner.io/blog/2018/11/09/canner-stable.html</id>
+        <link href="https://www.canner.io/blog/2018/11/09/canner-stable.html">
+        </link>
+        <updated>2018-11-09T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Hi everyone! It's been a long while since our last post. This doesn't mean that we forget our users and community. In contrast, we work extremely hard to provide a more productive and powerful CMS framework than ever.</p>
+<p>First of all, we finally confident of releasing our Canner open source to stable version.</p>
+]]></summary>
+        <author>
+            <name>Howard Chi</name>
+            <uri>http://twitter.com/chilijung</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gatsby-blog + Prisma + Canner]]></title>
         <id>https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</id>

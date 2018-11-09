@@ -4,7 +4,7 @@
         <title>Canner Blog</title>
         <link>https://www.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner news and events.</description>
-        <lastBuildDate>Wed, 08 Aug 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 09 Nov 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>https://www.canner.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Canner.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[Canner Open Source - Stable Version]]></title>
+            <link>https://www.canner.io/blog/2018/11/09/canner-stable.html</link>
+            <guid>https://www.canner.io/blog/2018/11/09/canner-stable.html</guid>
+            <pubDate>Fri, 09 Nov 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hi everyone! It's been a long while since our last post. This doesn't mean that we forget our users and community. In contrast, we work extremely hard to provide a more productive and powerful CMS framework than ever.</p>
+<p>First of all, we finally confident of releasing our Canner open source to stable version.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Gatsby-blog + Prisma + Canner]]></title>
             <link>https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</link>
