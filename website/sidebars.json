@@ -30,12 +30,6 @@
           "guides-deployment"
         ]
       },
-      "guides-storage",
-      "guides-internationalization",
-      "guides-validation",
-      "guides-default-value",
-      "guides-condition-fields",
-      "guides-canner-prisma-type",
       {
         "type": "subcategory",
         "label": "Customization",
@@ -46,7 +40,13 @@
           "guides-customized-layout",
           "guides-customized-toolbar"
         ]
-      }
+      },
+      "guides-storage",
+      "guides-internationalization",
+      "guides-validation",
+      "guides-default-value",
+      "guides-condition-fields",
+      "guides-canner-prisma-type"
     ],
     "CLI": [
       "cli-canner-cloud-js",
