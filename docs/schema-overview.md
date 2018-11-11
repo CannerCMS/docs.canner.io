@@ -17,7 +17,7 @@ There are several available tags, as listed below and it's categorized into five
 [***Root***](schema-root-tag.md)
 - \<root />
 
-[***Data Types***](schema-data-type-tags.md): Data types of the data from source and which UI should it rendered:
+[***Data Types***](schema-data-type-tags.md): Data types of the data from source and which UI should be rendered:
 
 - \<string />
 - \<boolean />
@@ -39,7 +39,7 @@ There are several available tags, as listed below and it's categorized into five
 - \<Default />
 - \<Condition />
 
-[***Page***](schema-page-tags.md): Provides analytics features of the CMS, works with `<component>`
+[***Page***](schema-page-tags.md): Provide analytic features of the CMS, works with `<component>`
 
 - \<page />
 - \<component />

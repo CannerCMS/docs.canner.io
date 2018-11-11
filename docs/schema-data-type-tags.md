@@ -316,21 +316,22 @@ The data is saved as string `[id]`
 
 ### &lt;json/&gt;
 
-You can imagine this type is a wildcard for `any` types, unlink other types, you don't have to declare it's children type.
+You can think this type is a wildcard for `any` types, unlike other types, you don't have to declare it's children type.
 
-For examples, there  is an `object` schema, we have to declare the children fields, or `graphql` will throw the error about missing subset in the `info` field:
+For example, here is an `object` schema, we have to declare it's children, or `graphql` will throw the error about missing subset in the `info` field:
 ```js
 <object keyName="info">
   <string keyName="title" />
 </object>
 ```
 
-With `<json/>`, you can write this schema like that(Without internal type declaring):
+With `<json/>`, you can write this schema as below without declare it's children:
 ```js
 <json keyName="info" />
 ```
 
-This type is useful when you actually don't know what the type is, for examples, if you have a field with dynamic fields in it, the data might be
+This type is useful when you actually don't know what the type looks like. For example, if you have a field with dynamic fields in it, the data might be
+
 ```
 {
   key1: 'foo1'

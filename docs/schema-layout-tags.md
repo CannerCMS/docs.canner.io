@@ -6,13 +6,13 @@ sidebar_label: Layout Tags
 
 ## Introduction
 
-Layout tags are used to create grids, containers, and blocks in CMS. And allows you create customized design layouts and visual design for your CMS.
+Layout tags are used to create grids, containers, and blocks in CMS. It allows you create customized design layouts and visual design for your CMS.
 
 > Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged (Grids, tabs, etc..) in your CMS**.
 
 ## Basic Layout
 
-Canner supports several basic layouts. Remember to import them before using them.
+Canner supports several basic layouts. Remember to import them before using it.
 
 ```jsx
 /** @jsx c */
@@ -80,11 +80,11 @@ You can use `<Default/>` to group fields, it will become only two tabs.
   <Default keyName="section1"> // -----> tab 1
     <string {...}>
     <string {...}>
-  </default>
+  </Default>
   <Default keyName="section2"> // -----> tab 2
     <string {...}>
     <string {...}>
-  </default>
+  </Default>
 <Tabs>
 ```
 
@@ -97,7 +97,7 @@ You can use `<Default/>` to group fields, it will become only two tabs.
 import c, {Block} from 'canner-script';
 ```
 
-The children in `Block` will be put into a Card component.
+The children in `Block` will be insert into a Card component.
 
 **Preview**
 
@@ -107,7 +107,7 @@ The children in `Block` will be put into a Card component.
 </Block>
 ```
 
-Will render to
+Will render into
 
 ![card](/docs/assets/schema-overview/layout-card.png)
 
@@ -127,17 +127,17 @@ Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default /
   <Default keyName="section1"> // -----> tab 1
     <string {...}>
     <string {...}>
-  </default>
+  </Default>
   <Default keyName="section2"> // -----> tab 2
     <string {...}>
     <string {...}>
-  </default>
+  </Default>
 <Tabs>
 ```
 
 **Preview**
 
-> Notice that each child in Tabs should have keyName to let it works because `<Tabs />` will use the keyName to tell canner to render which child.
+> Notice that each child in Tabs must have `keyName`, because `<Tabs />` will use the `keyName` to decide whether the child should be rendered.
 
 ```js
 <Tabs>
@@ -146,7 +146,7 @@ Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default /
 </Tabs>
 ```
 
-Will render to
+It will render into
 
 ![tabs](/docs/assets/schema-overview/layout-tabs.png)
 
@@ -159,7 +159,7 @@ Will render to
 import c, {Row, Col} from 'canner-script';
 ```
 
-The grid system same as [antd grid](https://ant.design/components/grid/).
+The grid system is the same as [antd grid](https://ant.design/components/grid/).
 
 **Preview**
 
@@ -192,12 +192,12 @@ Will render to
 import c, {Condition} from 'canner-script';
 ```
 
-Control the children field whether is meeting a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
+Control the children field whether it is fulfill a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.
 
 - `value`: You could access all the data in the same block, could use to determine whether it should render or not.
 - `operator`: The action of the first level.
 
-For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` like below:
+For examples, if you want to show the field `address` only when users choose the delivery service, you can use `<Condition />` as below:
 
 ```js
 <object keyName="shipment">
@@ -264,7 +264,7 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
 </object>
 ```
 
-Will render to
+Will render into
 
 ![preview](/docs/assets/schema-overview/layout-condition.gif)
 
