@@ -15,8 +15,7 @@ Use `packageName` to select your customized component to handle the data.
 ***npm package***
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>
@@ -30,8 +29,7 @@ export default (
 
 ***your own component***
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 import path from 'path';
 
 export default (
@@ -126,8 +124,7 @@ Add a new key in your `package.json`. If `canner` key is not set in your `packag
 For example, suppose there is an array component called `example-array-gallery` that defines it's structure in `canner.def.js`, that it **must** have two fields called `imgSrc` and `imgName`.
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default function({attributes, children}) {
   return (
@@ -145,9 +142,7 @@ export default function({attributes, children}) {
 In `schema.js`, you can simply use it without writing it's children.
 
 ```js
-
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default function({attributes, childre}) {
   return (

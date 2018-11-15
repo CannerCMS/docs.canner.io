@@ -13,8 +13,7 @@ If you don't know **Layout**, please read [Layout](schema-layout-tags.md) first.
 You can simply customize your layout tag by giving the component in `<Layout />` which exported from `canner-script`.
 
 ```js
-/** @jsx builder */
-import builder, {Layout} from 'canner-script';
+import CannerScript, {Layout} from 'canner-script';
 import CustomizeLayoutComponent from 'path/to/component';
 
 const CustomizeLayout = props => <Layout component={CustomizeLayoutComponent} {...props} />;
@@ -70,9 +69,7 @@ Using your customized layout is as easy as defining it in the `name` prop in `<L
 
 **canner.schema.js**
 ```jsx
-/** @jsx builder */
-
-import builder, {Layout} from '@canenr/canner-script';
+import CannerScript, {Layout} from '@canenr/canner-script';
 
 import CustomizeTabsLayout from 'path/to/tabs';
 

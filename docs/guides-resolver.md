@@ -16,8 +16,7 @@ By assigning `connector` to schema, the requests from view layer will be handled
 **Only first level tags in `<root/>`** can have a prop called resolver.
 
 ```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>

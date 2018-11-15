@@ -160,8 +160,7 @@ Everything in Canner CMS is a component (or called modules), you could build you
 Using your costomized component is as simple as passing a prop.
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>

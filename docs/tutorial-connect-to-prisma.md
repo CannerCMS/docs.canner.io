@@ -143,8 +143,7 @@ Furthermore, to connect the CMS to Prisma server, simply construct a `PrismaClie
 
 Hence, the `canner.schema.js` should be:
 ``` js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 import {PrismaClient} from "canner-graphql-interface";
 
 // contruct graphQL client

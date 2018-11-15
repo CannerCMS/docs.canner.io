@@ -15,8 +15,7 @@ Layout tags are used to create grids, containers, and blocks in CMS. And allows 
 Canner supports several basic layouts. Remember to import them before using them.
 
 ```jsx
-/** @jsx c */
-import c, {Default, Block, Tabs, Row, Col, Condition} from 'canner-script';
+import CannerScript, {Default, Block, Tabs, Row, Col, Condition} from 'canner-script';
 ```
 
 ***Usage***
@@ -56,8 +55,7 @@ import c, {Default, Block, Tabs, Row, Col, Condition} from 'canner-script';
 **Usage**
 
 ```js
-/** @jsx c */
-import c, {Default} from 'canner-script';
+import CannerScript, {Default} from 'canner-script';
 ```
 
 `<Default/>` is used to group tags. All children will be rendered as normal, this layout is useful when you want to group some fields on UI without changing the data structure.
@@ -93,8 +91,7 @@ You can use `<Default/>` to group fields, it will become only two tabs.
 **Usage**
 
 ```js
-/** @jsx c */
-import c, {Block} from 'canner-script';
+import CannerScript, {Block} from 'canner-script';
 ```
 
 The children in `Block` will be put into a Card component.
@@ -116,8 +113,7 @@ Will render to
 **Usage**
 
 ```js
-/** @jsx c */
-import c, {Tabs} from 'canner-script';
+import CannerScript, {Tabs} from 'canner-script';
 ```
 
 Each child in `Tabs` will be put into a `TabPane`. Usually used with `<Default />` because it can group fields without adding other styles. 
@@ -155,8 +151,7 @@ Will render to
 **Usage**
 
 ```js
-/** @jsx c */
-import c, {Row, Col} from 'canner-script';
+import CannerScript, {Row, Col} from 'canner-script';
 ```
 
 The grid system same as [antd grid](https://ant.design/components/grid/).
@@ -188,8 +183,7 @@ Will render to
 **Usage**
 
 ```js
-/** @jsx c */
-import c, {Condition} from 'canner-script';
+import CannerScript, {Condition} from 'canner-script';
 ```
 
 Control the children field whether is meeting a certain condition. It has two properties `match` and `defaultMode`, the former is a function with two arguments `value` and `operator`. If the `match` function returns true, the children field will show as normal, or it will behave as the specific defaultMode, such as `hidden` or `disabled`.

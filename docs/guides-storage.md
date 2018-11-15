@@ -15,8 +15,7 @@ New the storage instances, and put them into `imageStorage` or `fileStorage` pro
 > You don't have to install `@canner/storage` manually because it's a dependency of canner
 
 ```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 import {FirebaseStorage, ImgurStorage} from '@canner/storage';
 ...
 const fileStorage = new FirebaseStorage(options);
@@ -66,8 +65,7 @@ export default (
 Enable Firebase storage to store your files, you can new a `FirebaseClientStorage` instance and pass to prop `fileStorage` into `<Canner>` component.
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 import {FirebaseClientStorage} from '@canner/storage';
 import firebase from 'firebase';
 

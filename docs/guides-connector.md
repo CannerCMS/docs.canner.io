@@ -23,8 +23,7 @@ To setup your connector in CMS pass `connector` in eithor your `<root/>` or **fi
 ### Single connector
 
 ```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 import {FirestoreClientConnector} from "canner-graphql-interface";
 
 const config = {
@@ -53,8 +52,7 @@ export default (
 If you want to connect different sources in different tabs, you can pass `connector` props to **first level tags in `<root/>`**.
 
 ```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>

@@ -98,8 +98,7 @@ All `object` and `array` type components must define it's `canner.def.js`. In or
 In this example, add a `canner.def.js` in root.
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 module.exports = function({attributes}) {
   return (
