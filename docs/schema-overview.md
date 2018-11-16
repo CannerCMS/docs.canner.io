@@ -97,10 +97,9 @@ import CannerScript from 'canner-script';
 ```
 
 ***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of JSX, and it is **required**.
 
 ```jsx
-import CannerScript from 'canner-script';
+import CannerScript from 'canner-script';  // this is needed
 
 modules.export = (
   <root>
@@ -114,9 +113,9 @@ modules.export = (
 ***Output***
 
 ```jsx
-c('root', null, 
-  c('object', {name: 'info'}, 
-    c('string', {name: 'name'})
+CannerScript('root', null, 
+  CannerScript('object', {name: 'info'}, 
+    CannerScript('string', {name: 'name'})
   )
 )
 
