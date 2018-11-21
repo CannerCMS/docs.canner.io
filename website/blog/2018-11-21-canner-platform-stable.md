@@ -23,7 +23,7 @@ With this feature, is powerful for outsourcing software and development companie
 
 You can create your organizations after you login Canner, in header, there is a ***"Create Organization"***.
 
-![create btn](/blog/create_btn.png)
+![create btn](/blog/org/create_btn.png)
 
 After creating your organiztion, you can see a ***"My Orgs"*** dropdown in header. You can navigate to your organization page.
 
@@ -33,13 +33,17 @@ In an organization, you can add your teams into three roles ***Owner***, ***Memb
 
 Below is the compare table of each role.
 
-![org auth](/blog/org_auth.png)
+![org auth](/blog/org/org_auth.png)
+
+How you manage your team
+
+![org members](/blog/org/org_members.png)
 
 ## Apps in Organization
 
 Applications in organizations are independent. With organizational feature, you will never mess up with your personal applications. You can manage and share your applications with your team easily. 
 
-![org apps](/blog/org_apps.png)
+![org apps](/blog/org/org_apps.png)
 
 ## Try now
 
