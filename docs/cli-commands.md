@@ -24,32 +24,44 @@ canner
   <tr>
     <td>Command</td>
     <td>Description</td>
+    <td>Options</td>
   </tr>
   <tr>
     <td>login</td>
     <td>
       Log in to canner. <b>Required</b> before using other commands
     </td>
+    <td>-</td>
   </tr>
   <tr>
     <td>logout</td>
     <td>Log out from canner.</td>
+    <td>-</td>
   </tr>
   <tr>
-    <td>init [appUrl]</td>
+    <td>init [options] [appUrl]</td>
     <td>Choose an app and it will create <code>.cannerrc</code> configuration file in your current directory, or you can set the app directly with a appUrl. You can use this command to change configurations if you want.</td>
+    <td>
+      <li><code>appUrl</code>  your application URL</li>
+      <li><code>-o, --org-url <org-url></code>   organization url</li>
+    </td>
   </tr>
   <tr>
-    <td>init:schema [appUrl]</td>
+    <td>init:schema [options]</td>
     <td>Choose a schema template and a data source, it will create `schema` and `cert` files in your current directory.</td>
+    <td>
+      <li><code>-s, --schema-path <schema-path></code> your schema path</li>
+    </td>
   </tr>
   <tr>
     <td>open</td>
     <td>Open current application website on your browser.</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>open:dashboard</td>
     <td>Open current application dashboard on your browser.</td>
+    <td>-</td>
   </tr>
 </table>
 
@@ -59,10 +71,21 @@ canner
   <tr>
     <td>Command</td>
     <td>Description</td>
+    <td>Options</td>
   </tr>
   <tr>
     <td>app:list</td>
     <td>List all your apps and their information.</td>
+    <td>
+      <li><code>-o, --org-url <org-url></code>  organization url</li>
+    </td>
+  </tr>
+  <tr>
+    <td>app:create</td>
+    <td>Create app in org and personal account.</td>
+    <td>
+      <li><code>-o, --org-url <org-url></code>  organization url</li>
+    </td>
   </tr>
 </table>
 

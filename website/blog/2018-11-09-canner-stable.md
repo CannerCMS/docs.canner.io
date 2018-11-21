@@ -7,17 +7,17 @@ authorFBID: 100001324369534
 
 Hi everyone! It's been a long while since our last post. This doesn't mean that we forget our users and community. In contrast, we work extremely hard to provide a more productive and powerful CMS framework than ever.
 
-First of all, we finally confident of releasing our Canner open source to stable version.
+First of all, we are confident and proud of releasing our Canner open source to stable version.
 
 <!--truncate-->
 
-Before read further you could try out our latest demo [here](https://www.canner.io/demo). Which you could build this whole CMS within 1500 lines of code. We tried super hard to help developers to do less with more. Here's the result...
+Before reading further you could try out our latest demo [here](https://www.canner.io/demo). Which you could build this demo within 1500 lines of code.
+
+Canner team tried super hard to help developers to do less with more. Here's the result after using Canner...
 
 > Canner can reduce up to 80% of your current CMS solutions.
 
-We help companies scale and iterate fast using our CMS.
-
-What we are trying to improve in this version?
+Canner help companies scale and iterate fast using our CMS. What we are trying to improve in this version?
 
 ## Recap
 
