@@ -35,6 +35,12 @@ Below is the compare table of each role.
 
 ![org auth](/blog/org_auth.png)
 
+## Apps in Organization
+
+Applications in organizations are independent. With organizational feature, you will never mess up with your personal applications. You can manage and share your applications with your team easily. 
+
+![org apps](/blog/org_apps.png)
+
 ## Try now
 
 Want to try out CMS in your organization? [Sign up and Try](/forms/new_user)
