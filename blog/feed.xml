@@ -4,7 +4,7 @@
         <title>Canner Blog</title>
         <link>https://www.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner news and events.</description>
-        <lastBuildDate>Wed, 21 Nov 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 26 Nov 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://www.canner.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Canner.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[#CMS30 | 30 Day 30 CMSes Challenge]]></title>
+            <link>https://www.canner.io/blog/2018/11/26/cms30.html</link>
+            <guid>https://www.canner.io/blog/2018/11/26/cms30.html</guid>
+            <pubDate>Mon, 26 Nov 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hi all!</p> <p>Thank you for joining the Canner community! Having had launched our first open source Alpha version this past May, Canner has grown rapidly in the open source community, and we couldn’t have done it without you, thank you for your support.</p> <p>Si...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Canner Platform Stable - Introducing Organization]]></title>
             <link>https://www.canner.io/blog/2018/11/21/canner-platform-stable.html</link>

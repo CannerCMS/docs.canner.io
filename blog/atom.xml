@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
     <title>Canner Blog</title>
-    <updated>2018-11-21T06:00:00Z</updated>
+    <updated>2018-11-26T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Canner news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2018 Canner.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[#CMS30 | 30 Day 30 CMSes Challenge]]></title>
+        <id>https://www.canner.io/blog/2018/11/26/cms30.html</id>
+        <link href="https://www.canner.io/blog/2018/11/26/cms30.html">
+        </link>
+        <updated>2018-11-26T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Hi all!</p> <p>Thank you for joining the Canner community! Having had launched our first open source Alpha version this past May, Canner has grown rapidly in the open source community, and we couldn’t have done it without you, thank you for your support.</p> <p>Si...</p>]]></summary>
+        <author>
+            <name>Howard Chi</name>
+            <uri>http://twitter.com/chilijung</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Canner Platform Stable - Introducing Organization]]></title>
         <id>https://www.canner.io/blog/2018/11/21/canner-platform-stable.html</id>
