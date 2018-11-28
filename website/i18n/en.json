@@ -266,8 +266,8 @@
         "sidebar_label": "Firestore CMS (Community edition)"
       },
       "tutorial-connect-to-firebase": {
-        "title": "Connect to Firebase Realtime Database",
-        "sidebar_label": "Connect to Firebase Realtime Database"
+        "title": "Connect to Firebase/Firestore",
+        "sidebar_label": "Connect to Firebase/Firestore"
       },
       "tutorial-connect-to-prisma": {
         "title": "Connect to Prisma",
