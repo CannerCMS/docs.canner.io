@@ -15,7 +15,7 @@ After you decide to use Firebase as backend in your applications, several challe
 
 **2. How could the customer service team search for user's data in Firebase database, when customers ask for help?**
 
-**3. How could I better maintain data on websites and apps, should I update my code every time I change content or should I change from Firebase console directly?**
+**3. How could I better maintain data on websites and apps, should I update my code every time I change the content or should I change from Firebase console directly?**
 
 **4. Should I edit my database from Firebase console every time to update data in Firebase database when it is so dangerous to do so?**
 
@@ -23,7 +23,7 @@ After you decide to use Firebase as backend in your applications, several challe
 
 > All these problems point to the for a CMS to help manage content.
 
-But should I then build a dashboard, which might takes more time than building applications?
+But should I then build a dashboard, which might take more time than building applications?
 
 ## Top 5 reasons you should have a Firebase CMS
 
@@ -31,7 +31,7 @@ But should I then build a dashboard, which might takes more time than building a
 With a delightful and easy to use interface, empowers your team to manage and maintain data without any engineer.
 
 ### 2. Reusability
-CMS defined in schema, without any hard-coded programming. This allow you to reuse and rebuild your CMS fast.
+CMS defined in a schema, without any hard-coded programming. This allows you to reuse and rebuild your CMS fast.
 
 ### 3. Security
 To prevent team members directly modify data in Firebase database, the best way is to provide members a CMS interface.
