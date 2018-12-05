@@ -1,0 +1,96 @@
+---
+title: GQLify Open Source - Alpha Version
+author: Frank Yang
+---
+
+Hi everyone! We are so happy to show you our new open source project - [GQLify](https://www.gqlify.com). After canner released, we spend much time on how to save developer time on building GraphQL project. Today, we find a way to help developer! **With GQLify, only thing you need to do is define the schema. Then, GQLify handle everything else about GraphQL server!**
+
+GQLify help you do following things:
+* Convert your schema to GraphQL Schema Definition Language(SDL)
+* Support multiple [Data Source](https://www.gqlify.com/docs/data-source-overview)
+* Build Query functions
+* Build Mutation functions
+* Handle relationship between data model
+* Generate Apollo Server config
+
+## Quick Demo
+
+1. Define your schema in `demo.graphql`
+
+```graphql
+type User @GQLifyModel(dataSource: "memory", key: "users") {
+  id: ID! @unique @autoGen # auto generate unique id
+  username: String!
+  email: String
+  books: [Book!]! # User-Book: one-to-many
+}
+
+type Book @GQLifyModel(dataSource: "memory", key: "books") {
+  id: ID! @unique @autoGen # auto generate unique id
+  name: String!
+  author: User!
+}
+```
+
+2. Setup GQLify with Apollo Server in `index.js`
+
+```typescript
+const { Gqlify, MemoryDataSource } = require('@gqlify/server')
+const { ApolloServer } = require('apollo-server');
+
+// Read datamodel
+const sdl = readFileSync(__dirname + '/demo.graphql', { encoding: 'utf8' });
+
+// mock default data
+const defaultData = {
+  users: [
+    {id: '1', username: 'Alice', email: 'alice@gmail.com'},
+    {id: '2', username: 'Bob', email: 'bob@gmail.io'},
+  ],
+  books: [
+    {id: '1', name: 'book1', userId: '1'},
+    {id: '2', name: 'book2', userId: '2'},
+  ],
+};
+
+// construct gqlify
+const gqlify = new Gqlify({
+  // provide datamodel to gqlify
+  sdl,
+
+  // provide data-sources map to GQLify,
+  // so GQLify would know how to create data-source for each model
+  dataSources: {
+    memory: args => new MemoryDataSource(defaultData[args.key]),
+  },
+});
+
+// GQLify will provide graphql apis & resolvers to apollo-server
+const server = new ApolloServer(gqlify.createApolloConfig());
+
+// start server
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
+});
+```
+
+3. Start server!
+
+```bash
+$ node index.js
+```
+
+Now, GQLify console your data model and relationship.
+
+![start image](/blog/gqlify-alpha/start.png)
+
+Open `http://localhost:4000`, and you can enjoy GQLify.
+
+<iframe src="https://codesandbox.io/embed/p7wqo43zpx?module=%2Fdatamodel.graphql" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+## More information
+
+* [GQLify Official Site](https://www.gqlify.com)
+* [GQLify Github](https://github.com/Canner/gqlify)
+* [GQLify Documentation](https://www.gqlify.com/docs/intro.html)
+* [Why GQLify](https://www.gqlify.com/docs/why-gqlify)
