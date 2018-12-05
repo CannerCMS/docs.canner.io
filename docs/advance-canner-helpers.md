@@ -55,9 +55,9 @@ class extends ObjectComponent extends React.Component {
 
 ## LiteCMS
 
-Use this component to render any portion of your component tree, you can think of it as a **wild card component**.  You only need this when the key you want to render is not in the children of the component. So it should lookup from the whole `componentTree`.
+Use this component to render any portion of your component tree, you can think of it as a **wildcard component**.  You only need this when the key you want to render is not in the children of the component. So it should lookup from the whole `componentTree`.
 
-> You should **NOT** use this component in normal use cases to render your children in `array` and `object`, because this component will traverse the whole `componentTree` to find the component, to which the refId refers, hence spending more time as a consequence.
+> You should **NOT** use this component in normal use cases to render your children in `array` and `object`, because this component will traverse the whole `componentTree` to find the component, to which the `refId` refers, hence spending more time as a consequence.
 
 
 ```jsx
@@ -122,7 +122,7 @@ class VairantsObject extends React.Component {
 
 ## Buttons
 
-You can use these components to render confirm or cancel button, their default onClick prop are ***deploy and reset method***. These buttons are mostly used in a `Modal` component.
+You can use these components to render confirm or cancel button, their default onClick prop is***deploy and reset method***. These buttons are mostly used in a `Modal` component.
 
 > See full list of [propTypes and API document](api-cms-helpers.md#buttons)
 
@@ -177,7 +177,7 @@ class MyArrayComponent extends React.Component {
 
 ### createEmptyData
 
-Create empty data from canner schema object.
+Create empty data from Canner schema object.
 
 ```js
 type createEmptyData = (schemaObject: Object) => *

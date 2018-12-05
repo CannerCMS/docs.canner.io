@@ -10,6 +10,10 @@ Our vision is to create **ONE** CMS framework to solve most usages from any data
 
 > Canner is an agile Content Management System for faster delivery and stability with any data sources.
 
+Result! Save up to 80% of your CMS development time.
+
+![roi](/docs/assets/start-intro/compare-canner.png)
+
 It only takes three steps to build your CMSes using Canner.
 
 ### 1. Install CLI

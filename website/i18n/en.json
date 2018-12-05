@@ -293,6 +293,10 @@
         "title": "Why Canner?",
         "sidebar_label": "Why Canner?"
       },
+      "why-cms-framework": {
+        "title": "Why do I need a CMS framework?",
+        "sidebar_label": "Why CMS framework?"
+      },
       "why-firebase-cms": {
         "title": "Why CMS for Firebase?",
         "sidebar_label": "Why CMS for Firebase?"
