@@ -4,7 +4,7 @@
         <title>Canner Blog</title>
         <link>https://www.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner news and events.</description>
-        <lastBuildDate>Mon, 26 Nov 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Dec 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://www.canner.io/blog</link>
         </image>
         <copyright>Copyright © 2018 Canner.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[GQLify Open Source]]></title>
+            <link>https://www.canner.io/blog/2018/12/05/gqlify.html</link>
+            <guid>https://www.canner.io/blog/2018/12/05/gqlify.html</guid>
+            <pubDate>Wed, 05 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hi everyone! We are so happy to show you our new open source project - <a href="https://www.gqlify.com">GQLify</a>. After canner released, we spend much time on how to save developer time on building GraphQL projects. Today, we launched a new open source project called <strong><em>&quot;GQLify&quot...</em></strong></p>]]></description>
+        </item>
         <item>
             <title><![CDATA[#CMS30 | 30 Day 30 CMSes Challenge]]></title>
             <link>https://www.canner.io/blog/2018/11/26/cms30.html</link>
