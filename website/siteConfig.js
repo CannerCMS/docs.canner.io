@@ -63,6 +63,7 @@ const siteConfig = {
     secondaryColor: '#da836c',
   },
   cleanUrl: true,
+  editUrl: 'https://github.com/Canner/docs.canner.io/edit/master/docs/',
 
 
   /* custom fonts for website */
