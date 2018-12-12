@@ -93,13 +93,13 @@
         "title": "Credential in Firestore",
         "sidebar_label": "Firestore"
       },
-      "credential-intro": {
-        "title": "Credential introduction",
-        "sidebar_label": "Introduction"
-      },
       "credential-prisma": {
         "title": "Credential in Prisma",
         "sidebar_label": "Prisma"
+      },
+      "data-source-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
       },
       "file-canner-cloud-js": {
         "title": "canner.cloud.js",
@@ -172,6 +172,10 @@
       "guides-development": {
         "title": "Development",
         "sidebar_label": "Development"
+      },
+      "guides-graphql-client": {
+        "title": "GraphqlClient",
+        "sidebar_label": "GraphqlClient"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
@@ -330,7 +334,7 @@
     "categories": {
       "Quick start": "Quick start",
       "Schema": "Schema",
-      "Credential": "Credential",
+      "Data source": "Data source",
       "Guides": "Guides",
       "CLI": "CLI",
       "Files": "Files",

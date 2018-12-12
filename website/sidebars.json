@@ -14,11 +14,17 @@
       "schema-page-tags",
       "schema-type-tags"
     ],
-    "Credential": [
-      "credential-intro",
-      "credential-firebase",
-      "credential-firestore",
-      "credential-prisma"
+    "Data source": [
+      "data-source-overview",
+      {
+        "type": "subcategory",
+        "label": "Credential",
+        "ids": [
+          "credential-firebase",
+          "credential-firestore",
+          "credential-prisma"
+        ]
+      }
     ],
     "Guides": [
       "guides-setup",
@@ -89,7 +95,14 @@
       "guides-canner",
       "guides-canner-container",
       "guides-canner-router",
-      "guides-connector",
+      {
+        "type": "subcategory",
+        "label": "Data source",
+        "ids": [
+          "guides-connector",
+          "guides-graphql-client"
+        ]
+      },
       "guides-resolver"
     ],
     "Tutorial": [
