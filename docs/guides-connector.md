@@ -4,7 +4,8 @@ title: Connector
 sidebar_label: Connector
 ---
 
-**Connector** is how Canner CMS works to connect to different backend services. We provide different connectors for users to import and connect to their services.
+
+**Connector** is how Canner CMS works to connect to different backend services. We provide different connectors for users to import and connect to their services. ***But if you are loooking for connect to your existing GraphQL server, see [GrapgQL Client](guides-graphql-client).***
 
 Connector in Canner CMS is a **Apollo** connector, definition quoted from [Apollo Connector](https://github.com/apollographql/graphql-tools/blob/master/designs/connectors.md#what-is-a-connector).
 
@@ -15,7 +16,6 @@ Connector in Canner CMS is a **Apollo** connector, definition quoted from [Apoll
 > - Provide a way to log information about data fetched, such as how long the request took, which things were batched together, what was fetched from the cache, how much data was fetched etc.
 >
 > Both batching and caching are more important in GraphQL than in traditional endpoints, because one GraphQL query may make many separate calls to the backend to retrieve all the items where a REST endpoint would only retrieve a few items, usually in one query. The separate calls let GraphQL support a wide range of queries, whereas a single REST endpoint typically only allows querying for a narrow set of objects.
-
 ## Usage
 
 To setup your connector in CMS pass `connector` in eithor your `<root/>` or **first level tags in root**. Connector must be a `ConnectorInstance` which you can import from `canner-graphql-interface`.
@@ -122,19 +122,20 @@ const fakeData = {
 
 // pass `connector` to props
 const connector = new LocalStorageConnector({
-  defaultData?: fakeData
+  defaultData?: fakeData,
+  localStorageKey?: string
 });
 ```
 
 **Clear Data:**
 
-If you want to reset the data, you can call `localStorage.removeItem` with `LocalStorageConnector.CANNER_LOCAL_STORAGE_KEY`.
+If you want to reset the data, you can call `localStorage.removeItem` with `localStorage.localStorageKey`.
 
 ```js
 import {LocalStorageConnector} from "canner-graphql-interface";
 
 // clear the data
-localStorage.removeItem(LocalStorageConnector.CANNER_LOCAL_STORAGE_KEY);
+localStorage.removeItem(localStorage.localStorageKey);
 ```
 
 ### FirebaseRtdbClientConnector
