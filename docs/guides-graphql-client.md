@@ -6,7 +6,7 @@ sidebar_label: GrapgQL Client
 
 `GraphqlClient` let you connect your own GraphQL server with Canner, just new a `GraphqlClient` instance and put it into the `<root>` tag. 
 
-> ***Note that your GraphQL should follow [openCRUD](https://github.com/opencrud/opencrud)***
+> ***Note that, your GraphQL **must** follow [openCRUD](https://github.com/opencrud/opencrud)***
 
 ## Usage
 
