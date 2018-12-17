@@ -56,15 +56,15 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
+              target="_blank"
+              href="https://spectrum.chat/canner/cannercms">
+              Join Community
+            </a>
+            <a
               href="http://stackoverflow.com/questions/tagged/canner"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
-            </a>
-            <a
-              target="_blank"
-              href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
-              Project Chat
             </a>
           </div>
           <div>

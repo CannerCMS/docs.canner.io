@@ -43,10 +43,9 @@ const siteConfig = {
     {doc: 'start-quick-intro', label: 'Docs'},
     {doc: 'tutorial-connect-to-firebase', label: 'Tutorials'},
     {doc: 'start-quick-community', label: 'Community'},
-    {doc: 'api-schema', label: 'API'},
     {href: "/component", label: "Components"},
-    // {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {page: 'help', label: 'Help'},
+    {blog: true, label: 'Blog'}
   ],
 
   // If you have users set above, you add it here:

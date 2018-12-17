@@ -327,8 +327,8 @@
       "Docs": "Docs",
       "Tutorials": "Tutorials",
       "Community": "Community",
-      "API": "API",
       "Components": "Components",
+      "Help": "Help",
       "Blog": "Blog"
     },
     "categories": {
@@ -344,7 +344,9 @@
       "Advanced": "Advanced",
       "Concept": "Concept",
       "API": "API",
-      "Why Canner": "Why Canner"
+      "Why Canner": "Why Canner",
+      "Why a CMS framework": "Why a CMS framework",
+      "FAQ": "FAQ"
     }
   },
   "pages-strings": {
