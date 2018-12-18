@@ -174,8 +174,8 @@
         "sidebar_label": "Development"
       },
       "guides-graphql-client": {
-        "title": "GrapgQL Client",
-        "sidebar_label": "GrapgQL Client"
+        "title": "GraphQL Client",
+        "sidebar_label": "GraphQL Client"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
