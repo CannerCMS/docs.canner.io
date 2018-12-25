@@ -4,17 +4,15 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-Canner make **CMS simple and easy**. We help companies to build scalable and extendable CMS infrastructure.
+CannerCMS make **CMS simple and easy**. CannerCMS is a flexible Content Management System lets you create CMS fast and easy with any datasources.
 
 Our vision is to create **ONE** CMS framework to solve most usages from any datasources.
-
-> Canner is an agile Content Management System for faster delivery and stability with any data sources.
 
 Result! Save up to 80% of your CMS development time.
 
 ![roi](/docs/assets/start-intro/compare-canner.png)
 
-It only takes three steps to build your CMSes using Canner.
+It only takes three steps to build your CMSes using CannerCMS.
 
 ### 1. Install CLI
 
@@ -58,7 +56,7 @@ Commands:
 
 ### 2. Build your Schema
 
-The core concept of Canner is to use a simple CMS schema that you can assemble any use cases.
+The core concept of CannerCMS is to use a simple CMS schema that you can assemble any use cases.
 
 You can check out [here](/docs/schema-overview)
 
