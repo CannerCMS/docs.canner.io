@@ -1,7 +1,7 @@
 ---
 id: guides-graphql-client
-title: GrapgQL Client
-sidebar_label: GrapgQL Client
+title: GraphQL Client
+sidebar_label: GraphQL Client
 ---
 
 `GraphqlClient` let you connect your own GraphQL server with Canner, just new a `GraphqlClient` instance and put it into the `<root>` tag. 

@@ -134,7 +134,7 @@ copy the `config` in the script, in this case
 }
 ```
 
-And replace it in `src/app/config/firebase.ts` in your project.
+And replace it in `src/schema/utils/index.js` in your project.
 
 ## 6. Write you CMS schema, resolver, connector
 
