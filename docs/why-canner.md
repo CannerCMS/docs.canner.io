@@ -6,6 +6,8 @@ sidebar_label: Why Canner?
 
 Why create Canner?
 
+TL;DR - **Template CMS, Content Management System can build websites fast, but clients often need custom solutions? Well, what CannerCMS do is let creating custom CMS fast and easy with many clouds.** 
+
 > ***Canner's core concept is using configuration as structure, and component as a unit. To achieve fast delivery and stability for developers and companies.***
 
 Before we built Canner CMS framework, we've tried most of CMS framework such as Wordpress, Drupal, etc. What we found was that getting simple functions to work was easy enough, but once you try to build and scale into your product or your service you ran into deeper issues...
