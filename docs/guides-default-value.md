@@ -9,8 +9,7 @@ sidebar_label: Default Value
 Add the `defaultValue` property in your data type tag to set the default value when creating. You can also pass a function in `defaultValue` so that you can set a random value.
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 import shortId from 'shortid';
 export default (
   <root>

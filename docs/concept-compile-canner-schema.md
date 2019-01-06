@@ -20,10 +20,16 @@ Four stages
 
 So the first stage of the workflow is transforming `jsx` to a JSON object called schema object.
 
-***canner.schema.js***
+Importing `canner-script` library is needed and the variable must called `CannerScript`.
+
 ```jsx
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
+```
+
+***canner.schema.js***
+
+```jsx
+import CannerScript from 'canner-script';
 
 module.exports = <root>
   <object keyName="info" title="Info">

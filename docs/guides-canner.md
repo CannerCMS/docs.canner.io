@@ -74,9 +74,7 @@ rules: [{
 ***canner.schema.js***
 
 ```jsx
-/** @jsx builder */
-
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 module.exports = (
   <root>

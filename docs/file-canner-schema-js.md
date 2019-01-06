@@ -18,18 +18,16 @@ Schema can seperate to multiple files, **but must end with `.schema.js`**.
 
 ## Example of canner.schema.js
 
-***Remember to add the first two lines, is needed!***
+***Remember to import `canner-script`, and variable must be called `CannerScript` this is needed!***
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 ```
 
 **Example**
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>

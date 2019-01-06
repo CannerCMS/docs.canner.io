@@ -4,33 +4,93 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-Canner make **CMS simple and easy**. We help companies to build scalable and extendable CMS infrastructure.
+CannerCMS make **CMS simple and easy**. CannerCMS is a flexible Content Management System lets you create CMS fast and easy with any datasources.
 
 Our vision is to create **ONE** CMS framework to solve most usages from any datasources.
 
-> Canner is an agile Content Management System for faster delivery and stability with any data sources.
+Result! Save up to 80% of your CMS development time.
 
-Canner can **reduce up to 80%** of your current CMS solutions.
+![roi](/docs/assets/start-intro/compare-canner.png)
 
-You only need to upload a configuration file in **JSX**(easy to learn) syntax, to create any kind and form of applications. Our CMS has built CMS for websites, mobile apps, and even chatbot applications.  Amazingly, you can building a **blog CMS within 200 lines of code**, as for **basic E-commerce CMS within 300 lines of code** using Canner. [Here is a demo](https://www.canner.io/demo) only use 1500 lines of code.
+It only takes three steps to build your CMSes using CannerCMS.
 
-![compare](/docs/assets/start-intro/compare-canner.png)
+### 1. Install CLI
 
-> Want to learn more about [why use Canner](why-canner.md) and [mission](why-mission.md)
+```bash
+$ npm install -g @canner/cli
+```
 
-## Benefits and advantages (Simple. Agile. Flexible. Efficient - SAFE)
+To check if you install success, type `canner`.
 
-### 🌍 Simple, One Framework
-Canner is flexible and agnostic, that you can learn once and create any form of CMS for many different databases.
+```bash
+➜  canner git:(develop) ✗ canner
+Usage:  [options] [command] <cmd>
 
-### ⚡️ Agile, Move Faster
-By defining a Canner schema in JSX, you can determine how the CMS stores data in your databases and the appearance of the CMS UI/UX.
+Options:
+  -V, --version                       output the version number
+  -h, --help                          output usage information
 
-### 💪 Flexible, any Data Sources
-With different connectors, you are able to create a CMS to interact with Firebase, MySQL, PostgreSQL, GraphQL with the same schema.
+Commands:
+  login                               Login to Canner
+  logout                              Logout
+  whoami                              Display account info
+  init [options] [url]                Initialize project
+  init:schema [options]               Initialize schema
+  open:dashboard                      Open your project dashboard
+  app:list [options]                  List all your projects in Canner
+  app:create [options]                Create a project in Canner
+  script:deploy [options] [filename]  Bundle and Deploy your schema and UI components to Canner.
+  script:serve [options] [filename]   Serve your CMS in local
+  start [options]                     Serve your statics files
+  static:build [options] [filename]   Serve your CMS in local
+  data:import [options] [filename]    Import default data to your data source
 
-### 💸 Efficient, Less is More
-Since Canner schema is only a JSX (XML-like) language without any logistic code, in other words, you can maintain your code in a configuration file and easy to maintain using version controls.
+  Examples:
+
+    Intitialize schemas with templates:
+    $ canner init:schema
+
+    Serving CMS:
+    $ canner script:serve
+```
+
+### 2. Build your Schema
+
+The core concept of CannerCMS is to use a simple CMS schema that you can assemble any use cases.
+
+You can check out [here](/docs/schema-overview)
+
+### 3. Deploy your CMS
+
+After you build your CMS, you can select host by [your own](/docs/start-quick-community) or using [Canner platform](https://www.canner.io).
+
+If you select to deploy to Canner
+
+Login Canner:
+
+```bash
+$ canner login
+```
+
+Initialize your application in your local machine
+
+```bash
+$ canner init
+```
+
+if you want to init to your organization
+
+```bash
+$ canner init --org-url [orgUrl]
+```
+
+Deploy CMS on Canner
+
+```bash
+$ canner script:deploy
+```
+
+## Next
 
 Quick start for 
 

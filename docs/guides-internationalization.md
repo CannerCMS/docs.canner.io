@@ -39,8 +39,7 @@ The text dictionary, which records the texts that every messageId represents in 
 
 ```js
 // canner.schema.js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 const dict = {
   en: {

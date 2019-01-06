@@ -10,6 +10,8 @@ What things do we open source? **We open source all our framework including how 
 
 You could use our Canner compiler and [Canner](https://github.com/canner/canner) CMS framework to integrate Canner CMS framework into any applications and products without any fee, which is release under license **Apache license 2.0. Please make sure you follow our license before using our open source edition.**
 
+> See the complete compare table of [Open source edition vs. CannerCMS Cloud](https://github.com/Canner/canner#open-source-vs-cannercms-cloud)
+
 ## CMS open source edition
 
 We open source a simple edition of our CMS using Firebase as database.

@@ -93,13 +93,13 @@
         "title": "Credential in Firestore",
         "sidebar_label": "Firestore"
       },
-      "credential-intro": {
-        "title": "Credential introduction",
-        "sidebar_label": "Introduction"
-      },
       "credential-prisma": {
         "title": "Credential in Prisma",
         "sidebar_label": "Prisma"
+      },
+      "data-source-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
       },
       "file-canner-cloud-js": {
         "title": "canner.cloud.js",
@@ -172,6 +172,10 @@
       "guides-development": {
         "title": "Development",
         "sidebar_label": "Development"
+      },
+      "guides-graphql-client": {
+        "title": "GraphQL Client",
+        "sidebar_label": "GraphQL Client"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
@@ -266,8 +270,8 @@
         "sidebar_label": "Firestore CMS (Community edition)"
       },
       "tutorial-connect-to-firebase": {
-        "title": "Connect to Firebase Realtime Database",
-        "sidebar_label": "Connect to Firebase Realtime Database"
+        "title": "Connect to Firebase/Firestore",
+        "sidebar_label": "Connect to Firebase/Firestore"
       },
       "tutorial-connect-to-prisma": {
         "title": "Connect to Prisma",
@@ -292,6 +296,10 @@
       "why-canner": {
         "title": "Why Canner?",
         "sidebar_label": "Why Canner?"
+      },
+      "why-cms-framework": {
+        "title": "Why do I need a CMS framework?",
+        "sidebar_label": "Why CMS framework?"
       },
       "why-firebase-cms": {
         "title": "Why CMS for Firebase?",
@@ -319,14 +327,14 @@
       "Docs": "Docs",
       "Tutorials": "Tutorials",
       "Community": "Community",
-      "API": "API",
       "Components": "Components",
+      "Help": "Help",
       "Blog": "Blog"
     },
     "categories": {
       "Quick start": "Quick start",
       "Schema": "Schema",
-      "Credential": "Credential",
+      "Data source": "Data source",
       "Guides": "Guides",
       "CLI": "CLI",
       "Files": "Files",
@@ -336,7 +344,9 @@
       "Advanced": "Advanced",
       "Concept": "Concept",
       "API": "API",
-      "Why Canner": "Why Canner"
+      "Why Canner": "Why Canner",
+      "Why a CMS framework": "Why a CMS framework",
+      "FAQ": "FAQ"
     }
   },
   "pages-strings": {

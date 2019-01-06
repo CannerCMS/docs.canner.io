@@ -4,9 +4,11 @@ title: Build your first CMS
 sidebar_label: Build your first CMS
 ---
 
+> You can find the example repository [here](https://github.com/Canner/canner-quick-start).
+
 ## Installation
 
-First of all, you have to install at least [Node](https://nodejs.org/en/download/) and [npm](http://npmjs.com/) (or [Yarn](https://yarnpkg.com/)) on your computer.
+First of all, you have to install at least [Node](https://nodejs.org/en/download/) and [npm](http://npmjs.com/) (or [Yarn](https://yarnpkg.com/)) on your computer, and intitalize a React project. 
 
 > While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
 
@@ -15,17 +17,34 @@ Then, you have to install required packages of canner to have a CMS.
 ### npm
 
 ```sh
-$ npm install --save canner antd firebase
-$ npm install --save-dev canner-schema-loader canner-script less less-loader css-loader style-loader
+$ npm install --save canner antd firebase @canner/antd-components @canner/router @canner/container
+$ npm install --save-dev canner-schema-loader canner-script less less-loader css-loader style-loader babel-plugin-import
 ```
 
 ### yarn
 
 ```sh
-$ yarn add canner antd firebase
-$ yarn add -D canner-schema-loader canner-script less less-loader css-loader style-loader
+$ yarn add canner antd firebase @canner/antd-components @canner/router @canner/container
+$ yarn add -D canner-schema-loader canner-script less less-loader css-loader style-loader babel-plugin-import
 ```
 
+## Add `babel-plugin-import` in your babel plugins
+
+**babel.config.js**
+```js
+module.exports = {
+  //...
+  plugins: [
+    [
+      "import": {
+        "libraryName": "antd",
+        "style": true,
+      }
+    ]
+  ]
+  //...
+}
+```
 
 ## Add `canner-schema-loader` and `less-loader` in webpack configuation
 
@@ -34,25 +53,47 @@ $ yarn add -D canner-schema-loader canner-script less less-loader css-loader sty
 
 ```js
 // ...
-rules: [{
-  test: /(\.schema\.js|canner\.def\.js)$/,
-  use: [
-    {
-      loader: 'canner-schema-loader'
+module: {
+  rules: [{
+    oneOf: [
+      {
+        test: /(\.schema\.js|canner\.def\.js)$/,
+        use: [{
+          loader: "canner-schema-loader"
+        }, {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              ["@babel/preset-react", 
+                {
+                  "pragma": "CannerScript", // default pragma is React.createElement
+                  "pragmaFrag": "CannerScript.Default", // default is React.Fragment
+                  "throwIfNamespace": false // defaults to true
+                }
+              ]
+            ]
+          }
+        }]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  }, {
+    test: /\.less$/,
+    use: [{
+      loader: 'style-loader'
     }, {
-      loader: 'babel-loader',
-    }
-  ],
-}, {
-  test: /\.less$/,
-  use: [{
-    loader: 'style-loader'
-  }, {
-    loader: 'css-loader'
-  }, {
-    loader: 'less-loader'
+      loader: 'css-loader'
+    }, {
+      loader: 'less-loader'
+    }]
   }]
-}]
+}
 // ...
 ```
 
@@ -61,20 +102,17 @@ rules: [{
 > Furthur Information
 > - [Schema Overview](schema-overview.md)
 
-***canner.schema.js***
+***schema/canner.schema.js***
 
 ```jsx
-/** @jsx builder */
-
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 module.exports = (
   <root>
     <object keyName="info" title="My Info">
       <string keyName="name" title="Name"/>
-      <string keyName="nickname" title="Nickname" />
-      <string keyName="intro" ui="editor"/>
-      <dateTime keyName="updateAt"/>
+      <object keyName="intro" title="Intro" ui="editor"/>
+      <dateTime keyName="updateAt" title="Update at"/>
     </object>
   </root>
 );
@@ -86,7 +124,8 @@ Pass your `canner.schema.js` into `canner`, this will generate all the CMS for y
 
 > `React` version must be >= 16.x version
 
-```js
+***src/index.js***
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -96,12 +135,12 @@ import Container from '@canner/container';
 import Router from '@canner/router';
 
 // your schema
-import schema from './schema/canner.schema.js';
+import schema from '../schema/canner.schema.js';
 
 
 class CMSExample extends React.Component {
   router = new Router({
-    baseUrl: "/dashboard"
+    baseUrl: "/canner-quick-start"
   });
 
   componentDidMount() {

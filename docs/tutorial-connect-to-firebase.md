@@ -1,7 +1,7 @@
 ---
 id: tutorial-connect-to-firebase
-title: Connect to Firebase Realtime Database
-sidebar_label: Connect to Firebase Realtime Database
+title: Connect to Firebase/Firestore
+sidebar_label: Connect to Firebase/Firestore
 ---
 
 ## 1. Install Canner CLI

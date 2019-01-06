@@ -6,7 +6,7 @@ sidebar_label: Our mission
 
 Canner CMS's concept is radically different from other CMS frameworks. At Canner Inc., we spend the past three years seeking for best solutions to solve some major problems we find in current CMS solutions as below.
 
-Thanks to modern technologies, such as `Babel`, `React`, `GraphQL`, `Apollo`, `Webpack` to make Canner CMS posssible.
+Thanks to modern technologies, such as `Babel`, `React`, `GraphQL`, `Apollo`, `Webpack` to make Canner CMS possible.
 
 ***[flexibility](#1-flexibility), [adaptivity](#2-adaptivity), [simplicity](#3-simplicity), [scalability](#4-scalability), [modularity](#5-modularity)*** are the 5 major missions we try to solve at Canner. Following sections we'll talk about these 5 aspects.
 
@@ -48,11 +48,11 @@ As you see, Canner CMS schema's flexibility open a new opportunity, to build ten
 
 ## 2. Adaptivity
 
-As backend and database services springing up in modern technology stack. We design a adaptive interface that could easily connect to different sources and APIs.
+As backend and database, services springing up in the modern technology stack. We design an adaptive interface that could easily connect to different sources and APIs.
 
 > In order to achieve that we unify APIs into **GraphQL** interfaces.
 
-Change to different data source is as simple as change one line of code
+Change to a different data source is as simple as change one line of code
 
 ```js
 // add a condition to check if firebase is initialized
@@ -100,13 +100,13 @@ Transform data structure to fit your need by using **resolver**.
 
 ## 3. Simplicity
 
-Building CMS by your own, can truely hard and complex because it consist by views and logics (validation, cache, relation, authentication, etc...). Using Canner build your CMS without knowing these problems, we'll take care of it.
+Building CMS on your own, can truly hard and complex because it consist of views and logic (validation, cache, relation, authentication, etc...). Using Canner build your CMS without knowing these problems, we'll take care of it.
 
 ### Declare in one line code
 
-We design CMS component as unit. And you can use it in one line.
+We design a CMS component as a unit. And you can use it in one line.
 
-For example you need a slider, just declare
+For example, you need a slider, just declare
 
 ```xml
 <number ui="slider" uiParams={{min: 20, max: 70}} />
@@ -122,7 +122,7 @@ As for editor
 
 ### CMS structure as code
 
-Canner provide flexible CMS infrastructure, allowing developers to assemble CMS interface that adapts to specifications.
+Canner provides flexible CMS infrastructure, allowing developers to assemble CMS interface that adapts to specifications.
 
 Here's an example for a blog post, you can replace and modify any specification easily.
 
@@ -157,11 +157,10 @@ Canner is proved can be built from small to large applications by using our **Ca
 
 Everything in Canner CMS is a component (or called modules), you could build your own and import into our CMS without side-effects.
 
-Using your costomized component is as simple as passing a prop.
+Using your customized component is as simple as passing a prop.
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>
@@ -178,4 +177,4 @@ export default (
 
 ## Conclusion
 
-While some might think CMS is a crowded category, but believe CMS still a lot of new imagination and vision that no one have tried before.
+While some might think CMS is a crowded category, but believe CMS still a lot of new imagination and vision that no one has tried before.

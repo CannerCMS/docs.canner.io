@@ -9,9 +9,8 @@ sidebar_label: Condition Fields
 To control a field hidden or disabled in some conditions in runtime, we can use `Condition` layout tag to achieve it. For examples, if you want to show the field `address` only when users choose a certain delivery service, you can use `<Condition />` like below:
 
 ```jsx
-/** @jsx builder */
 // remember to import Condition tag before you use it
-import builder, {Condition} from 'canner-script';
+import CannerScript, {Condition} from 'canner-script';
 
 export default (
   <object keyName="shipment">
@@ -237,9 +236,7 @@ export default class ReceiveTime extends React.Component {
 
 **canner.schema.js**
 ```js
-/** @jsx builder */
-
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 module.exports = (
   <root>

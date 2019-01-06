@@ -24,22 +24,6 @@ class Footer extends React.Component {
 
     return (
       <footer className="nav-footer" id="footer">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            ((window.gitter = {}).chat = {}).options = {
-              room: 'Canner/CannerCMS'
-            };
-
-            const script = document.createElement("script");
-
-            script.src = "https://sidecar.gitter.im/dist/sidecar.v1.js";
-            script.async = true;
-            script.defer = true;
-
-            document.body.appendChild(script);
-            `
-          }}/>
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
@@ -49,22 +33,22 @@ class Footer extends React.Component {
             <a href={this.docUrl('start-quick-intro.html')}>
               Getting Started
             </a>
-            <a href={this.docUrl('guides-community-intro.html')}>
+            <a href={this.docUrl('start-quick-community.html')}>
               Community Edition
             </a>
           </div>
           <div>
             <h5>Community</h5>
             <a
+              target="_blank"
+              href="https://spectrum.chat/canner/cannercms">
+              Join Community
+            </a>
+            <a
               href="http://stackoverflow.com/questions/tagged/canner"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
-            </a>
-            <a
-              target="_blank"
-              href="https://gitter.im/Canner/CannerCMS?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
-              Project Chat
             </a>
           </div>
           <div>

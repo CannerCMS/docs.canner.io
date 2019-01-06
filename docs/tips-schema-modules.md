@@ -11,8 +11,7 @@ In real world use cases, schema can be really complex, you could seperate them t
 ***info.schema.js***
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 modules.export = (
   <object keyName="info">
@@ -24,8 +23,7 @@ modules.export = (
 
 ***canner.schema.js***
 ```jsx
-/** @jsx builder */
-import builder from '@canenr/canner-script';
+import CannerScript from 'canner-script';
 import Info from './info.schema.js';
 
 modules.export = (

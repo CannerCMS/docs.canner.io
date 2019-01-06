@@ -14,11 +14,17 @@
       "schema-page-tags",
       "schema-type-tags"
     ],
-    "Credential": [
-      "credential-intro",
-      "credential-firebase",
-      "credential-firestore",
-      "credential-prisma"
+    "Data source": [
+      "data-source-overview",
+      {
+        "type": "subcategory",
+        "label": "Credential",
+        "ids": [
+          "credential-firebase",
+          "credential-firestore",
+          "credential-prisma"
+        ]
+      }
     ],
     "Guides": [
       "guides-setup",
@@ -89,7 +95,14 @@
       "guides-canner",
       "guides-canner-container",
       "guides-canner-router",
-      "guides-connector",
+      {
+        "type": "subcategory",
+        "label": "Data source",
+        "ids": [
+          "guides-connector",
+          "guides-graphql-client"
+        ]
+      },
       "guides-resolver"
     ],
     "Tutorial": [
@@ -106,9 +119,7 @@
       "concept-component-tree",
       "concept-hocs" ,
       "concept-action"
-    ]
-  },
-  "api": {
+    ],
     "API": [
       "api-schema",
       "api-canner",
@@ -124,8 +135,13 @@
       "why-canner",
       "why-mission",
       "why-adaptive-cms",
-      "why-traditional-headless-adaptive",
-      "why-firebase-cms",
+      "why-traditional-headless-adaptive"
+    ],
+    "Why a CMS framework": [
+      "why-cms-framework",
+      "why-firebase-cms"
+    ],
+    "FAQ": [
       "why-jsx",
       "why-graphql"
     ]

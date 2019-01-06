@@ -90,19 +90,16 @@ is equivalent to (Canner compiler will compile into a JSON format)
 
 ### How
 
-We use `babel` with the `babel-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding these two lines at the beginning of `canner.schema.js`. ***This is required***.
+We use `babel` with the `babel-plugin-transform-react-jsx` plugin to parse `jsx` syntax. Choose the `canner-script` as the builder of `jsx` by adding import `canner-script` at the beginning of `canner.schema.js`. ***This is required***.
 
 ```js
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 ```
 
 ***Input***
-> NOTE: The comment on the top, it declares `canner-script` as the builder of JSX, and it is **required**.
 
 ```jsx
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';  // this is needed
 
 modules.export = (
   <root>
@@ -116,9 +113,9 @@ modules.export = (
 ***Output***
 
 ```jsx
-c('root', null, 
-  c('object', {name: 'info'}, 
-    c('string', {name: 'name'})
+CannerScript('root', null, 
+  CannerScript('object', {name: 'info'}, 
+    CannerScript('string', {name: 'name'})
   )
 )
 
@@ -193,8 +190,7 @@ module.exports = (
 The first level tags of `<root/>` must be one of [`<object/>`](schema-data-type-tags#lt-object-gt), [`<array/>`](schema-data-type-tags#lt-array-gt), [`<page />`](schema-page-tags), `<objectType/>`, and `<arrayType/>`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
 
 ```js
-/** @jsx builder */
-import builder from 'canner-script';
+import CannerScript from 'canner-script';
 
 export default (
   <root>
@@ -265,8 +261,7 @@ For example, there are three fields `name`, `nickname`, and `note` in the `info`
 
 ***without block***
 ```jsx
-/** @jsx c */
-import c from 'canner-script';
+import CannerScript from 'canner-script';
 
 module.exports = <root>
   <object keyName="info">
@@ -279,8 +274,7 @@ module.exports = <root>
 
 ***with block***
 ```jsx
-/** @jsx c */
-import c, {Block} from 'canner-script';
+import CannerScript, {Block} from 'canner-script';
 
 module.exports = <root>
   <object keyName="info">

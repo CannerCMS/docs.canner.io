@@ -10,8 +10,7 @@ The outermost tag in canner schema. It actually returns an object containing wit
 
 **Example**
 ```js
-/** @jsx builder */
-import builder, {Block} from 'canner-script';
+import CannerScript, {Block} from 'canner-script';
 const schema = (
   <root dict={dict} imageStorage={imageStorage} fileStorage={fileStorage}>
     <page keyName="dashboard">

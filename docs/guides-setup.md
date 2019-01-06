@@ -69,9 +69,8 @@ Before starting developing your CMS, you must create the `canner.schema.js` with
 Here is the schema of a simple company website
 
 **canner.schema.js**
-```
-/** @jsx c */
-import c from 'canner-script';
+```jsx
+import CannerScript from 'canner-script';
 
 export default (
   <root>
