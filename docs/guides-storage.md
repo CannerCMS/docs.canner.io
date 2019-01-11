@@ -16,9 +16,9 @@ New the storage instances, and put them into `imageStorage` or `fileStorage` pro
 
 ```jsx
 import CannerScript from 'canner-script';
-import {FirebaseStorage, ImgurStorage} from '@canner/storage';
+import {FirebaseClientStorage, ImgurStorage} from '@canner/storage';
 ...
-const fileStorage = new FirebaseStorage(options);
+const fileStorage = new FirebaseClientStorage(options);
 const imageStorage = new ImgurStorage(options);
 
 export default (
