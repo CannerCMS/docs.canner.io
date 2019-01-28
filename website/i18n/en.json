@@ -298,7 +298,7 @@
         "sidebar_label": "Why Canner?"
       },
       "why-cms-framework": {
-        "title": "Why do I need a Content Management Framework? Instead of CMS",
+        "title": "Why a Content Management Framework?",
         "sidebar_label": "Why Content Management Framework?"
       },
       "why-firebase-cms": {
@@ -345,7 +345,7 @@
       "Concept": "Concept",
       "API": "API",
       "Why Canner": "Why Canner",
-      "Why a CMS framework": "Why a CMS framework",
+      "Content Management Framework": "Content Management Framework",
       "FAQ": "FAQ"
     }
   },
