@@ -4,167 +4,54 @@ title: Overview
 sidebar_label: Overview
 ---
 
-## Install
+## Installation
 
-You'll need `npm` and `nodeJS`. And enter
+Make sure you have already installed NodeJS and use the command below to install `@canner/cli` globally. And as the [official NPM docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) mentioned, we also recommend using a Node version manager to prevent the [EACCESS issue](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) if you need to install `@canner/cli` with `sudo`.
 
-```sh
-npm install -g @canner/cli
+
+```shell
+$ npm install -g @canner/cli
 ```
 
-to install your CLI tool. After install CLI tool you can use it by enter
+Check the installation with
 
-```sh
-canner
+```shell
+$ canner --version
 ```
+#### Note
+- Your Node version must at least >= 6.10. 
+#### Troubleshooting
+- [EACCESS: permission denied](https://github.com/Canner/canner/issues/139)
 
-## Administrative
 
-<table>
-  <tr>
-    <td>Command</td>
-    <td>Description</td>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td>login</td>
-    <td>
-      Log in to canner. <b>Required</b> before using other commands
-    </td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>logout</td>
-    <td>Log out from canner.</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>init [options] [appUrl]</td>
-    <td>Choose an app and it will create <code>.cannerrc</code> configuration file in your current directory, or you can set the app directly with a appUrl. You can use this command to change configurations if you want.</td>
-    <td>
-      <li><code>appUrl</code>  your application URL</li>
-      <li><code>-o, --org-url <org-url></code>   organization url</li>
-    </td>
-  </tr>
-  <tr>
-    <td>init:schema [options]</td>
-    <td>Choose a schema template and a data source, it will create `schema` and `cert` files in your current directory.</td>
-    <td>
-      <li><code>-s, --schema-path <schema-path></code> your schema path</li>
-    </td>
-  </tr>
-  <tr>
-    <td>open</td>
-    <td>Open current application website on your browser.</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>open:dashboard</td>
-    <td>Open current application dashboard on your browser.</td>
-    <td>-</td>
-  </tr>
-</table>
 
-## App
+## Commands
 
-<table>
-  <tr>
-    <td>Command</td>
-    <td>Description</td>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td>app:list</td>
-    <td>List all your apps and their information.</td>
-    <td>
-      <li><code>-o, --org-url <org-url></code>  organization url</li>
-    </td>
-  </tr>
-  <tr>
-    <td>app:create</td>
-    <td>Create app in org and personal account.</td>
-    <td>
-      <li><code>-o, --org-url <org-url></code>  organization url</li>
-    </td>
-  </tr>
-</table>
+Commands can be roughly grouped into three categories, **OSS for self-hosting**, **Cloud for Canner platform**, and **Common for both**.
 
-## Data
-> To use `data:import`, please install `@canner/cli-firebase-tool` in global first.
-> 
-<table>
-  <tr>
-    <td>Command</td>
-    <td>Description</td>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td>data:import [options] [filename]</td>
-    <td>
-      Import your <code>canner.data.js</code>  to the default app url which is set in <code>.cannerrc</code>.
-    </td>
-    <td>
-      <li><code>-u &lt;url&lt;, --url &lt;url&gt;</code> to import data to the specific app.</li>
-      <li><code>-d, --drop-first</code> to drop the data before import.</li>
-    </td>
-  </tr>
-</table>
+### Common
+- **[canner init](cli-init)** - Initialize `canner.schema.js`, `schema/*.schema.js`, one of `canner.server.js` and `canner.cloud.js`.
+  - *--only-schema, -s*
+  - *--only-cloud, -c*
+  - *--only-server, -S*
 
-## Script
+### OSS (self-hosting)
+- **[canner start](cli-start)** - Build the CMS and run the GrapQL server.
+- **[canner start:cms](cli-start-cms)** - Run the CMS server including build the static files of the CMS.
+- **[canner start:graphql](cli-start-graphql)** - Run the GrapQL server.
+- **[canner start:auth](cli-start-auth)** - Run the auth server.
 
-<table>
-  <tr>
-    <td>Command</td>
-    <td>Description</td>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td>script:serve [options] [filename]</td>
-    <td>
-      Serve your CMS in local machine
-    </td>
-    <td>
-      <ul>
-        <li><code>-e &lt;env&gt;, --env &lt;env&gt;</code> Choose your environments.</li>
-        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
-        <li><code>-l &lt;listLength&gt;, --list-length &lt;listLength&gt;</code> Number of items of array data to be generated.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>script:deploy [options] [filename]</td>
-    <td>
-      Deploy your <a href="schema-overview"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
-    </td>
-    <td>
-      <ul>
-        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-## Schema [Canner v1 out-of-date]
-
-> Looking for v1 document? Visit [http://docs.v1.canner.io/](http://docs.v1.canner.io/)
-
-These command is used in older version of Canner
-
-<table>
-  <tr>
-    <td>Command</td>
-    <td>Description</td>
-    <td>Options</td>
-  </tr>
-  <tr>
-    <td>schema:deploy [filename]</td>
-    <td>
-      Deploy your <a href="#cannerschemajs"><code>canner.schema.js</code></a> to the default app url which is set in <code>.cannerrc</code>.
-    </td>
-    <td>
-      <ul>
-        <li><code>-u &lt;url&gt;, --url &lt;url&gt;</code> to deploy schema to the specific app.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+### Cloud
+- **[canner cloud:signup](cli-cloud-signup)** - Open browser to Canner sign up page.
+- **[canner cloud:login](cli-cloud-login)** - Login with Canner Account.
+- **[canner cloud:logout](cli-cloud-logout)** - Logout.
+- **[canner cloud:deploy](cli-cloud-deploy)** - Deploy the schemas and the server to Canner platform.
+- **[canner cloud:preview](cli-cloud-preview)** - Run webpack-dev-server for developers to develop quick.
+- **[canner cloud:whoami](cli-cloud-whoami)** - Check the identity of current account.
+- **[canner cloud:dashboard](cli-cloud-dashboard)** - Open the dashboard on the browser.
+- **[canner cloud:init](cli-cloud-init)** - Initialize the project, the combination of `canner app:use` and `canner init`.
+- **[canner app:use](cli-app-use)** - Select one app on Canner, create the `.cannerrc` in project root.
+  - *--app-name \<app-name>* - Specify the app.
+- **[canner app:create](cli-app-create)** - Create one app on Canner, create the `.cannerrc` in project root.
+  - *--app-name \<app-name>*- The app name
+- **[canner app:list](cli-app-list)** - List the user's app list.

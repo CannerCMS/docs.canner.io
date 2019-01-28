@@ -20,8 +20,6 @@ $ canner --version
 ```
 
 #### Note
-
-
 - Your Node version must at least >= 6.10. 
 #### Troubleshooting
 - [EACCESS: permission denied](https://github.com/Canner/canner/issues/139)

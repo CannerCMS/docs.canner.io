@@ -51,11 +51,11 @@
       },
       {
         "type": "subcategory",
-        "label": "OSS",
+        "label": "OSS(self-hosting)",
         "ids": [
           "cli-start",
           "cli-start-cms",
-          "cli-start-grapgql",
+          "cli-start-graphql",
           "cli-start-auth"
         ]
       },
