@@ -6,55 +6,92 @@ sidebar_label: Building CMS in 3 commands
 
 ## 1. Install Canner CLI
 
-Make sure you have already install NodeJS and use the command below to install `@canner/cli` globally.
+Make sure you have already installed NodeJS and use the command below to install `@canner/cli` globally. And as the [official NPM docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) mentioned, we also recommend using a Node version manager to prevent the [EACCESS issue](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) if you need to install `@canner/cli` with `sudo`.
 
-> While we recommend Node 8.x or greater, your Node version must at least >= 6.10.
-
-```sh
-npm install -g @canner/cli
-```
-
-> If you have trouble install through `yarn`, please try `npm`.
-
-## 2. Initialize Schema
-
-After installing **Canner CLI** in your own project, go in current project folder and run the command:
 
 ```shell
-$ canner init:schema
+$ npm install -g @canner/cli
 ```
 
-It will ask you to select a schema template and a data source you want to use.
+Check the installation with
 
 ```shell
-$ canenr init:schema
-Initializing schema...
+$ canner --version
+```
+
+#### Note
+
+
+- Your Node version must at least >= 6.10. 
+#### Troubleshooting
+- [EACCESS: permission denied](https://github.com/Canner/canner/issues/139)
+
+
+## 2. Initialize project
+
+Create a empty folder and enter it.
+
+```shell
+$ mkdir my-cms
+$ cd my-cms
+```
+
+Run command:
+
+```shell
+$ canner init
+```
+
+It will ask you to select a schema template you want to use. Feel free to select any one of them.
+
+```shell
+Initializing...
 ? What template do you want to create? Blog
-? What data source do you want to use? Firebase admin
 ✔ Initialized
+
+
+Next Steps:
+
+  - Serve your CMS: canner script:serve
+
+  - Or follow the docs below to connect your data source:
+      Firebase Admin: https://www.canner.io/docs/credential-firebase
+      Prisma: https://www.canner.io/docs/credential-prisma
 ```
 
-Choose any except `None`, and you'll see the folders `schema` and `canner.schema.js` appearing in your project folder. `canner.schema.js` and the folder `schema` are the schemas that Canner use them to build the CMS.
+And then, there will be serveral files and folders under the currect directory.
 
-> - Learn more about [`schema`](file-canner-schema-js.md)
+#### `canner.schema.js and schema/\*.schema.js`
+The schema of the CMS, defines the data model and UI.
+#### `components/\*.js`
+The customized components, not every project would have this.
+#### `canner.server.js`
+The configuration of **OSS** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
+#### `canner.cloud.js`
+The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
 
-## 3. Preview in Local Machine
 
-You can use `canner script:serve` to preview your result on local machines.
+## 3. Host the CMS locally
 
-In your project folder, you can run `canner script:serve` to build your CMS. Open [http://localhost:9090](http://localhost:9090), you will see the result as below.
+Simply type `canner start` and go to `http://localhost:3000` to see your CMS. The command will do the actions below.
 
+#### Build static files
+The static files of the CMS is generated under `./.cms`.
+#### Build json schema
+The JSON schema of your canner schema is generated called `canner.schema.json`.
+#### Host the CMS
+Host the path `./.cms` at `http://localhost:3000`
+#### Run the GraphQL server
+Parse `canenr.schema.json` to [GQLify data modal](https://www.gqlify.com/docs/data-model-overview), and the endpoint is `http://localhost:3000/graphql`
+
+**Go to http://localhost:3000, you will see the CMS**
 ![users-cms](/docs/assets/users-cms.png)
-
-You could preview your data in different environments by using `--env` to preview CMS with different data sources. If you didn't provide `--env`, data will serve through localstorage.
-
-
-> Serve data from different environment settings, learn more [here](cli-development.md).
 
 
 ## 4. Next Step
 
-You can follow the instruction below to build CMS on Canner with connecting your data source.
+You can follow the instruction below to configurate your CMS.
 
-- [connect to Firebase admin](tutorial-connect-to-firebase.md)
-- [connect to Prisma](tutorial-connect-to-prisma.md)
+- [Understand the schemas](schema-overview.md)
+- [Change the data source](data-source-overview)
+- [Deploy the CMS to Canner](guides-deploy-to-canner)
