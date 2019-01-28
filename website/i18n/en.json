@@ -298,8 +298,8 @@
         "sidebar_label": "Why Canner?"
       },
       "why-cms-framework": {
-        "title": "Why do I need a CMS framework?",
-        "sidebar_label": "Why CMS framework?"
+        "title": "Why do I need a Content Management Framework? Instead of CMS",
+        "sidebar_label": "Why Content Management Framework?"
       },
       "why-firebase-cms": {
         "title": "Why CMS for Firebase?",
