@@ -554,8 +554,8 @@
         "sidebar_label": "Why Canner?"
       },
       "version-2.8.3-why-cms-framework": {
-        "title": "Why do I need a CMS framework?",
-        "sidebar_label": "Why CMS framework?"
+        "title": "Why a Content Management Framework?",
+        "sidebar_label": "Why Content Management Framework?"
       },
       "version-2.8.3-why-firebase-cms": {
         "title": "Why CMS for Firebase?",
@@ -594,13 +594,14 @@
       "Files": "Files",
       "Tips": "Tips",
       "Tutorial": "Tutorial",
-      "Why Canner": "Why Canner",
       "Why a CMS framework": "Why a CMS framework",
-      "FAQ": "FAQ",
       "Quick Start": "Quick Start",
       "Advanced": "Advanced",
       "Concept": "Concept",
-      "API": "API"
+      "API": "API",
+      "Why Canner": "Why Canner",
+      "Content Management Framework": "Content Management Framework",
+      "FAQ": "FAQ"
     }
   },
   "pages-strings": {

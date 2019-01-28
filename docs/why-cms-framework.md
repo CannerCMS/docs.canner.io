@@ -1,40 +1,41 @@
 ---
 id: why-cms-framework
-title: Why do I need a CMS framework?
-sidebar_label: Why CMS framework?
+title: Why a Content Management Framework? 
+sidebar_label: Why Content Management Framework?
 ---
 
+> CannerCMS is a Content Management **Framework** that creates custom Content Management System.
 
-One of the most frequently asked questions about Canner is 
-> "Why I need a CMS framework instead of building my own?"
+**What is the difference between a system and framework? System is a general solution/software for a use case. Framework is like a structure that you can build to achieve a system.**
 
-Here are some main aspects of why Canner can help developers save tons of time and costs.
+***CannerCMS is a framework that provides interfaces to standardized UI and data source for companies, companies can write definition schema to define how the structure and architecture in the content management system.***
 
-## Reusable UI components
+# Canner - Content Management Framework
 
-Most CMS structure and components in the CMSes are alike.  You can see most of CMS developers are copy and pasting codes and libraries through different projects. Which make maintaining cross projects are tremendously difficult and inefficient.
-
-> Canner makes every CMS components reusable and can be modulized.
-
-## Connecting UI and APIs
-
-Every project you need to design your APIs align with your UI designs. In most cases, UI is usually changing over time, which make data modeling and APIs need to redesign and iterate many times in a project, to say nothing to communication cost between teams.
-
-> Canner binds **UI components** with each APIs, which make it extremely powerful for fast iteration and redesign.
-
-## Dataflow
-
-Data flow from your APIs to UI, is mostly where the unexpected bugs occurred, not to mention while specification and requirement changed.
-
-> Canner deals with all data flow mechanism in the framework itself, we got your back 😎.
+Here are some key features, CannerCMS helps enterprises to standardize content management system.
 
 
-## Data sources
+## 1. Reusable UI components
 
-If you are marketing agencies or outsourcing companies, you will have various requirements from customers. One of the most common and big challenges for developers are different databases for different clients.
+CannerCMS makes every CMS components reusable and can be modulized. So developers can pull existing libraries to implement key features in the CMS. They can also follow the guidelines to create it's own CMS component.
 
-> Canner supports multiple datasources and even GraphQL and Restful APIs interfaces.
+## 2. Unify UI and API structure
 
-# In conclusion
+Connecting UI and API endpoints includes complex logic and it's hard-coded into the system. CannerCMS solve all the complex work, while you define your UI interface CannerCMS will automatically generate your API infrastructure accordingly, and easy to customize.
 
-Canner helps you to build fast iterate and more reliable CMS infrastructure for your business. [Why not try out now?](https://www.canner.io/forms/new_user)
+![canner-flow](/docs/assets/canner-flow.png)
+
+## 3. Dataflow
+
+Canner deals with all data flow mechanism in the framework itself, we got your back 😎.  Most unexpected bugs occurred, while data flow from your APIs to UI, not to mention while specification and requirement frequently changed.
+
+
+## 4. Modulize data source interfaces
+
+CannerCMS is designed with modularity in mind, which one of the most important feature for businesses is customize it's business logic.
+
+CannerCMS creates a independent data source life cycle that you can customize without messing with your UI code.
+
+# Conclusion
+
+CannerCMS helps you to build fast iterate and a lot more reliable custom CMS infrastructure for your business. [Why not try out now?](https://www.canner.io/forms/new_user)
