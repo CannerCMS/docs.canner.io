@@ -21,6 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
+  docsSideNavCollapsible: true,
+
   // cname: 'docs.canner.io',
   title: 'Canner' /* title for your website */,
   tagline: 'Canner official documentation',
