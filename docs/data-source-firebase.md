@@ -1,6 +1,6 @@
 ---
-id: credential-firebase
-title: Credential in Firebase
+id: data-source-firebase
+title: Firebase
 sidebar_label: Firebase
 ---
 

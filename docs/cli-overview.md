@@ -1,7 +1,7 @@
 ---
-id: cli-commands
-title: Commands
-sidebar_label: Commands
+id: cli-overview
+title: Overview
+sidebar_label: Overview
 ---
 
 ## Install

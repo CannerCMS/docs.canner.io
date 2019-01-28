@@ -1,7 +1,7 @@
 ---
-id: cli-import-data
-title: Import Data
-sidebar_label: Import Data
+id: cli-cloud-data-import
+title: canner data:import
+sidebar_label: canner data:import
 ---
 
 > NOTE: Importing data feature is ONLY support Firebase realtime database

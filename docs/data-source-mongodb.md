@@ -1,7 +1,7 @@
 ---
-id: credential-prisma
-title: Credential in Prisma
-sidebar_label: Prisma
+id: data-source-mongodb
+title: Mongodb
+sidebar_label: Mongodb
 ---
 
 After [initialize your Prisma project](https://www.prisma.io/docs/reference/cli-command-reference/database-service/prisma-init-eeb1ohr4ec), you can find a file called [`prisma.yml`](https://www.prisma.io/docs/reference/service-configuration/prisma.yml/overview-and-example-foatho8aip), which provide your configuration of the service.

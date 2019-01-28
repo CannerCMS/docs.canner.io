@@ -5,101 +5,89 @@
     "previous": "Previous",
     "tagline": "Canner official documentation",
     "docs": {
-      "advance-canner-helpers": {
-        "title": "canner-helpers",
-        "sidebar_label": "Canner Helpers"
+      "cli-app-create": {
+        "title": "cli-app-create"
       },
-      "advance-canner-schema-loader": {
-        "title": "Canner Schema Loader",
-        "sidebar_label": "Canner Schema Loader"
+      "cli-app-list": {
+        "title": "cli-app-list"
       },
-      "advance-cms-test": {
-        "title": "Test CMS components",
-        "sidebar_label": "Test CMS components"
+      "cli-app-use": {
+        "title": "cli-app-use"
       },
-      "api-canner-helpers": {
-        "title": "Canner Helpers",
-        "sidebar_label": "Canner Helpers"
+      "cli-cloud-dashboard": {
+        "title": "cli-cloud-dashboard"
       },
-      "api-canner": {
-        "title": "Canner",
-        "sidebar_label": "Canner"
+      "cli-cloud-data-import": {
+        "title": "canner data:import",
+        "sidebar_label": "canner data:import"
       },
-      "api-container": {
-        "title": "Container",
-        "sidebar_label": "Container"
+      "cli-cloud-deploy": {
+        "title": "cli-cloud-deploy"
       },
-      "api-layout-components": {
-        "title": "Layout Components",
-        "sidebar_label": "Layout Components"
+      "cli-cloud-init": {
+        "title": "cli-cloud-init"
       },
-      "api-schema": {
-        "title": "Schema",
-        "sidebar_label": "Schema"
+      "cli-cloud-login": {
+        "title": "cli-cloud-login"
       },
-      "api-toolbar-components": {
-        "title": "Toolbar Components",
-        "sidebar_label": "Toolbar Components"
+      "cli-cloud-logout": {
+        "title": "cli-cloud-logout"
       },
-      "api-types": {
-        "title": "Reference Types",
-        "sidebar_label": "Reference Types"
+      "cli-cloud-preview": {
+        "title": "cli-cloud-preview"
       },
-      "api-ui-components": {
-        "title": "UI Components",
-        "sidebar_label": "UI Components"
+      "cli-cloud-signup": {
+        "title": "cli-cloud-signup"
       },
-      "cli-canner-cloud-js": {
-        "title": "canner.cloud.js",
-        "sidebar_label": "canner.cloud.js"
+      "cli-cloud-whoami": {
+        "title": "cli-cloud-whoami"
       },
-      "cli-commands": {
-        "title": "Commands",
-        "sidebar_label": "Commands"
+      "cli-init": {
+        "title": "cli-init"
       },
-      "cli-import-data": {
-        "title": "Import Data",
-        "sidebar_label": "Import Data"
+      "cli-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "cli-start-auth": {
+        "title": "cli-start-auth"
+      },
+      "cli-start-cms": {
+        "title": "cli-start-cms"
+      },
+      "cli-start-graphql": {
+        "title": "cli-start-graphql"
+      },
+      "cli-start": {
+        "title": "cli-start"
       },
       "cli-upload-image": {
         "title": "Upload image via CLI",
         "sidebar_label": "Upload image"
       },
-      "concept-action": {
-        "title": "Actions in CMS",
-        "sidebar_label": "Actions in CMS"
-      },
-      "concept-compile-schema": {
-        "title": "How compiling CMS schema works?",
-        "sidebar_label": "Compile schema"
-      },
-      "concept-component-tree": {
-        "title": "ComponentTree",
-        "sidebar_label": "ComponentTree"
-      },
-      "concept-hocs": {
-        "title": "High order components",
-        "sidebar_label": "High order components"
-      },
-      "concept-refid": {
-        "title": "What is RefId?",
-        "sidebar_label": "What is RefId?"
-      },
-      "credential-firebase": {
-        "title": "Credential in Firebase",
+      "data-source-firebase": {
+        "title": "Firebase",
         "sidebar_label": "Firebase"
       },
-      "credential-firestore": {
-        "title": "Credential in Firestore",
+      "data-source-firestore": {
+        "title": "Firestore",
         "sidebar_label": "Firestore"
       },
-      "credential-prisma": {
-        "title": "Credential in Prisma",
-        "sidebar_label": "Prisma"
+      "data-source-memory": {
+        "title": "Memory",
+        "sidebar_label": "Memory"
+      },
+      "data-source-mongodb": {
+        "title": "Mongodb",
+        "sidebar_label": "Mongodb"
       },
       "data-source-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
+      },
+      "data-source-prisma": {
+        "title": "Prisma",
+        "sidebar_label": "Prisma"
       },
       "file-canner-cloud-js": {
         "title": "canner.cloud.js",
@@ -113,6 +101,10 @@
         "title": "canner.schema.js",
         "sidebar_label": "canner.schema.js"
       },
+      "file-canner-server-js": {
+        "title": "canner.server.js",
+        "sidebar_label": "canner.server.js"
+      },
       "file-cannerrc": {
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
@@ -121,33 +113,9 @@
         "title": ".canner-image-uploaded.json file",
         "sidebar_label": ".canner-image-uploaded.json"
       },
-      "guides-canner-container": {
-        "title": "Canner Container",
-        "sidebar_label": "Canner Container"
-      },
-      "guides-canner-prisma-type": {
-        "title": "Canner and Prisma datatype comparison",
-        "sidebar_label": "Canner and Prisma datatype comparison"
-      },
-      "guides-canner-router": {
-        "title": "Canner Router",
-        "sidebar_label": "Canner Router"
-      },
-      "guides-canner": {
-        "title": "Canner Component",
-        "sidebar_label": "Canner Component"
-      },
-      "guides-component": {
-        "title": "Component",
-        "sidebar_label": "Component"
-      },
       "guides-condition-fields": {
         "title": "Condition Fields",
         "sidebar_label": "Condition Fields"
-      },
-      "guides-connector": {
-        "title": "Connector",
-        "sidebar_label": "Connector"
       },
       "guides-customized-component": {
         "title": "Customized CMS Component",
@@ -165,25 +133,13 @@
         "title": "Default Value",
         "sidebar_label": "Default Value"
       },
-      "guides-deployment": {
-        "title": "Deployment",
-        "sidebar_label": "Deployment"
-      },
-      "guides-development": {
-        "title": "Development",
-        "sidebar_label": "Development"
-      },
-      "guides-graphql-client": {
-        "title": "GraphQL Client",
-        "sidebar_label": "GraphQL Client"
+      "guides-deploy-to-Canner": {
+        "title": "Deploy to Canner",
+        "sidebar_label": "Deploy to Canner"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
-      },
-      "guides-resolver": {
-        "title": "Resolver",
-        "sidebar_label": "Resolver"
       },
       "guides-setup": {
         "title": "Setup",
@@ -237,14 +193,6 @@
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
-      "start-quick-build-the-cms": {
-        "title": "Build your first CMS",
-        "sidebar_label": "Build your first CMS"
-      },
-      "start-quick-community": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
-      },
       "start-quick-html5up": {
         "title": "First CMS using Canner in 3 minutes (Firebase)",
         "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
@@ -268,14 +216,6 @@
       "tutorial-community-firestore": {
         "title": "Firestore CMS (Community edition)",
         "sidebar_label": "Firestore CMS (Community edition)"
-      },
-      "tutorial-connect-to-firebase": {
-        "title": "Connect to Firebase/Firestore",
-        "sidebar_label": "Connect to Firebase/Firestore"
-      },
-      "tutorial-connect-to-prisma": {
-        "title": "Connect to Prisma",
-        "sidebar_label": "Connect to Prisma"
       },
       "tutorial-customize-array-component": {
         "title": "Customize array component",
@@ -643,8 +583,6 @@
       "Docs": "Docs",
       "Tutorials": "Tutorials",
       "Community": "Community",
-      "Components": "Components",
-      "Help": "Help",
       "Blog": "Blog"
     },
     "categories": {
@@ -656,13 +594,13 @@
       "Files": "Files",
       "Tips": "Tips",
       "Tutorial": "Tutorial",
+      "Why Canner": "Why Canner",
+      "Why a CMS framework": "Why a CMS framework",
+      "FAQ": "FAQ",
       "Quick Start": "Quick Start",
       "Advanced": "Advanced",
       "Concept": "Concept",
-      "API": "API",
-      "Why Canner": "Why Canner",
-      "Why a CMS framework": "Why a CMS framework",
-      "FAQ": "FAQ"
+      "API": "API"
     }
   },
   "pages-strings": {

@@ -1,7 +1,7 @@
 ---
-id: guides-deployment
-title: Deployment
-sidebar_label: Deployment
+id: guides-deploy-to-Canner
+title: Deploy to Canner
+sidebar_label: Deploy to Canner
 ---
 
 ## Introduction
