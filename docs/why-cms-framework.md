@@ -6,9 +6,9 @@ sidebar_label: Why Content Management Framework?
 
 > CannerCMS is a Content Management **Framework** that creates custom Content Management System.
 
-What is the difference between a system and framework? System is a general solution/software for a use case. Framework is like a structure that you can build to achieve a system.
+**What is the difference between a system and framework? System is a general solution/software for a use case. Framework is like a structure that you can build to achieve a system.**
 
-CannerCMS is a framework that provides interfaces to standardized UI and data source for companies, companies can write definition schema to define how the structure and architecture in the content management system.
+***CannerCMS is a framework that provides interfaces to standardized UI and data source for companies, companies can write definition schema to define how the structure and architecture in the content management system.***
 
 # Canner - Content Management Framework
 
