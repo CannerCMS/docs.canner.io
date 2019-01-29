@@ -52,7 +52,7 @@ export default (
 You could using CLI tool to indicate the filename.
 
 ```sh
-canner script:deploy [filename]
+canner cloud:deploy [filename]
 ```
 
 Alternatively, you could add setting `schema` in `.cannerrc`.
