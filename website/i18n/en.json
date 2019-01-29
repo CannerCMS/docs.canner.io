@@ -6,44 +6,55 @@
     "tagline": "Canner official documentation",
     "docs": {
       "cli-app-create": {
-        "title": "cli-app-create"
+        "title": "canner app create",
+        "sidebar_label": "canner app create"
       },
       "cli-app-list": {
-        "title": "cli-app-list"
+        "title": "canner app list",
+        "sidebar_label": "canner app list"
       },
       "cli-app-use": {
-        "title": "cli-app-use"
+        "title": "canner app use",
+        "sidebar_label": "canner app use"
       },
       "cli-cloud-dashboard": {
-        "title": "cli-cloud-dashboard"
+        "title": "canner cloud:dashboard",
+        "sidebar_label": "canner cloud:dashboard"
       },
       "cli-cloud-data-import": {
         "title": "canner data:import",
         "sidebar_label": "canner data:import"
       },
-      "cli-cloud-deploy": {
-        "title": "cli-cloud-deploy"
+      "cli-cloud:deploy": {
+        "title": "canner cloud:deploy",
+        "sidebar_label": "canner cloud:deploy"
       },
       "cli-cloud-init": {
-        "title": "cli-cloud-init"
+        "title": "canner cloud:init",
+        "sidebar_label": "canner cloud:init"
       },
       "cli-cloud-login": {
-        "title": "cli-cloud-login"
+        "title": "canner cloud:login",
+        "sidebar_label": "canner cloud:login"
       },
       "cli-cloud-logout": {
-        "title": "cli-cloud-logout"
+        "title": "canner cloud:logout",
+        "sidebar_label": "canner cloud:logout"
       },
       "cli-cloud-preview": {
         "title": "cli-cloud-preview"
       },
       "cli-cloud-signup": {
-        "title": "cli-cloud-signup"
+        "title": "canner cloud:signup",
+        "sidebar_label": "canner cloud:signup"
       },
       "cli-cloud-whoami": {
-        "title": "cli-cloud-whoami"
+        "title": "canner cloud:whoami",
+        "sidebar_label": "canner cloud:whoami"
       },
       "cli-init": {
-        "title": "cli-init"
+        "title": "canner init",
+        "sidebar_label": "canner init"
       },
       "cli-overview": {
         "title": "Overview",
@@ -53,17 +64,23 @@
         "title": "cli-start-auth"
       },
       "cli-start-cms": {
-        "title": "cli-start-cms"
+        "title": "canner start:cms",
+        "sidebar_label": "canner start:cms"
       },
       "cli-start-graphql": {
         "title": "cli-start-graphql"
       },
       "cli-start": {
-        "title": "cli-start"
+        "title": "canner start",
+        "sidebar_label": "canner start"
       },
       "cli-upload-image": {
         "title": "Upload image via CLI",
         "sidebar_label": "Upload image"
+      },
+      "data-source-customize": {
+        "title": "Customize",
+        "sidebar_label": "Customize"
       },
       "data-source-firebase": {
         "title": "Firebase",
@@ -84,10 +101,6 @@
       "data-source-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
-      },
-      "data-source-prisma": {
-        "title": "Prisma",
-        "sidebar_label": "Prisma"
       },
       "file-canner-cloud-js": {
         "title": "canner.cloud.js",
@@ -238,8 +251,8 @@
         "sidebar_label": "Why Canner?"
       },
       "why-cms-framework": {
-        "title": "Why do I need a CMS framework?",
-        "sidebar_label": "Why CMS framework?"
+        "title": "Why a Content Management Framework?",
+        "sidebar_label": "Why Content Management Framework?"
       },
       "why-firebase-cms": {
         "title": "Why CMS for Firebase?",
@@ -554,8 +567,8 @@
         "sidebar_label": "Why Canner?"
       },
       "version-2.8.3-why-cms-framework": {
-        "title": "Why a Content Management Framework?",
-        "sidebar_label": "Why Content Management Framework?"
+        "title": "Why do I need a CMS framework?",
+        "sidebar_label": "Why CMS framework?"
       },
       "version-2.8.3-why-firebase-cms": {
         "title": "Why CMS for Firebase?",
@@ -594,14 +607,14 @@
       "Files": "Files",
       "Tips": "Tips",
       "Tutorial": "Tutorial",
-      "Why a CMS framework": "Why a CMS framework",
+      "Why Canner": "Why Canner",
+      "Content Management Framework": "Content Management Framework",
+      "FAQ": "FAQ",
       "Quick Start": "Quick Start",
       "Advanced": "Advanced",
       "Concept": "Concept",
       "API": "API",
-      "Why Canner": "Why Canner",
-      "Content Management Framework": "Content Management Framework",
-      "FAQ": "FAQ"
+      "Why a CMS framework": "Why a CMS framework"
     }
   },
   "pages-strings": {

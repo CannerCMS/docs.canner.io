@@ -4,31 +4,73 @@ title: Firebase
 sidebar_label: Firebase
 ---
 
-We need your Firebase private key to access more control in your Firebase, such as more complete APIs, and storage APIs.
+## Download serviceAccount.json
 
-## Generating Firebase credential
+![get Firebase serviceAccount.json](assets/firebasesdk.gif)
 
-Visit your Firebase console, and navigate to **Project settings** > **Service accounts** > **Generate new private key**, after downloading the private key and place wherever you want to put in the project.
+## Use is `canner.server.js`
 
-![firebasesdk](/img/firebasesdk.gif)
-
-## Setup Firebase credential in `canner.cloud.js`
-
-In order to let Canner platfrom access to your Firebase you have to upload the credentials.
-
-In your `canner.cloud.js`, setup `env` settings using `FirebaseCredential` in `canner-credential`.
-
-**Example**
-
+**canner.server.js**
 ```js
-const {FirebaseCredential} = require("canner-credential");
+const admin = require('firebase-admin');
+const {FirebaseDataSource} = require('@gqlify/firebase');
+const cert = require('/path/to/serviceAccount.json');
+const databaseUrl = 'https://databaseName.firebaseio.com';
 
-module.exports = {
-  env: {
-    default: [new FirebaseCredential(require("path to your credential"))],
-    test: [new FirebaseCredential(require("path to your credential"))]
+exports.dataSources = {
+  firebase: args => new FirebaseDataSource({
+    config: {
+      credential: admin.credential.cert(cert),
+      databaseURL,
+    },
+    path: args.key,
+  }),
+}
+```
+
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'firebase'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```
+
+## Use is `canner.cloud.js`
+
+`canner.cloud.js` is used for Canner Cloud version. It supports sandbox feature, so you have to set the different dataSources in different environments.
+
+**canner.server.js**
+```js
+const admin = require('firebase-admin');
+const {FirebaseDataSource} = require('@gqlify/firebase');
+const cert = require('/path/to/serviceAccount.json');
+const databaseUrl = 'https://databaseName.firebaseio.com';
+
+exports.dataSources = {
+  // default env
+  default: {
+    firebase: args => new FirebaseDataSource({
+      config: {
+        credential: admin.credential.cert(cert),
+        databaseURL,
+      },
+      path: args.key,
+    }),
   }
 }
 ```
 
-> Best practice: You should **ignore** your credentials in your git repository.
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'firebase'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```

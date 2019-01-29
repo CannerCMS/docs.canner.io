@@ -18,7 +18,8 @@
       "data-source-firebase",
       "data-source-firestore",
       "data-source-mongodb",
-      "data-source-memory"
+      "data-source-memory",
+      "data-source-customize"
     ],
     "Guides": [
       "guides-setup",

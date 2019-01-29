@@ -4,23 +4,53 @@ title: Memory
 sidebar_label: Memory
 ---
 
-After [initialize your Prisma project](https://www.prisma.io/docs/reference/cli-command-reference/database-service/prisma-init-eeb1ohr4ec), you can find a file called [`prisma.yml`](https://www.prisma.io/docs/reference/service-configuration/prisma.yml/overview-and-example-foatho8aip), which provide your configuration of the service.
+## Use is `canner.server.js`
 
-## Setup Prisma credential in `canner.cloud.js`
-
-In your `canner.cloud.js`, setup `env` settings using `PrismaCredential` in `canner-credential`.
-
-**Example**
-
+**canner.server.js**
 ```js
-const {PrismaCredential} = require("canner-credential");
+const {MemoryDataSource} = require('@gqlify/server');
+const defaultData = require('/your/default/data.json');
 
-module.exports = {
-  env: {
-    default: [new PrismaCredential("path to prisma.yml")],
-    test: [new PrismaCredential("path to prisma.yml")]
+exports.dataSources = {
+  memory: args => new MemoryDataSource(defaultData[args.key]),
+}
+```
+
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'memory'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```
+
+## Use is `canner.cloud.js`
+
+`canner.cloud.js` is used for Canner Cloud version. It supports sandbox feature, so you have to set the different dataSources in different environments.
+
+**canner.server.js**
+```js
+const {MemoryDataSource} = require('@gqlify/server');
+const defaultData = require('/your/default/data.json');
+
+exports.dataSources = {
+  // default env
+  default: {
+    memory: args => new MemoryDataSource(defaultData[args.key])
   }
 }
 ```
 
-> Best practice: You should **ignore** your credentials in your git repository.
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'memory'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```

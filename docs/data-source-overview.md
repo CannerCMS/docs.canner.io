@@ -4,27 +4,95 @@ title: Overview
 sidebar_label: Overview
 ---
 
-In order to access your database and services, there are two ways to achieve. One is calling your service APIs through Canner backend, so we have to own the credentials to access the APIs, and another is calling the service APIs in the frontend page which means you have to add the `connector` or `graphqlClient` property in your `<root>` tag manually
+Since CLI uses GQLify to create the GraphQL server, the data source here is totally same as the [data source of GQLify](https://www.gqlify.com/docs/data-source-overview), and also you can customize your data source by following the [guide](https://www.gqlify.com/docs/create-own-data-source).
 
-## Using Credentials
+The dataSources in `canner.server.js` and `canner.cloud.js` are different, so make sure you edit the right one. `canner.server.js` is for OSS (self-hosting), and `canner.cloud.js` is for Canner Cloud.
 
-Canner's credential libaray are all live in `canner-credential` package.
+## Data Source in Schema
 
-You could install `canner-credential` through npm.
+To change the data source in Canner is simple, just edit the attribute `dataSource` of the first level tags. A dataSource is an object with a property `name` which corresponses the `dataSources` in your `canner.server.js` (or `canner.cloud.js` if you are using Canner Cloud).
 
-```sh
-npm install canner-credential
+**canner.schema.js**
+```jsx
+export default (
+
+  <root>
+    <array keyName="posts" dataSource={{name: 'firebase'}}>
+      {/* ... */}
+    </array>
+    <array keyName="users" dataSource={{name: 'memory'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+
 ```
 
-Supported services:
+**canner.server.js**
+```js
+const admin = require('firebase-admin');
+const {MemoryDataSource} = require('@gqlify/server');
+const {FirebaseDataSource} = require('@gqlify/firebase');
+const cert = require('/path/to/serviceAccount.json');
+const databaseUrl = 'https://databaseName.firebaseio.com';
+exports.dataSources = {
+  firebase: args => new FirebaseDataSource({
+    config: {
+      credential: admin.credential.cert(cert),
+      databaseURL,
+    },
+    path: args.key,
+  }),
+  memory: args => new MemoryDataSource(defaultData[args.key]),
+}
+```
 
-- [Firebase - Realtime database](credential-firebase)
-- [Firebase - Firestore](credential-firestore)
-- [Prisma](credential-prisma)
+## Data Source in `canner.server.js`
 
-## Connector and GraphqlClient
+Your `canner.server.js` must export a variable `dataSources` which is a map of DataSource.
 
-To connect your GraphQL server, check out [guide of graphqlClient](guides-graphql-client).
-To use your fake data with memory or localStorage, checkout out [memoryConnector](guides-connector#memoryconnector) and [localStorageConnector](guides-connector#localstorageconnector).
+**canner.server.js**
+```js
+exports.dataSource = {
+  // memory data-source
+  memory: () => new MemoryDataSource(),
 
+  // myApi data-source
+  myApi: args => new CustomizedDataSource({
+    service: args.service,
+    table: args.table,
+  }),
+}
+```
 
+## Data Source in `canner.cloud.js`
+
+For supporting the sandbox mode, the `dataSources` in your `canner.cloud.js` contains the dataSource map in different environments. Note that the `default` environment is required.
+
+**canner.cloud.js**
+```js
+exports.dataSource = {
+  // default env is required
+  default: {
+    // memory data-source
+    memory: () => new MemoryDataSource(),
+
+    // myApi data-source
+    myApi: args => new CustomizedDataSource({
+      service: args.service,
+      table: args.table,
+    }),
+  },
+  // test env
+  test: {
+    // memory data-source
+    memory: () => new MemoryDataSource(),
+
+    // myApi data-source
+    myApi: args => new TestDataSource({
+      service: args.service,
+      table: args.table,
+    }),
+  },
+}
+```

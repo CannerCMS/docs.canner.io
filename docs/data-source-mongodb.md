@@ -4,23 +4,65 @@ title: Mongodb
 sidebar_label: Mongodb
 ---
 
-After [initialize your Prisma project](https://www.prisma.io/docs/reference/cli-command-reference/database-service/prisma-init-eeb1ohr4ec), you can find a file called [`prisma.yml`](https://www.prisma.io/docs/reference/service-configuration/prisma.yml/overview-and-example-foatho8aip), which provide your configuration of the service.
+## Use is `canner.server.js`
 
-## Setup Prisma credential in `canner.cloud.js`
-
-In your `canner.cloud.js`, setup `env` settings using `PrismaCredential` in `canner-credential`.
-
-**Example**
-
+**canner.server.js**
 ```js
-const {PrismaCredential} = require("canner-credential");
+const { Gqlify } = require('@gqlify/server')
+const { MongodbDataSourceGroup } = require('@gqlify/mongodb')
 
-module.exports = {
-  env: {
-    default: [new PrismaCredential("path to prisma.yml")],
-    test: [new PrismaCredential("path to prisma.yml")]
+// connect to your mongoUri. You might keep your mongoUri in env.
+const mongoUri = process.env.MONOG_URI;
+
+// new MongodbDataSourceGroup(uri, database)
+const mongodbDataSourceGroup = new MongodbDataSourceGroup(mongoUri, 'gqlify');
+
+exports.dataSources = {
+  mongodb: args => mongodbDataSourceGroup.getDataSource(args.key),
+}
+```
+
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'mongodb'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```
+
+## Use is `canner.cloud.js`
+
+`canner.cloud.js` is used for Canner Cloud version. It supports sandbox feature, so you have to set the different dataSources in different environments.
+
+**canner.server.js**
+```js
+const { Gqlify } = require('@gqlify/server')
+const { MongodbDataSourceGroup } = require('@gqlify/mongodb')
+
+// connect to your mongoUri. You might keep your mongoUri in env.
+const mongoUri = process.env.MONOG_URI;
+
+// new MongodbDataSourceGroup(uri, database)
+const mongodbDataSourceGroup = new MongodbDataSourceGroup(mongoUri, 'gqlify');
+
+exports.dataSources = {
+  // default env
+  default: {
+    mongodb: args => mongodbDataSourceGroup.getDataSource(args.key),
   }
 }
 ```
 
-> Best practice: You should **ignore** your credentials in your git repository.
+**canner.schema.js**
+```js
+export default (
+  <root>
+    <array keyName="posts" dataSource={{name: 'mongodb'}}>
+      {/* ... */}
+    </array>
+  </root>
+)
+```
