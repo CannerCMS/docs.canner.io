@@ -51,7 +51,7 @@ Commands can be roughly grouped into three categories, **OSS for self-hosting**,
 - **[canner cloud:dashboard](cli-cloud-dashboard)** - Open the dashboard on the browser.
 - **[canner cloud:init](cli-cloud-init)** - Initialize the project, the combination of `canner app:use` and `canner init`.
 - **[canner app:use](cli-app-use)** - Select one app on Canner, create the `.cannerrc` in project root.
-  - *--app-name \<app-name>* - Specify the app.
+  - *--app-url, -a \<app-url>* - Specify the app.
 - **[canner app:create](cli-app-create)** - Create one app on Canner, create the `.cannerrc` in project root.
-  - *--app-name \<app-name>*- The app name
+  - *--app-name, -a \<app-name>*- The app name
 - **[canner app:list](cli-app-list)** - List the user's app list.
