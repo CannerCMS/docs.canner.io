@@ -42,4 +42,6 @@ CannerCMS creates a independent data source life cycle that you can customize wi
 
 # Conclusion
 
-CannerCMS helps you to build fast iterate and a lot more reliable custom CMS infrastructure for your business. [Why not try out now?](https://www.canner.io/forms/new_user)
+Canner will become a tool for Enterprise application integration (EAI), System integration(SI), custom CMS solutions, we aim to be a whole new standard for enterprises to manage content.
+
+Canner is open sourced is that we believe an open community can help us to build broad integration support for services and applications.
