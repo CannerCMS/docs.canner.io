@@ -27,8 +27,9 @@
         "type": "subcategory",
         "label": "Customization",
         "ids": [
-          "guides-theme",
+          "guides-style",
           "guides-sidebar",
+          "guides-navbar",
           "guides-customized-component",
           "guides-customized-layout",
           "guides-customized-toolbar"

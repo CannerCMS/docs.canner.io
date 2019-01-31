@@ -108,10 +108,6 @@
         "title": "canner.cloud.js",
         "sidebar_label": "canner.cloud.js"
       },
-      "file-canner-data-js": {
-        "title": "canner.data.js",
-        "sidebar_label": "canner.data.js"
-      },
       "file-canner-schema-js": {
         "title": "canner.schema.js",
         "sidebar_label": "canner.schema.js"
@@ -123,10 +119,6 @@
       "file-cannerrc": {
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
-      },
-      "file-canner-image-uploaded": {
-        "title": ".canner-image-uploaded.json file",
-        "sidebar_label": ".canner-image-uploaded.json"
       },
       "guides-condition-fields": {
         "title": "Condition Fields",
@@ -156,6 +148,10 @@
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
       },
+      "guides-navbar": {
+        "title": "Navbar",
+        "sidebar_label": "Navbar"
+      },
       "guides-setup": {
         "title": "Setup",
         "sidebar_label": "Setup"
@@ -168,9 +164,9 @@
         "title": "Storage",
         "sidebar_label": "Storage"
       },
-      "guides-theme": {
-        "title": "Theme",
-        "sidebar_label": "Theme"
+      "guides-style": {
+        "title": "Style",
+        "sidebar_label": "Style"
       },
       "guides-validation": {
         "title": "Validation",
