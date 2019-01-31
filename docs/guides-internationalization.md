@@ -14,20 +14,19 @@ The properties below supported i18n string.
 - uiParams
 - label
 - options
-- placeholder
 
 ## Usage
 
-Write the i18n `dict` and pass it to `<root />`, and change the text to `${(.*)}` format.
+Add `cms.i18nMeesages` in your configuration file, and change text to `${(.*)}` format in your schema.
 
-**dict**
+**i18nMeesages**
 
 The text dictionary, which records the texts that every messageId represents in different locale. Canner will find the correct text from this dictionary, so you can just pass the `${<messageId>}` to string property.
 
 **type**
-```
-{
-  dict: {
+```js
+exports.cms = {
+  i18nMeesages: {
     [locale: string]: {
       [messageId: string]: string
     }
@@ -38,20 +37,24 @@ The text dictionary, which records the texts that every messageId represents in 
 **example**
 
 ```js
-// canner.schema.js
-import CannerScript from 'canner-script';
+// canner.server.js
 
-const dict = {
-  en: {
-    productName: 'Product Name'
-  },
-  zh: {
-    productName: '產品名'
+exports.cms = {
+  i18nMessages: {
+    en: {
+      productName: 'Product Name'
+    },
+    zh: {
+      productName: '產品名'
+    }
   }
 };
 
+// canner.schema.js
+import CannerScript from 'canner-script';
+
 export default (
-  <root dict={dict}>
+  <root>
     <array keyName="products">
       <string keyName="name" title="${productName}" />
     </array>
