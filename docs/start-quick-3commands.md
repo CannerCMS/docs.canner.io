@@ -79,15 +79,17 @@ The configuration of **Cloud** version, you can change the *dataSources*, *i18n*
 
 ## 3. Host the CMS locally
 
-Simply type `canner start` and go to `http://localhost:3000` to see your CMS. The command will do the actions below.
+Simply type `canner start` and go to `http://localhost:3000` to open your CMS. The command is for self-hosting which reads the configuration from `canner.server.js`. You can edit it by following the [guide](file-canner-server-js.md).
 
-#### Build static files
+When the command runs, it shows the awesome dashboard displaying the progress of the static files building, the server status, and the server logs, ...etc. Here are the actions actually doing.
+
+- **Build static files**
 The static files of the CMS is generated under `./.cms`.
-#### Build json schema
+- **Build json schema**
 The JSON schema of your canner schema is generated called `canner.schema.json`.
-#### Host the CMS
+- **Host the CMS**
 Host the path `./.cms` at `http://localhost:3000`
-#### Run the GraphQL server
+- **Run the GraphQL server**
 Parse `canenr.schema.json` to [GQLify data modal](https://www.gqlify.com/docs/data-model-overview), and the endpoint is `http://localhost:3000/graphql`
 
 **Go to http://localhost:3000, you will see the CMS**
