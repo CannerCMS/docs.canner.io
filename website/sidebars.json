@@ -39,8 +39,20 @@
       "guides-internationalization",
       "guides-validation",
       "guides-default-value",
-      "guides-condition-fields",
-      "guides-deploy-to-canner"
+      "guides-condition-fields"
+    ],
+    "Deploy To Canner": [
+      "guide-deploy-to-canner",
+      {
+        "type": "subcategory",
+        "label": "Credentials",
+        "ids": [
+          "credential-firebase",
+          "credential-firestore",
+          "credential-prisma",
+          "credential-firestore"
+        ]
+      }
     ],
     "CLI": [
       "cli-overview",
