@@ -104,3 +104,41 @@ The data has `info` data after uploaded
   }
 }
 ```
+
+## Files
+
+### canner.data.js
+
+
+`canner.data.js` is the default file that `@canner/cli` reads when importing your default data. Your data inside `canner.data.js` should build correspondence with your `canner.schema.js` schema structure, and should export a `json`.
+
+**example**
+```js
+module.exports = {
+  "object1": {
+    "name": "Hello object 1",
+    "description": "I am object 1"
+  },
+  "object2": {
+    "name": "Hello object 2",
+    "description": "I am object 2"
+  },
+  "array1": [
+    {
+      "name": "Array item1"
+    }
+  ],
+  "array2": [
+    {
+      "name": "Array item2"
+    }
+  ]
+};
+```
+
+## .canner-image-uploaded.json
+
+
+When importing data in your CLI this file records what the latest static files you upload to your service. To prevent you uploading the same static files again and again when uploading schema.
+
+> NOTE: If the file is not changed, we will not upload it twice. And should be ignored in your git.

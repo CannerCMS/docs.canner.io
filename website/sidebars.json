@@ -79,12 +79,10 @@
       }
     ],
     "Files": [
-      "file-canner-data-js",
       "file-canner-schema-js",
       "file-canner-cloud-js",
       "file-canner-server-js",
-      "file-cannerrc",
-      "file-canner-image-uploaded"
+      "file-cannerrc"
     ],
     "Tips": [
       "tips-schema-modules",
