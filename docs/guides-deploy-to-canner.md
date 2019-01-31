@@ -6,21 +6,26 @@ sidebar_label: Deploy to Canner
 
 ## Introduction
 
-Building a CMS on Canner only need two main files [canner.schema.js](guides-setup#initial-your-schema) and [cloud.config.js](cli-cloud-config-js), and then you can publish your CMS on Canner with the simple command.
+> Note: The current dataSources in `canner.clous.js
+
+Building a CMS on Canner only need two main files [canner.schema.js](guides-setup#initial-your-schema) and [canner.cloud.js](cli-canner-cloud-js), and then you can publish your CMS on Canner with the simple command.
 
 ```
 $ canner script:deploy
 ```
 
-## Deploy CMS with LocalStorage as the Storage
+## Deploy CMS with Memory Data Source as the Storage
 
-The code below is the simplest `cloud.config.js` which represents using localStorage as the default storage in your CMS. 
+The code below is the simplest `cloud.config.js` which represents using memory as the default storage in your CMS. 
 
 **cloud.config.js**
-```
-module.exports = {
-  env: {
-    default: []
+
+```js
+exports.graphql = {
+  dataSources: {
+    env: {
+      default: []
+    }
   }
 }
 ```
@@ -33,15 +38,15 @@ $ canner script:deploy
 
 ## Setting Up Production Environment
 
-To setup **production** environment, in your `canner.config.js` set your key `default` in `env` to your resource.
+To setup **production** environment, in your `canner.cloud.js` set your key `default` in `env` to your resource.
 
 Example:
 
 ```js
 const {FirebaseCredential} = require("canner-credential");
 
-module.exports = {
-  env: {
+exports.graphql = {
+  dataSources: {
     default: [new FirebaseCredential(firebaseJSON)]
   }
 }
