@@ -12,10 +12,14 @@ sidebar_label: Why Content Management Framework?
 
 # Canner - Content Management Framework
 
-Here are some key features, CannerCMS helps enterprises to standardize content management system.
+In the past creating custom CMS, Enterprise application integration (EAI), System integration(SI), you have two solutions build from scratch or buying a standard software with limited customization.
+
+CannerCMS is designed with a whole new concept, a content management framework that is fully customizable to help enterprises to standardize content management system, which decouple and design with a standard of UI component design, data flow, and data interfaces.
+
+> CannerCMS, a content management framework not only can help create content management system also help companies to manage **multi-cloud,  hybrid-cloud data infrastructure, and application integrations, system integrations.**
 
 
-## 1. Reusable UI components
+## 1. Reusable UI components, and modulize
 
 CannerCMS makes every CMS components reusable and can be modulized. So developers can pull existing libraries to implement key features in the CMS. They can also follow the guidelines to create it's own CMS component.
 
@@ -38,4 +42,6 @@ CannerCMS creates a independent data source life cycle that you can customize wi
 
 # Conclusion
 
-CannerCMS helps you to build fast iterate and a lot more reliable custom CMS infrastructure for your business. [Why not try out now?](https://www.canner.io/forms/new_user)
+Canner will become a tool for Enterprise application integration (EAI), System integration(SI), custom CMS solutions, we aim to be a whole new standard for enterprises to manage content.
+
+Canner is open sourced is that we believe an open community can help us to build broad integration support for services and applications.
