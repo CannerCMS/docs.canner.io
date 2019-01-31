@@ -10,21 +10,21 @@ If your don't have any Canner app yet, it creates one automatically for you.
 
 ### Generated files
 
-- `.cannerrc`: Store the app information.
-- `canner.schema.js and schema/\*.schema.js`
+- `.cannerrc`: Store the app temporary information.
+- `canner.schema.js and schema/\*.schema.js`:
 The schema of the CMS, defines the data model and UI.
-- `components/\*.js`
+- `components/\*.js`:
 The customized components, not every project would have this.
-- `canner.server.js`
+- `canner.server.js`:
 The configuration of **OSS** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
-- `canner.cloud.js`
+- `canner.cloud.js`:
 The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
 
 
 ### Options
 
 #### `--schema-only, -s`
-Only initialize the schema and customized components if the template schema has.
+Only initialize the schema and customized components.
 
 #### `--cloud-only, -c`
 Only initialize the `canner.cloud.js`.

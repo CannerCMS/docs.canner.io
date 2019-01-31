@@ -4,13 +4,13 @@ title: Overview
 sidebar_label: Overview
 ---
 
-Since CLI uses GQLify to create the GraphQL server, the data source here is totally same as the [data source of GQLify](https://www.gqlify.com/docs/data-source-overview), and also you can customize your data source by following the [guide](https://www.gqlify.com/docs/create-own-data-source).
+Since CLI uses [GQLify](https://www.gqlify.com) to create the GraphQL server, the data source here is totally same as the [data source of GQLify](https://www.gqlify.com/docs/data-source-overview), and also you can customize your data source by following the [guides](https://www.gqlify.com/docs/create-own-data-source).
 
 <!-- WIP The dataSources in `canner.server.js` and `canner.cloud.js` are different, so make sure you edit the right one. `canner.server.js` is for OSS (self-hosting), and `canner.cloud.js` is for Canner Cloud. -->
 
 ## Data Source in Schema
 
-To change the data source in Canner is simple, just edit the attribute `dataSource` of the first level tags. A dataSource is an object with a property `name` which corresponses the `dataSources` in your `canner.server.js` <!-- WIP (or `canner.cloud.js` if you are using Canner Cloud)-->.
+To change the data source in CannerCMS is simple, just edit the attribute `dataSource` of the first level tags. A dataSource is an object with a property `name` which corresponses the `dataSources` in your `canner.server.js` <!-- WIP (or `canner.cloud.js` if you are using Canner Cloud)-->.
 
 **canner.schema.js**
 ```jsx
@@ -49,7 +49,7 @@ exports.dataSources = {
 
 ## Data Source in `canner.server.js`
 
-Your `canner.server.js` must export a variable `dataSources` which is a map of DataSource.
+Your `canner.server.js` must export a variable `dataSources` which is a map of DataSource instances.
 
 **canner.server.js**
 ```js

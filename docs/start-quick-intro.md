@@ -4,10 +4,12 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-CannerCMS make **CMS simple and easy**. CannerCMS is a flexible Content Management System lets you create CMS fast and easy with any datasources.
+CannerCMS make **CMS simple and easy**. CannerCMS is a Content Management Framework creates custom CMS fast and easy.
 
-Our vision is to create **ONE** CMS framework to solve most usages from any datasources.
+***CannerCMS is a framework that provides interfaces to standardized UI and data source for companies, companies can write definition schema to define how the structure and architecture in the content management system.***
 
-Result! Save up to 80% of your CMS development time.
+Our vision is to create **ONE** Content Management Framework that helps enterprises to manage and access content.
+
+Result! Save up to 90% of your CMS development time.
 
 ![roi](/docs/assets/start-intro/compare-canner.png)

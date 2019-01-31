@@ -4,9 +4,9 @@ title: canner.server.js
 sidebar_label: canner.server.js
 ---
 
-In OSS version(self-hosting), Canner CLI builds the static files of the CMS and run the Server to host the CMS, and also supports the GraphQL and Authentication APIs. `canner.server.js` is the configuration of it, you can change the data sources, the UIs, also the authentication config.
+In OSS version(self-hosting), Canner CLI builds the static files of the CMS and run the Server to host the CMS, and also supports the GraphQL and Authentication APIs. `canner.server.js` is the configuration of it, you can change the data sources, the UIs, also the authentication configuration.
 
-`canner.server.js` exports the four item below.
+`canner.server.js` exports the four items below.
 
 - [`common`](#common)
 - [`cms`](#cms)

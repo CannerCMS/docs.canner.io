@@ -27,7 +27,7 @@ $ canner --version
 
 ## Commands
 
-Commands can be roughly grouped into three categories, **OSS for self-hosting**, **Cloud for Canner platform**, and **Common for both**.
+Commands can be roughly grouped into three categories, **OSS for self-hosting**, **Cloud for Canner platform**, and **common commands**.
 
 ### Common
 - **[canner init](cli-init)** - Initialize `canner.schema.js`, `schema/*.schema.js`, one of `canner.server.js` and `canner.cloud.js`.
