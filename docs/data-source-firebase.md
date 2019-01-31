@@ -38,7 +38,7 @@ export default (
   </root>
 )
 ```
-
+<!-- WIP
 ## Use is `canner.cloud.js`
 
 `canner.cloud.js` is used for Canner Cloud version. It supports sandbox feature, so you have to set the different dataSources in different environments.
@@ -73,4 +73,4 @@ export default (
     </array>
   </root>
 )
-```
+``` -->
