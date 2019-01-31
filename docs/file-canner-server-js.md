@@ -4,88 +4,128 @@ title: canner.server.js
 sidebar_label: canner.server.js
 ---
 
-`canner.server.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
+In OSS version(self-hosting), Canner CLI builds the static files of the CMS and run the Server to host the CMS, and also supports the GraphQL and Authentication APIs. `canner.server.js` is the configuration of it, you can change the data sources, the UIs, also the authentication config.
 
-Canner now supporting three `canner.server.js` settings
+`canner.server.js` exports the four item below.
 
-- [`env`](#environment-env)
-- [`theme`](#theme)
-- [`sidebarMenu`](#sidebar-menu-sidebarmenu)
+- [`common`](#common)
+- [`cms`](#cms)
+- [`graphql`](#sidebar-menu-sidebarmenu)
+- [`auth`](#sidebar-menu-sidebarmenu)
 
-## Environment (env)
+## examples
+The basic example of `canner.server.js`, every item can only be an empty object.
 
-`env` key allows you to set different environments with different resources. It can only set with an object, different keys represent different environments, each setting's value **must be an array**, for example:
-
+**canner.server.js**
 ```js
-const {FirebaseCredential} = require("canner-credential");
-
-module.exports = {
-  "env": {
-    // production firebase setting
-    "default": [new FirebaseCredential(require("path to firebase credential"))],
-    // test1 firebase settings
-    "test1": [new FirebaseCredential(require("path to firebase credential"))]
-  }
-}
+exports.common = {}
+exports.cms = {}
+exports.graphql = {}
+exports.auth = {}
 ```
 
-> Learn more about [credentials](credential-intro)
+## common
+## cms
+### cms.style.theme `Object`
 
-### Production
-
-For production, which is the default environment in your Canner platform. Set with `default` key in `env` setting. Serving with production environment, learn more [here](cli-production.md#serving-production-environment).
-
-### Other environments
-
-You could easily serve other environments via Canner CLI, learn more [here](cli-development.md#serving-with-environments).
-
-## Theme
-
-Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). Customizing UI themes are a frequent request at Canner, by passing theme settings in `canner.server.js`.
+Currently our CMS components are based on an awesome React UI library called [Antd](https://ant.design/). It supports you change the theme by edit the less variables, and we also implement it in our configuration, by adding the variables in `cms.style.theme`.
 
 - [Antd variable list](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
 
-For example, if you want to replace `primary-color` with `#07a4b8`
+To set the primary-color `"#07a4b8"`:
 
+**canner.server.js** 
 ```json
-{
-  "theme": {
-    "primary-color": "#07a4b8"
+exports.cms = {
+  "style": {
+    "theme": {
+      "primary-color": "#07a4b8"
+    }
   }
 }
 ```
 
-> See [theme guide](guides-theme) to learn more usages.
+### cms.style.sidebarTheme `string`
 
-## Sidebar Menu (sidebarMenu)
+It can be `'light'` or `'dark'`. The color theme of the sidebar, change this will also change the sidebar menu theme. So you may need to change the [theme variables](https://ant.design/components/layout/#Layout.Sider) of [menu](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less#L346-L362).
 
-`sidebarMenu` is how you want to render your sidebar in your CMS.
+### cms.style.sidebarStyle `Object`
 
-Each menu should contains two properties `title` and `pathname`. `pathname` must be the same as the `keyName` of your first level's tagName.
+The style of sidebar.
 
-```json
-{
-  "sidebarMenu": [{
-    "title": 'Home',
-    "pathname": '/home'
-  }, {
-    "title": 'courses',
-    "pathname": '/courses'
-  }, {
-    "title": 'Authors',
-    "items": [{
-      "title": 'Author List',
-      "pathname": '/authors'
-    }, {
-      "title": 'post',
-      "pathname": '/post'
-    }]
-  }]
+### cms.style.sidebarMenuStyle `Object`
+
+The style of sidebar menu.
+
+### cms.style.navbarTheme `string`
+
+It can be `'light'` or `'dark'`. The color theme of the navbar, change this will also change the navbar menu theme. So you may need to change the [theme variables](https://ant.design/components/layout/#Layout.Sider) of [menu](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less#L346-L362).
+
+### cms.style.navbarStyle `Object`
+
+The style of navbar.
+
+### cms.style.navbarMenuStyle `Object`
+
+The style of navbar menu.
+
+### cms.sidebarMenu `Array`
+
+To [customize the content of the sidebar](guides-sidebar) of your CMS.
+
+**sidebarMenu interface**
+
+```js
+type menuItem = {
+  title?: string,
+  pathname?: string,
+  href?: string,
+  icon?: string
+}
+
+type subMenuItem = menuItem & {
+  items: Array<menuItem>
+}
+
+exports.cms = {
+  sidebarMenu: Array<menuItem | subMenuItem>
 }
 ```
 
-This will generate sidebar menu as below
+### cms.showSaveButton `boolean`
 
-![result](/docs/assets/cli/canner-config-sidebar.png)
+Show the save button at top-right corner or not, default vaue is `true`
 
-> See [sidebar guide](guides-sidebar) to learn more usages.
+### cms.logo `string`
+
+The url of logo at top-left corner.
+
+### cms.i18nMessages `Object`
+
+The messages of [react-intl](https://github.com/yahoo/react-intl/wiki/Components#intl-provider-component). It's an object records the texts in different locales. To make i18n works, you have to edit your schema, see [i18n guide](guides-internationalization).
+
+**examples**
+```js
+// canner.server.js
+exports.cms.i18nMessages = {
+  en: {
+    'name.title': 'Name',
+    'name.description': 'Enter your name'
+  },
+  zh: {
+    'name.title': '名稱',
+    'name.description': '請輸入名稱'
+  }
+}
+
+// any.schema.js
+<string
+  keyName="name"
+  title="${name.title}"
+  description="${name.description}"
+/>
+
+```
+
+## graphql
+## auth
