@@ -4,7 +4,15 @@ title: Firebase
 sidebar_label: Firebase
 ---
 
+## Install Dependencies
+
+```shell
+$ yarn add firebase-admin @gqlify/server @gqlify/firebase
+```
+
 ## Download serviceAccount.json
+
+To connect to your Firebase, Canner CLI needs the `serviceAccount.json` of your Firebase App to access data.
 
 ![get Firebase serviceAccount.json](assets/firebasesdk.gif)
 

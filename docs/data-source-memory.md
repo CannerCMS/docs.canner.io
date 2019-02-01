@@ -4,6 +4,12 @@ title: Memory
 sidebar_label: Memory
 ---
 
+## Install Dependencies
+
+```shell
+$ yarn add @gqlify/server
+```
+
 ## Use is `canner.server.js`
 
 **canner.server.js**

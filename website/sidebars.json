@@ -42,7 +42,7 @@
       "guides-condition-fields"
     ],
     "Deploy To Canner": [
-      "guide-deploy-to-canner",
+      "guides-deploy-to-canner",
       {
         "type": "subcategory",
         "label": "Credentials",
