@@ -51,17 +51,26 @@ It ask you to select a schema template. Feel free to select any one of them, you
 
 ```shell
 Initializing...
-? What template do you want to create? Blog
+What template do you want to create? Blog
+? This will override the file and folder below, do you want to continue?
+ 	/Users/siou/Code/test10/canner.schema.js
+	/Users/siou/Code/test10/schema
+	/Users/siou/Code/test10/components
+
+ Yes
 ✔ Initialized
 
 
 Next Steps:
 
-  - Serve your CMS: canner script:serve
+  - Host your CMS: canner start
 
-  - Or follow the docs below to connect your data source:
-      Firebase Admin: https://www.canner.io/docs/credential-firebase
-      Prisma: https://www.canner.io/docs/credential-prisma
+  - Follow the docs below to connect your data source:
+      Firebase: http://www.canner.io/docs/next/data-source-firebase
+      Firestore: http://www.canner.io/docs/next/data-source-firestore
+
+  - Deploy to Canner cloud:
+      http://www.canner.io/docs/next/guides-deploy-to-canner
 ```
 
 And then, there will be serveral files and folders under the  directory.
@@ -78,9 +87,14 @@ The configuration of **Cloud** version, you can change the *dataSources*, *i18n*
 
 ## 3. Host the CMS locally
 
-Simply type `canner start` and go to `http://localhost:3000` to open your CMS. This command will read the configuration from `canner.server.js` and serve it. You can edit it by the following [guides](file-canner-server-js.md).
+Simply type `canner start`, this command will read the configuration from `canner.server.js` and serve it. You can edit it by the following [guides](file-canner-server-js.md).
 
-When running the command, it display an awesome dashboard displaying the progress of the static files building, server status, and server logs, ...etc. Here are the actions actually doing in the background.
+
+When running the command, it displays an awesome dashboard displaying the progress of the static files building, server status, and server logs, ...etc. 
+
+![start-command-dashboard](/docs/assets/start-command-dashboard.png)
+
+Here are the actions actually doing in the background.
 
 - **Build static files**:
 The static files of the CMS is generated under `./.cms`.
@@ -91,7 +105,13 @@ Host the path `./.cms` at `http://localhost:3000`
 - **Run the GraphQL server**
 Parse `canner.schema.json` to [GQLify data modal](https://www.gqlify.com/docs/data-model-overview), and the endpoint will expose at `http://localhost:3000/graphql`
 
-**Go to http://localhost:3000, you will see the CMS**
+
+After the line `Server ready on port 3000` shows on dashboard, you can go to `http://localhost:3000` to see your CMS and login with the default username and password, `canner`.
+
+**Login page**
+![login-form](/docs/assets/login-form.png)
+
+**After loging in, here is your CMS!**
 ![users-cms](/docs/assets/users-cms.png)
 
 
