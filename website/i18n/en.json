@@ -80,6 +80,18 @@
         "title": "Upload image via CLI",
         "sidebar_label": "Upload image"
       },
+      "credential-firebase": {
+        "title": "Credential in Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "credential-firestore": {
+        "title": "Credential in Firestore",
+        "sidebar_label": "Firestore"
+      },
+      "credential-prisma": {
+        "title": "Credential in Prisma",
+        "sidebar_label": "Prisma"
+      },
       "data-source-customize": {
         "title": "Customize",
         "sidebar_label": "Customize"
@@ -142,7 +154,7 @@
       },
       "guides-deploy-to-canner": {
         "title": "Deploy to Canner",
-        "sidebar_label": "Deploy to Canner"
+        "sidebar_label": "Overview"
       },
       "guides-internationalization": {
         "title": "Internationalization (i18n)",

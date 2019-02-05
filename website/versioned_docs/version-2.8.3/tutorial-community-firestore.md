@@ -132,7 +132,7 @@ Now, create your own CMS!
 
 You'll find a file called `canner.schema.js` in the schema folder. Rewrite with your own settings.
 
-> Learn to [write schema](guides-write-schema.md)
+> Learn to [write schema](schema-overview.md)
 
 If you want to try for now, you could use default scripts.
 

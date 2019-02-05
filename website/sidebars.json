@@ -114,6 +114,8 @@
         "type": "subcategory",
         "label": "React Component",
         "ids": [
+          "tutorial-community-firebase",
+          "tutorial-community-firestore",
           "tutorial-customize-string-component",
           "tutorial-customize-array-component",
           "tutorial-customize-object-component"
