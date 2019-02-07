@@ -43,54 +43,316 @@ The label of a field.
 
 ### &lt;string/&gt;
 
-***Data type:***
+**UI List**
 
-```js
-string
-```
+- **input**, the default ui of `<string />`
+  ```js
+  <string ui="input" />
+  ```
+- **card**, render multiple cards for user to select, `uiParams.options` is required
 
-> See complete [String components list](/component?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+  ```js
+  <string
+    ui="card"
+    uiParams={{
+      options: [{
+        text: 'Value1',
+        value: 'VALUE1'
+      }, {
+        text: 'Value2',
+        value: 'VALUE2'
+      }]
+    }}
+  />
+  ```
+
+- **link**, render the clickable link below an text input
+
+  ```js
+  <string ui="link" />
+  ```
+- **radio**, let user select from radio component, `uiParams.options` is required.
+
+  ```js
+  <string
+    ui="radio"
+    uiParams={{
+      options: [{
+        text: 'Value1',
+        value: 'VALUE1'
+      }, {
+        text: 'Value2',
+        value: 'VALUE2'
+      }]
+    }}
+  />
+  ```
+- **select**, let user select from a dropdown menu, `uiParams.options` is required.
+
+  ```js
+  <string
+    ui="select"
+    uiParams={{
+      options: [{
+        text: 'Value1',
+        value: 'VALUE1'
+      }, {
+        text: 'Value2',
+        value: 'VALUE2'
+      }]
+    }}
+  />
+  ```
+- **textarea**, render a textarea, your can specify the default rows
+
+  ```js
+  <string
+    ui="textare"
+    uiParams={{
+      rows: 6
+    }}
+  />
+  ```
+- **time**, render a time input with the specific time format
+
+  ```js
+  <string
+    ui="time"
+    uiParams={{
+      format: 'HH:mm' // default
+    }}
+  />
+  ```
+
+
+> Playground [String components list](/component?selectedKind=String&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;boolean/&gt;
 
-***Data type:***
+**UI List**
+- **card**, render two cards for user to select
+  ```js
+  <boolean
+    ui="card"
+    uiParams={{
+      yesText: 'Yes', // default
+      noText: 'No'
+    }}
+  />
+  ```
+- **switch**, the default UI, render the switch component for user to toggle.
+  ```js
+  <boolean
+    ui="switch"
+    uiParams=={{
+      yesText: 'Yes', // default
+      noText: 'No'
+    }}
+  >
+  ```
 
-```js
-boolean
-```
-
-> See complete [Boolean components list](/component?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [Boolean components list](/component?selectedKind=Boolean&selectedStory=Card&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;number/&gt;
 
-***Data type:***
+**UI List**
+- **input**, the default number, render a text input only accepts number
+  ```js
+  <number
+    ui="input"
+    uiParams={{
+      min: 0,
+      max: 100,
+      step: 1,
+      precision: 0,
+      unit: ''
+    }}
+  >
 
-```js
-number
-```
+  ```
 
-> See complete [Number components list](/component?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+- **rate**, show the specfic count of stars for user to rate.
+  ```js
+  <number
+    ui="rate"
+    uiParams={{
+      allowHalf: false,
+      count: 5 // default count of stars
+    }}
+  >
+  ```
+
+- **slider**, render the slider component
+  ```js
+  <number
+    ui="slider"
+    uiParams={{
+      min: 2,
+      max: 10,
+      step: 2,
+      unit: "unit"
+    }}
+  />
+  ```
+
+> Playground [Number components list](/component?selectedKind=Number&selectedStory=Input&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;object/&gt;
 
-***Data type:***
+**UI List**
 
-```js
-{[string]: any}
-```
+- **default**, by default, the object type component directly renders its children components.
+  ```jsx
+  <object keyName="info">
+    <string keyName="name" />
+  </object>
+  ```
+- **editor**, render the editor
+  **data type**
+  ```
+  {
+    html: htmlString
+  }
+  ```
+- **options**, this is a component implement condition field, it renders the child which matches the selectedKey. If you want a more flexible condition, take a look at [here](guides-condition-fields.md).
 
-> See complete [Object components list](/component?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+  ```js
+  <object
+    keyName="options"
+    uiParams={{
+      options: [{
+        title: 'Option1',
+        key: 'option1'
+      }, {
+        title: 'Option2',
+        key: 'option2'
+      }]
+    }}
+    ui="options"
+  >
+    <object keyName="option1">
+      {/*...*/}
+    </object>
+    <object keyName="option2">
+      {/*...*/}
+    </object>
+  </object>
+  ```
+
+> Playground [Object components list](/component?selectedKind=Object&selectedStory=Options&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ### &lt;array/&gt;
 
-***Data type:***
+- **table**, the default ui, is avalible in the first level, pop up a modal if you click the edit button.
+  ```js
+  <array
+    keyName="posts"
+    ui="table"
+    uiParams={{
+      columns: [{
+        title: 'Title',
+        dataIndex: 'title'
+      }, {
+        title: 'Description',
+        dataIndex: 'description'
+        render: decs => desc.substr(0, 20) + '...'
+      }]
+    }}
+  >
+    <string keyName="title">
+    <string keyName="description">
+  </array>
+  ```
+- **tableRoue**, is available in the first level, change the current route if you click the edit button. In most case, we recommend you use this ui as the component of the first level array since the routes support feature such as [condition field](guides-condition-field.md). Example of changing route: `http://localhost:3000/cms/posts` => `http://localhost:3000/cms/posts/<postId>`
 
-```js
-Array<any>
-```
+  ```js
+  <array
+    keyName="posts"
+    ui="tableRoute"
+    uiParams={{
+      columns: [{
+        title: 'Title',
+        dataIndex: 'title'
+      }, {
+        title: 'Description',
+        dataIndex: 'description'
+        render: decs => desc.substr(0, 20) + '...'
+      }]
+    }}
+  >
+    <string keyName="title">
+    <string keyName="description">
+  </array>
+  ```
+- **tab**, renders the tabPan for each item of array, you can change this position of tab and specify the `titleKey` to show the title of each tabPane.
+  ```js
+  <array
+    keyName="posts"
+    ui="tab"
+    uiParams={{
+      titleKey: 'title',
+      position: 'top' // default
+    }}
+  >
+    <string keyName="title"/>
+    <string keyName="description"/>
+  </array>
+  ```
+- **panel**, renders the collapsible panel.
+  ```js
+  <array
+    keyName="posts"
+    ui="tab"
+    uiParams={{
+      titleKey: 'title',
+    }}
+  >
+    <string keyName="title"/>
+    <string keyName="description"/>
+  </array>
+  ```
+- **slider**, renders a slider for user to select a range, the value of this component must be an array with 2 number.
+  ```js
+  <array
+    keyName="range"
+    ui="slider"
+    uiParams={{
+      min: 0,
+      max: 100,
+      step: 1,
+      unit: 'unit'
+    }}
+  />
+  ```
+- **tag**, the value must be an array of string,
+  ```js
+  <array
+    keyName="tags"
+    ui="tag"
+    uiParams={{
+      defaultOptions: ['tag1', 'tag2']
+    }}
+  />
+  ```
+- **gallery**, shows an array as a gallery, you can specify the `imageKey` in item. It renders other fields with a popup modal.
+  ```js
+  <array
+    keyName="posts"
+    ui="gallery"
+    uiParams={{
+      imageKey: 'image'
+      limitSize: 6000,
+      disableDrag: false,
+      dirname: ''
+    }}
+  >
+    <string keyName="title" />
+    <image keyName="image" />
+  </array>
+  ```
 
-> See complete [Array components list](/component?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [Array components list](/component?selectedKind=Array&selectedStory=Gallery&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 
 ## Special types
@@ -113,7 +375,7 @@ string
 2018-05-15T08:28Z
 ```
 
-> See complete [Date components list](/component?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [Date components list](/component?selectedKind=Date&selectedStory=Date&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;geoPoint/&gt;
 
@@ -141,7 +403,7 @@ string
 }
 ```
 
-> See complete [GeoPoint components list](/component?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [GeoPoint components list](/component?selectedKind=GeoPoint&selectedStory=Map&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;image/&gt;
 
@@ -174,7 +436,7 @@ Static files that are images.
 }
 ```
 
-> See complete [Image components list](/component?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [Image components list](/component?selectedKind=Image&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;file/&gt;
 
@@ -208,7 +470,7 @@ Static files that are **not included** in [image types](schema-data-type-tags#lt
 }
 ```
 
-> See complete [File components list](/component?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
+> Playground [File components list](/component?selectedKind=File&selectedStory=Image&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel)
 
 ### &lt;relation/&gt;
 

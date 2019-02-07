@@ -2,6 +2,7 @@
 id: credential-firestore
 title: Credential in Firestore
 sidebar_label: Firestore
+original_id: credential-firestore
 ---
 
 We need your Firebase private key to access more control in your Firestore, such as more complete APIs, and storage APIs.
@@ -23,8 +24,8 @@ In your `canner.cloud.js`, setup `env` settings using `FirestoreCredential` in `
 ```js
 const {FirestoreCredential} = require("canner-credential");
 
-module.exports = {
-  env: {
+exports.graphql = {
+  dataSources: {
     default: [new FirestoreCredential(require("path to your credential"))],
     test: [new FirestoreCredential(require("path to your credential"))]
   }

@@ -21,6 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
+  docsSideNavCollapsible: true,
+
   // cname: 'docs.canner.io',
   title: 'Canner' /* title for your website */,
   tagline: 'Canner official documentation',
@@ -41,10 +43,8 @@ const siteConfig = {
   headerLinks: [
     {doc: 'why-canner', label: 'Why?'},
     {doc: 'start-quick-intro', label: 'Docs'},
-    {doc: 'tutorial-connect-to-firebase', label: 'Tutorials'},
-    {doc: 'start-quick-community', label: 'Community'},
-    {href: "/component", label: "Components"},
-    {page: 'help', label: 'Help'},
+    {doc: 'tutorial-community-firebase', label: 'Tutorials'},
+    {href: 'https://spectrum.chat/canner/cannercms', label: 'Community'},
     {blog: true, label: 'Blog'}
   ],
 

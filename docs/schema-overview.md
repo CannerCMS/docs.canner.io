@@ -5,11 +5,7 @@ sidebar_label: Overview
 ---
 
 ## Introduction
-Unlike other CMS solutions, Canner CMS provides components for developers to pick and assemble components that fits their needs.
-
-A CMS schema is constructed with the `jsx` syntax, describing the structure of the source data, how to connect to your service, and what the CMS UI should expect in certain fields.
-
-> Normally, CMS schema is stored in `canner.schema.js` file.
+Unlike other CMS solutions, CannerCMS is a framework for developers to build their CMS just by assembling the Canner schema. Canner schema is constructed with the `jsx` syntax, describing the structure of the data, how to connect to your data source, and what the CMS UI should expect in certain fields.
 
 ## JSX Tags
 There are several available tags, as listed below and it's categorized into five categories.
@@ -24,7 +20,6 @@ There are several available tags, as listed below and it's categorized into five
 - \<number />
 - \<date />
 - \<mapPoint />
-- \<file />
 - \<relation />
 - \<array />
 - \<object />
@@ -138,7 +133,7 @@ CannerScript('root', null,
 
 ## Wrapped in &lt;root/&gt;
 
-The JSX schema **must** be wrapped in the `<root />`. `<root />` will return object with several keys such as `schema`, `pageSchema`, `connector`, `graphqlClient`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
+The JSX schema **must** be wrapped in the `<root />`. `<root />` will return object with several keys such as `schema`, `pageSchema`, `imageStorages`, ...etc. You can find the complete explanation in [root tag](schema-root-tag.md)
 
 
 ***Incorrect***
@@ -248,14 +243,11 @@ So your `keyName` should define as `content`
 
 > Further information
 > - [All data type tags](schema-data-type-tags.md)
-> - [Antd CMS components docs](https://canner.github.io/antd-cms-component-docs)
-> - [API of CMS components](api-components.md) 
+> - [Antd CMS components storybook](https://www.cannercms.com/component)
 
 ## Layout tags
 
-Layout tags are used to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design.
-
-Every layout tag generates a new `visitor` which is used to edit the component tree will be collected in `root` tag.
+Layout tags are used to create grids, containers, and blocks in CMS. This allows your CMS to create customized design layouts for customized visual design. Every layout tag generates a new `visitor` which is used to edit the component tree will be collected in `root` tag.
 
 For example, there are three fields `name`, `nickname`, and `note` in the `info` object, and we can use `block` tag to separate the three fields into two different blocks.
 

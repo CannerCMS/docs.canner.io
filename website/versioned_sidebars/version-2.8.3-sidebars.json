@@ -1,0 +1,149 @@
+{
+  "version-2.8.3-docs": {
+    "Quick start": [
+      "version-2.8.3-start-quick-intro",
+      "version-2.8.3-start-quick-3commands",
+      "version-2.8.3-start-quick-html5up"
+    ],
+    "Schema": [
+      "version-2.8.3-schema-overview",
+      "version-2.8.3-schema-root-tag",
+      "version-2.8.3-schema-data-type-tags",
+      "version-2.8.3-schema-layout-tags",
+      "version-2.8.3-schema-toolbar-tags",
+      "version-2.8.3-schema-page-tags",
+      "version-2.8.3-schema-type-tags"
+    ],
+    "Data source": [
+      "version-2.8.3-data-source-overview",
+      {
+        "type": "subcategory",
+        "label": "Credential",
+        "ids": [
+          "version-2.8.3-credential-firebase",
+          "version-2.8.3-credential-firestore",
+          "version-2.8.3-credential-prisma"
+        ]
+      }
+    ],
+    "Guides": [
+      "version-2.8.3-guides-setup",
+      {
+        "type": "subcategory",
+        "label": "Environment",
+        "ids": [
+          "version-2.8.3-guides-development",
+          "version-2.8.3-guides-deployment"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Customization",
+        "ids": [
+          "version-2.8.3-guides-theme",
+          "version-2.8.3-guides-sidebar",
+          "version-2.8.3-guides-customized-component",
+          "version-2.8.3-guides-customized-layout",
+          "version-2.8.3-guides-customized-toolbar"
+        ]
+      },
+      "version-2.8.3-guides-storage",
+      "version-2.8.3-guides-internationalization",
+      "version-2.8.3-guides-validation",
+      "version-2.8.3-guides-default-value",
+      "version-2.8.3-guides-condition-fields",
+      "version-2.8.3-guides-canner-prisma-type"
+    ],
+    "CLI": [
+      "version-2.8.3-cli-canner-cloud-js",
+      "version-2.8.3-cli-import-data",
+      "version-2.8.3-cli-commands"
+    ],
+    "Files": [
+      "version-2.8.3-file-canner-data-js",
+      "version-2.8.3-file-canner-schema-js",
+      "version-2.8.3-file-canner-cloud-js",
+      "version-2.8.3-file-cannerrc",
+      "version-2.8.3-file-canner-image-uploaded"
+    ],
+    "Tips": [
+      "version-2.8.3-tips-schema-modules",
+      "version-2.8.3-tips-reusable-schema"
+    ]
+  },
+  "version-2.8.3-tutorial": {
+    "Tutorial": [
+      "version-2.8.3-tutorial-connect-to-firebase",
+      "version-2.8.3-tutorial-connect-to-prisma",
+      {
+        "type": "subcategory",
+        "label": "Customization",
+        "ids": [
+          "version-2.8.3-tutorial-customize-string-component",
+          "version-2.8.3-tutorial-customize-array-component",
+          "version-2.8.3-tutorial-customize-object-component"
+        ]
+      }
+    ]
+  },
+  "version-2.8.3-community": {
+    "Quick Start": [
+      "version-2.8.3-start-quick-community",
+      "version-2.8.3-start-quick-build-the-cms"
+    ],
+    "Guides": [
+      "version-2.8.3-guides-canner",
+      "version-2.8.3-guides-canner-container",
+      "version-2.8.3-guides-canner-router",
+      {
+        "type": "subcategory",
+        "label": "Data source",
+        "ids": [
+          "version-2.8.3-guides-connector",
+          "version-2.8.3-guides-graphql-client"
+        ]
+      },
+      "version-2.8.3-guides-resolver"
+    ],
+    "Tutorial": [
+      "version-2.8.3-tutorial-community-firebase",
+      "version-2.8.3-tutorial-community-firestore"
+    ],
+    "Advanced": [
+      "version-2.8.3-advance-canner-helpers",
+      "version-2.8.3-advance-canner-schema-loader"
+    ],
+    "Concept": [
+      "version-2.8.3-concept-refid",
+      "version-2.8.3-concept-compile-schema",
+      "version-2.8.3-concept-component-tree",
+      "version-2.8.3-concept-hocs",
+      "version-2.8.3-concept-action"
+    ],
+    "API": [
+      "version-2.8.3-api-schema",
+      "version-2.8.3-api-canner",
+      "version-2.8.3-api-container",
+      "version-2.8.3-api-ui-components",
+      "version-2.8.3-api-layout-components",
+      "version-2.8.3-api-toolbar-components",
+      "version-2.8.3-api-types"
+    ]
+  },
+  "version-2.8.3-why": {
+    "Why Canner": [
+      "version-2.8.3-why-canner",
+      "version-2.8.3-why-mission",
+      "version-2.8.3-why-adaptive-cms",
+      "version-2.8.3-why-traditional-headless-adaptive"
+    ],
+    "Why a CMS framework": [
+      "version-2.8.3-why-cms-framework",
+      "version-2.8.3-why-firebase-cms"
+    ],
+    "FAQ": [
+      "version-2.8.3-why-jsx",
+      "version-2.8.3-why-graphql"
+    ]
+  }
+}

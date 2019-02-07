@@ -2,8 +2,7 @@
   "docs": {
     "Quick start": [
       "start-quick-intro",
-      "start-quick-3commands",
-      "start-quick-html5up"
+      "start-quick-3commands"
     ],
     "Schema": [
       "schema-overview",
@@ -16,32 +15,25 @@
     ],
     "Data source": [
       "data-source-overview",
-      {
-        "type": "subcategory",
-        "label": "Credential",
-        "ids": [
-          "credential-firebase",
-          "credential-firestore",
-          "credential-prisma"
-        ]
-      }
+      "data-source-firebase",
+      "data-source-firestore",
+      "data-source-mongodb",
+      "data-source-memory",
+      "data-source-customize"
+    ],
+    "GraphQL API": [
+      "graphql-api-overview",
+      "graphql-api-read-only-access"
     ],
     "Guides": [
       "guides-setup",
       {
         "type": "subcategory",
-        "label": "Environment",
-        "ids": [
-          "guides-development",
-          "guides-deployment"
-        ]
-      },
-      {
-        "type": "subcategory",
         "label": "Customization",
         "ids": [
-          "guides-theme",
+          "guides-style",
           "guides-sidebar",
+          "guides-navbar",
           "guides-customized-component",
           "guides-customized-layout",
           "guides-customized-toolbar"
@@ -51,20 +43,65 @@
       "guides-internationalization",
       "guides-validation",
       "guides-default-value",
-      "guides-condition-fields",
-      "guides-canner-prisma-type"
+      "guides-condition-fields"
+    ],
+    "Deployment": [
+      "guides-deployment-overview",
+      "guides-deployment-of-docker",
+      "guides-deployment-of-canner",
+      {
+        "type": "subcategory",
+        "label": "Credentials",
+        "ids": [
+          "credential-firebase",
+          "credential-firestore",
+          "credential-prisma",
+          "credential-firestore"
+        ]
+      }
     ],
     "CLI": [
-      "cli-canner-cloud-js",
-      "cli-import-data",
-      "cli-commands"
+      "cli-overview",
+      {
+        "type": "subcategory",
+        "label": "Common",
+        "ids": [
+          "cli-init"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OSS(self-hosting)",
+        "ids": [
+          "cli-start",
+          "cli-start-cms",
+          "cli-start-graphql",
+          "cli-start-auth"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cloud",
+        "ids": [
+          "cli-cloud-signup",
+          "cli-cloud-login",
+          "cli-cloud-logout",
+          "cli-cloud-deploy",
+          "cli-cloud-preivew",
+          "cli-cloud-whoami",
+          "cli-cloud-dashboard",
+          "cli-cloud-init",
+          "cli-cloud-app-use",
+          "cli-cloud-app-create",
+          "cli-cloud-app-list"
+        ]
+      }
     ],
     "Files": [
-      "file-canner-data-js",
       "file-canner-schema-js",
       "file-canner-cloud-js",
-      "file-cannerrc",
-      "file-canner-image-uploaded"
+      "file-canner-server-js",
+      "file-cannerrc"
     ],
     "Tips": [
       "tips-schema-modules",
@@ -73,61 +110,23 @@
   },
   "tutorial": {
     "Tutorial": [
-      "tutorial-connect-to-firebase",
-      "tutorial-connect-to-prisma",
       {
         "type": "subcategory",
-        "label": "Customization",
+        "label": "CLI",
         "ids": [
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "React Component",
+        "ids": [
+          "tutorial-community-firebase",
+          "tutorial-community-firestore",
           "tutorial-customize-string-component",
           "tutorial-customize-array-component",
           "tutorial-customize-object-component"
         ]
       }
-    ]
-  },
-  "community": {
-    "Quick Start": [
-      "start-quick-community",
-      "start-quick-build-the-cms"
-    ],
-    "Guides": [
-      "guides-canner",
-      "guides-canner-container",
-      "guides-canner-router",
-      {
-        "type": "subcategory",
-        "label": "Data source",
-        "ids": [
-          "guides-connector",
-          "guides-graphql-client"
-        ]
-      },
-      "guides-resolver"
-    ],
-    "Tutorial": [
-      "tutorial-community-firebase",
-      "tutorial-community-firestore"
-    ],
-    "Advanced": [
-      "advance-canner-helpers",
-      "advance-canner-schema-loader"
-    ],
-    "Concept": [
-      "concept-refid",
-      "concept-compile-schema",
-      "concept-component-tree",
-      "concept-hocs" ,
-      "concept-action"
-    ],
-    "API": [
-      "api-schema",
-      "api-canner",
-      "api-container",
-      "api-ui-components",
-      "api-layout-components",
-      "api-toolbar-components",
-      "api-types"
     ]
   },
   "why": {

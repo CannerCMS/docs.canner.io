@@ -10,7 +10,7 @@ sidebar_label: Why Content Management Framework?
 
 ***CannerCMS is a framework that provides interfaces to standardized UI and data source for companies, companies can write definition schema to define how the structure and architecture in the content management system.***
 
-# Canner - Content Management Framework
+# CannerCMS - Content Management Framework
 
 In the past creating custom CMS, Enterprise application integration (EAI), System integration(SI), you have two solutions build from scratch or buying a standard software with limited customization.
 
