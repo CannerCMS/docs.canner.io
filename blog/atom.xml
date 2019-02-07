@@ -2,12 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.canner.io/blog</id>
     <title>Canner Blog</title>
-    <updated>2018-12-05T06:00:00Z</updated>
+    <updated>2019-02-07T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.canner.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Canner news and events.</subtitle>
     <logo>https://www.canner.io/img/icon.png</logo>
     <rights>Copyright © 2019 Canner.  Canner, Inc.</rights>
+    <entry>
+        <title type="html"><![CDATA[Introducing Canner v3]]></title>
+        <id>https://www.canner.io/blog/2019/02/07/canner-v3.html</id>
+        <link href="https://www.canner.io/blog/2019/02/07/canner-v3.html">
+        </link>
+        <updated>2019-02-07T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><img src="/blog/canner-v3/intro.png" alt="intro"></p>
+<p>Hi everyone! We're happy to introduce Canner v3, which comes with following great features:</p>
+<ul>
+<li>Enhanced developer experience</li>
+<li>Built-in Authentication</li>
+<li>GraphQL Playground</li>
+<li>GraphQL API Access</li>
+<li>Supporting Firebase, Firestore and MongoDB</li>
+<li>Perfectly decoupled services</li>
+<li>Fully Self-hosted</li>
+</ul>
+]]></summary>
+        <author>
+            <name>William Chang</name>
+            <uri>http://twitter.com/wwwy3y3</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GQLify Open Source]]></title>
         <id>https://www.canner.io/blog/2018/12/05/gqlify.html</id>

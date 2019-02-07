@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>From traditional, headless to adaptive CMS · Canner</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;Amongst disputes about what the next generation CMS is, the general trend recently has been the transition from traditional CMS to headless CMS.&lt;/strong&gt; In this post, I&#x27;ll share a different point of view of what the next generation CMS will look like.&lt;/p&gt;
+"/><meta name="docsearch:version" content="2.8.3"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="From traditional, headless to adaptive CMS · Canner"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Amongst disputes about what the next generation CMS is, the general trend recently has been the transition from traditional CMS to headless CMS.&lt;/strong&gt; In this post, I&#x27;ll share a different point of view of what the next generation CMS will look like.&lt;/p&gt;
+"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner"/><h2 class="headerTitleWithLogo">Canner</h2></a><a href="/versions"><h3>2.8.3</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/2.8.3/why-canner" target="_self">Why?</a></li><li class=""><a href="/docs/2.8.3/start-quick-intro" target="_self">Docs</a></li><li class=""><a href="/docs/2.8.3/tutorial-community-firebase" target="_self">Tutorials</a></li><li class=""><a href="https://spectrum.chat/canner/cannercms" target="_self">Community</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Why Canner</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Why Canner<span class="arrow">⌃</span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-canner">Why Canner?</a></li><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-mission">Our mission</a></li><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-adaptive-cms">Why Adaptive CMS?</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/2.8.3/why-traditional-headless-adaptive">Traditional vs Headless vs Adaptive CMS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Why a CMS framework<span class="arrow">⌃</span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-cms-framework">Why CMS framework?</a></li><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-firebase-cms">Why CMS for Firebase?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">FAQ<span class="arrow">⌃</span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-jsx">Why Canner use JSX?</a></li><li class="navListItem"><a class="navItem" href="/docs/2.8.3/why-graphql">Why build on GraphQL?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/Canner/docs.canner.io/edit/master/docs/why-traditional-headless-adaptive.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">From traditional, headless to adaptive CMS</h1></header><article><div><span><p><strong>Amongst disputes about what the next generation CMS is, the general trend recently has been the transition from traditional CMS to headless CMS.</strong> In this post, I'll share a different point of view of what the next generation CMS will look like.
+First, Let's look at two major CMS frameworks:</p>
+<h2><a class="anchor" aria-hidden="true" id="traditional-cms-vs-headless-cms"></a><a href="#traditional-cms-vs-headless-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Traditional CMS v.s. Headless CMS</h2>
+<h3><a class="anchor" aria-hidden="true" id="traditional-cms"></a><a href="#traditional-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Traditional CMS</h3>
+<p>Traditional CMS, such as Drupal and Wordpress, has a strong community and provides a complete collection of templates of websites that allows users to create beautiful websites with CMS in seconds.</p>
+<p>Traditional CMS structure</p>
+<p><img src="/docs/assets/traditionalcms.png" alt="overview"></p>
+<p><strong><em>Pros:</em></strong></p>
+<ol>
+<li>Abundant CMS website templates.</li>
+<li>Quick setup for template sites.</li>
+</ol>
+<p><strong><em>Cons:</em></strong></p>
+<ol>
+<li>No flexibility to construct API structure</li>
+<li>Don't allow different views (Mobile app, IoT, etc… )</li>
+</ol>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="headless-cms"></a><a href="#headless-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headless CMS</h3>
+<p>In the last few years, there have been many different headless CMS surging to the market. The biggest difference between a headless CMS and a traditional CMS is its <strong>flexible API and CMS fields</strong>. Headless CMS's core concept is API-first CMS. There are many headless CMS in the market such as Contentful, GraphCMS, … .</p>
+<p>Headless CMS structure</p>
+<p><img src="/docs/assets/headlesscms.png" alt="overview"></p>
+<p><strong><em>Pros:</em></strong></p>
+<ol>
+<li>API-first, allowing users to build different applications.</li>
+<li>flexible CMS structure.</li>
+</ol>
+<p><strong><em>Cons:</em></strong></p>
+<ol>
+<li>Vender lock-in</li>
+<li>Some use drag and drop CMS features, limit the complexity of apps built.</li>
+</ol>
+<hr>
+<p>The main reasons for users consider using headless CMS over traditional CMS, is because:</p>
+<ol>
+<li><p>Flexible CMS structure:
+Traditional CMS have solid API specifications for each use cases. Headless CMS allows flexible API structure for users to construct their API specifications. In order to achieve it, Some of the headless CMS platforms are like &quot;Wix version&quot; of CMS that you could drag and drop CMS components to design your CMS designs. Some provide CMS configurations to upload your CMS designs.</p></li>
+<li><p>Cross devices:
+Because headless CMS is API-based, you create different CMS for each platform, whether it is web, mobile, or even IoT.</p></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="so-how-could-a-headless-cms-be-further-improved"></a><a href="#so-how-could-a-headless-cms-be-further-improved" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>So, how could a headless CMS be further improved?</h4>
+<ol>
+<li><p>Decoupled data sources:
+Due to wide variety of API-based services and BaaS nowadays. CMS should be able to support both private and public clouds, and even hybrid clouds.</p></li>
+<li><p>Deal with complex data relationships:
+Most of headless CMS didn't deal with data relationship problem, this is a huge obstacle for building complex use cases and applications.</p></li>
+<li><p>Reusable CMS templates:
+CMS should be reused easily like traditional CMS, allowing users create any constructed CMS templates in one click.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="introducing-adaptive-cms"></a><a href="#introducing-adaptive-cms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introducing Adaptive CMS</h2>
+<p><strong>Adaptive CMS</strong> is an improve structure of Headless CMS, and the most flexible CMS structure at present, the core concept of <strong>Adaptive CMS is that CMS should adapt to your workflow and specifications, not the other way around.</strong> What this means is that you could compose your CMS using CMS components and use <strong>specific adapters</strong> to connect to the right data sources (currently BaaS).</p>
+<p>Adaptive CMS structure</p>
+<p><img src="/docs/assets/adaptivecms.png" alt="overview"></p>
+<p><strong><em>Pros:</em></strong></p>
+<ol>
+<li>API first</li>
+<li>Flexible with CMS components.</li>
+<li>Allows multi or hybrid sources</li>
+<li>No vender lock-in</li>
+</ol>
+<p><strong><em>Cons:</em></strong></p>
+<ol>
+<li>No application templates like traditional CMS.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>I believe the future of CMS should be both spec free and data free, which means users could use the CMS framework that adapts to their applications and from any sources.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2018-7-2</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/2.8.3/why-adaptive-cms"><span class="arrow-prev">← </span><span>Why Adaptive CMS?</span></a><a class="docs-next button" href="/docs/2.8.3/why-cms-framework"><span>Why Content Management Framework?</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#traditional-cms-vs-headless-cms">Traditional CMS v.s. Headless CMS</a><ul class="toc-headings"><li><a href="#traditional-cms">Traditional CMS</a></li><li><a href="#headless-cms">Headless CMS</a></li></ul></li><li><a href="#introducing-adaptive-cms">Introducing Adaptive CMS</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c9ba81d7831a52129d133134abaf5f04',
+                indexName: 'canner',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

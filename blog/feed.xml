@@ -4,7 +4,7 @@
         <title>Canner Blog</title>
         <link>https://www.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner news and events.</description>
-        <lastBuildDate>Wed, 05 Dec 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Feb 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,24 @@
             <link>https://www.canner.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Canner.  Canner, Inc.</copyright>
+        <item>
+            <title><![CDATA[Introducing Canner v3]]></title>
+            <link>https://www.canner.io/blog/2019/02/07/canner-v3.html</link>
+            <guid>https://www.canner.io/blog/2019/02/07/canner-v3.html</guid>
+            <pubDate>Thu, 07 Feb 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/blog/canner-v3/intro.png" alt="intro"></p>
+<p>Hi everyone! We're happy to introduce Canner v3, which comes with following great features:</p>
+<ul>
+<li>Enhanced developer experience</li>
+<li>Built-in Authentication</li>
+<li>GraphQL Playground</li>
+<li>GraphQL API Access</li>
+<li>Supporting Firebase, Firestore and MongoDB</li>
+<li>Perfectly decoupled services</li>
+<li>Fully Self-hosted</li>
+</ul>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[GQLify Open Source]]></title>
             <link>https://www.canner.io/blog/2018/12/05/gqlify.html</link>
