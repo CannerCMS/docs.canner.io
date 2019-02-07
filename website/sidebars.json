@@ -21,6 +21,10 @@
       "data-source-memory",
       "data-source-customize"
     ],
+    "GraphQL API": [
+      "graphql-api-overview",
+      "graphql-api-read-only-access"
+    ],
     "Guides": [
       "guides-setup",
       {
