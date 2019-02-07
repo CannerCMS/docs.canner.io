@@ -41,6 +41,13 @@ $ mkdir my-cms
 $ cd my-cms
 ```
 
+Initialize the package.json and install the dependencies:
+
+```shell
+$ npm init
+$ npm install --save-dev @gqlify/server
+```
+
 Run command:
 
 ```shell
@@ -83,7 +90,6 @@ The customized components, not every projects have this.
 The configuration of **OSS** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
 - `canner.cloud.js`:
 The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
-
 
 ## 3. Host the CMS locally
 
