@@ -152,8 +152,16 @@
         "title": "Default Value",
         "sidebar_label": "Default Value"
       },
-      "guides-deploy-to-canner": {
+      "guides-deployment-of-canner": {
         "title": "Deploy to Canner",
+        "sidebar_label": "Deploy to Canner"
+      },
+      "guides-deployment-of-docker": {
+        "title": "Deploy with Docker",
+        "sidebar_label": "Deploy with Docker"
+      },
+      "guides-deployment-overview": {
+        "title": "Deployment",
         "sidebar_label": "Overview"
       },
       "guides-internationalization": {
@@ -613,7 +621,7 @@
       "Schema": "Schema",
       "Data source": "Data source",
       "Guides": "Guides",
-      "Deploy To Canner": "Deploy To Canner",
+      "Deployment": "Deployment",
       "CLI": "CLI",
       "Files": "Files",
       "Tips": "Tips",

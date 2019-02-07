@@ -41,8 +41,10 @@
       "guides-default-value",
       "guides-condition-fields"
     ],
-    "Deploy To Canner": [
-      "guides-deploy-to-canner",
+    "Deployment": [
+      "guides-deployment-overview",
+      "guides-deployment-of-docker",
+      "guides-deployment-of-canner",
       {
         "type": "subcategory",
         "label": "Credentials",
