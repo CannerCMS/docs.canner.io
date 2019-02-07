@@ -132,6 +132,14 @@
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
       },
+      "graphql-api-overview": {
+        "title": "GraphQL API Overview",
+        "sidebar_label": "Overview"
+      },
+      "graphql-api-read-only-access": {
+        "title": "ReadOnly Access GraphQL API",
+        "sidebar_label": "ReadOnly API"
+      },
       "guides-condition-fields": {
         "title": "Condition Fields",
         "sidebar_label": "Condition Fields"
@@ -620,6 +628,7 @@
       "Quick start": "Quick start",
       "Schema": "Schema",
       "Data source": "Data source",
+      "GraphQL API": "GraphQL API",
       "Guides": "Guides",
       "Deployment": "Deployment",
       "CLI": "CLI",
