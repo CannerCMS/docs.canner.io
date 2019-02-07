@@ -1,0 +1,147 @@
+{
+  "version-3.0.0-docs": {
+    "Quick start": [
+      "version-3.0.0-start-quick-intro",
+      "version-3.0.0-start-quick-3commands"
+    ],
+    "Schema": [
+      "version-3.0.0-schema-overview",
+      "version-3.0.0-schema-root-tag",
+      "version-3.0.0-schema-data-type-tags",
+      "version-3.0.0-schema-layout-tags",
+      "version-3.0.0-schema-toolbar-tags",
+      "version-3.0.0-schema-page-tags",
+      "version-3.0.0-schema-type-tags"
+    ],
+    "Data source": [
+      "version-3.0.0-data-source-overview",
+      "version-3.0.0-data-source-firebase",
+      "version-3.0.0-data-source-firestore",
+      "version-3.0.0-data-source-mongodb",
+      "version-3.0.0-data-source-memory",
+      "version-3.0.0-data-source-customize"
+    ],
+    "GraphQL API": [
+      "version-3.0.0-graphql-api-overview",
+      "version-3.0.0-graphql-api-read-only-access"
+    ],
+    "Guides": [
+      "version-3.0.0-guides-setup",
+      {
+        "type": "subcategory",
+        "label": "Customization",
+        "ids": [
+          "version-3.0.0-guides-style",
+          "version-3.0.0-guides-sidebar",
+          "version-3.0.0-guides-navbar",
+          "version-3.0.0-guides-customized-component",
+          "version-3.0.0-guides-customized-layout",
+          "version-3.0.0-guides-customized-toolbar"
+        ]
+      },
+      "version-3.0.0-guides-storage",
+      "version-3.0.0-guides-internationalization",
+      "version-3.0.0-guides-validation",
+      "version-3.0.0-guides-default-value",
+      "version-3.0.0-guides-condition-fields"
+    ],
+    "Deployment": [
+      "version-3.0.0-guides-deployment-overview",
+      "version-3.0.0-guides-deployment-of-docker",
+      "version-3.0.0-guides-deployment-of-canner",
+      {
+        "type": "subcategory",
+        "label": "Credentials",
+        "ids": [
+          "version-3.0.0-credential-firebase",
+          "version-3.0.0-credential-firestore",
+          "version-3.0.0-credential-prisma",
+          "version-3.0.0-credential-firestore"
+        ]
+      }
+    ],
+    "CLI": [
+      "version-3.0.0-cli-overview",
+      {
+        "type": "subcategory",
+        "label": "Common",
+        "ids": [
+          "version-3.0.0-cli-init"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OSS(self-hosting)",
+        "ids": [
+          "version-3.0.0-cli-start",
+          "version-3.0.0-cli-start-cms",
+          "version-3.0.0-cli-start-graphql",
+          "version-3.0.0-cli-start-auth"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cloud",
+        "ids": [
+          "version-3.0.0-cli-cloud-signup",
+          "version-3.0.0-cli-cloud-login",
+          "version-3.0.0-cli-cloud-logout",
+          "version-3.0.0-cli-cloud-deploy",
+          "version-3.0.0-cli-cloud-preivew",
+          "version-3.0.0-cli-cloud-whoami",
+          "version-3.0.0-cli-cloud-dashboard",
+          "version-3.0.0-cli-cloud-init",
+          "version-3.0.0-cli-cloud-app-use",
+          "version-3.0.0-cli-cloud-app-create",
+          "version-3.0.0-cli-cloud-app-list"
+        ]
+      }
+    ],
+    "Files": [
+      "version-3.0.0-file-canner-schema-js",
+      "version-3.0.0-file-canner-cloud-js",
+      "version-3.0.0-file-canner-server-js",
+      "version-3.0.0-file-cannerrc"
+    ],
+    "Tips": [
+      "version-3.0.0-tips-schema-modules",
+      "version-3.0.0-tips-reusable-schema"
+    ]
+  },
+  "version-3.0.0-tutorial": {
+    "Tutorial": [
+      {
+        "type": "subcategory",
+        "label": "CLI",
+        "ids": []
+      },
+      {
+        "type": "subcategory",
+        "label": "React Component",
+        "ids": [
+          "version-3.0.0-tutorial-community-firebase",
+          "version-3.0.0-tutorial-community-firestore",
+          "version-3.0.0-tutorial-customize-string-component",
+          "version-3.0.0-tutorial-customize-array-component",
+          "version-3.0.0-tutorial-customize-object-component"
+        ]
+      }
+    ]
+  },
+  "version-3.0.0-why": {
+    "Why Canner": [
+      "version-3.0.0-why-canner",
+      "version-3.0.0-why-mission",
+      "version-3.0.0-why-adaptive-cms",
+      "version-3.0.0-why-traditional-headless-adaptive"
+    ],
+    "Content Management Framework": [
+      "version-3.0.0-why-cms-framework",
+      "version-3.0.0-why-firebase-cms"
+    ],
+    "FAQ": [
+      "version-3.0.0-why-jsx",
+      "version-3.0.0-why-graphql"
+    ]
+  }
+}

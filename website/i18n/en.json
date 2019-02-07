@@ -615,6 +615,194 @@
       "version-2.8.3-why-traditional-headless-adaptive": {
         "title": "From traditional, headless to adaptive CMS",
         "sidebar_label": "Traditional vs Headless vs Adaptive CMS"
+      },
+      "version-3.0.0-cli-app-create": {
+        "title": "canner app create",
+        "sidebar_label": "canner app create"
+      },
+      "version-3.0.0-cli-app-list": {
+        "title": "canner app list",
+        "sidebar_label": "canner app list"
+      },
+      "version-3.0.0-cli-app-use": {
+        "title": "canner app use",
+        "sidebar_label": "canner app use"
+      },
+      "version-3.0.0-cli-cloud-dashboard": {
+        "title": "canner cloud:dashboard",
+        "sidebar_label": "canner cloud:dashboard"
+      },
+      "version-3.0.0-cli-cloud-data-import": {
+        "title": "canner data:import",
+        "sidebar_label": "canner data:import"
+      },
+      "version-3.0.0-cli-cloud:deploy": {
+        "title": "canner cloud:deploy",
+        "sidebar_label": "canner cloud:deploy"
+      },
+      "version-3.0.0-cli-cloud-init": {
+        "title": "canner cloud:init",
+        "sidebar_label": "canner cloud:init"
+      },
+      "version-3.0.0-cli-cloud-login": {
+        "title": "canner cloud:login",
+        "sidebar_label": "canner cloud:login"
+      },
+      "version-3.0.0-cli-cloud-logout": {
+        "title": "canner cloud:logout",
+        "sidebar_label": "canner cloud:logout"
+      },
+      "version-3.0.0-cli-cloud-signup": {
+        "title": "canner cloud:signup",
+        "sidebar_label": "canner cloud:signup"
+      },
+      "version-3.0.0-cli-cloud-whoami": {
+        "title": "canner cloud:whoami",
+        "sidebar_label": "canner cloud:whoami"
+      },
+      "version-3.0.0-cli-init": {
+        "title": "canner init",
+        "sidebar_label": "canner init"
+      },
+      "version-3.0.0-cli-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.0.0-cli-start-auth": {
+        "title": "canner start:auth",
+        "sidebar_label": "canner start:auth"
+      },
+      "version-3.0.0-cli-start-cms": {
+        "title": "canner start:cms",
+        "sidebar_label": "canner start:cms"
+      },
+      "version-3.0.0-cli-start-graphql": {
+        "title": "canner start:graphql",
+        "sidebar_label": "canner start:graphql"
+      },
+      "version-3.0.0-cli-start": {
+        "title": "canner start",
+        "sidebar_label": "canner start"
+      },
+      "version-3.0.0-credential-firebase": {
+        "title": "Credential in Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "version-3.0.0-credential-firestore": {
+        "title": "Credential in Firestore",
+        "sidebar_label": "Firestore"
+      },
+      "version-3.0.0-credential-prisma": {
+        "title": "Credential in Prisma",
+        "sidebar_label": "Prisma"
+      },
+      "version-3.0.0-data-source-customize": {
+        "title": "Customize",
+        "sidebar_label": "Customize"
+      },
+      "version-3.0.0-data-source-firebase": {
+        "title": "Firebase",
+        "sidebar_label": "Firebase"
+      },
+      "version-3.0.0-data-source-firestore": {
+        "title": "Firestore",
+        "sidebar_label": "Firestore"
+      },
+      "version-3.0.0-data-source-memory": {
+        "title": "Memory",
+        "sidebar_label": "Memory"
+      },
+      "version-3.0.0-data-source-mongodb": {
+        "title": "Mongodb",
+        "sidebar_label": "Mongodb"
+      },
+      "version-3.0.0-data-source-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.0.0-file-canner-cloud-js": {
+        "title": "canner.cloud.js",
+        "sidebar_label": "canner.cloud.js"
+      },
+      "version-3.0.0-file-canner-schema-js": {
+        "title": "canner.schema.js",
+        "sidebar_label": "canner.schema.js"
+      },
+      "version-3.0.0-file-canner-server-js": {
+        "title": "canner.server.js",
+        "sidebar_label": "canner.server.js"
+      },
+      "version-3.0.0-graphql-api-overview": {
+        "title": "GraphQL API Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.0.0-graphql-api-read-only-access": {
+        "title": "ReadOnly Access GraphQL API",
+        "sidebar_label": "ReadOnly API"
+      },
+      "version-3.0.0-guides-deployment-of-canner": {
+        "title": "Deploy to Canner",
+        "sidebar_label": "Deploy to Canner"
+      },
+      "version-3.0.0-guides-deployment-of-docker": {
+        "title": "Deploy with Docker",
+        "sidebar_label": "Deploy with Docker"
+      },
+      "version-3.0.0-guides-deployment-overview": {
+        "title": "Deployment",
+        "sidebar_label": "Overview"
+      },
+      "version-3.0.0-guides-internationalization": {
+        "title": "Internationalization (i18n)",
+        "sidebar_label": "Internationalization (i18n)"
+      },
+      "version-3.0.0-guides-navbar": {
+        "title": "Navbar",
+        "sidebar_label": "Navbar"
+      },
+      "version-3.0.0-guides-sidebar": {
+        "title": "Sidebar",
+        "sidebar_label": "Sidebar"
+      },
+      "version-3.0.0-guides-style": {
+        "title": "Style",
+        "sidebar_label": "Style"
+      },
+      "version-3.0.0-schema-data-type-tags": {
+        "title": "Data Type Tags",
+        "sidebar_label": "Data Type Tags"
+      },
+      "version-3.0.0-schema-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.0.0-schema-root-tag": {
+        "title": "Root Tag",
+        "sidebar_label": "Root Tag"
+      },
+      "version-3.0.0-start-quick-3commands": {
+        "title": "Building CMS in 3 commands",
+        "sidebar_label": "Building CMS in 3 commands"
+      },
+      "version-3.0.0-start-quick-intro": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
+      "version-3.0.0-tutorial-community-firebase": {
+        "title": "Firebase CMS with NextJS (Community edition)",
+        "sidebar_label": "Firebase CMS with NextJS (Community edition)"
+      },
+      "version-3.0.0-tutorial-community-firestore": {
+        "title": "Firestore CMS (Community edition)",
+        "sidebar_label": "Firestore CMS (Community edition)"
+      },
+      "version-3.0.0-why-canner": {
+        "title": "Why Canner?",
+        "sidebar_label": "Why Canner?"
+      },
+      "version-3.0.0-why-cms-framework": {
+        "title": "Why a Content Management Framework?",
+        "sidebar_label": "Why Content Management Framework?"
       }
     },
     "links": {
