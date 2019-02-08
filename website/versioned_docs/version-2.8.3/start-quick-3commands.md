@@ -28,7 +28,7 @@ $ canner init:schema
 It will ask you to select a schema template and a data source you want to use.
 
 ```shell
-$ canenr init:schema
+$ canner init:schema
 Initializing schema...
 ? What template do you want to create? Blog
 ? What data source do you want to use? Firebase admin
