@@ -69,7 +69,7 @@ Using your customized layout is as easy as defining it in the `name` prop in `<L
 
 **canner.schema.js**
 ```jsx
-import CannerScript, {Layout} from '@canenr/canner-script';
+import CannerScript, {Layout} from '@canner/canner-script';
 
 import CustomizeTabsLayout from 'path/to/tabs';
 
