@@ -179,9 +179,6 @@
 <url> <loc>https://www.canner.io/docs/cli-cloud-whoami</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-cloud-whoami" /> </url>
 <url> <loc>https://www.canner.io/docs/cli-init</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-init" /> </url>
 <url> <loc>https://www.canner.io/docs/cli-overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-overview" /> </url>
-<url> <loc>https://www.canner.io/docs/cli-start-auth</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-start-auth" /> </url>
-<url> <loc>https://www.canner.io/docs/cli-start-cms</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-start-cms" /> </url>
-<url> <loc>https://www.canner.io/docs/cli-start-graphql</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-start-graphql" /> </url>
 <url> <loc>https://www.canner.io/docs/cli-start</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/cli-start" /> </url>
 <url> <loc>https://www.canner.io/docs/data-source-customize</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/data-source-customize" /> </url>
 <url> <loc>https://www.canner.io/docs/data-source-firebase</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.canner.io/docs/data-source-firebase" /> </url>
