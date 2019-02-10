@@ -7,7 +7,7 @@ sidebar_label: Firestore
 ## Install Dependencies
 
 ```shell
-$ yarn add firebase-admin @gqlify/server @gqlify/firebase
+$ yarn add firebase-admin @gqlify/server @gqlify/firestore
 ```
 
 ## Download serviceAccount.json
@@ -19,16 +19,15 @@ To connect to your Firebase, Canner CLI needs the `serviceAccount.json` of your 
 
 **canner.server.js**
 ```js
-const admin = require('firebase-admin');
 const {FirestoreDataSource} = require('@gqlify/firestore');
+const admin = require('firebase-admin');
 const cert = require('/path/to/serviceAccount.json');
-const databaseUrl = 'https://databaseName.firebaseio.com';
 
 exports.dataSources = {
   firestore: args => new FirestoreDataSource({
     config: {
       credential: admin.credential.cert(cert),
-      databaseURL,
+      databaseURL: `https://${cert.project_id}.firebaseio.com`
     },
     path: args.key,
   }),
