@@ -73,10 +73,7 @@
         "type": "subcategory",
         "label": "OSS(self-hosting)",
         "ids": [
-          "version-3.0.0-cli-start",
-          "version-3.0.0-cli-start-cms",
-          "version-3.0.0-cli-start-graphql",
-          "version-3.0.0-cli-start-auth"
+          "version-3.0.0-cli-start"
         ]
       },
       {

@@ -668,18 +668,6 @@
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-cli-start-auth": {
-        "title": "canner start:auth",
-        "sidebar_label": "canner start:auth"
-      },
-      "version-3.0.0-cli-start-cms": {
-        "title": "canner start:cms",
-        "sidebar_label": "canner start:cms"
-      },
-      "version-3.0.0-cli-start-graphql": {
-        "title": "canner start:graphql",
-        "sidebar_label": "canner start:graphql"
-      },
       "version-3.0.0-cli-start": {
         "title": "canner start",
         "sidebar_label": "canner start"
