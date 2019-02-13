@@ -31,7 +31,7 @@ exports.dataSources = {
       credential: admin.credential.cert(cert),
       databaseURL,
     },
-    path: args.key,
+    collection: args.key,
   }),
 }
 ```

@@ -29,7 +29,7 @@ exports.dataSources = {
       credential: admin.credential.cert(cert),
       databaseURL: `https://${cert.project_id}.firebaseio.com`
     },
-    path: args.key,
+    collection: args.key,
   }),
 }
 ```
