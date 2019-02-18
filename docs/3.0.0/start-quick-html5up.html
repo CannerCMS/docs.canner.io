@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>First CMS using Canner in 3 minutes (Firebase) · Canner</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;HTML5UP is one of the most famous free template online, beautiful design and many template options, most importantly, all templates are released under Creative Commons Attribution license, which means you could use it for personal or commercial purpose.&lt;/p&gt;
+"/><meta name="docsearch:version" content="3.0.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="First CMS using Canner in 3 minutes (Firebase) · Canner"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="&lt;p&gt;HTML5UP is one of the most famous free template online, beautiful design and many template options, most importantly, all templates are released under Creative Commons Attribution license, which means you could use it for personal or commercial purpose.&lt;/p&gt;
+"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner"/><h2 class="headerTitleWithLogo">Canner</h2></a><a href="/versions"><h3>3.0.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/3.0.0/why-canner" target="_self">Why?</a></li><li class=""><a href="/docs/3.0.0/start-quick-intro" target="_self">Docs</a></li><li class=""><a href="/docs/3.0.0/tutorial-community-firebase" target="_self">Tutorials</a></li><li class=""><a href="https://spectrum.chat/canner/cannercms" target="_self">Community</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/Canner/docs.canner.io/edit/master/docs/start-quick-html5up.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">First CMS using Canner in 3 minutes (Firebase)</h1></header><article><div><span><p>HTML5UP is one of the most famous free template online, beautiful design and many template options, most importantly, all templates are released under Creative Commons Attribution license, which means you could use it for personal or commercial purpose.</p>
+<p>We are going to show you <strong>how to build a HTML5UP CMS in 3 minutes and using Firebase as database</strong>, in fact, after this tutorial you will find out you’re able to build any kind of applications with CMS in minutes, no matter it is mobile, web and IoT. You are able to not only build a CMS with beautiful UI, but also maintainable and scalable CMS.</p>
+<p>The demo code is at <a href="https://github.com/Canner/canner-demo/tree/master/html5up-lens">https://github.com/Canner/canner-demo/tree/master/html5up-lens</a>, please download this repository before you start!</p>
+<p>In this tutorial we will use, Firebase as database and <a href="https://www.canner.io">Canner</a> as your CMS.</p>
+<p>Your final website should like this: <a href="https://html5up-lens.firebaseapp.com/">https://html5up-lens.firebaseapp.com/</a></p>
+<p><img src="/docs/assets/tutorial-html5up/result.png" alt="result"></p>
+<h3><a class="anchor" aria-hidden="true" id="your-cms-result"></a><a href="#your-cms-result" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your CMS result:</h3>
+<p><img src="/docs/assets/tutorial-html5up/cms-1.png" alt="cms-1"></p>
+<p><img src="/docs/assets/tutorial-html5up/cms-2.png" alt="cms-2"></p>
+<h2><a class="anchor" aria-hidden="true" id="1-download-canner-canner-html5up-demo"></a><a href="#1-download-canner-canner-html5up-demo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Download Canner/canner-html5up-demo</h2>
+<p>After you download <code>Canner/canner-html5up-demo</code> navigate to <code>html5up-lens</code>.</p>
+<p><img src="/docs/assets/tutorial-html5up/file-structure.png" alt="file-structure"></p>
+<h2><a class="anchor" aria-hidden="true" id="2-create-a-new-project-at-firebase-install-firebase-tool"></a><a href="#2-create-a-new-project-at-firebase-install-firebase-tool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Create a new project at Firebase &amp; install Firebase Tool</h2>
+<p><img src="/docs/assets/tutorial-html5up/firebase-create.png" alt="firebase-create"></p>
+<p>We’ll need later to host our website on Firebase. So you have to install Firebase CLI tool first. <a href="https://github.com/firebase/firebase-tools">https://github.com/firebase/firebase-tools</a></p>
+<pre><code class="hljs css language-sh">npm install -g firebase-tools
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="3-install-canner-cli"></a><a href="#3-install-canner-cli" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Install @canner/cli</h2>
+<p><code>@canner/cli</code> is a command line tools using <a href="https://www.canner.io">Canner</a>, that allows you to upload CMS schema, and upload initial data, … etc.</p>
+<pre><code class="hljs css language-sh">npm install -g @canner/cli
+</code></pre>
+<p>And login your Canner account</p>
+<pre><code class="hljs css language-sh">canner login
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="4-create-project-at-canner"></a><a href="#4-create-project-at-canner" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Create project at Canner</h2>
+<p>Login your <a href="https://www.canner.io">Canner</a> account and create a project</p>
+<p><img src="/docs/assets/tutorial-html5up/canner-create.png" alt="canner-create"></p>
+<p>Or you could create by command line</p>
+<pre><code class="hljs css language-sh">canner init
+? Create a new app or select from existed apps (Use arrow keys)
+❯ Select from existed apps
+  Create a new app
+</code></pre>
+<p>select <strong>&quot;Create a new app&quot;</strong> , this will create a new project and initialize. If you create through website select <strong>“Select from existed apps”</strong> and select the app.</p>
+<h2><a class="anchor" aria-hidden="true" id="5-replace-public-indexhtml-cannerschemajs-firebase-config"></a><a href="#5-replace-public-indexhtml-cannerschemajs-firebase-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Replace ‘public/index.html’ &amp; ‘canner.schema.js’ Firebase config</h2>
+<p><img src="/docs/assets/tutorial-html5up/firebase-config.gif" alt="firebase-config"></p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apiKey<span class="token punctuation">:</span> <span class="token string">"API_KEY"</span><span class="token punctuation">,</span>
+  authDomain<span class="token punctuation">:</span> <span class="token string">"AUTH_DOMAIN"</span><span class="token punctuation">,</span>
+  databaseURL<span class="token punctuation">:</span> <span class="token string">"DATABASE_URL"</span><span class="token punctuation">,</span>
+  projectId<span class="token punctuation">:</span> <span class="token string">"PROJECT_ID"</span><span class="token punctuation">,</span>
+  storageBucket<span class="token punctuation">:</span> <span class="token string">"STORAGE_BUCKET"</span><span class="token punctuation">,</span>
+  messagingSenderId<span class="token punctuation">:</span> <span class="token string">"MESSAGING_SENDER_ID"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Replace <code>public/index.html</code> &amp; <code>./utils.js</code> firebase config to your config.</p>
+<h2><a class="anchor" aria-hidden="true" id="6-download-firebase-private-key"></a><a href="#6-download-firebase-private-key" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Download firebase private key</h2>
+<p>Because Canner CMS needs to integrate with your Firebase database, Firebase storage and more. So you have to download your private key on Firebase, edit <code>canner.cloud.js</code> (create one in <code>htmlup-lens</code> folder if it's not exist).</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>FirebaseCredential<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"canner-credential"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// production data endpoint configuration</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">FirebaseCredential</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path to your firebase config"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p><img src="/docs/assets/tutorial-html5up/firebase-key.gif" alt="firebase-key"></p>
+<h2><a class="anchor" aria-hidden="true" id="7-preview-in-your-local-machine"></a><a href="#7-preview-in-your-local-machine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Preview in your local machine</h2>
+<p>Now, you could preview your CMS in your local machine.</p>
+<pre><code class="hljs css language-sh">canner script:serve --env prod
+</code></pre>
+<blockquote>
+<p><code>--env prod</code> will use your default <code>env</code> setting in <code>canner.cloud.js</code>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="7-deploy-your-website-on-firebase"></a><a href="#7-deploy-your-website-on-firebase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Deploy your website on Firebase</h2>
+<p>select your Firebase project in your command line</p>
+<pre><code class="hljs css language-sh">firebase init
+</code></pre>
+<p>Deploy static files</p>
+<pre><code class="hljs css language-sh">firebase deploy
+</code></pre>
+<p>You could check your website in local, using</p>
+<pre><code class="hljs css language-sh">firebase serve
+</code></pre>
+<p>And you could open your website at <a href="http://localhost:5000">http://localhost:5000</a></p>
+<h2><a class="anchor" aria-hidden="true" id="8-deploy-your-data-to-firebase-schema-to-canner"></a><a href="#8-deploy-your-data-to-firebase-schema-to-canner" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Deploy your data to Firebase, schema to Canner</h2>
+<p>Deploy schema</p>
+<pre><code class="hljs css language-sh">canner script:deploy
+</code></pre>
+<p>Import data</p>
+<pre><code class="hljs css language-sh">canner data:import
+</code></pre>
+<p>Let’s it! Your website is now live! Like this website: <a href="https://html5up-lens.firebaseapp.com/">https://html5up-lens.firebaseapp.com/</a> , Cheers!</p>
+<p>You could build any CMS using Canner! Try it in your next Firebase project!</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2018-10-8</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-download-canner-canner-html5up-demo">1. Download Canner/canner-html5up-demo</a></li><li><a href="#2-create-a-new-project-at-firebase-install-firebase-tool">2. Create a new project at Firebase &amp; install Firebase Tool</a></li><li><a href="#3-install-canner-cli">3. Install @canner/cli</a></li><li><a href="#4-create-project-at-canner">4. Create project at Canner</a></li><li><a href="#5-replace-public-indexhtml-cannerschemajs-firebase-config">5. Replace ‘public/index.html’ &amp; ‘canner.schema.js’ Firebase config</a></li><li><a href="#6-download-firebase-private-key">6. Download firebase private key</a></li><li><a href="#7-preview-in-your-local-machine">7. Preview in your local machine</a></li><li><a href="#7-deploy-your-website-on-firebase">7. Deploy your website on Firebase</a></li><li><a href="#8-deploy-your-data-to-firebase-schema-to-canner">8. Deploy your data to Firebase, schema to Canner</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c9ba81d7831a52129d133134abaf5f04',
+                indexName: 'canner',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
