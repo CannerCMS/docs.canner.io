@@ -60,17 +60,9 @@
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "cli-start-auth": {
-        "title": "canner start:auth",
-        "sidebar_label": "canner start:auth"
-      },
-      "cli-start-cms": {
-        "title": "canner start:cms",
-        "sidebar_label": "canner start:cms"
-      },
-      "cli-start-graphql": {
-        "title": "canner start:graphql",
-        "sidebar_label": "canner start:graphql"
+      "cli-start-production": {
+        "title": "canner start:production",
+        "sidebar_label": "canner start:production"
       },
       "cli-start": {
         "title": "canner start",
@@ -791,6 +783,26 @@
       "version-3.0.0-why-cms-framework": {
         "title": "Why a Content Management Framework?",
         "sidebar_label": "Why Content Management Framework?"
+      },
+      "version-3.1.0-cli-start-production": {
+        "title": "canner start:production",
+        "sidebar_label": "canner start:production"
+      },
+      "version-3.1.0-cli-start": {
+        "title": "canner start",
+        "sidebar_label": "canner start"
+      },
+      "version-3.1.0-data-source-firestore": {
+        "title": "Firestore",
+        "sidebar_label": "Firestore"
+      },
+      "version-3.1.0-schema-data-type-tags": {
+        "title": "Data Type Tags",
+        "sidebar_label": "Data Type Tags"
+      },
+      "version-3.1.0-tutorial-community-firebase": {
+        "title": "Firebase CMS with NextJS (Community edition)",
+        "sidebar_label": "Firebase CMS with NextJS (Community edition)"
       }
     },
     "links": {

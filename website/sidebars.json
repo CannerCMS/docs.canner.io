@@ -74,9 +74,7 @@
         "label": "OSS(self-hosting)",
         "ids": [
           "cli-start",
-          "cli-start-cms",
-          "cli-start-graphql",
-          "cli-start-auth"
+          "cli-start-production"
         ]
       },
       {
