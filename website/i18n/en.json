@@ -60,17 +60,9 @@
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "cli-start-auth": {
-        "title": "canner start:auth",
-        "sidebar_label": "canner start:auth"
-      },
-      "cli-start-cms": {
-        "title": "canner start:cms",
-        "sidebar_label": "canner start:cms"
-      },
-      "cli-start-graphql": {
-        "title": "canner start:graphql",
-        "sidebar_label": "canner start:graphql"
+      "cli-start-production": {
+        "title": "canner start:production",
+        "sidebar_label": "canner start:production"
       },
       "cli-start": {
         "title": "canner start",
