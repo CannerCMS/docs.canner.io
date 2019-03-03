@@ -8,7 +8,7 @@ sidebar_label: Layout Tags
 
 Layout tags are used to create grids, containers, and blocks in CMS. It allows you create customized design layouts and visual design for your CMS.
 
-> Biggest difference between `layout` and `type` components is that **Layout defines how CMS type components are arranged (Grids, tabs, etc..) in your CMS**.
+> Biggest differences between `layout` and `type` components is that **Layout defines how CMS type components are arranged (Grids, tabs, etc..) in your CMS**.
 
 ## Basic Layout
 

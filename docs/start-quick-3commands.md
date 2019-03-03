@@ -6,7 +6,7 @@ sidebar_label: Building CMS in 3 commands
 
 ## 1. Install Canner CLI
 
-Make sure you have already installed NodeJS and use the command below to install `@canner/cli` globally. And as the [official NPM docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) mentioned, we also recommend using a Node version manager to prevent the [EACCESS issue](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally).
+Make sure you have already installed NodeJS and use the command below to install `@canner/cli` globally. And as the [official NPM docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) mentioned, we also recommend using a Node version manager to prevent the [EACCES issue](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) if you need to install `@canner/cli` with `sudo`.
 
 
 ```shell
@@ -18,19 +18,20 @@ Check the installation with
 ```shell
 $ canner --version
 ```
-
 #### Note
 - Your Node version must at least >= 6.10. 
-#### Troubleshooting
-- [EACCESS: permission denied](https://github.com/Canner/canner/issues/139)
 
+#### Troubleshooting
+
+- [Canner issue - EACCES: permission denied](https://github.com/Canner/canner/issues/139)
+- [Stackoverflow - "Error: EACCES: permission denied"](https://stackoverflow.com/questions/38323880/error-eacces-permission-denied)
 
 ## 2. Initialize project
-In the Canner project, there are some important files you have to know, [`canner.schema.js`](file-canner-schema-js.md), [`canner.server.js`](file-canner-server-js.md), and [`canner.cloud.js`](file-canner-cloud-js.md). 
+In a Canner project, there are some important files you must to know, [`canner.schema.js`](file-canner-schema-js.md), [`canner.server.js`](file-canner-server-js.md), and [`canner.cloud.js`](file-canner-cloud-js.md). 
 
-`canner.schema.js` is the most important one, which defines the data model and UIs of your CMS. It's written with `jsx`, a XML-like language, and is easy to learn and understand.
+`canner.schema.js` is the most important one, which is the entry of your CMS definitions, it defines the data model and UIs of your CMS. It's written with `jsx`, a XML-like language, and is easy to learn and understand.
 
-`canner.server.js` and `canner.cloud.js` are both configurations for hosting, such as the [**theme**](guides-theme), [**sidebar menu**](guides-sidebar.md), [**data sources**](data-source-overview.md), ...etc. The difference between them are the former one is used for self-hosting, which means you can locally serve and host your CMS and GraphQL APIs. The latter one is for Canner Cloud platform, which helps you to host the CMS on [cannercms.com](https://cannercms.com).
+`canner.server.js` and `canner.cloud.js` are both configurations for hosting, such as the [**theme**](guides-theme), [**sidebar menu**](guides-sidebar.md), [**data sources**](data-source-overview.md), ...etc. The differences between them are the former one is used for self-hosting, which means you can locally serve and host your CMS and GraphQL API servers. The latter one is for Canner Cloud platform, which helps you to host the CMS on [cannercms.com](https://cannercms.com).
 
 In this step, we create the three files with CLI. You can take a look at the files, and edit them by the following guides.
 
@@ -48,7 +49,7 @@ $ npm init
 $ npm install --save-dev @gqlify/server
 ```
 
-Run command:
+Run command below to initialize your project.
 
 ```shell
 $ canner init
@@ -80,10 +81,10 @@ Next Steps:
       http://www.canner.io/docs/next/guides-deploy-to-canner
 ```
 
-And then, there will be serveral files and folders under the  directory.
+And then, there will be serveral files and folders under the directory.
 
 - `canner.schema.js and schema/\*.schema.js`:
-The schema of the CMS, defines the data model and UI.
+The entry of definition schema of the CMS, defines the data model and UI.
 - `components/\*.js`:
 The customized components, not every projects have this.
 - `canner.server.js`:
@@ -95,7 +96,6 @@ The configuration of **Cloud** version, you can change the *dataSources*, *i18n*
 
 Simply type `canner start`, this command will read the configuration from `canner.server.js` and serve it. You can edit it by the following [guides](file-canner-server-js.md).
 
-
 When running the command, it displays an awesome dashboard displaying the progress of the static files building, server status, and server logs, ...etc. 
 
 ![start-command-dashboard](/docs/assets/start-command-dashboard.png)
@@ -106,13 +106,12 @@ Here are the actions actually doing in the background.
 The static files of the CMS is generated under `./.cms`.
 - **Build json schema**:
 The JSON schema of your canner schema is generated called `canner.schema.json`.
-- **Host the CMS**
+- **Host the CMS**:
 Host the path `./.cms` at `http://localhost:3000`
 - **Run the GraphQL server**
-Parse `canner.schema.json` to [GQLify data modal](https://www.gqlify.com/docs/data-model-overview), and the endpoint will expose at `http://localhost:3000/graphql`
+Parse `canner.schema.json` to [GQLify data modal](https://www.gqlify.com/docs/data-model-overview), and the API endpoint will expose at `http://localhost:3000/graphql`
 
-
-After the line `Server ready on port 3000` shows on dashboard, you can go to `http://localhost:3000` to see your CMS and login with the default username and password, `canner`.
+After the line `Server ready on port 3000` shows on dashboard, you can go to `http://localhost:3000` to see your CMS and ***login with the default username and password, `canner`***.
 
 **Login page**
 ![login-form](/docs/assets/login-form.png)
@@ -123,7 +122,7 @@ After the line `Server ready on port 3000` shows on dashboard, you can go to `ht
 
 ## 4. Next Step
 
-You can follow the instruction below to configurate your CMS.
+You can follow the instructions below to configurate your CMS.
 
 - [Understand the schemas](schema-overview.md)
 - [Change the data source](data-source-overview)

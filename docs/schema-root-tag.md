@@ -9,6 +9,7 @@ sidebar_label: Root Tag
 The outermost tag in Canner schema. It actually returns an object containing with several information.
 
 **Example**
+
 ```js
 import CannerScript, {Block} from 'canner-script';
 const schema = (

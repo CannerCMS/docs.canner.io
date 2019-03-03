@@ -5,10 +5,10 @@ sidebar_label: Overview
 ---
 
 ## Introduction
-Unlike other CMS solutions, CannerCMS is a framework for developers to build their CMS just by assembling the Canner schema. Canner schema is constructed with the `jsx` syntax, describing the structure of the data, how to connect to your data source, and what the CMS UI should expect in certain fields.
+Unlike other CMS solutions, CannerCMS is a framework for developers to build their CMS just by assembling the Canner schema, you can think of Canner schema is a definition syntax of your CMS. Canner schema is constructed with the `jsx` syntax, describing the structure of the data, how to connect to your data source, and what the CMS UI should expect in certain fields.
 
 ## JSX Tags
-There are several available tags, as listed below and it's categorized into five categories.
+There are several available tags, as listed below and define in five categories.
 
 [***Root***](schema-root-tag.md)
 - \<root />
@@ -217,7 +217,7 @@ As below
 
 ## Data Type tags
 
-Type tags are the most basic UI component for CMS.  For example,  you could create a textarea for a string field.
+Type tags are the most basic UI component for CMS. For example, you could create a textarea for a string field.
 
 Using textarea UI:
 
