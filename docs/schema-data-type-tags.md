@@ -264,7 +264,7 @@ The label of a field.
     <string keyName="description">
   </array>
   ```
-- **tableRoue**, is available in the first level, change the current route if you click the edit button. In most case, we recommend you use this ui as the component of the first level array since the routes support feature such as [condition field](guides-condition-field.md). Example of changing route: `http://localhost:3000/cms/posts` => `http://localhost:3000/cms/posts/<postId>`
+- **tableRoute**, is available in the first level, change the current route if you click the edit button. In most case, we recommend you use this ui as the component of the first level array since the routes support feature such as [condition field](guides-condition-field.md). Example of changing route: `http://localhost:3000/cms/posts` => `http://localhost:3000/cms/posts/<postId>`
 
   ```js
   <array
