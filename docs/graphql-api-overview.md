@@ -10,7 +10,7 @@ Under development, you can open GraphQL Playground with signed token on our dash
 
 ### GraphQL Playground
 
-![graphql-playground](/docs/assets/graphql-playground.gif)
+![graphql-playground](/docs/assets/graphql.gif)
 
 
 ### Access your GraphQL API from clients
