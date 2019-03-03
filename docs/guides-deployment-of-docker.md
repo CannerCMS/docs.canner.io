@@ -8,4 +8,4 @@ sidebar_label: Deploy with Docker
 > 
 > We will release our official docker image soon.
 > 
-> Follow our process here https://github.com/Canner/canner/issues/144
+> Follow our progress here https://github.com/Canner/canner/issues/144

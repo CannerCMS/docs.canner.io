@@ -6,7 +6,7 @@ sidebar_label: Condition Fields
 
 ## Introduction
 
-To control a field hidden or disabled in some conditions in runtime, we can use `Condition` layout tag to achieve it. For examples, if you want to show the field `address` only when users choose a certain delivery service, you can use `<Condition />` like below:
+To control a field hidden or disabled in some conditions in runtime, we can use `Condition` layout tag to achieve it. For example, if you want to show the field `address` only when users choose a certain delivery service, you can use `<Condition />` like below:
 
 ```jsx
 // remember to import Condition tag before you use it
@@ -73,7 +73,7 @@ If you prefer to disable it instead of hiding, add `defaultMode` property in `<C
 
 ## Duplicated Keys Problem
 
-In some cases, you may want to use condition fields to pass different properties or children to a tag. But in Canner, this way doesn't work. See the example below. There are two tags with the same `keyName`, receiveTime with different `uiParams`, and they are wrapped in their exclusive condition.
+In some cases, you may want to use condition fields to pass different properties or children to a tag. But in Canner, this way doesn't work. See the example below. There are two tags with the same `keyName`, `receiveTime` with different `uiParams`, and they are wrapped in their exclusive condition.
 
 ```jsx
 <array keyName="orders">
@@ -130,7 +130,7 @@ In some cases, you may want to use condition fields to pass different properties
 </array>
 ```
 
- This schema will throw the error `duplicated key`, because the schema actually generate a JSON object that represents the data structure and two visitors which are used to change the component tree. And the JSON object of the schema above will be the object below which has duplicated keys in `orders.items.items`
+This schema will throw the error `duplicated key`, because the schema actually generate a JSON object that represents the data structure and two visitors which are used to change the component tree. And the JSON object of the schema above will be the object below which has duplicated keys in `orders.items.items`
 
 ```js
 // data structure
@@ -262,4 +262,4 @@ module.exports = (
 );
 ```
 
-> Furthor information, see [customized component](guides-customized-component.md)
+> Further information, see [customized component](guides-customized-component.md)

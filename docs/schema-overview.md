@@ -18,7 +18,7 @@ There are several available tags, as listed below and it's categorized into five
 - \<string />
 - \<boolean />
 - \<number />
-- \<date />
+- \<dateTime />
 - \<mapPoint />
 - \<relation />
 - \<array />

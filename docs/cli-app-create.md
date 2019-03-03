@@ -4,7 +4,7 @@ title: canner app create
 sidebar_label: canner app create
 ---
 
-Create an new Canner app, you can specify the app name with the option `--app-name, -a`. Free plan users can only have one project, so the command will throw error.
+Create a new Canner app, you can specify the app name with the option `--app-name, -a`.
 
 ## Options
 

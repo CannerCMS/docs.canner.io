@@ -4,7 +4,7 @@ title: Overview
 sidebar_label: Overview
 ---
 
-Since CLI uses [GQLify](https://www.gqlify.com) to create the GraphQL server, the data source here is totally same as the [data source of GQLify](https://www.gqlify.com/docs/data-source-overview), and also you can customize your data source by following the [guides](https://www.gqlify.com/docs/create-own-data-source).
+Since CLI uses [GQLify](https://www.gqlify.com) to create the GraphQL server, the data source here is totally same as the [data source in GQLify](https://www.gqlify.com/docs/data-source-overview), and also you can customize your data source by following the [guides](https://www.gqlify.com/docs/create-own-data-source).
 
 <!-- WIP The dataSources in `canner.server.js` and `canner.cloud.js` are different, so make sure you edit the right one. `canner.server.js` is for OSS (self-hosting), and `canner.cloud.js` is for Canner Cloud. -->
 

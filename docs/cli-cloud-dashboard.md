@@ -4,4 +4,4 @@ title: canner cloud:dashboard
 sidebar_label: canner cloud:dashboard
 ---
 
-Open the app dashboard on the browser.
+Open the application's dashboard on the browser.

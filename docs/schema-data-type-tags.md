@@ -357,7 +357,7 @@ The label of a field.
 
 ## Special types
 
-### &lt;date/&gt;
+### &lt;dateTime/&gt;
 
 ISO8601 without timezone. In other words, the value must postfix with `Z`
 
