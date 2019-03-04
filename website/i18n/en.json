@@ -803,6 +803,90 @@
       "version-3.1.0-tutorial-community-firebase": {
         "title": "Firebase CMS with NextJS (Community edition)",
         "sidebar_label": "Firebase CMS with NextJS (Community edition)"
+      },
+      "version-3.1.1-cli-app-create": {
+        "title": "canner app create",
+        "sidebar_label": "canner app create"
+      },
+      "version-3.1.1-cli-app-use": {
+        "title": "canner app use",
+        "sidebar_label": "canner app use"
+      },
+      "version-3.1.1-cli-cloud-dashboard": {
+        "title": "canner cloud:dashboard",
+        "sidebar_label": "canner cloud:dashboard"
+      },
+      "version-3.1.1-cli-cloud-data-import": {
+        "title": "canner data:import",
+        "sidebar_label": "canner data:import"
+      },
+      "version-3.1.1-cli-cloud:deploy": {
+        "title": "canner cloud:deploy",
+        "sidebar_label": "canner cloud:deploy"
+      },
+      "version-3.1.1-cli-cloud-init": {
+        "title": "canner cloud:init",
+        "sidebar_label": "canner cloud:init"
+      },
+      "version-3.1.1-cli-cloud-login": {
+        "title": "canner cloud:login",
+        "sidebar_label": "canner cloud:login"
+      },
+      "version-3.1.1-cli-cloud-whoami": {
+        "title": "canner cloud:whoami",
+        "sidebar_label": "canner cloud:whoami"
+      },
+      "version-3.1.1-cli-init": {
+        "title": "canner init",
+        "sidebar_label": "canner init"
+      },
+      "version-3.1.1-cli-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.1.1-cli-start-production": {
+        "title": "canner start:production",
+        "sidebar_label": "canner start:production"
+      },
+      "version-3.1.1-data-source-customize": {
+        "title": "Customize",
+        "sidebar_label": "Customize"
+      },
+      "version-3.1.1-data-source-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.1.1-graphql-api-overview": {
+        "title": "GraphQL API Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.1.1-guides-condition-fields": {
+        "title": "Condition Fields",
+        "sidebar_label": "Condition Fields"
+      },
+      "version-3.1.1-guides-deployment-of-docker": {
+        "title": "Deploy with Docker",
+        "sidebar_label": "Deploy with Docker"
+      },
+      "version-3.1.1-schema-data-type-tags": {
+        "title": "Data Type Tags",
+        "sidebar_label": "Data Type Tags"
+      },
+      "version-3.1.1-schema-layout-tags": {
+        "title": "Layout Tags",
+        "sidebar_label": "Layout Tags"
+      },
+      "version-3.1.1-schema-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.1.1-schema-root-tag": {
+        "title": "Root Tag",
+        "sidebar_label": "Root Tag"
+      },
+      "version-3.1.1-start-quick-3commands": {
+        "title": "Building CMS in 3 commands",
+        "sidebar_label": "Building CMS in 3 commands"
       }
     },
     "links": {
