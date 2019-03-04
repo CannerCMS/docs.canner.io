@@ -302,33 +302,33 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>Toolbar tags provide additional features for users to build a powerful CMS, such as <code>filter</code>, <code>sort</code>, <code>pagination</code>, <code>export</code>, <code>import</code>, ...etc. They only can be put into <strong>first level array</strong> and <strong>relation field</strong>.</p>
 <p><strong>examples</strong></p>
 <pre><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">root</span>&gt;</span>
-  </span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">array</span> <span class="hljs-attr">keyName</span>=<span class="hljs-string">"posts"</span>&gt;</span>
-    </span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">toolbar</span>&gt;</span>
-      </span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">filter</span>&gt;</span>
-        </span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">numberFilter</span> <span class="hljs-attr">field</span>=<span class="hljs-string">"views"</span> <span class="hljs-attr">lable</span>=<span class="hljs-string">"Views"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">array</span> <span class="hljs-attr">keyName</span>=<span class="hljs-string">"posts"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">toolbar</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">filter</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">numberFilter</span> <span class="hljs-attr">field</span>=<span class="hljs-string">"views"</span> <span class="hljs-attr">lable</span>=<span class="hljs-string">"Views"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">selectFilter</span>
           <span class="hljs-attr">label</span>=<span class="hljs-string">"Status"</span>
-          <span class="hljs-attr">options</span>=</span></span><span class="xquery">{[{
-            text: <span class="hljs-string">'All'</span>,
+          <span class="hljs-attr">options</span>=</span></span><span class="hljs-template-variable">{[{
+            text: 'All',
             condition: {}</span><span class="xml"><span class="hljs-tag">
-          }, </span></span><span class="xquery">{
-            text: <span class="hljs-string">'Published'</span>,
+          }, </span></span><span class="hljs-template-variable">{
+            text: 'Published',
             condition: {
               draft: {
-                eq:<span class="hljs-built_in"> false</span>
+                <span class="hljs-keyword">eq</span>: false
               }</span><span class="xml"><span class="hljs-tag">
             }
           }]}
         /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">filter</span>&gt;</span></span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">sort</span> <span class="hljs-attr">defaultOption</span>=<span class="hljs-string">"views"</span> <span class="hljs-attr">options</span>=</span></span><span class="xquery">{[{
-        field: <span class="hljs-string">'views'</span>,
-        label: <span class="hljs-string">'Views'</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">filter</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">sort</span> <span class="hljs-attr">defaultOption</span>=<span class="hljs-string">"views"</span> <span class="hljs-attr">options</span>=</span></span><span class="hljs-template-variable">{[{
+        field: 'views',
+        label: 'Views'
       }</span><span class="xml"><span class="hljs-tag">]}&gt;</span>
-      </span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">pagination</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">toolbar</span>&gt;</span></span><span class="xml">
-  <span class="hljs-tag">&lt;/<span class="hljs-name">array</span>&gt;</span></span><span class="xml">
-<span class="hljs-tag">&lt;/<span class="hljs-name">root</span>&gt;</span></span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">pagination</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">toolbar</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">array</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">root</span>&gt;</span>
 
 </span></code></pre>
 <blockquote>
@@ -368,7 +368,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><a href="/docs/next/schema-page-tags">All &lt;page/&gt; tags</a></li>
 </ul>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-3</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/start-quick-3commands"><span class="arrow-prev">← </span><span>Building CMS in 3 commands</span></a><a class="docs-next button" href="/docs/next/schema-root-tag"><span>Root Tag</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#jsx-tags">JSX Tags</a><ul class="toc-headings"><li><a href="#why">Why</a></li><li><a href="#how">How</a></li></ul></li><li><a href="#wrapped-in-lt-root-gt">Wrapped in &lt;root/&gt;</a></li><li><a href="#first-level-tags">First level tags</a></li><li><a href="#data-type-tags">Data Type tags</a></li><li><a href="#layout-tags">Layout tags</a></li><li><a href="#toolbar-tags">Toolbar tags</a></li><li><a href="#page-tags">Page tags</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/3/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/start-quick-3commands"><span class="arrow-prev">← </span><span>Building CMS in 3 commands</span></a><a class="docs-next button" href="/docs/next/schema-root-tag"><span>Root Tag</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#jsx-tags">JSX Tags</a><ul class="toc-headings"><li><a href="#why">Why</a></li><li><a href="#how">How</a></li></ul></li><li><a href="#wrapped-in-lt-root-gt">Wrapped in &lt;root/&gt;</a></li><li><a href="#first-level-tags">First level tags</a></li><li><a href="#data-type-tags">Data Type tags</a></li><li><a href="#layout-tags">Layout tags</a></li><li><a href="#toolbar-tags">Toolbar tags</a></li><li><a href="#page-tags">Page tags</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
                 </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

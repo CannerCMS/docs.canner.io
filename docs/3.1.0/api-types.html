@@ -1,0 +1,549 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Reference Types · Canner</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;loadedschema&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#loadedschema&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LoadedSchema&lt;/h2&gt;
+"/><meta name="docsearch:version" content="3.1.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Reference Types · Canner"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;loadedschema&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#loadedschema&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LoadedSchema&lt;/h2&gt;
+"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner"/><h2 class="headerTitleWithLogo">Canner</h2></a><a href="/versions"><h3>3.1.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/3.1.0/why-canner" target="_self">Why?</a></li><li class=""><a href="/docs/3.1.0/start-quick-intro" target="_self">Docs</a></li><li class=""><a href="/docs/3.1.0/tutorial-community-firebase" target="_self">Tutorials</a></li><li class=""><a href="https://spectrum.chat/canner/cannercms" target="_self">Community</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/Canner/docs.canner.io/edit/master/docs/api-types.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Reference Types</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="loadedschema"></a><a href="#loadedschema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LoadedSchema</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>schema</td>
+    <td><code>CannerSchema</code></td>
+    <td>The JSON object which represents the structure and UI config of the CMS.</td>
+  </tr>
+  <tr>
+    <td>pageSchema</td>
+    <td><code>CannerSchema</code></td>
+    <td>The JSON object which represents the pages which are contructed with &lt;component>.</td>
+  </tr>
+  <tr>
+    <td>visitors</td>
+    <td><code>Array&lt;Object></code></td>
+    <td>The vistors which will transform the componentTree.</td>
+  </tr>
+  <tr>
+    <td>connector</td>
+    <td>
+      <pre><code class="hljs">Connector | {
+  [key: string]: Connector
+}</code></pre>
+    </td>
+    <td>See <a href="guides-connector">Connector Guide</a></td>
+  </tr>
+  <tr>
+    <td>graphqlClient</td>
+    <td>
+      <pre><code class="hljs">GraphqlClient | {
+  [key: string]: GraphqlClient
+}</code></pre>
+      </td>
+    <td>See <a href="guides-connector">Connector Guide</a></td>
+  </tr>
+  <tr>
+    <td>resolvers</td>
+    <td><code>{[key: string]: Resolver}</code></td>
+    <td>See <a href="guides-resolver">Resolver Guide</a></td>
+  </tr>
+  <tr>
+    <td>imageStorages</td>
+    <td><code>{[key: string]: Storage}</code></td>
+    <td>See <a href="#storage">Storage</a></td>
+  </tr>
+  <tr>
+    <td>fileStorages</td>
+    <td><code>{[key: string]: Storage}</code></td>
+    <td>See <a href="#storage">Storage</a></td>
+  </tr>
+  <tr>
+    <td>dict</td>
+    <td>
+      <code>
+        <a href="api-types#intldict">
+          IntlDict
+        </a>
+      <code>
+    </td>
+    <td>The dictionary which records the data in different locales</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="changeddata"></a><a href="#changeddata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ChangedData</h2>
+<pre><code class="hljs css language-js"><span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>key<span class="token punctuation">:</span> string<span class="token punctuation">]</span><span class="token punctuation">:</span> boolean <span class="token operator">|</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>id<span class="token punctuation">:</span> string<span class="token punctuation">]</span><span class="token punctuation">:</span> any<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="intlobject"></a><a href="#intlobject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IntlObject</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>locale</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>defaultLocale</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>messages</td>
+    <td>
+      <code>
+        <a href="api-types#intldict">
+          IntlDict
+        </a>
+      </code>
+    </td>
+    <td>The dictionary which records the texts in different locales.</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="intldict"></a><a href="#intldict" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IntlDict</h2>
+<pre><code class="hljs css language-js"><span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>locale<span class="token punctuation">:</span> string<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>textId<span class="token punctuation">:</span> string<span class="token punctuation">]</span><span class="token punctuation">:</span> string
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="menuconfig"></a><a href="#menuconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MenuConfig</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</>
+  </tr>
+  <tr>
+    <td>MenuConfig</td>
+    <td>
+      <code>
+        Array&lt;SubmenuConfig | MenuItemConfig>
+      </code>
+    </td>
+    <td>The configuration of sidebar menu.</td>
+  </tr>
+  <tr>
+    <td>SubmenuConfig</td>
+    <td>
+      <pre><code class="hljs">{
+  title: string,
+  items: Array&lt;MenuItemConfig>
+}</code></pre>
+    </td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>MenuItemConfig</td>
+    <td>
+      <pre><code class="hljs">{
+  title: string,
+  pathname: string,
+  params?: <a href="#routerparams">RouterParams</a>
+}</code></pre>
+    </td>
+    <td>
+      -
+    </td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="navbarconfig"></a><a href="#navbarconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>NavbarConfig</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</>
+  </tr>
+  <tr>
+    <td>logo</td>
+    <td width="40%"><code>string | React.Node</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>renderMenu</td>
+    <td><code>() => React.Node</code></td>
+    <td>The method to render your customized menu, recommand you to use <a  href="https://ant.design/components/menu/">antd menu</a></td>
+  </tr>
+  <tr>
+    <td>showSaveButton</td>
+    <td>
+      <code>
+        boolean
+      </code>
+    </td>
+    <td>
+      Show a save button at the top-right corner.
+    </td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="router"></a><a href="#router" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Router</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</>
+  </tr>
+  <tr>
+    <td>getRoutes</td>
+    <td>
+      <code>
+        () => Array&lt;string>
+      </code>
+    </td>
+    <td>Get current routes.</td>
+  </tr>
+  <tr>
+    <td>getOperator</td>
+    <td>
+      <code>
+      () => 'create' | 'update'
+      </code>
+    </td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>getPayload</td>
+    <td>
+      <code>
+        () => Object
+      </code>
+    </td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>goTo</td>
+    <td>
+      <code>
+        () => ({pathname: string} & <a href="#routerparams">RouterParams</a>)
+      </code>
+    </td>
+    <td></td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="routerparams"></a><a href="#routerparams" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RouterParams</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>operator</td>
+    <td><code>'create' | 'update'</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>payload</td>
+    <td><code>Object</code></td>
+    <td>The payload when creating form.</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="toolbar"></a><a href="#toolbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Toolbar</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>async</td>
+    <td><code>boolean</code></td>
+    <td>The async value is true represents that the all queries is done by server, so it cost less network because of that the pagination limits the count of the responsed data. But it also limits the flexibility of query since Canner supports serveral APIs, so we have to define the most general interface. </td>
+  </tr>
+  <tr>
+    <td>sorter</td>
+    <td><code><a href="#sorter">Sorter</a></code></td>
+    <td>The sorter schema.</td>
+  </tr>
+  <tr>
+    <td>filter</td>
+    <td><code><a href="#filter">filter</a></code></td>
+    <td>The filter schema.</td>
+  </tr>
+  <tr>
+    <td>pagination</td>
+    <td><code>boolean</code></td>
+    <td>Use pagination or not.</td>
+  </tr>
+  <tr>
+    <td>actions</td>
+    <td><code><a href="#actions">Actions</a></code></td>
+    <td>The actions schema.</td>
+  </tr>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="sorter"></a><a href="#sorter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorter</h3>
+<p>The default sorter is showed as a select component, so it has the <code>options</code> property.</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>defaultField</td>
+    <td><code>string</code></td>
+    <td>Thie initial sorted field.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>
+      <pre><code class="hljs">{
+  field: string,
+  label: string,
+  defaultOrder?: 'ASC' | 'DESC'
+}</code></pre>
+    </td>
+    <td>Every option respresents the field you want to sort by, the label you want to show to user, and the default order type you want to use.</td>
+  </tr>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="filter"></a><a href="#filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filter</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>filters</td>
+    <td>
+      <code>Array&lt;<a href="#textfilter">TextFilterConfig</a> | 
+        <a href="#numberfilter">NumberFilterConfig</a> | 
+        <a href="#selectfilter">SelectFilterConfig</a>>
+      </code>
+    </td>
+    <td>
+      The configuration of your filters. Canner provides serveral filters, each of them may has its different configuration.
+    </td>
+  </tr>
+  <tr>
+    <td>permanentFilter</td>
+    <td>
+      <code>
+      <a href="#queryobject">QueryObject</a>
+      </code>
+    </td>
+    <td>
+      The permanent filter condition which can't be changed.
+    </td>
+  </tr>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="textfilter"></a><a href="#textfilter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TextFilter</h4>
+<p><a href="schema-toolbar-tags#lt-textfilter-gt">TextFilter</a> has different query comparisons:</p>
+<ul>
+<li>async: using <a href="#queryobjecteq">eq</a></li>
+<li>sync: using <a href="#queryobjectcontains">contains</a></li>
+</ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>field</td>
+    <td><code>string</code></td>
+    <td>The field you want to filter</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>alwaysDisplay</td>
+    <td><code>boolean</code></td>
+    <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
+  </tr>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="numberfilter"></a><a href="#numberfilter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>NumberFilter</h4>
+<p><a href="schema-toolbar-tags#lt-textfilter-gt">NumberFilter</a> let users select the comparison by themseleves such as <code>&gt;</code>, <code>&lt;</code>, <code>=</code>, <code>≥</code>, <code>≤</code>.</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>field</td>
+    <td><code>string</code></td>
+    <td>The field you want to filter</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>alwaysDisplay</td>
+    <td><code>boolean</code></td>
+    <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
+  </tr>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="selectfilter"></a><a href="#selectfilter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SelectFilter</h4>
+<p><a href="schema-toolbar-tags#lt-selectfilter-gt">SelectFilter</a> provides a way for users to query with a complex condition containing one or more fields.</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td><code>string</code></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>
+      <pre><code class="hljs">Array&lt;{
+  text: string,
+  condition: <a href="#queryobject">QueryObject</a>
+}></code></pre>
+    </td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>alwaysDisplay</td>
+    <td><code>boolean</code></td>
+    <td>Filter is hidden by default, you can set alwaysDisplay true to let it visible.</td>
+  </tr>
+  <tr>
+    <td>defaultOptionIndex</td>
+    <td><code>number</code></td>
+    <td>You can specify the initial filter with its index of options.</td>
+  </tr>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="queryobject"></a><a href="#queryobject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>QueryObject</h4>
+<p>The object represents the filter condition. Composited with <code>field</code>, <code>comparison</code> and compared values.</p>
+<pre><code class="hljs css language-js"><span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>field<span class="token punctuation">:</span> string<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>comparison<span class="token punctuation">:</span> Comparsion<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">*</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="comparsion"></a><a href="#comparsion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>comparsion</h4>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr id="queryobjecteq">
+    <td>eq</td>
+    <td><code>string | number</code></td>
+    <td>equal</td>
+  </tr>
+  <tr>
+    <td id="queryobjectcontains">contains</td>
+    <td><code>string | Array</code></td>
+    <td>Use indexOf method, only supported in sync for now.</td>
+  </tr>
+  <tr>
+    <td>gt</td>
+    <td><code>number</code></td>
+    <td>greater than</td>
+  </tr>
+  <tr>
+    <td>gte</td>
+    <td><code>number</code></td>
+    <td>greater than or equal to</td>
+  </tr>
+  <tr>
+    <td>lt</td>
+    <td><code>number</code></td>
+    <td>less than</td>
+  </tr>
+  <tr>
+    <td>lte</td>
+    <td><code>number</code></td>
+    <td>less than equal to</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="storage"></a><a href="#storage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Storage</h2>
+<p><a href="https://github.com/Canner/canner/tree/canary/packages/canner-storage/src">source code</a></p>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>description</td>
+  </tr>
+  <tr>
+    <td>upload</td>
+    <td>
+      <pre><code class="hljs">(
+  file: File,
+  options: { filename: string },
+  onProgress: (e: { precent: number }) => void
+) => Promise<{ link: string }></code></pre>
+    </td>
+    <td>upload file.</td>
+  </tr>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="refid"></a><a href="#refid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RefId</h2>
+<p><a href="https://github.com/Canner/canner/blob/canary/packages/canner-ref-id/src/index.js">source code</a></p>
+<p><strong>methods</strong></p>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>description</td>
+  </tr>
+  <tr>
+    <td>getPathArr</td>
+    <td><code>() => Array&lt;string></code></td>
+    <td>Get the array of paths.</td>
+  </tr>
+  <tr>
+    <td>toString</td>
+    <td><code>() => string</code></td>
+    <td>Change refId to string.</td>
+  </tr>
+  <tr>
+    <td>child</td>
+    <td><code>(keyName: string) => RefId</code></td>
+    <td>Append a keyName after the current refId. Return a new RefId instance.</td>
+  </tr>
+  <tr>
+    <td>remove</td>
+    <td><code>(count: number) => RefId</code></td>
+    <td>Get the ancestor's refId. Return a new RefId instance.</td>
+  </tr>
+</table></span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/19/2018</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#loadedschema">LoadedSchema</a></li><li><a href="#changeddata">ChangedData</a></li><li><a href="#intlobject">IntlObject</a></li><li><a href="#intldict">IntlDict</a></li><li><a href="#menuconfig">MenuConfig</a></li><li><a href="#navbarconfig">NavbarConfig</a></li><li><a href="#router">Router</a></li><li><a href="#routerparams">RouterParams</a></li><li><a href="#toolbar">Toolbar</a><ul class="toc-headings"><li><a href="#sorter">Sorter</a></li><li><a href="#filter">Filter</a></li></ul></li><li><a href="#storage">Storage</a></li><li><a href="#refid">RefId</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c9ba81d7831a52129d133134abaf5f04',
+                indexName: 'canner',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
