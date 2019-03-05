@@ -119,7 +119,6 @@ After the line `Server ready on port 3000` shows on dashboard, you can go to `ht
 **After loging in, here is your CMS!**
 ![users-cms](/docs/assets/users-cms.png)
 
-
 ## 4. Next Step
 
 You can follow the instructions below to configurate your CMS.
