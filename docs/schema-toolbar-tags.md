@@ -15,13 +15,16 @@ sidebar_label: Toolbar Tags
 
 **Example**
 
-```
+```jsx
 <root>
   <array keyName="posts">
     <toolbar>
       <actions>
+        {/* export button in action bar, refer to https://www.cannercms.com/docs/schema-toolbar-tags#lt-export-gt */}
         <export {...exportProps}>
+        {/* import button in action bar, refer to https://www.cannercms.com/docs/schema-toolbar-tags#lt-import-gt */}
         <import {...importProps}>
+        {/* filter button in action bar, refer to https://www.cannercms.com/docs/schema-toolbar-tags#lt-filter-gt */}
         <filter />
       </actions>
       <sorter
@@ -30,6 +33,7 @@ sidebar_label: Toolbar Tags
           { label: "CreateDate", field: "createDate", defaultOrder: "desc" }
         ]}
       />
+      {/* filter settings*/}
       <filter>
         <textFilter
           label="BuyerName"
@@ -68,6 +72,8 @@ There are two fetch policies, `sync` and `async`, of [**first level array field*
 ![pagination-async](assets/schema-toolbar-tags/pagination-async.png)
 
 ## &lt;filter /&gt;
+
+`<filter />` is used to setup all the filters in your toolbar, and if you want to show a action button in the toolbar you can add `<actions><filter/></actions>` in your `<toolbar/>` 
 
 There two usages of `<filter />`:
 1. <b>Wraps the filters.</b> There are serveral filter tags such as [\<textFilter>](schema-toolbar-tags#lt-textfilter-gt), [\<numberFilter>](schema-toolbar-tags#lt-numberfilter-gt), and [\<selectFilter>](schema-toolbar-tags#lt-selectfilter-gt). They all should be wrapped by a `<filter />`.
@@ -183,9 +189,11 @@ For string field, this filter generates a text input, has a different behavior i
 **Example**
 ```js
 <array keyName="users">
-  <filter>
-    <textFilter field="name" label="Name" placeholder="name" alwaysDisplay/>
-  </filter>
+  <toolbar>
+    <filter>
+      <textFilter field="name" label="Name" placeholder="name" alwaysDisplay/>
+    </filter>
+  </toolbar>
   <string keyName="name" />
 </array>
 ```
@@ -210,12 +218,16 @@ For number field, there are four comparisons in this filter.
 **Example**
 ```js
 <array keyName="products">
-  <actions>
-    <filter />
-  </actions>
-  <filter>
-    <textFilter field="price" label="Price" placeholder="price" />
-  </filter>
+  <toolbar>
+    <actions>
+      {/* Whether display filter button in action menu */}
+      <filter />
+    </actions>
+    {/* Setting for the filter */}
+    <filter>
+      <textFilter field="price" label="Price" placeholder="price" />
+    </filter>
+  </toolbar>
   <number keyName="price" />
 </array>
 ```
@@ -336,19 +348,20 @@ The `filter` tag in actions is used to control the filters appear or not. So if 
 <root>
   <array keyName="products">
     <toolbar>
-      <actions />
-      <export
-        fields={[{
-          keyName: 'name',
-          title: 'Name'
-        }, {
-          keyName: 'price',
-          title: 'Price',
-          render: v => `$ ${price}`
-        }]}
-        title="Export Modal"
-        filename="Products"
-      />
+      <actions>
+        <export
+          fields={[{
+            keyName: 'name',
+            title: 'Name'
+          }, {
+            keyName: 'price',
+            title: 'Price',
+            render: v => `$ ${price}`
+          }]}
+          title="Export Modal"
+          filename="Products"
+        />
+      </actions>
     </toolbar>
     <string keyName="name" />
     <number keyName="price" />
@@ -371,18 +384,19 @@ The `filter` tag in actions is used to control the filters appear or not. So if 
 <root>
   <array keyName="products">
     <toolbar>
-      <actions />
-      <import
-        fields={[{
-          keyName: 'name',
-          title: 'Name'
-        }, {
-          keyName: 'price',
-          title: 'Price'
-        }]}
-        title="Import Modal"
-        filename="Products"
-      />
+      <actions>
+        <import
+          fields={[{
+            keyName: 'name',
+            title: 'Name'
+          }, {
+            keyName: 'price',
+            title: 'Price'
+          }]}
+          title="Import Modal"
+          filename="Products"
+        />
+      </actions>
     </toolbar>
     <string keyName="name" />
     <number keyName="price" />
