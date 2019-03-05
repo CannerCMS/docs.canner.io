@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Connect to Prisma · Canner</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;img src=&quot;/docs/assets/orange.png&quot; alt=&quot;cannerxprisma&quot;&gt;&lt;/p&gt;
+"/><meta name="docsearch:version" content="3.1.2"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Connect to Prisma · Canner"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.canner.io/index.html"/><meta property="og:description" content="&lt;p&gt;&lt;img src=&quot;/docs/assets/orange.png&quot; alt=&quot;cannerxprisma&quot;&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://www.canner.io/img/og-image.jpg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.canner.io/img/og-image.jpg"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://www.canner.io/blog/atom.xml" title="Canner Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://www.canner.io/blog/feed.xml" title="Canner Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-63519210-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="/css/code-blocks-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-blocks-buttons.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/icon.png" alt="Canner"/><h2 class="headerTitleWithLogo">Canner</h2></a><a href="/versions"><h3>3.1.2</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/3.1.2/why-canner" target="_self">Why?</a></li><li class=""><a href="/docs/3.1.2/start-quick-intro" target="_self">Docs</a></li><li class=""><a href="/docs/3.1.2/tutorial-community-firebase" target="_self">Tutorials</a></li><li class=""><a href="https://spectrum.chat/canner/cannercms" target="_self">Community</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/Canner/docs.canner.io/edit/master/docs/tutorial-connect-to-prisma.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Connect to Prisma</h1></header><article><div><span><p><img src="/docs/assets/orange.png" alt="cannerxprisma"></p>
+<blockquote>
+<p><a href="https://www.prisma.io/">Prisma</a> is a performant open-source GraphQL ORM-like layer doing the heavy lifting in your GraphQL server.</p>
+</blockquote>
+<p>In this article, I'm going to demonstrate how to use Canner with <a href="https://www.prisma.io/">Prisma</a>.</p>
+<blockquote>
+<p>We assume you already deployed a Prisma server, if not, please refer to <a href="https://www.prisma.io/docs/quickstart/">Prisma document</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="1-start-with-a-new-project-folder"></a><a href="#1-start-with-a-new-project-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Start with a new project folder</h2>
+<p>Let's start with a new project folder. We'll put related files under this folder.</p>
+<pre><code class="hljs css language-sh">mkdir canner-prisma &amp;&amp; <span class="hljs-built_in">cd</span> canner-prisma
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-install-canner-cli"></a><a href="#2-install-canner-cli" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Install Canner CLI</h2>
+<p>Make sure you have already install NodeJS and use the command below to install <code>@canner/cli</code> globally.</p>
+<blockquote>
+<p>While we recommend Node 8.x or greater, your Node version must at least &gt;= 6.10.</p>
+</blockquote>
+<pre><code class="hljs css language-sh">npm install -g @canner/cli
+</code></pre>
+<p>You should now have a global canner command available from any terminal window on your machine. Once you've installed Canner CLI, sign in using your Canner account:</p>
+<pre><code class="hljs css language-sh">canner login
+</code></pre>
+<p>After logging in, it will store a token on your machine to validate login information at every canner comamnd, you can use <code>canner whoami</code> to check whether you are login or not, it will return your <code>username</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="3-initialize-project"></a><a href="#3-initialize-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Initialize project</h2>
+<p>To use <code>Canner CLI</code> in your own project, run the command under current project folder:</p>
+<pre><code class="hljs css language-sh">canner init
+</code></pre>
+<p>It will ask you some questions to initialize your project with template schema.</p>
+<pre><code class="hljs css language-sh">? Create an new app or select from existed apps? Select from existed apps
+? What template <span class="hljs-keyword">do</span> you want to create? None
+? What data <span class="hljs-built_in">source</span> <span class="hljs-keyword">do</span> you want to use? Prisma
+</code></pre>
+<p>Then you'll see <code>.cannerrc</code>, <code>canner.schema.js</code>, <code>canner.cloud.js</code> in your folder.</p>
+<blockquote>
+<ul>
+<li>Learn more about <a href="/docs/3.1.2/file-cannerrc"><code>.cannerrc</code></a></li>
+<li>Learn more about <a href="/docs/3.1.2/file-canner-schema-js"><code>canner.schema.js</code></a></li>
+<li>Learn more about <a href="cli-canner-cloud-js.md"><code>canner.cloud.js</code></a></li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="4-start-a-prisma-project"></a><a href="#4-start-a-prisma-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Start a Prisma project</h2>
+<blockquote>
+<p>Follow Prisma quick start to start your first project: <a href="https://www.prisma.io/docs/quickstart/">https://www.prisma.io/docs/quickstart/</a></p>
+</blockquote>
+<p>After these steps your get two files (<code>datamodel.graphql</code> and <code>prisma.yml</code>) that is needed in next step.</p>
+<h2><a class="anchor" aria-hidden="true" id="5-copy-prisma-s-files"></a><a href="#5-copy-prisma-s-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Copy Prisma's files</h2>
+<p>Canner needs prisma's <code>datamodel.graphql</code> and <code>prisma.yml</code> to create a proxy server that deliver requests to your prisma server.</p>
+<p>Initialize your Prisma project into your project</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>PrismaCert<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"canner-credential"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  env<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// production env</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">PrismaCert</span><span class="token punctuation">(</span><span class="token string">"path to prisma.yml"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="6-write-cannerschemajs"></a><a href="#6-write-cannerschemajs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Write canner.schema.js</h2>
+<p>You only need to create a file called <code>canner.schema.js</code> to complete your CMS.</p>
+<p><code>canner.schema.js</code> defines how your CMS and data structure looks like, and how your CMS should connect to your sources.</p>
+<blockquote>
+<p>Learn how to <a href="schema-overview">write schema</a></p>
+</blockquote>
+<p>A basic <code>Post</code> schema from a blog application with following graphql model</p>
+<pre><code class="hljs css language-js">type Post <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token constant">ID</span><span class="token operator">!</span> @unique
+  createdAt<span class="token punctuation">:</span> DateTime<span class="token operator">!</span>
+  content<span class="token punctuation">:</span> String<span class="token operator">!</span>
+  title<span class="token punctuation">:</span> String<span class="token operator">!</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>will look like this:</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+    <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+    <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+    <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dateTime</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Created Date<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Content<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>For example, if you wrote your <code>datamodel.graphql</code> as:</p>
+<pre><code class="hljs css language-graphql">type Post <span class="token punctuation">{</span>
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> <span class="token directive function">@unique</span>
+  <span class="token attr-name">createdAt</span><span class="token punctuation">:</span> DateTime<span class="token operator">!</span>
+  <span class="token attr-name">content</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
+  <span class="token attr-name">title</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
+  <span class="token attr-name">owner</span><span class="token punctuation">:</span> User<span class="token operator">!</span> <span class="token directive function">@relation</span><span class="token punctuation">(</span><span class="token attr-name">name</span><span class="token punctuation">:</span> <span class="token string">"UserPosts"</span><span class="token punctuation">)</span>
+  <span class="token attr-name">location</span><span class="token punctuation">:</span> Location<span class="token operator">!</span>
+<span class="token punctuation">}</span>
+
+type User <span class="token punctuation">{</span>
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> <span class="token directive function">@unique</span>
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span> <span class="token directive function">@default</span><span class="token punctuation">(</span><span class="token attr-name">value</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">)</span>
+  <span class="token attr-name">posts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Post<span class="token operator">!</span><span class="token punctuation">]</span><span class="token operator">!</span> <span class="token directive function">@relation</span><span class="token punctuation">(</span><span class="token attr-name">name</span><span class="token punctuation">:</span> <span class="token string">"UserPosts"</span><span class="token punctuation">,</span> <span class="token attr-name">onDelete</span><span class="token punctuation">:</span> CASCADE<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+type Location <span class="token punctuation">{</span>
+  <span class="token attr-name">lat</span><span class="token punctuation">:</span> Float<span class="token operator">!</span>
+  <span class="token attr-name">lng</span><span class="token punctuation">:</span> Float<span class="token operator">!</span>
+  <span class="token attr-name">placeId</span><span class="token punctuation">:</span> String
+  <span class="token attr-name">address</span><span class="token punctuation">:</span> String
+<span class="token punctuation">}</span>
+</code></pre>
+<p>You'll have to write a <code>canner.schema.js</code> containing the same fields with <code>datamodel.graphql</code>.</p>
+<p>Furthermore, to connect the CMS to Prisma server, simply construct a <code>PrismaClient</code> and pass it to <code>&lt;root&gt;</code>.</p>
+<p>Hence, the <code>canner.schema.js</code> should be:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">import</span> CannerScript <span class="token keyword">from</span> <span class="token string">'canner-script'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>PrismaClient<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"canner-graphql-interface"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// contruct graphQL client</span>
+<span class="token keyword">const</span> graphqlClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrismaClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>root</span> <span class="token attr-name">graphqlClient</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>graphqlClient<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+      <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+      <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Post<span class="token punctuation">"</span></span>
+      <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"title"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"owner"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"owner.name"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"owner.name"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tableRoute<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dateTime</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createdAt<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"owner"</span>
+        relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          to<span class="token punctuation">:</span> <span class="token string">'User'</span><span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> <span class="token string">'toOne'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+          textCol<span class="token punctuation">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+          columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Name'</span><span class="token punctuation">,</span>
+            dataIndex<span class="token punctuation">:</span> <span class="token string">'name'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>geoPoint</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>location<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>location<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span>
+      <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>User<span class="token punctuation">"</span></span>
+      <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>User<span class="token punctuation">"</span></span>
+      <span class="token attr-name">uiParams</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
+          key<span class="token punctuation">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
+          dataIndex<span class="token punctuation">:</span> <span class="token string">"name"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">ui</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tableRoute<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">keyName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token operator">&lt;</span>relation keyName<span class="token operator">=</span><span class="token string">"posts"</span>
+        relation<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          to<span class="token punctuation">:</span> <span class="token string">'Post'</span><span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> <span class="token string">'toMany'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        uiParams<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+          textCol<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+          columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+            dataIndex<span class="token punctuation">:</span> <span class="token string">'title'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>To learn more about how to define Canner Schema's tag correspoding to prisma's datatype, see <a href="guides-canner-prisma-type">Canner and Prisma Datatype Comparison</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="7-deploy"></a><a href="#7-deploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Deploy</h2>
+<p>You could preview CMS in your local machine, by entering</p>
+<pre><code class="hljs css language-sh">canner script:serve --env prod
+</code></pre>
+<p>After writing your <code>canner.schema.js</code> you could deploy your script to Canner through our CLI tool by entering</p>
+<pre><code class="hljs css language-sh">canner script:deploy
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="8-cms-is-live"></a><a href="#8-cms-is-live" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. CMS is live</h2>
+<p>Run <code>canner open:dashboard</code> and click <code>Edit Content</code>, you will seed your CMS live.</p>
+<p><img src="/img/editContent.png" alt="editContent"></p>
+<h2><a class="anchor" aria-hidden="true" id="resource"></a><a href="#resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resource</h2>
+<ul>
+<li><a href="guides-canner-prisma-type">Canner and Prisma datatype comparison</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/15/2018</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-start-with-a-new-project-folder">1. Start with a new project folder</a></li><li><a href="#2-install-canner-cli">2. Install Canner CLI</a></li><li><a href="#3-initialize-project">3. Initialize project</a></li><li><a href="#4-start-a-prisma-project">4. Start a Prisma project</a></li><li><a href="#5-copy-prisma-s-files">5. Copy Prisma's files</a></li><li><a href="#6-write-cannerschemajs">6. Write canner.schema.js</a></li><li><a href="#7-deploy">7. Deploy</a></li><li><a href="#8-cms-is-live">8. CMS is live</a></li><li><a href="#resource">Resource</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/why-canner.html">Why Canner?</a><a href="/docs/start-quick-intro.html">Getting Started</a><a href="/docs/start-quick-community.html">Community Edition</a></div><div><h5>Community</h5><a target="_blank" href="https://spectrum.chat/canner/cannercms">Join Community</a><a href="http://stackoverflow.com/questions/tagged/canner" target="_blank" rel="noreferrer noopener">Stack Overflow</a></div><div><h5>Social</h5><a href="https://www.canner.io/">Canner Official site</a><div class="social"><a class="github-button" href="https://github.com/canner/canner" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div><div class="social"><a href="https://twitter.com/cannerIO" class="twitter-follow-button">Follow @cannerIO</a></div></div></section><div style="text-align:center"><a href="/"><img src="/img/logo-word-white.png" alt="Canner"/></a></div><section class="copyright">Copyright © 2019 Canner.  Canner, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'1435592646549630',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'c9ba81d7831a52129d133134abaf5f04',
+                indexName: 'canner',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
