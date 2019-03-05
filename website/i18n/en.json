@@ -891,6 +891,18 @@
       "version-3.1.2-schema-toolbar-tags": {
         "title": "Toolbar Tags",
         "sidebar_label": "Toolbar Tags"
+      },
+      "version-3.1.3-guides-setup": {
+        "title": "Setup",
+        "sidebar_label": "Setup"
+      },
+      "version-3.1.3-schema-overview": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-3.1.3-start-quick-3commands": {
+        "title": "Building CMS in 3 commands",
+        "sidebar_label": "Building CMS in 3 commands"
       }
     },
     "links": {
