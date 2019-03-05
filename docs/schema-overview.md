@@ -185,30 +185,31 @@ module.exports = (
 The first level tags of `<root/>` must be one of [`<object/>`](schema-data-type-tags#lt-object-gt), [`<array/>`](schema-data-type-tags#lt-array-gt), [`<page />`](schema-page-tags), `<objectType/>`, and `<arrayType/>`, first level tags will eventually become CMS's tabs. Moreover, you could customize how CMS resolve your data pass resolver prop into your tabs.
 
 ```js
-import CannerScript from 'canner-script';
+// Set your data source of each first level data, refer to https://www.cannercms.com/docs/data-source-overview
+const dataSource = {
+  name: 'memory'
+};
 
-export default (
+const schema = (
   <root>
-    <page
-      keyName="dashbaord"
-      title="Dashboard"
-    >
-      <component {...} />
-    </page>
     <object
       keyName="info"
       title="Info"
+      {/* Set your data source of each first level data */}
+      dataSource={dataSource}
     >
       <string title="Your name" keyName="name"/>
     </object>
     <array
       keyName="products"
       title="Products"
+      {/* Set your data source of each first level data */}
+      dataSource={dataSource}
     >
       <string title="Product name" keyName="name"/>
     </array>
   </root>
-)
+);
 ```
 
 As below
@@ -218,6 +219,8 @@ As below
 ## Data Type tags
 
 Type tags are the most basic UI component for CMS. For example, you could create a textarea for a string field.
+
+### UI settings
 
 Using textarea UI:
 
@@ -235,11 +238,23 @@ For example, your data in your source is as below
 }
 ```
 
+### Data source keyName
+
 So your `keyName` should define as `content`
 
 ```js
 <string ui="textarea" keyName="content">
 ```
+
+### Setup description
+
+Add description, simply add `description` props.
+
+```js
+<string keyName="test" description="tests"/>
+```
+
+![desc](/docs/assets/schema-overview/description-view.png)
 
 > Further information
 > - [All data type tags](schema-data-type-tags.md)

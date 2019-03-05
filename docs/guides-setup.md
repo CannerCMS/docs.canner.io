@@ -28,34 +28,36 @@ canner --help
 You will get all available commands, and help menu.
 
 ```shell
-Usage:  [options] [command] <cmd>
+Usage: cli [options] [command] <cmd>
 
-  Options:
+Options:
+  -V, --version                       output the version number
+  -h, --help                          output usage information
 
-    -V, --version                       output the version number
-    -h, --help                          output usage information
-
-  Commands:
-
-    login                               Login to Canner
-    logout                              Logout
-    whoami                              Display account info
-    init [url]                          Initialize project
-    init:schema [options]               Initialize schema
-    open:dashboard                      Open your project dashboard
-    app:list                            List all your projects in Canner
-    app:create                          Create a project in Canner
-    script:deploy [options] [filename]  Bundle your CMS and deploy it to Canner
-    script:serve [options] [filename]   Serve your CMS in local
-    data:import [options] [filename]    Import default data to your data source
+Commands:
+  app:create [options]                Create a project in Canner
+  app:list [options]                  List all your projects in Canner
+  app:use [url]                       Specify a Canner app
+  cloud:dashboard                     Open your project dashboard
+  cloud:deploy [options]              Bundle and Deploy your schema and UI components to Canner.
+  cloud:init [options] [url]          Initialize project
+  cloud:login                         Login to Canner
+  cloud:logout                        Logout
+  cloud:preview [options] [filename]  Host your CMS locally to preview.
+  cloud:signup                        Register an account of Canner
+  cloud:whoami                        Display account info
+  init [options]                      Initialize Canner files
+  start [options]                     Build your CMS with authentication and GraphQL server
+  start:production [options]          Build your CMS with authentication and GraphQL server for production
+  build [options]                     Build the static files and canner.schema.json
 
   Examples:
 
-    Intitialize schemas with templates:
-    $ canner init:schema
+    Intitialize files: "canner.schema.js", "canner.cloud.js", "canner.server.js"
+    $ canner init
 
-    Serving CMS:
-    $ canner script:serve
+    Host CMS:
+    $ canner start
 ```
 
 Hooray! You are ready to go!
