@@ -903,6 +903,22 @@
       "version-3.1.3-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
+      },
+      "version-3.1.4-cli-cloud-init": {
+        "title": "canner cloud:init",
+        "sidebar_label": "canner cloud:init"
+      },
+      "version-3.1.4-cli-init": {
+        "title": "canner init",
+        "sidebar_label": "canner init"
+      },
+      "version-3.1.4-guides-deployment-of-docker": {
+        "title": "Deploy with Docker",
+        "sidebar_label": "Deploy with Docker"
+      },
+      "version-3.1.4-start-quick-3commands": {
+        "title": "Building CMS in 3 commands",
+        "sidebar_label": "Building CMS in 3 commands"
       }
     },
     "links": {
