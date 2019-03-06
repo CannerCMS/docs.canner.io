@@ -17,7 +17,11 @@ The custom components, not every project would have this.
 The configuration of **OSS** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
 - `canner.cloud.js`:
 The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
-
+- `Dockerfile`:
+The dockerfile for docker deployment.
+- `package.json`
+- `.gitignore`
+- `.dockerignore`
 
 ### Options
 
