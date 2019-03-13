@@ -17,6 +17,9 @@ const mongoUri = process.env.MONOG_URI;
 // new MongodbDataSourceGroup(uri, database)
 const mongodbDataSourceGroup = new MongodbDataSourceGroup(mongoUri, 'gqlify');
 
+// trigger the initialization
+mongodbDataSourceGroup.initialize();
+
 exports.dataSources = {
   mongodb: args => mongodbDataSourceGroup.getDataSource(args.key),
 }
