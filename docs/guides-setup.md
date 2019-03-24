@@ -62,7 +62,7 @@ Commands:
 
 Hooray! You are ready to go!
 
-> Learn more about [commands](cli-commands.md)
+> Learn more about [commands](cli-overview.md)
 
 ## Initial Your Schema
 

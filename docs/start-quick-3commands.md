@@ -31,7 +31,7 @@ In a Canner project, there are some important files you must to know, [`canner.s
 
 `canner.schema.js` is the most important one, which is the entry of your CMS definitions, it defines the data model and UIs of your CMS. It's written with `jsx`, a XML-like language, and is easy to learn and understand.
 
-`canner.server.js` and `canner.cloud.js` are both configurations for hosting, such as the [**theme**](guides-theme), [**sidebar menu**](guides-sidebar.md), [**data sources**](data-source-overview.md), ...etc. The differences between them are the former one is used for self-hosting, which means you can locally serve and host your CMS and GraphQL API servers. The latter one is for Canner Cloud platform, which helps you to host the CMS on [cannercms.com](https://cannercms.com).
+`canner.server.js` and `canner.cloud.js` are both configurations for hosting, such as the [**theme**](guides-theme), [**sidebar menu**](guides-sidebar.md), [**data sources**](data-source-overview.md), ...etc. The differences between them are the former one is used for self-hosting, which means you can locally serve and host your CMS and GraphQL API servers. **The latter one is for Canner Cloud platform, which helps you to host the CMS on with some additional features, check out [canner.io/cms](https://canner.io/cms)**.
 
 In this step, we create the three files with CLI. You can take a look at the files, and edit them by the following guides.
 
@@ -83,7 +83,7 @@ The customized components, not every projects have this.
 - `canner.server.js`:
 The configuration of **OSS** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
 - `canner.cloud.js`:
-The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc.
+The configuration of **Cloud** version, you can change the *dataSources*, *i18n*, *sidebar*, *style*, ...etc. Checkout [canner.io/cms](canner.io/cms) to learn more.
 - `Dockerfile`:
 The dockerfile for docker deployment.
 - `package.json`

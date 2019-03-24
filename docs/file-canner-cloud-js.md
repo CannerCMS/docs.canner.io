@@ -4,7 +4,7 @@ title: canner.cloud.js
 sidebar_label: canner.cloud.js
 ---
 
-`canner.cloud.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.
+`canner.cloud.js` is the configuation file to set the appearance, data resources, environment, menu sidebar, etc... in your Canner platform's CMS.  Using Canner Cloud platform, you can have addtional features like role permission, access control, etc... Check out more at [canner.io/cms](canner.io/cms).
 
 Canner now supporting three `canner.cloud.js` settings
 
@@ -33,7 +33,7 @@ module.exports = {
 
 ### Production
 
-For production, which is the default environment in your Canner platform. Set with `default` key in `env` setting. Serving with production environment, learn more [here](cli-production.md#serving-production-environment).
+For production, which is the default environment in your Canner platform. Set with `default` key in `env` setting. Serving with production environment, learn more [here](cli-start-production).
 
 ### Other environments
 

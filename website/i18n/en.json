@@ -292,631 +292,631 @@
         "title": "From traditional, headless to adaptive CMS",
         "sidebar_label": "Traditional vs Headless vs Adaptive CMS"
       },
-      "version-2.8.3-advance-canner-helpers": {
+      "version-2.8.3/version-2.8.3-advance-canner-helpers": {
         "title": "canner-helpers",
         "sidebar_label": "Canner Helpers"
       },
-      "version-2.8.3-advance-canner-schema-loader": {
+      "version-2.8.3/version-2.8.3-advance-canner-schema-loader": {
         "title": "Canner Schema Loader",
         "sidebar_label": "Canner Schema Loader"
       },
-      "version-2.8.3-advance-cms-test": {
+      "version-2.8.3/version-2.8.3-advance-cms-test": {
         "title": "Test CMS components",
         "sidebar_label": "Test CMS components"
       },
-      "version-2.8.3-api-canner-helpers": {
+      "version-2.8.3/version-2.8.3-api-canner-helpers": {
         "title": "Canner Helpers",
         "sidebar_label": "Canner Helpers"
       },
-      "version-2.8.3-api-canner": {
+      "version-2.8.3/version-2.8.3-api-canner": {
         "title": "Canner",
         "sidebar_label": "Canner"
       },
-      "version-2.8.3-api-container": {
+      "version-2.8.3/version-2.8.3-api-container": {
         "title": "Container",
         "sidebar_label": "Container"
       },
-      "version-2.8.3-api-layout-components": {
+      "version-2.8.3/version-2.8.3-api-layout-components": {
         "title": "Layout Components",
         "sidebar_label": "Layout Components"
       },
-      "version-2.8.3-api-schema": {
+      "version-2.8.3/version-2.8.3-api-schema": {
         "title": "Schema",
         "sidebar_label": "Schema"
       },
-      "version-2.8.3-api-toolbar-components": {
+      "version-2.8.3/version-2.8.3-api-toolbar-components": {
         "title": "Toolbar Components",
         "sidebar_label": "Toolbar Components"
       },
-      "version-2.8.3-api-types": {
+      "version-2.8.3/version-2.8.3-api-types": {
         "title": "Reference Types",
         "sidebar_label": "Reference Types"
       },
-      "version-2.8.3-api-ui-components": {
+      "version-2.8.3/version-2.8.3-api-ui-components": {
         "title": "UI Components",
         "sidebar_label": "UI Components"
       },
-      "version-2.8.3-cli-canner-cloud-js": {
+      "version-2.8.3/version-2.8.3-cli-canner-cloud-js": {
         "title": "canner.cloud.js",
         "sidebar_label": "canner.cloud.js"
       },
-      "version-2.8.3-cli-commands": {
+      "version-2.8.3/version-2.8.3-cli-commands": {
         "title": "Commands",
         "sidebar_label": "Commands"
       },
-      "version-2.8.3-cli-import-data": {
+      "version-2.8.3/version-2.8.3-cli-import-data": {
         "title": "Import Data",
         "sidebar_label": "Import Data"
       },
-      "version-2.8.3-cli-upload-image": {
+      "version-2.8.3/version-2.8.3-cli-upload-image": {
         "title": "Upload image via CLI",
         "sidebar_label": "Upload image"
       },
-      "version-2.8.3-concept-action": {
+      "version-2.8.3/version-2.8.3-concept-action": {
         "title": "Actions in CMS",
         "sidebar_label": "Actions in CMS"
       },
-      "version-2.8.3-concept-compile-schema": {
+      "version-2.8.3/version-2.8.3-concept-compile-schema": {
         "title": "How compiling CMS schema works?",
         "sidebar_label": "Compile schema"
       },
-      "version-2.8.3-concept-component-tree": {
+      "version-2.8.3/version-2.8.3-concept-component-tree": {
         "title": "ComponentTree",
         "sidebar_label": "ComponentTree"
       },
-      "version-2.8.3-concept-hocs": {
+      "version-2.8.3/version-2.8.3-concept-hocs": {
         "title": "High order components",
         "sidebar_label": "High order components"
       },
-      "version-2.8.3-concept-refid": {
+      "version-2.8.3/version-2.8.3-concept-refid": {
         "title": "What is RefId?",
         "sidebar_label": "What is RefId?"
       },
-      "version-2.8.3-credential-firebase": {
+      "version-2.8.3/version-2.8.3-credential-firebase": {
         "title": "Credential in Firebase",
         "sidebar_label": "Firebase"
       },
-      "version-2.8.3-credential-firestore": {
+      "version-2.8.3/version-2.8.3-credential-firestore": {
         "title": "Credential in Firestore",
         "sidebar_label": "Firestore"
       },
-      "version-2.8.3-credential-prisma": {
+      "version-2.8.3/version-2.8.3-credential-prisma": {
         "title": "Credential in Prisma",
         "sidebar_label": "Prisma"
       },
-      "version-2.8.3-data-source-overview": {
+      "version-2.8.3/version-2.8.3-data-source-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-2.8.3-file-canner-cloud-js": {
+      "version-2.8.3/version-2.8.3-file-canner-cloud-js": {
         "title": "canner.cloud.js",
         "sidebar_label": "canner.cloud.js"
       },
-      "version-2.8.3-file-canner-data-js": {
+      "version-2.8.3/version-2.8.3-file-canner-data-js": {
         "title": "canner.data.js",
         "sidebar_label": "canner.data.js"
       },
-      "version-2.8.3-file-canner-schema-js": {
+      "version-2.8.3/version-2.8.3-file-canner-schema-js": {
         "title": "canner.schema.js",
         "sidebar_label": "canner.schema.js"
       },
-      "version-2.8.3-file-cannerrc": {
+      "version-2.8.3/version-2.8.3-file-cannerrc": {
         "title": ".cannerrc",
         "sidebar_label": ".cannerrc"
       },
-      "version-2.8.3-file-canner-image-uploaded": {
+      "version-2.8.3/version-2.8.3-file-canner-image-uploaded": {
         "title": ".canner-image-uploaded.json file",
         "sidebar_label": ".canner-image-uploaded.json"
       },
-      "version-2.8.3-guides-canner-container": {
+      "version-2.8.3/version-2.8.3-guides-canner-container": {
         "title": "Canner Container",
         "sidebar_label": "Canner Container"
       },
-      "version-2.8.3-guides-canner-prisma-type": {
+      "version-2.8.3/version-2.8.3-guides-canner-prisma-type": {
         "title": "Canner and Prisma datatype comparison",
         "sidebar_label": "Canner and Prisma datatype comparison"
       },
-      "version-2.8.3-guides-canner-router": {
+      "version-2.8.3/version-2.8.3-guides-canner-router": {
         "title": "Canner Router",
         "sidebar_label": "Canner Router"
       },
-      "version-2.8.3-guides-canner": {
+      "version-2.8.3/version-2.8.3-guides-canner": {
         "title": "Canner Component",
         "sidebar_label": "Canner Component"
       },
-      "version-2.8.3-guides-component": {
+      "version-2.8.3/version-2.8.3-guides-component": {
         "title": "Component",
         "sidebar_label": "Component"
       },
-      "version-2.8.3-guides-condition-fields": {
+      "version-2.8.3/version-2.8.3-guides-condition-fields": {
         "title": "Condition Fields",
         "sidebar_label": "Condition Fields"
       },
-      "version-2.8.3-guides-connector": {
+      "version-2.8.3/version-2.8.3-guides-connector": {
         "title": "Connector",
         "sidebar_label": "Connector"
       },
-      "version-2.8.3-guides-customized-component": {
+      "version-2.8.3/version-2.8.3-guides-customized-component": {
         "title": "Customized CMS Component",
         "sidebar_label": "CMS Component"
       },
-      "version-2.8.3-guides-customized-layout": {
+      "version-2.8.3/version-2.8.3-guides-customized-layout": {
         "title": "Customized Layout",
         "sidebar_label": "Layout"
       },
-      "version-2.8.3-guides-customized-toolbar": {
+      "version-2.8.3/version-2.8.3-guides-customized-toolbar": {
         "title": "Customized Toolbar",
         "sidebar_label": "Toolbar"
       },
-      "version-2.8.3-guides-default-value": {
+      "version-2.8.3/version-2.8.3-guides-default-value": {
         "title": "Default Value",
         "sidebar_label": "Default Value"
       },
-      "version-2.8.3-guides-deployment": {
+      "version-2.8.3/version-2.8.3-guides-deployment": {
         "title": "Deployment",
         "sidebar_label": "Deployment"
       },
-      "version-2.8.3-guides-development": {
+      "version-2.8.3/version-2.8.3-guides-development": {
         "title": "Development",
         "sidebar_label": "Development"
       },
-      "version-2.8.3-guides-graphql-client": {
+      "version-2.8.3/version-2.8.3-guides-graphql-client": {
         "title": "GraphQL Client",
         "sidebar_label": "GraphQL Client"
       },
-      "version-2.8.3-guides-internationalization": {
+      "version-2.8.3/version-2.8.3-guides-internationalization": {
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
       },
-      "version-2.8.3-guides-resolver": {
+      "version-2.8.3/version-2.8.3-guides-resolver": {
         "title": "Resolver",
         "sidebar_label": "Resolver"
       },
-      "version-2.8.3-guides-setup": {
+      "version-2.8.3/version-2.8.3-guides-setup": {
         "title": "Setup",
         "sidebar_label": "Setup"
       },
-      "version-2.8.3-guides-sidebar": {
+      "version-2.8.3/version-2.8.3-guides-sidebar": {
         "title": "Sidebar",
         "sidebar_label": "Sidebar"
       },
-      "version-2.8.3-guides-storage": {
+      "version-2.8.3/version-2.8.3-guides-storage": {
         "title": "Storage",
         "sidebar_label": "Storage"
       },
-      "version-2.8.3-guides-theme": {
+      "version-2.8.3/version-2.8.3-guides-theme": {
         "title": "Theme",
         "sidebar_label": "Theme"
       },
-      "version-2.8.3-guides-validation": {
+      "version-2.8.3/version-2.8.3-guides-validation": {
         "title": "Validation",
         "sidebar_label": "Validation"
       },
-      "version-2.8.3-schema-data-type-tags": {
+      "version-2.8.3/version-2.8.3-schema-data-type-tags": {
         "title": "Data Type Tags",
         "sidebar_label": "Data Type Tags"
       },
-      "version-2.8.3-schema-layout-tags": {
+      "version-2.8.3/version-2.8.3-schema-layout-tags": {
         "title": "Layout Tags",
         "sidebar_label": "Layout Tags"
       },
-      "version-2.8.3-schema-overview": {
+      "version-2.8.3/version-2.8.3-schema-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-2.8.3-schema-page-tags": {
+      "version-2.8.3/version-2.8.3-schema-page-tags": {
         "title": "Page Tags",
         "sidebar_label": "Page Tags"
       },
-      "version-2.8.3-schema-root-tag": {
+      "version-2.8.3/version-2.8.3-schema-root-tag": {
         "title": "Root Tag",
         "sidebar_label": "Root Tag"
       },
-      "version-2.8.3-schema-toolbar-tags": {
+      "version-2.8.3/version-2.8.3-schema-toolbar-tags": {
         "title": "Toolbar Tags",
         "sidebar_label": "Toolbar Tags"
       },
-      "version-2.8.3-schema-type-tags": {
+      "version-2.8.3/version-2.8.3-schema-type-tags": {
         "title": "Type Tags",
         "sidebar_label": "Type Tags"
       },
-      "version-2.8.3-start-quick-3commands": {
+      "version-2.8.3/version-2.8.3-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
-      "version-2.8.3-start-quick-build-the-cms": {
+      "version-2.8.3/version-2.8.3-start-quick-build-the-cms": {
         "title": "Build your first CMS",
         "sidebar_label": "Build your first CMS"
       },
-      "version-2.8.3-start-quick-community": {
+      "version-2.8.3/version-2.8.3-start-quick-community": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "version-2.8.3-start-quick-html5up": {
+      "version-2.8.3/version-2.8.3-start-quick-html5up": {
         "title": "First CMS using Canner in 3 minutes (Firebase)",
         "sidebar_label": "First CMS in 3 minutes - HTML5UP (Firebase)"
       },
-      "version-2.8.3-start-quick-intro": {
+      "version-2.8.3/version-2.8.3-start-quick-intro": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "version-2.8.3-tips-reusable-schema": {
+      "version-2.8.3/version-2.8.3-tips-reusable-schema": {
         "title": "Reusable Schema Components",
         "sidebar_label": "Reusable Schema Components"
       },
-      "version-2.8.3-tips-schema-modules": {
+      "version-2.8.3/version-2.8.3-tips-schema-modules": {
         "title": "Schema as Modules",
         "sidebar_label": "Schema as Modules"
       },
-      "version-2.8.3-tutorial-community-firebase": {
+      "version-2.8.3/version-2.8.3-tutorial-community-firebase": {
         "title": "Firebase CMS with NextJS (Community edition)",
         "sidebar_label": "Firebase CMS with NextJS (Community edition)"
       },
-      "version-2.8.3-tutorial-community-firestore": {
+      "version-2.8.3/version-2.8.3-tutorial-community-firestore": {
         "title": "Firestore CMS (Community edition)",
         "sidebar_label": "Firestore CMS (Community edition)"
       },
-      "version-2.8.3-tutorial-connect-to-firebase": {
+      "version-2.8.3/version-2.8.3-tutorial-connect-to-firebase": {
         "title": "Connect to Firebase/Firestore",
         "sidebar_label": "Connect to Firebase/Firestore"
       },
-      "version-2.8.3-tutorial-connect-to-prisma": {
+      "version-2.8.3/version-2.8.3-tutorial-connect-to-prisma": {
         "title": "Connect to Prisma",
         "sidebar_label": "Connect to Prisma"
       },
-      "version-2.8.3-tutorial-customize-array-component": {
+      "version-2.8.3/version-2.8.3-tutorial-customize-array-component": {
         "title": "Customize array component",
         "sidebar_label": "Array component"
       },
-      "version-2.8.3-tutorial-customize-object-component": {
+      "version-2.8.3/version-2.8.3-tutorial-customize-object-component": {
         "title": "Customize object component",
         "sidebar_label": "Object component"
       },
-      "version-2.8.3-tutorial-customize-string-component": {
+      "version-2.8.3/version-2.8.3-tutorial-customize-string-component": {
         "title": "Customize string component",
         "sidebar_label": "String component"
       },
-      "version-2.8.3-why-adaptive-cms": {
+      "version-2.8.3/version-2.8.3-why-adaptive-cms": {
         "title": "Why Adaptive CMS?",
         "sidebar_label": "Why Adaptive CMS?"
       },
-      "version-2.8.3-why-canner": {
+      "version-2.8.3/version-2.8.3-why-canner": {
         "title": "Why Canner?",
         "sidebar_label": "Why Canner?"
       },
-      "version-2.8.3-why-cms-framework": {
+      "version-2.8.3/version-2.8.3-why-cms-framework": {
         "title": "Why do I need a CMS framework?",
         "sidebar_label": "Why CMS framework?"
       },
-      "version-2.8.3-why-firebase-cms": {
+      "version-2.8.3/version-2.8.3-why-firebase-cms": {
         "title": "Why CMS for Firebase?",
         "sidebar_label": "Why CMS for Firebase?"
       },
-      "version-2.8.3-why-graphql": {
+      "version-2.8.3/version-2.8.3-why-graphql": {
         "title": "Why build on GraphQL?",
         "sidebar_label": "Why build on GraphQL?"
       },
-      "version-2.8.3-why-jsx": {
+      "version-2.8.3/version-2.8.3-why-jsx": {
         "title": "Why Canner use JSX as schema?",
         "sidebar_label": "Why Canner use JSX?"
       },
-      "version-2.8.3-why-mission": {
+      "version-2.8.3/version-2.8.3-why-mission": {
         "title": "Our mission",
         "sidebar_label": "Our mission"
       },
-      "version-2.8.3-why-traditional-headless-adaptive": {
+      "version-2.8.3/version-2.8.3-why-traditional-headless-adaptive": {
         "title": "From traditional, headless to adaptive CMS",
         "sidebar_label": "Traditional vs Headless vs Adaptive CMS"
       },
-      "version-3.0.0-cli-app-create": {
+      "version-3.0.0/version-3.0.0-cli-app-create": {
         "title": "canner app create",
         "sidebar_label": "canner app create"
       },
-      "version-3.0.0-cli-app-list": {
+      "version-3.0.0/version-3.0.0-cli-app-list": {
         "title": "canner app list",
         "sidebar_label": "canner app list"
       },
-      "version-3.0.0-cli-app-use": {
+      "version-3.0.0/version-3.0.0-cli-app-use": {
         "title": "canner app use",
         "sidebar_label": "canner app use"
       },
-      "version-3.0.0-cli-cloud-dashboard": {
+      "version-3.0.0/version-3.0.0-cli-cloud-dashboard": {
         "title": "canner cloud:dashboard",
         "sidebar_label": "canner cloud:dashboard"
       },
-      "version-3.0.0-cli-cloud-data-import": {
+      "version-3.0.0/version-3.0.0-cli-cloud-data-import": {
         "title": "canner data:import",
         "sidebar_label": "canner data:import"
       },
-      "version-3.0.0-cli-cloud:deploy": {
+      "version-3.0.0/version-3.0.0-cli-cloud:deploy": {
         "title": "canner cloud:deploy",
         "sidebar_label": "canner cloud:deploy"
       },
-      "version-3.0.0-cli-cloud-init": {
+      "version-3.0.0/version-3.0.0-cli-cloud-init": {
         "title": "canner cloud:init",
         "sidebar_label": "canner cloud:init"
       },
-      "version-3.0.0-cli-cloud-login": {
+      "version-3.0.0/version-3.0.0-cli-cloud-login": {
         "title": "canner cloud:login",
         "sidebar_label": "canner cloud:login"
       },
-      "version-3.0.0-cli-cloud-logout": {
+      "version-3.0.0/version-3.0.0-cli-cloud-logout": {
         "title": "canner cloud:logout",
         "sidebar_label": "canner cloud:logout"
       },
-      "version-3.0.0-cli-cloud-signup": {
+      "version-3.0.0/version-3.0.0-cli-cloud-signup": {
         "title": "canner cloud:signup",
         "sidebar_label": "canner cloud:signup"
       },
-      "version-3.0.0-cli-cloud-whoami": {
+      "version-3.0.0/version-3.0.0-cli-cloud-whoami": {
         "title": "canner cloud:whoami",
         "sidebar_label": "canner cloud:whoami"
       },
-      "version-3.0.0-cli-init": {
+      "version-3.0.0/version-3.0.0-cli-init": {
         "title": "canner init",
         "sidebar_label": "canner init"
       },
-      "version-3.0.0-cli-overview": {
+      "version-3.0.0/version-3.0.0-cli-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-cli-start": {
+      "version-3.0.0/version-3.0.0-cli-start": {
         "title": "canner start",
         "sidebar_label": "canner start"
       },
-      "version-3.0.0-credential-firebase": {
+      "version-3.0.0/version-3.0.0-credential-firebase": {
         "title": "Credential in Firebase",
         "sidebar_label": "Firebase"
       },
-      "version-3.0.0-credential-firestore": {
+      "version-3.0.0/version-3.0.0-credential-firestore": {
         "title": "Credential in Firestore",
         "sidebar_label": "Firestore"
       },
-      "version-3.0.0-credential-prisma": {
+      "version-3.0.0/version-3.0.0-credential-prisma": {
         "title": "Credential in Prisma",
         "sidebar_label": "Prisma"
       },
-      "version-3.0.0-data-source-customize": {
+      "version-3.0.0/version-3.0.0-data-source-customize": {
         "title": "Customize",
         "sidebar_label": "Customize"
       },
-      "version-3.0.0-data-source-firebase": {
+      "version-3.0.0/version-3.0.0-data-source-firebase": {
         "title": "Firebase",
         "sidebar_label": "Firebase"
       },
-      "version-3.0.0-data-source-firestore": {
+      "version-3.0.0/version-3.0.0-data-source-firestore": {
         "title": "Firestore",
         "sidebar_label": "Firestore"
       },
-      "version-3.0.0-data-source-memory": {
+      "version-3.0.0/version-3.0.0-data-source-memory": {
         "title": "Memory",
         "sidebar_label": "Memory"
       },
-      "version-3.0.0-data-source-mongodb": {
+      "version-3.0.0/version-3.0.0-data-source-mongodb": {
         "title": "Mongodb",
         "sidebar_label": "Mongodb"
       },
-      "version-3.0.0-data-source-overview": {
+      "version-3.0.0/version-3.0.0-data-source-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-file-canner-cloud-js": {
+      "version-3.0.0/version-3.0.0-file-canner-cloud-js": {
         "title": "canner.cloud.js",
         "sidebar_label": "canner.cloud.js"
       },
-      "version-3.0.0-file-canner-schema-js": {
+      "version-3.0.0/version-3.0.0-file-canner-schema-js": {
         "title": "canner.schema.js",
         "sidebar_label": "canner.schema.js"
       },
-      "version-3.0.0-file-canner-server-js": {
+      "version-3.0.0/version-3.0.0-file-canner-server-js": {
         "title": "canner.server.js",
         "sidebar_label": "canner.server.js"
       },
-      "version-3.0.0-graphql-api-overview": {
+      "version-3.0.0/version-3.0.0-graphql-api-overview": {
         "title": "GraphQL API Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-graphql-api-read-only-access": {
+      "version-3.0.0/version-3.0.0-graphql-api-read-only-access": {
         "title": "ReadOnly Access GraphQL API",
         "sidebar_label": "ReadOnly API"
       },
-      "version-3.0.0-guides-deployment-of-canner": {
+      "version-3.0.0/version-3.0.0-guides-deployment-of-canner": {
         "title": "Deploy to Canner",
         "sidebar_label": "Deploy to Canner"
       },
-      "version-3.0.0-guides-deployment-of-docker": {
+      "version-3.0.0/version-3.0.0-guides-deployment-of-docker": {
         "title": "Deploy with Docker",
         "sidebar_label": "Deploy with Docker"
       },
-      "version-3.0.0-guides-deployment-overview": {
+      "version-3.0.0/version-3.0.0-guides-deployment-overview": {
         "title": "Deployment",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-guides-internationalization": {
+      "version-3.0.0/version-3.0.0-guides-internationalization": {
         "title": "Internationalization (i18n)",
         "sidebar_label": "Internationalization (i18n)"
       },
-      "version-3.0.0-guides-navbar": {
+      "version-3.0.0/version-3.0.0-guides-navbar": {
         "title": "Navbar",
         "sidebar_label": "Navbar"
       },
-      "version-3.0.0-guides-sidebar": {
+      "version-3.0.0/version-3.0.0-guides-sidebar": {
         "title": "Sidebar",
         "sidebar_label": "Sidebar"
       },
-      "version-3.0.0-guides-style": {
+      "version-3.0.0/version-3.0.0-guides-style": {
         "title": "Style",
         "sidebar_label": "Style"
       },
-      "version-3.0.0-schema-data-type-tags": {
+      "version-3.0.0/version-3.0.0-schema-data-type-tags": {
         "title": "Data Type Tags",
         "sidebar_label": "Data Type Tags"
       },
-      "version-3.0.0-schema-overview": {
+      "version-3.0.0/version-3.0.0-schema-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.0.0-schema-root-tag": {
+      "version-3.0.0/version-3.0.0-schema-root-tag": {
         "title": "Root Tag",
         "sidebar_label": "Root Tag"
       },
-      "version-3.0.0-start-quick-3commands": {
+      "version-3.0.0/version-3.0.0-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
-      "version-3.0.0-start-quick-intro": {
+      "version-3.0.0/version-3.0.0-start-quick-intro": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "version-3.0.0-tutorial-community-firebase": {
+      "version-3.0.0/version-3.0.0-tutorial-community-firebase": {
         "title": "Firebase CMS with NextJS (Community edition)",
         "sidebar_label": "Firebase CMS with NextJS (Community edition)"
       },
-      "version-3.0.0-tutorial-community-firestore": {
+      "version-3.0.0/version-3.0.0-tutorial-community-firestore": {
         "title": "Firestore CMS (Community edition)",
         "sidebar_label": "Firestore CMS (Community edition)"
       },
-      "version-3.0.0-why-canner": {
+      "version-3.0.0/version-3.0.0-why-canner": {
         "title": "Why Canner?",
         "sidebar_label": "Why Canner?"
       },
-      "version-3.0.0-why-cms-framework": {
+      "version-3.0.0/version-3.0.0-why-cms-framework": {
         "title": "Why a Content Management Framework?",
         "sidebar_label": "Why Content Management Framework?"
       },
-      "version-3.1.0-cli-start-production": {
+      "version-3.1.0/version-3.1.0-cli-start-production": {
         "title": "canner start:production",
         "sidebar_label": "canner start:production"
       },
-      "version-3.1.0-cli-start": {
+      "version-3.1.0/version-3.1.0-cli-start": {
         "title": "canner start",
         "sidebar_label": "canner start"
       },
-      "version-3.1.0-data-source-firestore": {
+      "version-3.1.0/version-3.1.0-data-source-firestore": {
         "title": "Firestore",
         "sidebar_label": "Firestore"
       },
-      "version-3.1.0-schema-data-type-tags": {
+      "version-3.1.0/version-3.1.0-schema-data-type-tags": {
         "title": "Data Type Tags",
         "sidebar_label": "Data Type Tags"
       },
-      "version-3.1.0-tutorial-community-firebase": {
+      "version-3.1.0/version-3.1.0-tutorial-community-firebase": {
         "title": "Firebase CMS with NextJS (Community edition)",
         "sidebar_label": "Firebase CMS with NextJS (Community edition)"
       },
-      "version-3.1.1-cli-app-create": {
+      "version-3.1.1/version-3.1.1-cli-app-create": {
         "title": "canner app create",
         "sidebar_label": "canner app create"
       },
-      "version-3.1.1-cli-app-use": {
+      "version-3.1.1/version-3.1.1-cli-app-use": {
         "title": "canner app use",
         "sidebar_label": "canner app use"
       },
-      "version-3.1.1-cli-cloud-dashboard": {
+      "version-3.1.1/version-3.1.1-cli-cloud-dashboard": {
         "title": "canner cloud:dashboard",
         "sidebar_label": "canner cloud:dashboard"
       },
-      "version-3.1.1-cli-cloud-data-import": {
+      "version-3.1.1/version-3.1.1-cli-cloud-data-import": {
         "title": "canner data:import",
         "sidebar_label": "canner data:import"
       },
-      "version-3.1.1-cli-cloud:deploy": {
+      "version-3.1.1/version-3.1.1-cli-cloud:deploy": {
         "title": "canner cloud:deploy",
         "sidebar_label": "canner cloud:deploy"
       },
-      "version-3.1.1-cli-cloud-init": {
+      "version-3.1.1/version-3.1.1-cli-cloud-init": {
         "title": "canner cloud:init",
         "sidebar_label": "canner cloud:init"
       },
-      "version-3.1.1-cli-cloud-login": {
+      "version-3.1.1/version-3.1.1-cli-cloud-login": {
         "title": "canner cloud:login",
         "sidebar_label": "canner cloud:login"
       },
-      "version-3.1.1-cli-cloud-whoami": {
+      "version-3.1.1/version-3.1.1-cli-cloud-whoami": {
         "title": "canner cloud:whoami",
         "sidebar_label": "canner cloud:whoami"
       },
-      "version-3.1.1-cli-init": {
+      "version-3.1.1/version-3.1.1-cli-init": {
         "title": "canner init",
         "sidebar_label": "canner init"
       },
-      "version-3.1.1-cli-overview": {
+      "version-3.1.1/version-3.1.1-cli-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.1.1-cli-start-production": {
+      "version-3.1.1/version-3.1.1-cli-start-production": {
         "title": "canner start:production",
         "sidebar_label": "canner start:production"
       },
-      "version-3.1.1-data-source-customize": {
+      "version-3.1.1/version-3.1.1-data-source-customize": {
         "title": "Customize",
         "sidebar_label": "Customize"
       },
-      "version-3.1.1-data-source-overview": {
+      "version-3.1.1/version-3.1.1-data-source-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.1.1-graphql-api-overview": {
+      "version-3.1.1/version-3.1.1-graphql-api-overview": {
         "title": "GraphQL API Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.1.1-guides-condition-fields": {
+      "version-3.1.1/version-3.1.1-guides-condition-fields": {
         "title": "Condition Fields",
         "sidebar_label": "Condition Fields"
       },
-      "version-3.1.1-guides-deployment-of-docker": {
+      "version-3.1.1/version-3.1.1-guides-deployment-of-docker": {
         "title": "Deploy with Docker",
         "sidebar_label": "Deploy with Docker"
       },
-      "version-3.1.1-schema-data-type-tags": {
+      "version-3.1.1/version-3.1.1-schema-data-type-tags": {
         "title": "Data Type Tags",
         "sidebar_label": "Data Type Tags"
       },
-      "version-3.1.1-schema-layout-tags": {
+      "version-3.1.1/version-3.1.1-schema-layout-tags": {
         "title": "Layout Tags",
         "sidebar_label": "Layout Tags"
       },
-      "version-3.1.1-schema-overview": {
+      "version-3.1.1/version-3.1.1-schema-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.1.1-schema-root-tag": {
+      "version-3.1.1/version-3.1.1-schema-root-tag": {
         "title": "Root Tag",
         "sidebar_label": "Root Tag"
       },
-      "version-3.1.1-start-quick-3commands": {
+      "version-3.1.1/version-3.1.1-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
-      "version-3.1.2-schema-toolbar-tags": {
+      "version-3.1.2/version-3.1.2-schema-toolbar-tags": {
         "title": "Toolbar Tags",
         "sidebar_label": "Toolbar Tags"
       },
-      "version-3.1.3-guides-setup": {
+      "version-3.1.3/version-3.1.3-guides-setup": {
         "title": "Setup",
         "sidebar_label": "Setup"
       },
-      "version-3.1.3-schema-overview": {
+      "version-3.1.3/version-3.1.3-schema-overview": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-3.1.3-start-quick-3commands": {
+      "version-3.1.3/version-3.1.3-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       },
-      "version-3.1.4-cli-cloud-init": {
+      "version-3.1.4/version-3.1.4-cli-cloud-init": {
         "title": "canner cloud:init",
         "sidebar_label": "canner cloud:init"
       },
-      "version-3.1.4-cli-init": {
+      "version-3.1.4/version-3.1.4-cli-init": {
         "title": "canner init",
         "sidebar_label": "canner init"
       },
-      "version-3.1.4-guides-deployment-of-docker": {
+      "version-3.1.4/version-3.1.4-guides-deployment-of-docker": {
         "title": "Deploy with Docker",
         "sidebar_label": "Deploy with Docker"
       },
-      "version-3.1.4-start-quick-3commands": {
+      "version-3.1.4/version-3.1.4-start-quick-3commands": {
         "title": "Building CMS in 3 commands",
         "sidebar_label": "Building CMS in 3 commands"
       }

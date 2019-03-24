@@ -8,7 +8,7 @@ sidebar_label: Deploy to Canner
 
 > Note: The current dataSources in `canner.cloud.js` will change in the near future.
 
-Building a CMS on Canner only need two main files [canner.schema.js](guides-setup#initial-your-schema) and [canner.cloud.js](cli-canner-cloud-js), and then you can publish your CMS on Canner with the simple command.
+Building a CMS on Canner only need two main files [canner.schema.js](guides-setup#initial-your-schema) and [canner.cloud.js](file-canner-cloud-js), and then you can publish your CMS on Canner with the simple command.
 
 ```
 $ canner script:deploy
