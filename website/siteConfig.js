@@ -60,7 +60,7 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#07a4b8',
+    primaryColor: '#f38c78',
     secondaryColor: '#da836c',
   },
   cleanUrl: true,
