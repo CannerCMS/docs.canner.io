@@ -29,7 +29,7 @@ exports.dataSources = {
   firebase: args => new FirebaseDataSource({
     config: {
       credential: admin.credential.cert(cert),
-      databaseURL,
+      databaseUrl,
     },
     path: args.key,
   }),
