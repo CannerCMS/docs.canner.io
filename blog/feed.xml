@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>Canner Blog</title>
-        <link>https://www.canner.io/blog</link>
+        <link>https://www.canner.io/docs.canner.io/blog</link>
         <description>The best place to stay up-to-date with the latest Canner news and events.</description>
         <lastBuildDate>Thu, 07 Feb 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Canner Blog</title>
-            <url>https://www.canner.io/img/icon.png</url>
-            <link>https://www.canner.io/blog</link>
+            <url>https://www.canner.io/docs.canner.io/img/icon.png</url>
+            <link>https://www.canner.io/docs.canner.io/blog</link>
         </image>
-        <copyright>Copyright © 2019 Canner.  Canner, Inc.</copyright>
+        <copyright>Copyright © 2020 Canner.  Canner, Inc.</copyright>
         <item>
             <title><![CDATA[Introducing Canner v3]]></title>
-            <link>https://www.canner.io/blog/2019/02/07/canner-v3.html</link>
-            <guid>https://www.canner.io/blog/2019/02/07/canner-v3.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2019/02/07/canner-v3.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2019/02/07/canner-v3.html</guid>
             <pubDate>Thu, 07 Feb 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[<p><img src="/blog/canner-v3/intro.png" alt="intro"></p>
 <p>Hi everyone! We're happy to introduce Canner v3, which comes with following great features:</p>
@@ -33,15 +33,15 @@
         </item>
         <item>
             <title><![CDATA[GQLify Open Source]]></title>
-            <link>https://www.canner.io/blog/2018/12/05/gqlify.html</link>
-            <guid>https://www.canner.io/blog/2018/12/05/gqlify.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/12/05/gqlify.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/12/05/gqlify.html</guid>
             <pubDate>Wed, 05 Dec 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hi everyone! We are so happy to show you our new open source project - <a href="https://www.gqlify.com">GQLify</a>. After canner released, we spend much time on how to save developer time on building GraphQL projects. Today, we launched a new open source project called <strong><em>&quot;GQLify&quot...</em></strong></p>]]></description>
         </item>
         <item>
             <title><![CDATA[#CMS30 | 30 Day 30 CMSes Challenge]]></title>
-            <link>https://www.canner.io/blog/2018/11/26/cms30.html</link>
-            <guid>https://www.canner.io/blog/2018/11/26/cms30.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/11/26/cms30.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/11/26/cms30.html</guid>
             <pubDate>Mon, 26 Nov 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hi all!</p>
 <p>Thank you for joining the Canner community! Having had launched our first open source Alpha version this past May, Canner has grown rapidly in the open source community, and we couldn’t have done it without you, thank you for your support.</p>
@@ -52,8 +52,8 @@
         </item>
         <item>
             <title><![CDATA[Canner Platform Stable - Introducing Organization]]></title>
-            <link>https://www.canner.io/blog/2018/11/21/canner-platform-stable.html</link>
-            <guid>https://www.canner.io/blog/2018/11/21/canner-platform-stable.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/11/21/canner-platform-stable.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/11/21/canner-platform-stable.html</guid>
             <pubDate>Wed, 21 Nov 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Canner platform is now bump to stable! Thanks for all the community and supporters of Canner to keep Canner forward.</p>
 <p>Our platform have over thousands of users registered and using Canner as their primary select of building their CMS in their applications.</p>
@@ -61,8 +61,8 @@
         </item>
         <item>
             <title><![CDATA[Canner Open Source - Stable Version]]></title>
-            <link>https://www.canner.io/blog/2018/11/09/canner-stable.html</link>
-            <guid>https://www.canner.io/blog/2018/11/09/canner-stable.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/11/09/canner-stable.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/11/09/canner-stable.html</guid>
             <pubDate>Fri, 09 Nov 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hi everyone! It's been a long while since our last post. This doesn't mean that we forget our users and community. In contrast, we work extremely hard to provide a more productive and powerful CMS framework than ever.</p>
 <p>First of all, we are confident and proud of releasing our Canner open source to stable version.</p>
@@ -70,8 +70,8 @@
         </item>
         <item>
             <title><![CDATA[Gatsby-blog + Prisma + Canner]]></title>
-            <link>https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</link>
-            <guid>https://www.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/08/08/canner-gatsby-prisma.html</guid>
             <pubDate>Wed, 08 Aug 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Demo of how to use <a href="https://www.canner.io">Canner</a>(CMS) + <a href="https://www.gatsbyjs.org/">Gatsby</a>(Site generator) + <a href="https://www.prisma.io/">Prisma</a>(Database).</p>
 <p><img src="https://i.imgur.com/zqPONIo.png" alt="cover"></p>
@@ -79,8 +79,8 @@
         </item>
         <item>
             <title><![CDATA[Canner 1st meetup @ Taiwan, Taipei]]></title>
-            <link>https://www.canner.io/blog/2018/07/02/canner-meetup.html</link>
-            <guid>https://www.canner.io/blog/2018/07/02/canner-meetup.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/07/02/canner-meetup.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/07/02/canner-meetup.html</guid>
             <pubDate>Mon, 02 Jul 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>On June 30, our team Canner held our first meetup at Taiwan, Taipei. We are amazed by how the community passionate about Canner, our seats are full within 6 days when we release our meetup news. Thanks to all supporters of Canner!</p>
 <p>In this post we are going to share our talks in that day, and hope people that couldn't attend our meetup could also learn from this post! So let's get started! 🌟</p>
@@ -88,16 +88,16 @@
         </item>
         <item>
             <title><![CDATA[Canner at GraphQL Taiwan Meetup Recap]]></title>
-            <link>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</link>
-            <guid>https://www.canner.io/blog/2018/06/21/graphql-meetup.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/06/21/graphql-meetup.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/06/21/graphql-meetup.html</guid>
             <pubDate>Thu, 21 Jun 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Yesterday, GraphQL Taiwan meetup hosted by <a href="https://www.facebook.com/groups/graphql.tw/">GraphQL Taiwan</a> took place in Taipei, Taiwan, around 50 participants attended. As CTO of <a href="www.canner.io">Canner</a>, I'm glad to share what our team Canner's experienced with GraphQL on this meetup.</p>
 ]]></description>
         </item>
         <item>
             <title><![CDATA[CannerIO 2.0 & Open source Canner]]></title>
-            <link>https://www.canner.io/blog/2018/05/28/cannerio-2.html</link>
-            <guid>https://www.canner.io/blog/2018/05/28/cannerio-2.html</guid>
+            <link>https://www.canner.io/docs.canner.io/blog/2018/05/28/cannerio-2.html</link>
+            <guid>https://www.canner.io/docs.canner.io/blog/2018/05/28/cannerio-2.html</guid>
             <pubDate>Mon, 28 May 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Today, our team at Canner, Inc. is thrilled to announce our <strong><a href="https://www.canner.io">CannerIO 2.0 alpha version</a> and <a href="https://framework.canner.io">Open source Canner alpha</a> is now release</strong>! 🎉🎉 This is our biggest release so far! 🤡</p>
 <p>What's new?</p>
